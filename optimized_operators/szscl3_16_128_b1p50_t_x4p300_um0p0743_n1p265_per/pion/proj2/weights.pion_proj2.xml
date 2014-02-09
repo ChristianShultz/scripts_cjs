@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<ProjectedOps>
+  <elem>
+    <Key>
+      <id>pion_proj2_p000_A1</id> <smear></smear>
+    </Key>
+    <Weights>
+      <elem><id>pion_a0xD3_J131_J0__J0_A1</id> <weight>0.00334843</weight></elem>
+      <elem><id>pion_a1xD3_J131_J1__J0_A1</id> <weight>0.109604</weight></elem>
+      <elem><id>pion_b1xD1_J1__J0_A1</id> <weight>0.494956</weight></elem>
+      <elem><id>pion_b1xD3_J130_J1__J0_A1</id> <weight>-0.121701</weight></elem>
+      <elem><id>pion_b1xD3_J132_J1__J0_A1</id> <weight>0.570996</weight></elem>
+      <elem><id>pion_b1xD3_J132_J3__J4_A1</id> <weight>0.167727</weight></elem>
+      <elem><id>pion_pion_2xD0_J0__J0_A1</id> <weight>0.353262</weight></elem>
+      <elem><id>pion_pion_2xD2_J0__J0_A1</id> <weight>0.201481</weight></elem>
+      <elem><id>pion_pionxD0_J0__J0_A1</id> <weight>0.0185678</weight></elem>
+      <elem><id>pion_pionxD2_J0__J0_A1</id> <weight>-0.0373583</weight></elem>
+      <elem><id>pion_rho_2xD2_J1__J0_A1</id> <weight>0.824486</weight></elem>
+      <elem><id>pion_rhoxD2_J1__J0_A1</id> <weight>0.891999</weight></elem>
+    </Weights>
+  </elem>
+  <elem>
+    <Key>
+      <id>pion_proj2_p100_H0D4A2</id> <smear></smear>
+    </Key>
+    <Weights>
+      <elem><id>a_a1xD0_J0__J1_H0D4A2</id> <weight>-0.559762</weight></elem>
+      <elem><id>a_a1xD2_J0__J1_H0D4A2</id> <weight>-0.246422</weight></elem>
+      <elem><id>a_a1xD2_J2__J1_H0D4A2</id> <weight>-0.0673025</weight></elem>
+      <elem><id>a_a1xD2_J2__J3_H0D4A2</id> <weight>-0.0864255</weight></elem>
+      <elem><id>a_b0xD2_J1__J1_H0D4A2</id> <weight>0.100063</weight></elem>
+      <elem><id>a_b1xD2_J1__J1_H0D4A2</id> <weight>0.273237</weight></elem>
+      <elem><id>a_rho_2xD1_J1__J1_H0D4A2</id> <weight>0.173527</weight></elem>
+      <elem><id>a_rhoxD1_J1__J1_H0D4A2</id> <weight>-0.0128959</weight></elem>
+      <elem><id>pion_b1xD1_J1__J0_H0D4A2</id> <weight>-0.202246</weight></elem>
+      <elem><id>pion_b1xD1_J1__J2_H0D4A2</id> <weight>-0.440643</weight></elem>
+      <elem><id>pion_pion_2xD0_J0__J0_H0D4A2</id> <weight>1.3205</weight></elem>
+      <elem><id>pion_pion_2xD2_J0__J0_H0D4A2</id> <weight>0.580274</weight></elem>
+      <elem><id>pion_pion_2xD2_J2__J2_H0D4A2</id> <weight>-0.234256</weight></elem>
+      <elem><id>pion_pionxD0_J0__J0_H0D4A2</id> <weight>1.36252</weight></elem>
+      <elem><id>pion_pionxD2_J0__J0_H0D4A2</id> <weight>0.545579</weight></elem>
+      <elem><id>pion_pionxD2_J2__J2_H0D4A2</id> <weight>-0.381622</weight></elem>
+      <elem><id>pion_rho_2xD2_J1__J0_H0D4A2</id> <weight>0.316515</weight></elem>
+      <elem><id>pion_rho_2xD2_J1__J2_H0D4A2</id> <weight>-0.0822794</weight></elem>
+      <elem><id>pion_rhoxD2_J1__J0_H0D4A2</id> <weight>0.53154</weight></elem>
+      <elem><id>pion_rhoxD2_J1__J2_H0D4A2</id> <weight>0.0641128</weight></elem>
+    </Weights>
+  </elem>
+  <elem>
+    <Key>
+      <id>pion_proj2_p110_H0D2A2</id> <smear></smear>
+    </Key>
+    <Weights>
+      <elem><id>a_a0xD2_J2__J2_H2D2A2</id> <weight>-0.0924582</weight></elem>
+      <elem><id>a_a1xD0_J0__J1_H0D2A2</id> <weight>-0.999367</weight></elem>
+      <elem><id>a_a1xD2_J0__J1_H0D2A2</id> <weight>-0.522393</weight></elem>
+      <elem><id>a_a1xD2_J2__J1_H0D2A2</id> <weight>-0.0953226</weight></elem>
+      <elem><id>a_a1xD2_J2__J2_H2D2A2</id> <weight>0.0267756</weight></elem>
+      <elem><id>a_a1xD2_J2__J3_H0D2A2</id> <weight>0.0387052</weight></elem>
+      <elem><id>a_a1xD2_J2__J3_H2D2A2</id> <weight>0.0333359</weight></elem>
+      <elem><id>a_b0xD2_J1__J1_H0D2A2</id> <weight>-0.0321861</weight></elem>
+      <elem><id>a_b1xD2_J1__J1_H0D2A2</id> <weight>0.0155017</weight></elem>
+      <elem><id>a_b1xD2_J1__J2_H2D2A2</id> <weight>-0.0415982</weight></elem>
+      <elem><id>a_rho_2xD1_J1__J1_H0D2A2</id> <weight>-0.209595</weight></elem>
+      <elem><id>a_rho_2xD1_J1__J2_H2D2A2</id> <weight>0.127834</weight></elem>
+      <elem><id>a_rhoxD1_J1__J1_H0D2A2</id> <weight>-0.127139</weight></elem>
+      <elem><id>a_rhoxD1_J1__J2_H2D2A2</id> <weight>0.0353234</weight></elem>
+      <elem><id>pion_b1xD1_J1__J0_H0D2A2</id> <weight>-0.428798</weight></elem>
+      <elem><id>pion_b1xD1_J1__J2_H0D2A2</id> <weight>0.29821</weight></elem>
+      <elem><id>pion_b1xD1_J1__J2_H2D2A2</id> <weight>-0.181398</weight></elem>
+      <elem><id>pion_pion_2xD0_J0__J0_H0D2A2</id> <weight>-1.85703</weight></elem>
+      <elem><id>pion_pion_2xD2_J0__J0_H0D2A2</id> <weight>-1.0727</weight></elem>
+      <elem><id>pion_pion_2xD2_J2__J2_H0D2A2</id> <weight>0.274029</weight></elem>
+      <elem><id>pion_pion_2xD2_J2__J2_H2D2A2</id> <weight>-0.0740387</weight></elem>
+      <elem><id>pion_pionxD0_J0__J0_H0D2A2</id> <weight>-0.922984</weight></elem>
+      <elem><id>pion_pionxD2_J0__J0_H0D2A2</id> <weight>-0.640334</weight></elem>
+      <elem><id>pion_pionxD2_J2__J2_H0D2A2</id> <weight>0.130359</weight></elem>
+      <elem><id>pion_pionxD2_J2__J2_H2D2A2</id> <weight>-0.209219</weight></elem>
+      <elem><id>pion_rho_2xD2_J1__J0_H0D2A2</id> <weight>0.210802</weight></elem>
+      <elem><id>pion_rho_2xD2_J1__J2_H0D2A2</id> <weight>-0.115186</weight></elem>
+      <elem><id>pion_rho_2xD2_J1__J2_H2D2A2</id> <weight>0.106914</weight></elem>
+      <elem><id>pion_rhoxD2_J1__J0_H0D2A2</id> <weight>-0.121353</weight></elem>
+      <elem><id>pion_rhoxD2_J1__J2_H0D2A2</id> <weight>-0.232247</weight></elem>
+      <elem><id>pion_rhoxD2_J1__J2_H2D2A2</id> <weight>0.117609</weight></elem>
+    </Weights>
+  </elem>
+  <elem>
+    <Key>
+      <id>pion_proj2_p111_H0D3A2</id> <smear></smear>
+    </Key>
+    <Weights>
+      <elem><id>a_a1xD0_J0__J1_H0D3A2</id> <weight>0.986426</weight></elem>
+      <elem><id>a_a1xD2_J0__J1_H0D3A2</id> <weight>0.656518</weight></elem>
+      <elem><id>a_a1xD2_J2__J1_H0D3A2</id> <weight>0.310199</weight></elem>
+      <elem><id>a_a1xD2_J2__J3_H0D3A2</id> <weight>0.0952018</weight></elem>
+      <elem><id>a_a1xD2_J2__J3_H3D3A2</id> <weight>0.277949</weight></elem>
+      <elem><id>a_b0xD2_J1__J1_H0D3A2</id> <weight>-0.262803</weight></elem>
+      <elem><id>a_b1xD2_J1__J1_H0D3A2</id> <weight>-0.0207725</weight></elem>
+      <elem><id>a_rho_2xD1_J1__J1_H0D3A2</id> <weight>-0.093744</weight></elem>
+      <elem><id>a_rhoxD1_J1__J1_H0D3A2</id> <weight>-0.519947</weight></elem>
+      <elem><id>pion_b1xD1_J1__J0_H0D3A2</id> <weight>-0.303761</weight></elem>
+      <elem><id>pion_b1xD1_J1__J2_H0D3A2</id> <weight>0.650661</weight></elem>
+      <elem><id>pion_pion_2xD0_J0__J0_H0D3A2</id> <weight>-1.21552</weight></elem>
+      <elem><id>pion_pion_2xD2_J0__J0_H0D3A2</id> <weight>-0.865903</weight></elem>
+      <elem><id>pion_pion_2xD2_J2__J2_H0D3A2</id> <weight>0.710528</weight></elem>
+      <elem><id>pion_pionxD0_J0__J0_H0D3A2</id> <weight>-1.29831</weight></elem>
+      <elem><id>pion_pionxD2_J0__J0_H0D3A2</id> <weight>-0.758911</weight></elem>
+      <elem><id>pion_pionxD2_J2__J2_H0D3A2</id> <weight>0.794681</weight></elem>
+      <elem><id>pion_rho_2xD2_J1__J0_H0D3A2</id> <weight>-0.0303435</weight></elem>
+      <elem><id>pion_rho_2xD2_J1__J2_H0D3A2</id> <weight>0.0971374</weight></elem>
+      <elem><id>pion_rhoxD2_J1__J0_H0D3A2</id> <weight>0.341639</weight></elem>
+      <elem><id>pion_rhoxD2_J1__J2_H0D3A2</id> <weight>0.310964</weight></elem>
+    </Weights>
+  </elem>
+  <elem>
+    <Key>
+      <id>pion_proj2_p200_H0D4A2</id> <smear></smear>
+    </Key>
+    <Weights>
+      <elem><id>a_a1xD0_J0__J1_H0D4A2</id> <weight>-1.22853</weight></elem>
+      <elem><id>a_a1xD2_J0__J1_H0D4A2</id> <weight>-0.849269</weight></elem>
+      <elem><id>a_a1xD2_J2__J1_H0D4A2</id> <weight>-0.85053</weight></elem>
+      <elem><id>a_a1xD2_J2__J3_H0D4A2</id> <weight>0.264413</weight></elem>
+      <elem><id>a_b0xD2_J1__J1_H0D4A2</id> <weight>0.146997</weight></elem>
+      <elem><id>a_b1xD2_J1__J1_H0D4A2</id> <weight>0.217929</weight></elem>
+      <elem><id>a_rho_2xD1_J1__J1_H0D4A2</id> <weight>-0.0149499</weight></elem>
+      <elem><id>a_rhoxD1_J1__J1_H0D4A2</id> <weight>0.38187</weight></elem>
+      <elem><id>pion_b1xD1_J1__J0_H0D4A2</id> <weight>-0.533558</weight></elem>
+      <elem><id>pion_b1xD1_J1__J2_H0D4A2</id> <weight>-0.558021</weight></elem>
+      <elem><id>pion_pion_2xD0_J0__J0_H0D4A2</id> <weight>0.684679</weight></elem>
+      <elem><id>pion_pion_2xD2_J0__J0_H0D4A2</id> <weight>0.504284</weight></elem>
+      <elem><id>pion_pion_2xD2_J2__J2_H0D4A2</id> <weight>-0.521577</weight></elem>
+      <elem><id>pion_pionxD0_J0__J0_H0D4A2</id> <weight>-0.0693435</weight></elem>
+      <elem><id>pion_pionxD2_J0__J0_H0D4A2</id> <weight>-0.179832</weight></elem>
+      <elem><id>pion_pionxD2_J2__J2_H0D4A2</id> <weight>-0.0396963</weight></elem>
+      <elem><id>pion_rho_2xD2_J1__J0_H0D4A2</id> <weight>-0.00728405</weight></elem>
+      <elem><id>pion_rho_2xD2_J1__J2_H0D4A2</id> <weight>0.146604</weight></elem>
+      <elem><id>pion_rhoxD2_J1__J0_H0D4A2</id> <weight>-0.23114</weight></elem>
+      <elem><id>pion_rhoxD2_J1__J2_H0D4A2</id> <weight>0.0351334</weight></elem>
+    </Weights>
+  </elem>
+</ProjectedOps>
