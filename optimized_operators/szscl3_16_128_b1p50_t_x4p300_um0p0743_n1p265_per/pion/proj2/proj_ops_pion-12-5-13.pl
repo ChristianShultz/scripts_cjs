@@ -29,6 +29,7 @@ my @all_ops = ();
   $pion_proj2_p000_A1->t0(7);
   $pion_proj2_p000_A1->state(2); 
   $pion_proj2_p000_A1->tz(17);
+  $pion_proj2_p000_A1->phaser(1);
 
 
   my $pion_proj2_p100_H0D4A2 = OPparams->new();
@@ -43,6 +44,7 @@ my @all_ops = ();
   $pion_proj2_p100_H0D4A2->t0(9);
   $pion_proj2_p100_H0D4A2->state(4); 
   $pion_proj2_p100_H0D4A2->tz(18);
+  $pion_proj2_p100_H0D4A2->phaser(1);
 
 
 
@@ -58,6 +60,7 @@ my @all_ops = ();
   $pion_proj2_p110_H0D2A2->t0(7); # proj0 is 9
   $pion_proj2_p110_H0D2A2->state(6); 
   $pion_proj2_p110_H0D2A2->tz(14);
+  $pion_proj2_p110_H0D2A2->phaser(1);
 
 
   my $pion_proj2_p111_H0D3A2 = OPparams->new();
@@ -72,6 +75,7 @@ my @all_ops = ();
   $pion_proj2_p111_H0D3A2->t0(8);
   $pion_proj2_p111_H0D3A2->state(4); 
   $pion_proj2_p111_H0D3A2->tz(16);
+  $pion_proj2_p111_H0D3A2->phaser(1);
 
 
   my $pion_proj2_p200_H0D4A2 = OPparams->new();
@@ -86,6 +90,7 @@ my @all_ops = ();
   $pion_proj2_p200_H0D4A2->t0(8);
   $pion_proj2_p200_H0D4A2->state(3); 
   $pion_proj2_p200_H0D4A2->tz(16);
+  $pion_proj2_p200_H0D4A2->phaser(1);
 
 
 
@@ -108,3 +113,5 @@ my @all_ops = ();
   &make_proj_plots($listfile);
 
   &write_radmat_xml(\@all_operators); 
+
+  &serialize_ops_list( "pion_proj2.perl.xml" , \@all_operators );

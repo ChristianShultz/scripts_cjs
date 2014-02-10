@@ -112,3 +112,5 @@ my @all_ops = ();
   &make_proj_plots($listfile);
 
   &write_radmat_xml(\@all_operators); 
+
+  &serialize_ops_list( "pion_proj0.perl.xml" , \@all_operators );

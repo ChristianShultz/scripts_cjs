@@ -2,141 +2,1399 @@
 <ProjectedOps>
   <elem>
     <Key>
-      <id>pion_proj1_p000_A1</id> <smear></smear>
+      <name>pion_proj1_p000_A1</name> 
+      <smear/>
+      <mom_type>0 0 0</mom_type>
     </Key>
-    <Weights>
-      <elem><id>pion_a0xD3_J131_J0__J0_A1</id> <weight>-0.419728</weight></elem>
-      <elem><id>pion_a1xD3_J131_J1__J0_A1</id> <weight>-0.640926</weight></elem>
-      <elem><id>pion_b1xD1_J1__J0_A1</id> <weight>-1.05402</weight></elem>
-      <elem><id>pion_b1xD3_J130_J1__J0_A1</id> <weight>0.713928</weight></elem>
-      <elem><id>pion_b1xD3_J132_J1__J0_A1</id> <weight>-1.42912</weight></elem>
-      <elem><id>pion_b1xD3_J132_J3__J4_A1</id> <weight>-0.0254236</weight></elem>
-      <elem><id>pion_pion_2xD0_J0__J0_A1</id> <weight>-0.655703</weight></elem>
-      <elem><id>pion_pion_2xD2_J0__J0_A1</id> <weight>-0.269321</weight></elem>
-      <elem><id>pion_pionxD0_J0__J0_A1</id> <weight>-0.0835749</weight></elem>
-      <elem><id>pion_pionxD2_J0__J0_A1</id> <weight>0.0163486</weight></elem>
-      <elem><id>pion_rho_2xD2_J1__J0_A1</id> <weight>-1.55129</weight></elem>
-      <elem><id>pion_rhoxD2_J1__J0_A1</id> <weight>-1.53234</weight></elem>
-    </Weights>
+    <Val>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_a0xD3_J131_J0__J0_A1</name>
+              <smear/>
+              <mom_type>0 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.419728</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_a1xD3_J131_J1__J0_A1</name>
+              <smear/>
+              <mom_type>0 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.640926</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_b1xD1_J1__J0_A1</name>
+              <smear/>
+              <mom_type>0 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-1.05402</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_b1xD3_J130_J1__J0_A1</name>
+              <smear/>
+              <mom_type>0 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.713928</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_b1xD3_J132_J1__J0_A1</name>
+              <smear/>
+              <mom_type>0 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-1.42912</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_b1xD3_J132_J3__J4_A1</name>
+              <smear/>
+              <mom_type>0 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.0254236</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_pion_2xD0_J0__J0_A1</name>
+              <smear/>
+              <mom_type>0 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.655703</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_pion_2xD2_J0__J0_A1</name>
+              <smear/>
+              <mom_type>0 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.269321</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_pionxD0_J0__J0_A1</name>
+              <smear/>
+              <mom_type>0 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.0835749</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_pionxD2_J0__J0_A1</name>
+              <smear/>
+              <mom_type>0 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.0163486</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_rho_2xD2_J1__J0_A1</name>
+              <smear/>
+              <mom_type>0 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-1.55129</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_rhoxD2_J1__J0_A1</name>
+              <smear/>
+              <mom_type>0 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-1.53234</Val>
+      </elem>
+    </Val>
   </elem>
   <elem>
     <Key>
-      <id>pion_proj1_p100_H0D4A2</id> <smear></smear>
+      <name>pion_proj1_p100_H0D4A2</name> 
+      <smear/>
+      <mom_type>1 0 0</mom_type>
     </Key>
-    <Weights>
-      <elem><id>a_a1xD0_J0__J1_H0D4A2</id> <weight>1.10988</weight></elem>
-      <elem><id>a_a1xD2_J0__J1_H0D4A2</id> <weight>0.136213</weight></elem>
-      <elem><id>a_a1xD2_J2__J1_H0D4A2</id> <weight>-0.0374999</weight></elem>
-      <elem><id>a_a1xD2_J2__J3_H0D4A2</id> <weight>0.0653959</weight></elem>
-      <elem><id>a_b0xD2_J1__J1_H0D4A2</id> <weight>0.368614</weight></elem>
-      <elem><id>a_b1xD2_J1__J1_H0D4A2</id> <weight>-0.416899</weight></elem>
-      <elem><id>a_rho_2xD1_J1__J1_H0D4A2</id> <weight>1.13794</weight></elem>
-      <elem><id>a_rhoxD1_J1__J1_H0D4A2</id> <weight>1.552</weight></elem>
-      <elem><id>pion_b1xD1_J1__J0_H0D4A2</id> <weight>-0.892143</weight></elem>
-      <elem><id>pion_b1xD1_J1__J2_H0D4A2</id> <weight>0.336101</weight></elem>
-      <elem><id>pion_pion_2xD0_J0__J0_H0D4A2</id> <weight>3.4705</weight></elem>
-      <elem><id>pion_pion_2xD2_J0__J0_H0D4A2</id> <weight>1.39764</weight></elem>
-      <elem><id>pion_pion_2xD2_J2__J2_H0D4A2</id> <weight>-0.120987</weight></elem>
-      <elem><id>pion_pionxD0_J0__J0_H0D4A2</id> <weight>3.48575</weight></elem>
-      <elem><id>pion_pionxD2_J0__J0_H0D4A2</id> <weight>1.31718</weight></elem>
-      <elem><id>pion_pionxD2_J2__J2_H0D4A2</id> <weight>-0.313043</weight></elem>
-      <elem><id>pion_rho_2xD2_J1__J0_H0D4A2</id> <weight>-0.117209</weight></elem>
-      <elem><id>pion_rho_2xD2_J1__J2_H0D4A2</id> <weight>-0.686285</weight></elem>
-      <elem><id>pion_rhoxD2_J1__J0_H0D4A2</id> <weight>-0.996408</weight></elem>
-      <elem><id>pion_rhoxD2_J1__J2_H0D4A2</id> <weight>-0.670569</weight></elem>
-    </Weights>
+    <Val>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_a1xD0_J0__J1_H0D4A2</name>
+              <smear/>
+              <mom_type>1 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>1.10988</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_a1xD2_J0__J1_H0D4A2</name>
+              <smear/>
+              <mom_type>1 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.136213</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_a1xD2_J2__J1_H0D4A2</name>
+              <smear/>
+              <mom_type>1 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.0374999</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_a1xD2_J2__J3_H0D4A2</name>
+              <smear/>
+              <mom_type>1 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.0653959</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_b0xD2_J1__J1_H0D4A2</name>
+              <smear/>
+              <mom_type>1 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.368614</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_b1xD2_J1__J1_H0D4A2</name>
+              <smear/>
+              <mom_type>1 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.416899</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_rho_2xD1_J1__J1_H0D4A2</name>
+              <smear/>
+              <mom_type>1 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>1.13794</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_rhoxD1_J1__J1_H0D4A2</name>
+              <smear/>
+              <mom_type>1 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>1.552</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_b1xD1_J1__J0_H0D4A2</name>
+              <smear/>
+              <mom_type>1 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.892143</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_b1xD1_J1__J2_H0D4A2</name>
+              <smear/>
+              <mom_type>1 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.336101</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_pion_2xD0_J0__J0_H0D4A2</name>
+              <smear/>
+              <mom_type>1 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>3.4705</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_pion_2xD2_J0__J0_H0D4A2</name>
+              <smear/>
+              <mom_type>1 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>1.39764</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_pion_2xD2_J2__J2_H0D4A2</name>
+              <smear/>
+              <mom_type>1 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.120987</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_pionxD0_J0__J0_H0D4A2</name>
+              <smear/>
+              <mom_type>1 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>3.48575</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_pionxD2_J0__J0_H0D4A2</name>
+              <smear/>
+              <mom_type>1 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>1.31718</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_pionxD2_J2__J2_H0D4A2</name>
+              <smear/>
+              <mom_type>1 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.313043</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_rho_2xD2_J1__J0_H0D4A2</name>
+              <smear/>
+              <mom_type>1 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.117209</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_rho_2xD2_J1__J2_H0D4A2</name>
+              <smear/>
+              <mom_type>1 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.686285</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_rhoxD2_J1__J0_H0D4A2</name>
+              <smear/>
+              <mom_type>1 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.996408</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_rhoxD2_J1__J2_H0D4A2</name>
+              <smear/>
+              <mom_type>1 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.670569</Val>
+      </elem>
+    </Val>
   </elem>
   <elem>
     <Key>
-      <id>pion_proj1_p110_H0D2A2</id> <smear></smear>
+      <name>pion_proj1_p110_H0D2A2</name> 
+      <smear/>
+      <mom_type>1 1 0</mom_type>
     </Key>
-    <Weights>
-      <elem><id>a_a0xD2_J2__J2_H2D2A2</id> <weight>-0.0169443</weight></elem>
-      <elem><id>a_a1xD0_J0__J1_H0D2A2</id> <weight>-0.0691202</weight></elem>
-      <elem><id>a_a1xD2_J0__J1_H0D2A2</id> <weight>-0.0197572</weight></elem>
-      <elem><id>a_a1xD2_J2__J1_H0D2A2</id> <weight>-0.0339169</weight></elem>
-      <elem><id>a_a1xD2_J2__J2_H2D2A2</id> <weight>0.0587191</weight></elem>
-      <elem><id>a_a1xD2_J2__J3_H0D2A2</id> <weight>0.0222593</weight></elem>
-      <elem><id>a_a1xD2_J2__J3_H2D2A2</id> <weight>0.0080402</weight></elem>
-      <elem><id>a_b0xD2_J1__J1_H0D2A2</id> <weight>0.112776</weight></elem>
-      <elem><id>a_b1xD2_J1__J1_H0D2A2</id> <weight>-0.12991</weight></elem>
-      <elem><id>a_b1xD2_J1__J2_H2D2A2</id> <weight>-0.0421738</weight></elem>
-      <elem><id>a_rho_2xD1_J1__J1_H0D2A2</id> <weight>0.180107</weight></elem>
-      <elem><id>a_rho_2xD1_J1__J2_H2D2A2</id> <weight>0.0037079</weight></elem>
-      <elem><id>a_rhoxD1_J1__J1_H0D2A2</id> <weight>0.169986</weight></elem>
-      <elem><id>a_rhoxD1_J1__J2_H2D2A2</id> <weight>-0.0044078</weight></elem>
-      <elem><id>pion_b1xD1_J1__J0_H0D2A2</id> <weight>0.0628593</weight></elem>
-      <elem><id>pion_b1xD1_J1__J2_H0D2A2</id> <weight>0.116631</weight></elem>
-      <elem><id>pion_b1xD1_J1__J2_H2D2A2</id> <weight>0.0344171</weight></elem>
-      <elem><id>pion_pion_2xD0_J0__J0_H0D2A2</id> <weight>-0.113066</weight></elem>
-      <elem><id>pion_pion_2xD2_J0__J0_H0D2A2</id> <weight>0.0705251</weight></elem>
-      <elem><id>pion_pion_2xD2_J2__J2_H0D2A2</id> <weight>-0.176744</weight></elem>
-      <elem><id>pion_pion_2xD2_J2__J2_H2D2A2</id> <weight>0.0824262</weight></elem>
-      <elem><id>pion_pionxD0_J0__J0_H0D2A2</id> <weight>1.08451</weight></elem>
-      <elem><id>pion_pionxD2_J0__J0_H0D2A2</id> <weight>0.678102</weight></elem>
-      <elem><id>pion_pionxD2_J2__J2_H0D2A2</id> <weight>-0.310151</weight></elem>
-      <elem><id>pion_pionxD2_J2__J2_H2D2A2</id> <weight>0.0642859</weight></elem>
-      <elem><id>pion_rho_2xD2_J1__J0_H0D2A2</id> <weight>0.100955</weight></elem>
-      <elem><id>pion_rho_2xD2_J1__J2_H0D2A2</id> <weight>-0.145619</weight></elem>
-      <elem><id>pion_rho_2xD2_J1__J2_H2D2A2</id> <weight>0.0641024</weight></elem>
-      <elem><id>pion_rhoxD2_J1__J0_H0D2A2</id> <weight>0.199039</weight></elem>
-      <elem><id>pion_rhoxD2_J1__J2_H0D2A2</id> <weight>-0.158671</weight></elem>
-      <elem><id>pion_rhoxD2_J1__J2_H2D2A2</id> <weight>0.0738092</weight></elem>
-    </Weights>
+    <Val>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_a0xD2_J2__J2_H2D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.0169443</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_a1xD0_J0__J1_H0D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.0691202</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_a1xD2_J0__J1_H0D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.0197572</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_a1xD2_J2__J1_H0D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.0339169</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_a1xD2_J2__J2_H2D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.0587191</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_a1xD2_J2__J3_H0D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.0222593</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_a1xD2_J2__J3_H2D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.0080402</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_b0xD2_J1__J1_H0D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.112776</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_b1xD2_J1__J1_H0D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.12991</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_b1xD2_J1__J2_H2D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.0421738</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_rho_2xD1_J1__J1_H0D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.180107</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_rho_2xD1_J1__J2_H2D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.0037079</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_rhoxD1_J1__J1_H0D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.169986</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_rhoxD1_J1__J2_H2D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.0044078</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_b1xD1_J1__J0_H0D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.0628593</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_b1xD1_J1__J2_H0D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.116631</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_b1xD1_J1__J2_H2D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.0344171</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_pion_2xD0_J0__J0_H0D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.113066</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_pion_2xD2_J0__J0_H0D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.0705251</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_pion_2xD2_J2__J2_H0D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.176744</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_pion_2xD2_J2__J2_H2D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.0824262</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_pionxD0_J0__J0_H0D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>1.08451</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_pionxD2_J0__J0_H0D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.678102</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_pionxD2_J2__J2_H0D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.310151</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_pionxD2_J2__J2_H2D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.0642859</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_rho_2xD2_J1__J0_H0D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.100955</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_rho_2xD2_J1__J2_H0D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.145619</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_rho_2xD2_J1__J2_H2D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.0641024</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_rhoxD2_J1__J0_H0D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.199039</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_rhoxD2_J1__J2_H0D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.158671</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_rhoxD2_J1__J2_H2D2A2</name>
+              <smear/>
+              <mom_type>1 1 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.0738092</Val>
+      </elem>
+    </Val>
   </elem>
   <elem>
     <Key>
-      <id>pion_proj1_p111_H0D3A2</id> <smear></smear>
+      <name>pion_proj1_p111_H0D3A2</name> 
+      <smear/>
+      <mom_type>1 1 1</mom_type>
     </Key>
-    <Weights>
-      <elem><id>a_a1xD0_J0__J1_H0D3A2</id> <weight>-1.68216</weight></elem>
-      <elem><id>a_a1xD2_J0__J1_H0D3A2</id> <weight>-1.08566</weight></elem>
-      <elem><id>a_a1xD2_J2__J1_H0D3A2</id> <weight>-0.0189614</weight></elem>
-      <elem><id>a_a1xD2_J2__J3_H0D3A2</id> <weight>0.194839</weight></elem>
-      <elem><id>a_a1xD2_J2__J3_H3D3A2</id> <weight>-0.107972</weight></elem>
-      <elem><id>a_b0xD2_J1__J1_H0D3A2</id> <weight>0.199842</weight></elem>
-      <elem><id>a_b1xD2_J1__J1_H0D3A2</id> <weight>-0.0907777</weight></elem>
-      <elem><id>a_rho_2xD1_J1__J1_H0D3A2</id> <weight>-0.325069</weight></elem>
-      <elem><id>a_rhoxD1_J1__J1_H0D3A2</id> <weight>-0.0121491</weight></elem>
-      <elem><id>pion_b1xD1_J1__J0_H0D3A2</id> <weight>0.5575</weight></elem>
-      <elem><id>pion_b1xD1_J1__J2_H0D3A2</id> <weight>-0.468153</weight></elem>
-      <elem><id>pion_pion_2xD0_J0__J0_H0D3A2</id> <weight>-2.85756</weight></elem>
-      <elem><id>pion_pion_2xD2_J0__J0_H0D3A2</id> <weight>-1.73064</weight></elem>
-      <elem><id>pion_pion_2xD2_J2__J2_H0D3A2</id> <weight>0.250281</weight></elem>
-      <elem><id>pion_pionxD0_J0__J0_H0D3A2</id> <weight>-3.94883</weight></elem>
-      <elem><id>pion_pionxD2_J0__J0_H0D3A2</id> <weight>-2.22764</weight></elem>
-      <elem><id>pion_pionxD2_J2__J2_H0D3A2</id> <weight>0.481988</weight></elem>
-      <elem><id>pion_rho_2xD2_J1__J0_H0D3A2</id> <weight>0.362664</weight></elem>
-      <elem><id>pion_rho_2xD2_J1__J2_H0D3A2</id> <weight>0.315175</weight></elem>
-      <elem><id>pion_rhoxD2_J1__J0_H0D3A2</id> <weight>0.432699</weight></elem>
-      <elem><id>pion_rhoxD2_J1__J2_H0D3A2</id> <weight>0.0614126</weight></elem>
-    </Weights>
+    <Val>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_a1xD0_J0__J1_H0D3A2</name>
+              <smear/>
+              <mom_type>1 1 1</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-1.68216</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_a1xD2_J0__J1_H0D3A2</name>
+              <smear/>
+              <mom_type>1 1 1</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-1.08566</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_a1xD2_J2__J1_H0D3A2</name>
+              <smear/>
+              <mom_type>1 1 1</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.0189614</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_a1xD2_J2__J3_H0D3A2</name>
+              <smear/>
+              <mom_type>1 1 1</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.194839</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_a1xD2_J2__J3_H3D3A2</name>
+              <smear/>
+              <mom_type>1 1 1</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.107972</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_b0xD2_J1__J1_H0D3A2</name>
+              <smear/>
+              <mom_type>1 1 1</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.199842</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_b1xD2_J1__J1_H0D3A2</name>
+              <smear/>
+              <mom_type>1 1 1</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.0907777</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_rho_2xD1_J1__J1_H0D3A2</name>
+              <smear/>
+              <mom_type>1 1 1</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.325069</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_rhoxD1_J1__J1_H0D3A2</name>
+              <smear/>
+              <mom_type>1 1 1</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.0121491</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_b1xD1_J1__J0_H0D3A2</name>
+              <smear/>
+              <mom_type>1 1 1</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.5575</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_b1xD1_J1__J2_H0D3A2</name>
+              <smear/>
+              <mom_type>1 1 1</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.468153</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_pion_2xD0_J0__J0_H0D3A2</name>
+              <smear/>
+              <mom_type>1 1 1</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-2.85756</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_pion_2xD2_J0__J0_H0D3A2</name>
+              <smear/>
+              <mom_type>1 1 1</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-1.73064</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_pion_2xD2_J2__J2_H0D3A2</name>
+              <smear/>
+              <mom_type>1 1 1</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.250281</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_pionxD0_J0__J0_H0D3A2</name>
+              <smear/>
+              <mom_type>1 1 1</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-3.94883</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_pionxD2_J0__J0_H0D3A2</name>
+              <smear/>
+              <mom_type>1 1 1</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-2.22764</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_pionxD2_J2__J2_H0D3A2</name>
+              <smear/>
+              <mom_type>1 1 1</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.481988</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_rho_2xD2_J1__J0_H0D3A2</name>
+              <smear/>
+              <mom_type>1 1 1</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.362664</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_rho_2xD2_J1__J2_H0D3A2</name>
+              <smear/>
+              <mom_type>1 1 1</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.315175</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_rhoxD2_J1__J0_H0D3A2</name>
+              <smear/>
+              <mom_type>1 1 1</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.432699</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_rhoxD2_J1__J2_H0D3A2</name>
+              <smear/>
+              <mom_type>1 1 1</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.0614126</Val>
+      </elem>
+    </Val>
   </elem>
   <elem>
     <Key>
-      <id>pion_proj1_p200_H0D4A2</id> <smear></smear>
+      <name>pion_proj1_p200_H0D4A2</name> 
+      <smear/>
+      <mom_type>2 0 0</mom_type>
     </Key>
-    <Weights>
-      <elem><id>a_a1xD0_J0__J1_H0D4A2</id> <weight>0.184858</weight></elem>
-      <elem><id>a_a1xD2_J0__J1_H0D4A2</id> <weight>0.329608</weight></elem>
-      <elem><id>a_a1xD2_J2__J1_H0D4A2</id> <weight>-0.0286205</weight></elem>
-      <elem><id>a_a1xD2_J2__J3_H0D4A2</id> <weight>-0.419923</weight></elem>
-      <elem><id>a_b0xD2_J1__J1_H0D4A2</id> <weight>0.164953</weight></elem>
-      <elem><id>a_b1xD2_J1__J1_H0D4A2</id> <weight>0.0477688</weight></elem>
-      <elem><id>a_rho_2xD1_J1__J1_H0D4A2</id> <weight>0.387421</weight></elem>
-      <elem><id>a_rhoxD1_J1__J1_H0D4A2</id> <weight>-0.124637</weight></elem>
-      <elem><id>pion_b1xD1_J1__J0_H0D4A2</id> <weight>0.150064</weight></elem>
-      <elem><id>pion_b1xD1_J1__J2_H0D4A2</id> <weight>-0.523743</weight></elem>
-      <elem><id>pion_pion_2xD0_J0__J0_H0D4A2</id> <weight>0.148716</weight></elem>
-      <elem><id>pion_pion_2xD2_J0__J0_H0D4A2</id> <weight>0.20688</weight></elem>
-      <elem><id>pion_pion_2xD2_J2__J2_H0D4A2</id> <weight>-1.05638</weight></elem>
-      <elem><id>pion_pionxD0_J0__J0_H0D4A2</id> <weight>2.3497</weight></elem>
-      <elem><id>pion_pionxD2_J0__J0_H0D4A2</id> <weight>1.43011</weight></elem>
-      <elem><id>pion_pionxD2_J2__J2_H0D4A2</id> <weight>-1.65641</weight></elem>
-      <elem><id>pion_rho_2xD2_J1__J0_H0D4A2</id> <weight>-0.208417</weight></elem>
-      <elem><id>pion_rho_2xD2_J1__J2_H0D4A2</id> <weight>-0.0982839</weight></elem>
-      <elem><id>pion_rhoxD2_J1__J0_H0D4A2</id> <weight>0.185708</weight></elem>
-      <elem><id>pion_rhoxD2_J1__J2_H0D4A2</id> <weight>0.0618659</weight></elem>
-    </Weights>
+    <Val>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_a1xD0_J0__J1_H0D4A2</name>
+              <smear/>
+              <mom_type>2 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.184858</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_a1xD2_J0__J1_H0D4A2</name>
+              <smear/>
+              <mom_type>2 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.329608</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_a1xD2_J2__J1_H0D4A2</name>
+              <smear/>
+              <mom_type>2 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.0286205</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_a1xD2_J2__J3_H0D4A2</name>
+              <smear/>
+              <mom_type>2 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.419923</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_b0xD2_J1__J1_H0D4A2</name>
+              <smear/>
+              <mom_type>2 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.164953</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_b1xD2_J1__J1_H0D4A2</name>
+              <smear/>
+              <mom_type>2 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.0477688</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_rho_2xD1_J1__J1_H0D4A2</name>
+              <smear/>
+              <mom_type>2 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.387421</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>a_rhoxD1_J1__J1_H0D4A2</name>
+              <smear/>
+              <mom_type>2 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.124637</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_b1xD1_J1__J0_H0D4A2</name>
+              <smear/>
+              <mom_type>2 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.150064</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_b1xD1_J1__J2_H0D4A2</name>
+              <smear/>
+              <mom_type>2 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.523743</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_pion_2xD0_J0__J0_H0D4A2</name>
+              <smear/>
+              <mom_type>2 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.148716</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_pion_2xD2_J0__J0_H0D4A2</name>
+              <smear/>
+              <mom_type>2 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.20688</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_pion_2xD2_J2__J2_H0D4A2</name>
+              <smear/>
+              <mom_type>2 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-1.05638</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_pionxD0_J0__J0_H0D4A2</name>
+              <smear/>
+              <mom_type>2 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>2.3497</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_pionxD2_J0__J0_H0D4A2</name>
+              <smear/>
+              <mom_type>2 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>1.43011</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_pionxD2_J2__J2_H0D4A2</name>
+              <smear/>
+              <mom_type>2 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-1.65641</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_rho_2xD2_J1__J0_H0D4A2</name>
+              <smear/>
+              <mom_type>2 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.208417</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_rho_2xD2_J1__J2_H0D4A2</name>
+              <smear/>
+              <mom_type>2 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.0982839</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_rhoxD2_J1__J0_H0D4A2</name>
+              <smear/>
+              <mom_type>2 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.185708</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>pion_rhoxD2_J1__J2_H0D4A2</name>
+              <smear/>
+              <mom_type>2 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.0618659</Val>
+      </elem>
+    </Val>
   </elem>
 </ProjectedOps>

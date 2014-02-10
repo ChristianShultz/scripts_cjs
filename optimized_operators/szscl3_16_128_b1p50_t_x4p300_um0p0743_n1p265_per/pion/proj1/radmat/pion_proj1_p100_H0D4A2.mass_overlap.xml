@@ -6,11 +6,11 @@
   <ncfg>535</ncfg>
   <resize>false</resize>
   <isProjected>true</isProjected>
-  <phase_real>1.</phase_real>
+  <phase_real>1</phase_real>
   <phase_imag>0.</phase_imag>
   <Z_type>2E</Z_type>
   <dbname>pion_proj1_p100_H0D4A2.sdb</dbname>
-  <pid>pion_proj1_p100_H0D4A2</pid>
+  <pid>pion_proj1</pid>
   <LG>true</LG>
   <t0_extract>9</t0_extract>
   <redstar>
