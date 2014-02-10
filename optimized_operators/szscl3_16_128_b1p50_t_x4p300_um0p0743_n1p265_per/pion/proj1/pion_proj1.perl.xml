@@ -1,0 +1,89 @@
+<perldata>
+ <arrayref memory_address="0x8a4030">
+  <item key="0">
+   <hashref blessed_package="OPparams" memory_address="0x827778">
+    <item key="ENERGY">0.36834 0.00141064</item>
+    <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
+    <item key="MOM">p000</item>
+    <item key="NCFG">535</item>
+    <item key="PHASER">1</item>
+    <item key="PID">pion_proj1</item>
+    <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/A1mM</item>
+    <item key="REP">A1</item>
+    <item key="REPSTEM">A1</item>
+    <item key="STATE">1</item>
+    <item key="T0">7</item>
+    <item key="TWOIZ">2</item>
+    <item key="TZ">17</item>
+   </hashref>
+  </item>
+  <item key="1">
+   <hashref blessed_package="OPparams" memory_address="0xde8868">
+    <item key="ENERGY">0.379663 0.00244263</item>
+    <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
+    <item key="MOM">p100</item>
+    <item key="NCFG">535</item>
+    <item key="PHASER">1</item>
+    <item key="PID">pion_proj1</item>
+    <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D4A2M_mom1</item>
+    <item key="REP">D4A2</item>
+    <item key="REPSTEM">H0D4A2</item>
+    <item key="STATE">2</item>
+    <item key="T0">9</item>
+    <item key="TWOIZ">2</item>
+    <item key="TZ">18</item>
+   </hashref>
+  </item>
+  <item key="2">
+   <hashref blessed_package="OPparams" memory_address="0xde89b8">
+    <item key="ENERGY">0.397496 0.00254953</item>
+    <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
+    <item key="MOM">p110</item>
+    <item key="NCFG">535</item>
+    <item key="PHASER">1</item>
+    <item key="PID">pion_proj1</item>
+    <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D2A2M_mom2</item>
+    <item key="REP">D2A2</item>
+    <item key="REPSTEM">H0D2A2</item>
+    <item key="STATE">3</item>
+    <item key="T0">7</item>
+    <item key="TWOIZ">2</item>
+    <item key="TZ">14</item>
+   </hashref>
+  </item>
+  <item key="3">
+   <hashref blessed_package="OPparams" memory_address="0xde8b08">
+    <item key="ENERGY">0.419211 0.00368868</item>
+    <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
+    <item key="MOM">p111</item>
+    <item key="NCFG">535</item>
+    <item key="PHASER">1</item>
+    <item key="PID">pion_proj1</item>
+    <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D3A2M_mom3</item>
+    <item key="REP">D3A2</item>
+    <item key="REPSTEM">H0D3A2</item>
+    <item key="STATE">2</item>
+    <item key="T0">8</item>
+    <item key="TWOIZ">2</item>
+    <item key="TZ">16</item>
+   </hashref>
+  </item>
+  <item key="4">
+   <hashref blessed_package="OPparams" memory_address="0xde8c58">
+    <item key="ENERGY">0.436623 0.00527369</item>
+    <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
+    <item key="MOM">p200</item>
+    <item key="NCFG">535</item>
+    <item key="PHASER">1</item>
+    <item key="PID">pion_proj1</item>
+    <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D4A2M_mom4</item>
+    <item key="REP">D4A2</item>
+    <item key="REPSTEM">H0D4A2</item>
+    <item key="STATE">2</item>
+    <item key="T0">8</item>
+    <item key="TWOIZ">2</item>
+    <item key="TZ">16</item>
+   </hashref>
+  </item>
+ </arrayref>
+</perldata>
