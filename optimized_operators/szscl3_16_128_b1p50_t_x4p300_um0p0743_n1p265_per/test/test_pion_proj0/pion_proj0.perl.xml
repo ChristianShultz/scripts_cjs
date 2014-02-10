@@ -1,7 +1,8 @@
 <perldata>
- <arrayref memory_address="0x10edc28">
+ <arrayref memory_address="0x23a3cf0">
   <item key="0">
-   <hashref blessed_package="OPparams" memory_address="0xb7e418">
+   <hashref blessed_package="OPparams" memory_address="0x1e30778">
+    <item key="ENERGY">0.148382 0.000125406</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="MOM">p000</item>
     <item key="NCFG">535</item>
@@ -17,7 +18,8 @@
    </hashref>
   </item>
   <item key="1">
-   <hashref blessed_package="OPparams" memory_address="0x11394f8">
+   <hashref blessed_package="OPparams" memory_address="0x23f0af0">
+    <item key="ENERGY">0.18684 0.000128824</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="MOM">p100</item>
     <item key="NCFG">535</item>
@@ -33,7 +35,8 @@
    </hashref>
   </item>
   <item key="2">
-   <hashref blessed_package="OPparams" memory_address="0x1139630">
+   <hashref blessed_package="OPparams" memory_address="0x23f0c40">
+    <item key="ENERGY">0.218533 0.000194076</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="MOM">p110</item>
     <item key="NCFG">535</item>
@@ -49,7 +52,8 @@
    </hashref>
   </item>
   <item key="3">
-   <hashref blessed_package="OPparams" memory_address="0x1139768">
+   <hashref blessed_package="OPparams" memory_address="0x23f0d90">
+    <item key="ENERGY">0.246631 0.000223377</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="MOM">p111</item>
     <item key="NCFG">535</item>
@@ -65,7 +69,8 @@
    </hashref>
   </item>
   <item key="4">
-   <hashref blessed_package="OPparams" memory_address="0x10f5098">
+   <hashref blessed_package="OPparams" memory_address="0x23f0ee0">
+    <item key="ENERGY">0.270533 0.000318313</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="MOM">p200</item>
     <item key="NCFG">535</item>

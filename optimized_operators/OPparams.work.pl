@@ -7,6 +7,7 @@
 use strict; 
 use File::Basename;
 use File::Copy;
+use XML::Dumper;
 
 sub rep_list
 {
@@ -256,6 +257,8 @@ sub print_trailer_perl
   &make_proj_plots(\$listfile);
 
   &write_radmat_xml(\\\@all_operators); 
+  
+  &serialize_ops_list( \"$pid.perl.xml\" , \\\@all_operators ); 
 EOF
 
 
@@ -331,6 +334,7 @@ sub run_extract_all_v_coeffs_svd
   chomp $base;  
   my $destdir = $op->recon_dir(); 
 
+  $op->calc_mass(); 
 
   my $loc = "/u/home/shultz/optimized_operators/";
   my $exe = $loc ."extract_all_v_coeffs_svd.pl";
@@ -415,6 +419,14 @@ sub make_proj_plots
   die ( "input not present : $file " ) unless -f $file; 
 
   system ( " ${exe} $file " ) == 0 || die ($_); 
+}
+
+sub serialize_ops_list
+{
+  my ($f , $aref)  = @_; 
+
+  my $dump = XML::Dumper->new(); 
+  $dump->pl2xml( $aref , $f ); 
 }
 
 1;  # for require 

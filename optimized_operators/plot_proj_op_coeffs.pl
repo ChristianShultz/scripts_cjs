@@ -57,7 +57,12 @@ foreach my $key (@keys)
 # loop and run gnuplot
 foreach my $plot (@plots)
 {
-  system("gnuplot -persist $plot"); 
+  my @a = @{ $plot }; 
+  my $p = $a[0]; 
+  my $f = $a[1]; 
+  system("gnuplot -persist $p"); 
+  unlink $p; 
+  unlink $f; 
 }
 
 
@@ -160,7 +165,9 @@ if($saveplot)
 close OUT; 
 
 
-return $plot; 
+my @r = ( $plot , $fout ) ; 
+
+return \@r; 
 }
 
 

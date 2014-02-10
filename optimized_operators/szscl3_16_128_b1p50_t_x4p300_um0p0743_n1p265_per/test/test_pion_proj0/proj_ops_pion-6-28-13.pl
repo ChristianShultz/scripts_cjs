@@ -114,13 +114,7 @@ my @all_ops = ();
 
   &write_radmat_xml(\@all_operators); 
 
-
-  # test begins here
-  my $dump = new XML::Dumper; 
-  my $perl = \@all_operators;
-  my $xml = '';
-  my $f = "f.xml";
-  $dump->pl2xml( $perl, $f ); 
+  &serialize_ops_list( "pion_proj0.perl.xml" , \@all_operators);  
   
 
 

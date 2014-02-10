@@ -26,6 +26,7 @@ sub new
     ENSEMBLE => undef,  
     RECONDIR => undef,
     PHASER => undef, 
+    ENERGY=> undef, 
     @_,
   }; ## self 
 
@@ -110,6 +111,12 @@ sub phaser {
   return $self->{PHASER};
 }
 
+sub mass {
+  my $self = shift; 
+  if(@_) {$self->{ENERGY} = shift}; 
+  return $self->{ENERGY};
+}
+
 #
 #
 # parameterless methods
@@ -136,6 +143,25 @@ sub split_mom
   # drop first char and put spaces btwn mom components
   return $c[1] . " " . $c[2] . " " . $c[3] ;  
 }
+
+sub calc_mass
+{ 
+  my $self = shift; 
+
+  my $massf = $self->recon_dir() . "/t0" . $self->t0(); 
+  $massf .= "/MassJackFiles/mass_t0_" . $self->t0() . "_reorder_"; 
+  $massf .= "state" . $self->state() . ".jack"; 
+
+  my $s = `calc $massf | awk '{ print \$2 " " \$3 }'`;
+  chomp $s; 
+  
+#  my ( $e , $ve ) = split /\s+/ , $s ; 
+#  print $massf . "\n" . $e . " +/- " . $ve . "\n"
+
+  $self->mass($s); 
+}
+
+
 
 
 sub write_mass_overlap_xml
