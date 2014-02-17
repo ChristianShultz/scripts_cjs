@@ -1346,7 +1346,6 @@ sub print_UNSMEARED_HADRON_NODE_DISTILLATION__harom
   my $t_origin = $self->t_origin();
 
   my $gauge = $self->gauge_file_3d(); 
-  my $colorvec = $self->colorvec_file(); 
   my $unhadnode = $self->scratch_seq_callback("unsmeared_hadron_node_xml"); 
   my $unhadop = $self->scratch_seq_callback("unsmeared_hadron_node_sdb");
 

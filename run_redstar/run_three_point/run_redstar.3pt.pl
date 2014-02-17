@@ -70,7 +70,7 @@ push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.
 push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p110.sdb" . $seqno ; 
 push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p111.sdb" . $seqno ; 
 push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p200.sdb" . $seqno ; 
-# push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p000.sdb" . $seqno ; 
+push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p000.sdb" . $seqno ; 
 push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p100.sdb" . $seqno ; 
 push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p110.sdb" . $seqno ; 
 push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p111.sdb" . $seqno ; 
@@ -103,13 +103,15 @@ my $dest_corr = $param->work_dir() . "/" . $param->stem();
 $dest_corr .= "/meson_3pt_redstar/unsmeared_insertion/";
 $dest_corr .= $mat;
 
-# check that it exists
-if ( ! -d $dest_corr ) 
-{
-  print "ERROR: The work dest, $dest_corr, does not exist and we cannot make it from a remote node";
-  print "\n because christian never bothered to figure out how\n";
-  die ( "UNHOLY DEATH!" ) ; 
-}
+# cant see the work disk from the nodes?
+#
+## check that it exists
+#if ( ! -d $dest_corr ) 
+#{
+#  print "ERROR: The work dest, $dest_corr, does not exist and we cannot make it from a remote node";
+#  print "\n because christian never bothered to figure out how\n";
+#  die ( "UNHOLY DEATH!" ) ; 
+#}
 
 $dest_corr .= "/" . $param->stem() . ".qq_0_1_2_3_4.sdb" . $param->seqno(); 
 $param->copy_back_rename_rcp($scratch_corr,$dest_corr);

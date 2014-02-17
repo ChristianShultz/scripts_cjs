@@ -26,6 +26,7 @@ sub new
     ENSEMBLE => undef,  
     RECONDIR => undef,
     PHASER => undef, 
+    HYBRID=> undef, 
     ENERGY=> undef, 
     @_,
   }; ## self 
@@ -109,6 +110,12 @@ sub phaser {
   my $self = shift; 
   if (@_) {$self->{PHASER} = shift;}
   return $self->{PHASER};
+}
+
+sub hybrid {
+  my $self = shift; 
+  if (@_) {$self->{HYBRID} = shift;}
+  return $self->{HYBRID};
 }
 
 sub mass {

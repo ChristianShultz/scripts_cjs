@@ -71,6 +71,7 @@ foreach my $key (@keys)
 close OUT;
 
 open PLOT , ">" , $plot;
+print PLOT "set xrange[-0.1:4.1] \n";
 print PLOT "t = 6.2831853 \n";
 print PLOT "l = $L_s \n";
 print PLOT "f = (t/l)*(t/l) \n";

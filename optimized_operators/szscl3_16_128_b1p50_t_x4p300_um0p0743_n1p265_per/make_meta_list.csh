@@ -30,6 +30,8 @@ foreach list (  pion/proj0/weights.pion_proj0.list \
                 pion/proj1/weights.pion_proj1.list \
                 pion/proj2/weights.pion_proj2.list \
                 rho/proj0/weights.rho_proj0.list \
+                rho/proj1/weights.rho_proj1.list \
+                rho/proj2/weights.rho_proj2.list \
     )
 
     if (! -f $list) then 

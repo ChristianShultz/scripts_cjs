@@ -29,6 +29,8 @@ foreach db (  pion/proj0/radmat/pion_proj0.sdb \
               pion/proj1/radmat/pion_proj1.sdb \
               pion/proj2/radmat/pion_proj2.sdb \
               rho/proj0/radmat/rho_proj0.sdb \
+              rho/proj1/radmat/rho_proj1.sdb \
+              rho/proj2/radmat/rho_proj2.sdb \
     )
 
     if (! -f $db) then 

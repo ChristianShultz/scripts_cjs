@@ -5,12 +5,17 @@ use OPparams;
 use File::Basename;
 use XML::Dumper; 
 
+our $hybrid_line_number = init_hybrid_params(); 
+
+
 # list of perl xml 
 my @fs = ( 
   "pion/proj0/pion_proj0.perl.xml",
   "pion/proj1/pion_proj1.perl.xml", 
   "pion/proj2/pion_proj2.perl.xml", 
-  "rho/proj0/rho_proj0.perl.xml" 
+  "rho/proj0/rho_proj0.perl.xml", 
+  "rho/proj1/rho_proj1.perl.xml", 
+  "rho/proj2/rho_proj2.perl.xml" 
 ); 
 
 # move from xml to perl 
@@ -19,20 +24,14 @@ my $dump = XML::Dumper->new();
 # ops list 
 my @ops = (); 
 
-# invert the serialization 
+# invert the serialization, 
+# push the operator into the ops array 
 foreach my $f ( @fs ) 
 {
- my $ref =  $dump->xml2pl( $f ); 
- push @ops , @{ $ref };
+  my $ref =  $dump->xml2pl( $f ); 
+  push @ops , @{ $ref };
 }
 
-## what did we pull out
-#print "extracted.. \n";
-#
-#foreach my $op ( @ops ) 
-#{
-#  print $op->op_name() . "\n";
-#}
 
 # sort the operators by momentum 
 my @moms = ( "p000" ) ; # , "p100" , "p110" , "p111" , "p200" ); 
@@ -50,7 +49,7 @@ foreach my $p ( @moms )
   }
 }
 
-# make spectral plots
+# make spectral plots for each momentum considered
 foreach my $p ( keys %mom_hash ) 
 {
   my @os = @{ $mom_hash{$p} };
@@ -68,15 +67,47 @@ sub make_gnu_spectrum_plots
   my %particles = (); 
   foreach my $op ( @ops ) 
   {
-    my $pid = $op->op_name(); 
-    my ( $name , @trash ) = split /_/ , $pid ; 
-
-    print $pid . " " . $name . "\n"; 
-    
-    push @{ $particles{$name} } , $op unless ! exists $particles{$name}; 
-    $particles{$name} = [$op] unless exists $particles{$name};
+    my $key = sort_operators( $op ) ;
+    push @{ $particles{$key} } , $op unless ! exists $particles{$key}; 
+    $particles{$key} = [$op] unless exists $particles{$key};
   }
 
+  my $dat = &write_data_files( $f , \%particles ); 
+  my $gp = &write_gnuplot_file( $f , $dat , "foo" ) ; 
+
+
+  system ( "gnuplot -persist $gp" ); 
+
+}
+
+sub write_gnuplot_file
+{
+  my ($f, $dat , $line_styles) = @_; 
+
+  my $dir = "tmp";
+  mkdir $dir;
+  my $gp =  $dir . "/" . $f . ".gp"; 
+  open GNU , ">" , $gp ; 
+
+  print GNU "set terminal x11 enhanced \n";
+  print GNU xtic_function(); 
+  print GNU "unset key \n";
+  print GNU "set style fill solid .5 border -1\n";
+  print GNU "set title \"Spectrum($f)\" \n";
+  print GNU "set ylabel \"a_{t} m_{h}\"\n";
+  print GNU "set xlabel \"hadron\"\n";
+  print GNU "plot \"$dat\" u (\$1+\$6):2:4:3:7 w boxxyerrorbars lc variable \n";
+
+  close GNU ; 
+
+  return $gp; 
+}
+
+
+sub write_data_files
+{
+  my ($f,$href) = @_; 
+  my %particles = %{ $href };
 
   my $dir = "tmp";
   mkdir $dir;
@@ -86,51 +117,211 @@ sub make_gnu_spectrum_plots
 
   my $xpos = 0; 
   my $color = 1; 
-  my $xtics = "set xtics (";
   foreach my $key ( sort { sort_function($a) <=> sort_function($b) } keys %particles ) 
   {
     $xpos++; 
-    $xtics .= "\"$key\" $xpos ,";  
     foreach my $operator ( @{ $particles{$key} } )
     {
-      my $string = $xpos . " " .  $operator->mass() . " 0.1 " . $key . " " . 0.2*rand(1) . " " . $xpos;  
+      my $ref = sort_function($key); 
+      my $string = @{$ref}[0] . " " .  $operator->mass() . " 0.1 " . $key . " " . 0.1*(1 - rand(2)) . " ";
+      $string .= state_color_function( $key ,  $operator ) ; 
       print OUT $string . "\n";
     }
   }
-  chop $xtics; 
-  $xtics .= ")\n";
 
   close OUT; 
 
-  my $gp =  $dir . "/" . $f . ".gp"; 
-  open GNU , ">" , $gp ; 
-
-  print GNU "set terminal x11 enhanced \n";
-  print GNU "unset key \n";
-  print GNU "set style fill solid .5 border -1\n";
-  print GNU "set title \"Spectrum($f)\" \n";
-  print GNU "set ylabel \"a_{t} m_{h}\"\n";
-  print GNU "set xlabel \"hadron\"\n";
-  print GNU $xtics; 
-  print GNU "plot \"$dat\" u (\$1+\$6):2:4:3:7 w boxxyerrorbars lc variable \n";
-
-  close GNU ; 
-
-  system ( "gnuplot -persist $gp" ); 
-
+  return $dat; 
 }
 
-
+#
+#
+# OPERATOR SORTING FUNCTIONS 
+#
+#
 sub sort_function
 {
-  my $f = shift; 
-  my %hash = ();  
-  
-  $hash{"pion"} = 1; 
-  $hash{"rho"} = 2; 
-
-  my $idx = 10; 
-  $idx = $hash{$f} if exists $hash{$f};
-  return $idx; 
+  my $id = shift; 
+  return function_callback( $id , "T"  ); 
 }
 
+sub xtic_function
+{
+  return function_callback( "foo" , undef ); 
+}
+
+#
+#
+# PICK SORTING METHOD
+#
+#
+
+
+sub sort_operators
+{
+  my $op = shift; 
+#  return sort_operators_name($op); 
+  return sort_operators_JPC($op); 
+}
+
+
+sub function_callback
+{
+  my ($p1,$p2) = @_; 
+#  return sort_function_particle_name($p1,$p2); 
+  return sort_function_particle_JPC($p1,$p2); 
+}
+
+
+#
+#
+# SORT OPERATORS BY PARTICLE NAME 
+#
+#
+
+
+sub sort_operators_name
+{
+  my $op = shift; 
+  my $pid = $op->op_name(); 
+  my ( $name , @trash ) = split /_/ , $pid ; 
+
+  print $pid . " " . $name . "\n"; 
+  return $name; 
+}
+
+
+# cook up a sorting function and also use it for xtics 
+sub sort_function_particle_name
+{
+  my ($f,$mode) = @_;
+
+  my %hash = ();  
+  my $bad_idx = [-2,7]; 
+  $hash{"pion"} = [1,1]; 
+  $hash{"rho"} = [2,2]; 
+  $hash{"unknown"} = $bad_idx; 
+
+  if ( $mode ) 
+  {
+    my $idx = $bad_idx; 
+    $idx = $hash{$f} if exists $hash{$f};
+    return $idx; 
+  }
+  else
+  {
+    my $s = "set xtics ( "; 
+    foreach my $p ( keys %hash ) 
+    {
+      my $val = @{ $hash{$p} }[0];
+      $s .= " \"$p\"  $val ,"; 
+    }
+    chop $s; 
+    $s .= ") \n";
+    return $s; 
+  }
+}
+
+
+
+#
+#
+# SORT OPERATORS BY PARTICLE JPC
+#
+#
+
+
+sub sort_operators_JPC
+{
+  my $op = shift; 
+  my $pid = $op->op_name(); 
+  my ( $name , @trash ) = split /_/ , $pid ; 
+
+  my %hash = ();  
+  my $bad_idx = -2; 
+  $hash{"pion"} = "0-+"; 
+  $hash{"rho"} = "1--"; 
+
+  my $ret = "unknown"; 
+  $ret = $hash{$name} if exists $hash{$name};
+
+  print $pid . " " . $ret . "\n"; 
+  return $ret; 
+}
+
+
+# cook up a sorting function and also use it for xtics 
+sub sort_function_particle_JPC
+{
+  my ($f,$mode) = @_;
+
+  my %hash = ();  
+  my $bad_idx = [-2,-2]; 
+#  $hash{"0--"} = [0,1]; 
+  $hash{"0-+"} = [1,1]; 
+#  $hash{"0+-"} = [2,1]; 
+#  $hash{"0++"} = [3,1]; 
+  $hash{"1--"} = [4,2]; 
+#  $hash{"1-+"} = [5,2]; 
+#  $hash{"1+-"} = [6,2]; 
+#  $hash{"1++"} = [7,2]; 
+#  $hash{"2--"} = [8,3]; 
+#  $hash{"2-+"} = [9,3]; 
+#  $hash{"2+-"} = [10,3]; 
+#  $hash{"2++"} = [11,3]; 
+#  $hash{"3--"} = [12,4]; 
+#  $hash{"3-+"} = [13,4]; 
+#  $hash{"3+-"} = [14,4]; 
+#  $hash{"3++"} = [15,4]; 
+#  $hash{"4--"} = [16,5]; 
+#  $hash{"4-+"} = [17,5]; 
+#  $hash{"4+-"} = [18,5]; 
+#  $hash{"4++"} = [19,5]; 
+  $hash{"unknown"} = $bad_idx; 
+
+  if ( $mode ) 
+  {
+    my $idx = $bad_idx; 
+    $idx = $hash{$f} if exists $hash{$f};
+    return $idx; 
+  }
+  else
+  {
+    my $s = "set xtics ( "; 
+    foreach my $p ( keys %hash ) 
+    {
+      my $val = @{ $hash{$p} }[0];
+      $s .= " \"$p\"  $val ,"; 
+    }
+    chop $s; 
+    $s .= ") \n";
+    return $s; 
+  }
+}
+
+
+#
+#
+# COLOR FUNCTIONS FOR PLOTTING
+#
+#
+
+
+sub init_hybrid_params
+{
+  return 8;
+}
+
+sub state_color_function
+{
+  my ($key,$op) = @_; 
+
+  my $c = sort_function( $key ); 
+  my $lc = @{ $c }[1]; 
+  if ( $op->hybrid() ) 
+  {
+    $lc = $hybrid_line_number; 
+  }
+
+  return $lc; 
+}
