@@ -113,7 +113,7 @@ $dest_corr .= $mat;
 #  die ( "UNHOLY DEATH!" ) ; 
 #}
 
-$dest_corr .= "/" . $param->stem() . ".qq_0_1_2_3_4.sdb" . $param->seqno(); 
+$dest_corr .= "/" . $param->stem() . ".qq_0-4.corr2.sdb" . $param->seqno(); 
 $param->copy_back_rename_rcp($scratch_corr,$dest_corr);
 
 exit ( 0 ) ; 

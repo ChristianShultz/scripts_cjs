@@ -2,7 +2,7 @@
 
 
 BEGIN{
-  push (@INC, "/u/home/shultz/git/radmat/scripts/three_point/check");
+  push (@INC, "/u/home/shultz/git/scripts_cjs/three_point/check");
 }
 
 use strict; 
@@ -64,7 +64,7 @@ foreach my $q2 (@qs)
 
     if( @tst )
     {
-      system ("multiplot_all_jack_inp.pl 1 1") == 0 || die (" multiplot failed "); 
+      system ("multiplot_all_jack_inp.pl 1 1") == 0 || print " multiplot failed \n"; 
     }
     else
     {
@@ -85,7 +85,7 @@ foreach my $q2 (@qs)
 
     if( @tst )
     {
-      system ("multiplot_all_jack_inp.pl 1 1") == 0 || die (" multiplot failed "); 
+      system ("multiplot_all_jack_inp.pl 1 1") == 0 || print " multiplot failed "; 
     }
     else
     {

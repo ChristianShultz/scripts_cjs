@@ -2,36 +2,13 @@
 
 use strict; 
 use OPparams;
+use ExtractedStates; 
 use File::Basename;
 use XML::Dumper; 
 
 our $hybrid_line_number = init_hybrid_params(); 
 
-
-# list of perl xml 
-my @fs = ( 
-  "pion/proj0/pion_proj0.perl.xml",
-  "pion/proj1/pion_proj1.perl.xml", 
-  "pion/proj2/pion_proj2.perl.xml", 
-  "rho/proj0/rho_proj0.perl.xml", 
-  "rho/proj1/rho_proj1.perl.xml", 
-  "rho/proj2/rho_proj2.perl.xml" 
-); 
-
-# move from xml to perl 
-my $dump = XML::Dumper->new(); 
-
-# ops list 
-my @ops = (); 
-
-# invert the serialization, 
-# push the operator into the ops array 
-foreach my $f ( @fs ) 
-{
-  my $ref =  $dump->xml2pl( $f ); 
-  push @ops , @{ $ref };
-}
-
+my @ops = @{ ExtractedStates::grab_all() }; 
 
 # sort the operators by momentum 
 my @moms = ( "p000" ) ; # , "p100" , "p110" , "p111" , "p200" ); 
@@ -95,7 +72,7 @@ sub write_gnuplot_file
   print GNU "set style fill solid .5 border -1\n";
   print GNU "set title \"Spectrum($f)\" \n";
   print GNU "set ylabel \"a_{t} m_{h}\"\n";
-  print GNU "set xlabel \"hadron\"\n";
+  print GNU "set xlabel \"channel\"\n";
   print GNU "plot \"$dat\" u (\$1+\$6):2:4:3:7 w boxxyerrorbars lc variable \n";
 
   close GNU ; 

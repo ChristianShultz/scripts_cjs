@@ -5,10 +5,11 @@ use warnings;
 use POSIX; 
 
 
-die("usage: $0 <mode 1->multiplot, 0->single graphs >") unless ($#ARGV == 0);
+die("usage: $0 <mode 1->multiplot, 0->single graphs > <grep string>") unless ($#ARGV == 1);
 my $mode = $ARGV[0];
+my $str = $ARGV[1]; 
 
-my @dat = `ls *.jack`;
+my @dat = `ls | grep $str `;
 
 chomp @dat; 
 
@@ -75,8 +76,9 @@ if($mode != 0)
       system ( $cmdr ) == 0 || die($_);
       system ( $cmdi ) == 0 || die($_); 
 
-
-      print GNU "set label 1 \"$stem\" at graph 0.45,0.9 font \',8\' \n";
+      my $ti = $stem; 
+      $ti =~ s/_/-/g; 
+      print GNU "set label 1 \"$ti\" at graph 0.1,0.95 font \',8\' \n";
       print GNU "plot \'tmp/${stem}.dat.real\' using 1:2:3 w yerr title \'real\', \\\n";
       print GNU " \'tmp/${stem}.dat.imag\' using 1:2:3 w yerr title \'imag\' \n";
     }

@@ -257,8 +257,8 @@ sub parse_id
   $self->hsnk( $snk[1] ); 
 
   # ins params
-  my ($trash,$mu) = split(/_/,$ins); 
-  $self->jmu($mu); 
+  my ($op,$mom) = split(/_/,$ins); 
+  $self->jmu($op); 
 }
 
 
@@ -269,7 +269,7 @@ sub parse_state
   my $str = shift;
 
   # split the name 
-  my($op,$sp,$h,$p,$I,$t) = split(/,/,$str); 
+  my($op,$p) = split(/_/,$str); 
 
   # return array
   my @params; 
@@ -298,9 +298,7 @@ sub parse_state
 
   push @params , \@m;
 
-# get the helicity
-$h = substr($h,1,length($h));
-push @params, $h; 
+push @params, $op; 
 
 
 return \@params; 
