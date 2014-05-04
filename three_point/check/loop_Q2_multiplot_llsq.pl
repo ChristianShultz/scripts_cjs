@@ -33,7 +33,7 @@ foreach my $q2 (@qs)
   chdir $q2dir || die(" coudnt move to $q2 "); 
 
 
-  my @lgs = split (/\s+/,  ` ls -al | grep ^d | awk '{ print \$9 }' | grep lefty | xargs ` );
+  my @lgs = split (/\s+/,  ` ls -al | grep ^d | awk '{ print \$9 }' | grep -v correlator | grep -v continuum | xargs ` );
 
   foreach my $lg (@lgs)
   {

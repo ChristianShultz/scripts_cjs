@@ -75,7 +75,7 @@ my @all_ops = ();
   $pion_proj1_p111_H0D3A2->t0(8);
   $pion_proj1_p111_H0D3A2->state(2); 
   $pion_proj1_p111_H0D3A2->tz(16);
-  $pion_proj1_p111_H0D3A2->phaser(1);
+  $pion_proj1_p111_H0D3A2->phaser(-1);
 
 
   my $pion_proj1_p200_H0D4A2 = OPparams->new();

@@ -31,6 +31,7 @@ foreach db (  pion/proj0/radmat/pion_proj0.sdb \
               rho/proj0/radmat/rho_proj0.sdb \
               rho/proj1/radmat/rho_proj1.sdb \
               rho/proj2/radmat/rho_proj2.sdb \
+              rho/proj3/radmat/rho_proj3.sdb \
     )
 
     if (! -f $db) then 
@@ -42,7 +43,7 @@ foreach db (  pion/proj0/radmat/pion_proj0.sdb \
 end
 
 
-set exe = $HOME/git-builds/radmat/bin/mass_overlap_db_combine
+set exe = $HOME/git-builds/formfactor/bin/mass_overlap_db_combine
 
 if ( ! -e $exe ) then 
   echo "executable $exe does not exist"

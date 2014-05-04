@@ -8,12 +8,9 @@ use XML::Dumper;
 
 my @ops = @{ ExtractedStates::grab_all() }; 
 
-my $p =  "p000";
 
 foreach my $op ( @ops ) 
 {
-  if ( $op->op_name() =~ $p ) 
-  {
     print $op->op_name();
 
     if ( $op->hybrid() ) 
@@ -27,5 +24,4 @@ foreach my $op ( @ops )
 
     print $op->mass() . "\n";
 
-  }
 }

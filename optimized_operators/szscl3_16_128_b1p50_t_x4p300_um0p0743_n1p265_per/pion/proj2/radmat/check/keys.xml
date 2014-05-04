@@ -3,45 +3,7 @@
 
 <Keys>
   <elem>
-    <particle_id>pion_proj2_p110_H0D2A2</particle_id>
-    <basic_key>
-      <CGs>
-      </CGs>
-      <Operators>
-        <elem>
-          <name>pion_proj2_p110_H0D2A2</name>
-          <smear></smear>
-          <mom_type>1 1 0</mom_type>
-        </elem>
-      </Operators>
-      <creation_op>false</creation_op>
-      <smearedP>true</smearedP>
-      <mom>0 0 0</mom>
-      <row>0</row>
-      <twoI_z>2</twoI_z>
-    </basic_key>
-  </elem>
-  <elem>
-    <particle_id>pion_proj2_p100_H0D4A2</particle_id>
-    <basic_key>
-      <CGs>
-      </CGs>
-      <Operators>
-        <elem>
-          <name>pion_proj2_p100_H0D4A2</name>
-          <smear></smear>
-          <mom_type>1 0 0</mom_type>
-        </elem>
-      </Operators>
-      <creation_op>false</creation_op>
-      <smearedP>true</smearedP>
-      <mom>0 0 0</mom>
-      <row>0</row>
-      <twoI_z>2</twoI_z>
-    </basic_key>
-  </elem>
-  <elem>
-    <particle_id>pion_proj2_p200_H0D4A2</particle_id>
+    <particle_id>pion_proj2</particle_id>
     <basic_key>
       <CGs>
       </CGs>
@@ -60,7 +22,7 @@
     </basic_key>
   </elem>
   <elem>
-    <particle_id>pion_proj2_p111_H0D3A2</particle_id>
+    <particle_id>pion_proj2</particle_id>
     <basic_key>
       <CGs>
       </CGs>
@@ -79,7 +41,26 @@
     </basic_key>
   </elem>
   <elem>
-    <particle_id>pion_proj2_p000_A1</particle_id>
+    <particle_id>pion_proj2</particle_id>
+    <basic_key>
+      <CGs>
+      </CGs>
+      <Operators>
+        <elem>
+          <name>pion_proj2_p100_H0D4A2</name>
+          <smear></smear>
+          <mom_type>1 0 0</mom_type>
+        </elem>
+      </Operators>
+      <creation_op>false</creation_op>
+      <smearedP>true</smearedP>
+      <mom>0 0 0</mom>
+      <row>0</row>
+      <twoI_z>2</twoI_z>
+    </basic_key>
+  </elem>
+  <elem>
+    <particle_id>pion_proj2</particle_id>
     <basic_key>
       <CGs>
       </CGs>
@@ -88,6 +69,25 @@
           <name>pion_proj2_p000_A1</name>
           <smear></smear>
           <mom_type>0 0 0</mom_type>
+        </elem>
+      </Operators>
+      <creation_op>false</creation_op>
+      <smearedP>true</smearedP>
+      <mom>0 0 0</mom>
+      <row>0</row>
+      <twoI_z>2</twoI_z>
+    </basic_key>
+  </elem>
+  <elem>
+    <particle_id>pion_proj2</particle_id>
+    <basic_key>
+      <CGs>
+      </CGs>
+      <Operators>
+        <elem>
+          <name>pion_proj2_p110_H0D2A2</name>
+          <smear></smear>
+          <mom_type>1 1 0</mom_type>
         </elem>
       </Operators>
       <creation_op>false</creation_op>
