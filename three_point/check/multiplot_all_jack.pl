@@ -18,8 +18,8 @@ my @ffs = ();
 
 foreach (@dat)
 {
-  my ($stem,$trash) = split(/\./,$_);
-    
+  my $stem = $_; 
+
   if ( $stem =~ "ff") 
   {
     push @ffs , $stem; 
@@ -55,6 +55,8 @@ mkdir ("tmp");
 
 if($mode != 0)
 {
+  open MAP , ">" , "fname.map"; 
+  my $map_count = 0; 
 
   foreach my $this_chunk (@chunks)
   {
@@ -70,17 +72,23 @@ if($mode != 0)
     foreach my $stem (@these_stems)
     {
 
-      my $cmdr = "calcbc \' real ( ${stem}.jack ) \' > tmp/${stem}.dat.real";
-      my $cmdi = "calcbc \' imag ( ${stem}.jack ) \' > tmp/${stem}.dat.imag";
+      my $cmdr = "calcbc \' real ( ${stem} ) \' > tmp/${stem}.dat.real";
+      my $cmdi = "calcbc \' imag ( ${stem} ) \' > tmp/${stem}.dat.imag";
 
       system ( $cmdr ) == 0 || die($_);
       system ( $cmdi ) == 0 || die($_); 
 
       my $ti = $stem; 
-      $ti =~ s/_/-/g; 
-      print GNU "set label 1 \"$ti\" at graph 0.1,0.95 font \',8\' \n";
-      print GNU "plot \'tmp/${stem}.dat.real\' using 1:2:3 w yerr title \'real\', \\\n";
-      print GNU " \'tmp/${stem}.dat.imag\' using 1:2:3 w yerr title \'imag\' \n";
+      ++ $map_count;
+      print MAP $map_count . "->" . $ti . "\n"; 
+
+      print GNU "set label 1\"";
+      print GNU $map_count;
+      print GNU "\" at graph 0.45,0.9 font \',8\' \n";
+
+
+      print GNU "plot \'tmp/${stem}.dat.real\' using 1:2:3 w yerr title \'real\' lt 2, \\\n";
+      print GNU " \'tmp/${stem}.dat.imag\' using 1:2:3 w yerr title \'imag\' lt 4 \n";
     }
 
 
@@ -89,6 +97,8 @@ if($mode != 0)
 
     system ("gnuplot -persist tmp/plot_$rn.gp") ;
   }
+
+  close MAP; 
 } 
 else
 {
@@ -98,14 +108,30 @@ else
 
     open GNU , ">" , "tmp/plot_$rn.gp"; 
 
-    my $cmdr = "calcbc \' real ( ${stem}.jack ) \' > tmp/${stem}.dat.real";
-    my $cmdi = "calcbc \' imag ( ${stem}.jack ) \' > tmp/${stem}.dat.imag";
+    my $cmdr = "calcbc \' real ( ${stem} ) \' > tmp/${stem}.dat.real";
+    my $cmdi = "calcbc \' imag ( ${stem} ) \' > tmp/${stem}.dat.imag";
 
     system ( $cmdr ) == 0 || die($_);
     system ( $cmdi ) == 0 || die($_); 
 
+    print GNU "set label 1\"";
+# split up the name to be 80 char then new line then next 80 char...
+    my @chars = map substr($stem, $_, 1), 0 .. length($stem) -1; 
+    my $idx = 0;
+    foreach my $char (@chars) 
+    { 
+      if($idx == 50)
+      {
+        print GNU "\\n";
+        $idx = 0; 
+      }
+      print GNU $char;
+      $idx++; 
+    }
 
-    print GNU "set label 1 \"$stem\" at graph 0.45,0.9 font \',8\' \n";
+
+
+    print GNU "\" at graph 0.45,0.9 font \',8\' \n";
     print GNU "plot \'tmp/${stem}.dat.real\' using 1:2:3 w yerr title \'real\', \\\n";
     print GNU " \'tmp/${stem}.dat.imag\' using 1:2:3 w yerr title \'imag\' \n";
     close GNU;
@@ -147,7 +173,9 @@ sub chunk
 
 sub do_split_last
 {
+  no warnings 'numeric';
   my $foo = $_[0];
   my @bar = split(/_/,$foo);
-  return $bar[$#bar];
+  return $bar[$#bar] + 9;
 }
+

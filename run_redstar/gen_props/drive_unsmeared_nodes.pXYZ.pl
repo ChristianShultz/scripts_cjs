@@ -257,7 +257,7 @@ sub mpi_info
 #  my $numa = "${base}/numa_script.sh";
   my $numa = $ENV{'HOME'};
   chomp $numa; 
-  $numa .= "/scripts/numa_script_c8.sh"; 
+  $numa .= "/scripts_cjs/run_redstar/gen_props/numa_script_c8.sh"; 
 
 
   my $mpi = $ENV{'MPIHOME'};

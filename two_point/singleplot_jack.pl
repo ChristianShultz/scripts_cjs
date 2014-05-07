@@ -60,8 +60,8 @@ foreach my $char (@chars)
 }
 
 print GNU "\"\n";
-print GNU "plot \'tmp/${file}.real\' using 1:2:3  w yerr title \'real\', \\\n";
-print GNU " \'tmp/${file}.imag\' using (\$1 + 0.5):2:3 lc 3 w yerr title \'imag\' \n";
+print GNU "plot \'tmp/${file}.real\' using 1:2:3  w yerr title \'real\' lt 2, \\\n";
+print GNU " \'tmp/${file}.imag\' using (\$1 + 0.5):2:3 w yerr ti \'imag\' lt 4\n";
 print GNU "unset multiplot";
 close GNU;
 

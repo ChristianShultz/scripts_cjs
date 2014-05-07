@@ -1,5 +1,5 @@
 #!/bin/tcsh -x
-#PBS -N dt28u_p110_c8
+#PBS -N dt12u_p110_c8
 #PBS -q ib
 #PBS -A Spectrum
 #PBS -l walltime=48:00:00
@@ -21,7 +21,7 @@ endif
 set file_prefix="szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"
 set list="sdb.list"
 set run_script="${PBS_O_WORKDIR}/drive_unsmeared_nodes.pXYZ.pl"
-set dt=28
+set dt=12
 set mom="p110"
 
 if ( ! -e $run_script ) then

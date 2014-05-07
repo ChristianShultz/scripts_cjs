@@ -1,7 +1,7 @@
 %!PS-Adobe-2.0 EPSF-2.0
 %%Title: plot.eps
-%%Creator: gnuplot 4.4 patchlevel 2
-%%CreationDate: Mon Feb  3 16:22:42 2014
+%%Creator: gnuplot 4.7 patchlevel 0
+%%CreationDate: Mon May  5 10:26:21 2014
 %%DocumentFonts: (atend)
 %%BoundingBox: 50 50 410 302
 %%EndComments
@@ -18,12 +18,15 @@ gnudict begin
 /Dashlength 1 def
 /Landscape false def
 /Level1 false def
+/Level3 false def
 /Rounded false def
 /ClipToBoundingBox false def
+/SuppressPDFMark false def
 /TransparentPatterns false def
 /gnulinewidth 5.000 def
 /userlinewidth gnulinewidth def
 /Gamma 1.0 def
+/BackgroundColor {-1.000 -1.000 -1.000} def
 %
 /vshift -46 def
 /dl1 {
@@ -38,22 +41,6 @@ gnudict begin
 /vpt_ 31.5 def
 /hpt hpt_ def
 /vpt vpt_ def
-Level1 {} {
-/SDict 10 dict def
-systemdict /pdfmark known not {
-  userdict /pdfmark systemdict /cleartomark get put
-} if
-SDict begin [
-  /Title (plot.eps)
-  /Subject (gnuplot plot)
-  /Creator (gnuplot 4.4 patchlevel 2)
-  /Author (shultz)
-%  /Producer (gnuplot)
-%  /Keywords ()
-  /CreationDate (Mon Feb  3 16:22:42 2014)
-  /DOCINFO pdfmark
-end
-} ifelse
 /doclip {
   ClipToBoundingBox {
     newpath 50 50 moveto 410 50 lineto 410 302 lineto 50 302 lineto closepath
@@ -61,7 +48,7 @@ end
   } if
 } def
 %
-% Gnuplot Prolog Version 4.4 (August 2010)
+% Gnuplot Prolog Version 4.7 (May 2013)
 %
 %/SuppressPDFMark true def
 %
@@ -78,11 +65,11 @@ end
 /vpt2 vpt 2 mul def
 /hpt2 hpt 2 mul def
 /Lshow {currentpoint stroke M 0 vshift R 
-	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
 /Rshow {currentpoint stroke M dup stringwidth pop neg vshift R
-	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
 /Cshow {currentpoint stroke M dup stringwidth pop -2 div vshift R 
-	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
 /UP {dup vpt_ mul /vpt exch def hpt_ mul /hpt exch def
   /hpt2 hpt 2 mul def /vpt2 vpt 2 mul def} def
 /DL {Color {setrgbcolor Solid {pop []} if 0 setdash}
@@ -328,7 +315,8 @@ end
 /PatternFill {gsave /PFa [ 9 2 roll ] def
   PFa 0 get PFa 2 get 2 div add PFa 1 get PFa 3 get 2 div add translate
   PFa 2 get -2 div PFa 3 get -2 div PFa 2 get PFa 3 get Rec
-  gsave 1 setgray fill grestore clip
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+  clip
   currentlinewidth 0.5 mul setlinewidth
   /PFs PFa 2 get dup mul PFa 3 get dup mul add sqrt def
   0 0 M PFa 5 get rotate PFs -2 div dup translate
@@ -342,9 +330,14 @@ end
 %
 /languagelevel where
  {pop languagelevel} {1} ifelse
- 2 lt
-	{/InterpretLevel1 true def}
-	{/InterpretLevel1 Level1 def}
+dup 2 lt
+	{/InterpretLevel1 true def
+	 /InterpretLevel3 false def}
+	{/InterpretLevel1 Level1 def
+	 2 gt
+	    {/InterpretLevel3 Level3 def}
+	    {/InterpretLevel3 false def}
+	 ifelse }
  ifelse
 %
 % PostScript level 2 pattern fill definitions
@@ -433,8 +426,52 @@ Level1 {Level1PatternFill} {Level2PatternFill} ifelse
 /Symbol-Oblique /Symbol findfont [1 0 .167 1 0 0] makefont
 dup length dict begin {1 index /FID eq {pop pop} {def} ifelse} forall
 currentdict end definefont pop
+%
+Level1 SuppressPDFMark or 
+{} {
+/SDict 10 dict def
+systemdict /pdfmark known not {
+  userdict /pdfmark systemdict /cleartomark get put
+} if
+SDict begin [
+  /Title (plot.eps)
+  /Subject (gnuplot plot)
+  /Creator (gnuplot 4.7 patchlevel 0)
+  /Author (shultz)
+%  /Producer (gnuplot)
+%  /Keywords ()
+  /CreationDate (Mon May  5 10:26:21 2014)
+  /DOCINFO pdfmark
 end
+} ifelse
+end
+%
+% Support for boxed text - Ethan A Merritt May 2005
+%
+/InitTextBox { userdict /TBy2 3 -1 roll put userdict /TBx2 3 -1 roll put
+           userdict /TBy1 3 -1 roll put userdict /TBx1 3 -1 roll put
+	   /Boxing true def } def
+/ExtendTextBox { Boxing
+    { gsave dup false charpath pathbbox
+      dup TBy2 gt {userdict /TBy2 3 -1 roll put} {pop} ifelse
+      dup TBx2 gt {userdict /TBx2 3 -1 roll put} {pop} ifelse
+      dup TBy1 lt {userdict /TBy1 3 -1 roll put} {pop} ifelse
+      dup TBx1 lt {userdict /TBx1 3 -1 roll put} {pop} ifelse
+      grestore } if } def
+/PopTextBox { newpath TBx1 TBxmargin sub TBy1 TBymargin sub M
+               TBx1 TBxmargin sub TBy2 TBymargin add L
+	       TBx2 TBxmargin add TBy2 TBymargin add L
+	       TBx2 TBxmargin add TBy1 TBymargin sub L closepath } def
+/DrawTextBox { PopTextBox stroke /Boxing false def} def
+/FillTextBox { gsave PopTextBox 1 1 1 setrgbcolor fill grestore /Boxing false def} def
+0 0 0 0 InitTextBox
+/TBxmargin 20 def
+/TBymargin 20 def
+/Boxing false def
+/textshow { ExtendTextBox Gshow } def
+%
 %%EndProlog
+%%Page: 1 1
 gnudict begin
 gsave
 doclip
@@ -443,81 +480,101 @@ doclip
 0 setgray
 newpath
 (Helvetica) findfont 140 scalefont setfont
+BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {BackgroundColor C 1.000 0 0 7200.00 5040.00 BoxColFill} if
 1.000 UL
 LTb
-630 280 M
+LCb setrgbcolor
+630 664 M
 63 0 V
 6254 0 R
 -63 0 V
-546 280 M
-( 0.13) Rshow
+546 664 M
+( 0.36) Rshow
 1.000 UL
 LTb
-630 936 M
-63 0 V
-6254 0 R
--63 0 V
-546 936 M
-( 0.14) Rshow
-1.000 UL
-LTb
-630 1592 M
+LCb setrgbcolor
+630 1149 M
 63 0 V
 6254 0 R
 -63 0 V
 -6338 0 R
-( 0.15) Rshow
+( 0.37) Rshow
 1.000 UL
 LTb
-630 2248 M
+LCb setrgbcolor
+630 1635 M
 63 0 V
 6254 0 R
 -63 0 V
 -6338 0 R
-( 0.16) Rshow
+( 0.38) Rshow
 1.000 UL
 LTb
-630 2903 M
+LCb setrgbcolor
+630 2121 M
 63 0 V
 6254 0 R
 -63 0 V
 -6338 0 R
-( 0.17) Rshow
+( 0.39) Rshow
 1.000 UL
 LTb
-630 3559 M
+LCb setrgbcolor
+630 2606 M
 63 0 V
 6254 0 R
 -63 0 V
 -6338 0 R
-( 0.18) Rshow
+( 0.4) Rshow
 1.000 UL
 LTb
-630 4215 M
+LCb setrgbcolor
+630 3092 M
 63 0 V
 6254 0 R
 -63 0 V
 -6338 0 R
-( 0.19) Rshow
+( 0.41) Rshow
 1.000 UL
 LTb
-630 4871 M
+LCb setrgbcolor
+630 3578 M
 63 0 V
 6254 0 R
 -63 0 V
 -6338 0 R
-( 0.2) Rshow
+( 0.42) Rshow
 1.000 UL
 LTb
-630 280 M
+LCb setrgbcolor
+630 4064 M
+63 0 V
+6254 0 R
+-63 0 V
+-6338 0 R
+( 0.43) Rshow
+1.000 UL
+LTb
+LCb setrgbcolor
+630 4549 M
+63 0 V
+6254 0 R
+-63 0 V
+-6338 0 R
+( 0.44) Rshow
+1.000 UL
+LTb
+LCb setrgbcolor
+780 280 M
 0 63 V
 0 4528 R
 0 -63 V
-630 140 M
+780 140 M
 ( 0) Cshow
 1.000 UL
 LTb
-1420 280 M
+LCb setrgbcolor
+1532 280 M
 0 63 V
 0 4528 R
 0 -63 V
@@ -525,7 +582,8 @@ LTb
 ( 0.5) Cshow
 1.000 UL
 LTb
-2209 280 M
+LCb setrgbcolor
+2284 280 M
 0 63 V
 0 4528 R
 0 -63 V
@@ -533,7 +591,8 @@ LTb
 ( 1) Cshow
 1.000 UL
 LTb
-2999 280 M
+LCb setrgbcolor
+3036 280 M
 0 63 V
 0 4528 R
 0 -63 V
@@ -541,6 +600,7 @@ LTb
 ( 1.5) Cshow
 1.000 UL
 LTb
+LCb setrgbcolor
 3789 280 M
 0 63 V
 0 4528 R
@@ -549,7 +609,8 @@ LTb
 ( 2) Cshow
 1.000 UL
 LTb
-4578 280 M
+LCb setrgbcolor
+4541 280 M
 0 63 V
 0 4528 R
 0 -63 V
@@ -557,7 +618,8 @@ LTb
 ( 2.5) Cshow
 1.000 UL
 LTb
-5368 280 M
+LCb setrgbcolor
+5293 280 M
 0 63 V
 0 4528 R
 0 -63 V
@@ -565,7 +627,8 @@ LTb
 ( 3) Cshow
 1.000 UL
 LTb
-6157 280 M
+LCb setrgbcolor
+6045 280 M
 0 63 V
 0 4528 R
 0 -63 V
@@ -573,7 +636,8 @@ LTb
 ( 3.5) Cshow
 1.000 UL
 LTb
-6947 280 M
+LCb setrgbcolor
+6797 280 M
 0 63 V
 0 4528 R
 0 -63 V
@@ -581,8 +645,10 @@ LTb
 ( 4) Cshow
 1.000 UL
 LTb
+LCb setrgbcolor
 1.000 UL
 LTb
+LCb setrgbcolor
 630 4871 N
 630 280 L
 6317 0 V
@@ -592,169 +658,175 @@ Z stroke
 1.000 UP
 1.000 UL
 LTb
+LCb setrgbcolor
 % Begin plot #1
 1.000 UP
-1.000 UL
+2.000 UL
 LT0
-LCb setrgbcolor
+0.58 0.00 0.83 C LCb setrgbcolor
 6296 4738 M
-(E^2\(p^2\)) Rshow
+(E\(p^2\)) Rshow
 LT0
-6380 4738 M
+0.58 0.00 0.83 C 6380 4738 M
 399 0 V
 -399 31 R
 0 -62 V
 399 62 R
 0 -62 V
-630 584 M
-0 136 V
-599 584 M
+780 1018 M
+0 101 V
+749 1018 M
 62 0 V
-599 720 M
+-62 101 R
 62 0 V
-1548 366 R
-0 243 V
--31 -243 R
+1473 410 R
+0 180 V
+-31 -180 R
 62 0 V
--62 243 R
+-62 180 R
 62 0 V
-1549 655 R
-0 266 V
--31 -266 R
+1474 677 R
+0 197 V
+-31 -197 R
 62 0 V
--62 266 R
+-62 197 R
 62 0 V
-1548 827 R
-0 406 V
--31 -406 R
+1473 806 R
+0 301 V
+-31 -301 R
 62 0 V
--62 406 R
+-62 301 R
 62 0 V
-1548 472 R
-0 604 V
--31 -604 R
+1473 472 R
+0 447 V
+-31 -447 R
 62 0 V
--62 604 R
+-62 447 R
 62 0 V
-630 652 Pls
-2209 1208 Pls
-3789 2117 Pls
-5368 3280 Pls
-6947 4257 Pls
-6579 4738 Pls
+780 1069 Pnt
+2284 1619 Pnt
+3789 2485 Pnt
+5293 3540 Pnt
+6797 4385 Pnt
+6579 4738 Pnt
 % End plot #1
 % Begin plot #2
 1.000 UL
 LT1
-LCb setrgbcolor
+0.18 0.55 0.34 C LCb setrgbcolor
 6296 4598 M
-(g=m^2 + x*\(2pi/Ls/xi\)^2, m=0.3641, xi=3.3010) Rshow
+(g=root\(m^2 + x*\(2pi/Ls/xi\)^2\), m=0.3641, xi=3.3010) Rshow
 LT1
-6380 4598 M
+0.18 0.55 0.34 C 6380 4598 M
 399 0 V
-630 446 M
+630 766 M
+64 40 V
+64 40 V
+63 40 V
+64 40 V
+64 40 V
+64 40 V
+64 39 V
+63 40 V
+64 39 V
+64 40 V
+64 39 V
+64 39 V
+64 40 V
+63 39 V
+64 39 V
+64 39 V
 64 38 V
-64 37 V
+64 39 V
+63 39 V
+64 38 V
+64 39 V
+64 38 V
+64 39 V
 63 38 V
-64 37 V
 64 38 V
-64 37 V
 64 38 V
-63 37 V
 64 38 V
-64 37 V
 64 38 V
-64 37 V
-64 38 V
-63 37 V
-64 38 V
-64 37 V
-64 38 V
-64 37 V
 63 38 V
-64 37 V
 64 38 V
-64 37 V
-64 38 V
-63 37 V
-64 38 V
-64 37 V
-64 38 V
-64 37 V
-63 38 V
-64 37 V
 64 38 V
 64 37 V
 64 38 V
 63 37 V
 64 38 V
 64 37 V
-64 38 V
 64 37 V
 64 38 V
+64 37 V
 63 37 V
-64 38 V
 64 37 V
-64 38 V
 64 37 V
-63 38 V
 64 37 V
-64 38 V
-64 37 V
-64 38 V
+64 36 V
 63 37 V
-64 38 V
 64 37 V
-64 38 V
+64 36 V
 64 37 V
-63 38 V
+64 36 V
+63 36 V
 64 37 V
-64 38 V
-64 37 V
-64 38 V
-63 37 V
-64 38 V
-64 37 V
-64 38 V
-64 37 V
-64 38 V
-63 37 V
-64 38 V
-64 37 V
-64 38 V
-64 37 V
-63 38 V
-64 37 V
-64 38 V
-64 37 V
-64 38 V
-63 37 V
-64 38 V
-64 37 V
-64 38 V
-64 38 V
-63 37 V
-64 38 V
-64 37 V
-64 38 V
-64 37 V
-63 38 V
-64 37 V
-64 38 V
-64 37 V
-64 38 V
-64 37 V
-63 38 V
-64 37 V
-64 38 V
-64 37 V
-64 38 V
-63 37 V
-64 38 V
-64 37 V
+64 36 V
+64 36 V
+64 36 V
+63 36 V
+64 36 V
+64 36 V
+64 36 V
+64 36 V
+63 35 V
+64 36 V
+64 36 V
+64 35 V
+64 36 V
+64 35 V
+63 35 V
+64 36 V
+64 35 V
+64 35 V
+64 35 V
+63 35 V
+64 35 V
+64 35 V
+64 35 V
+64 34 V
+63 35 V
+64 35 V
+64 34 V
+64 35 V
+64 34 V
+63 35 V
+64 34 V
+64 34 V
+64 35 V
+64 34 V
+63 34 V
+64 34 V
+64 34 V
+64 34 V
+64 34 V
+64 34 V
+63 34 V
+64 33 V
+64 34 V
+64 34 V
+64 33 V
+63 34 V
+64 33 V
+64 34 V
 % End plot #2
 stroke
+2.000 UL
 LTb
+LCb setrgbcolor
+1.000 UL
+LTb
+LCb setrgbcolor
 630 4871 N
 630 280 L
 6317 0 V
@@ -764,6 +836,7 @@ Z stroke
 1.000 UP
 1.000 UL
 LTb
+LCb setrgbcolor
 stroke
 grestore
 end
