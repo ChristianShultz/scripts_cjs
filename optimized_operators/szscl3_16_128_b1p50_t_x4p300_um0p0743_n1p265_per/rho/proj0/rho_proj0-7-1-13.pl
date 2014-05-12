@@ -30,6 +30,7 @@ my @all_ops = ();
   $rho_proj0_p000_T1->state(0); 
   $rho_proj0_p000_T1->tz(19);
   $rho_proj0_p000_T1->phaser(-1.);
+  $rho_proj0_p000_T1->spin(1);
 
 
   my $rho_proj0_p100_H0D4A1 = OPparams->new();
@@ -45,6 +46,7 @@ my @all_ops = ();
   $rho_proj0_p100_H0D4A1->state(0); 
   $rho_proj0_p100_H0D4A1->tz(18);
   $rho_proj0_p100_H0D4A1->phaser(1.);
+  $rho_proj0_p100_H0D4A1->spin(1.);
 
 
   my $rho_proj0_p100_H1D4E2 = OPparams->new();
@@ -60,6 +62,7 @@ my @all_ops = ();
   $rho_proj0_p100_H1D4E2->state(0); 
   $rho_proj0_p100_H1D4E2->tz(16);
   $rho_proj0_p100_H1D4E2->phaser(1.);
+  $rho_proj0_p100_H1D4E2->spin(1.);
 
 
   my $rho_proj0_p110_H0D2A1 = OPparams->new();
@@ -75,6 +78,7 @@ my @all_ops = ();
   $rho_proj0_p110_H0D2A1->state(0); 
   $rho_proj0_p110_H0D2A1->tz(16);
   $rho_proj0_p110_H0D2A1->phaser(1.);
+  $rho_proj0_p110_H0D2A1->spin(1.);
 
 
   my $rho_proj0_p110_H1D2B1 = OPparams->new();
@@ -90,6 +94,7 @@ my @all_ops = ();
   $rho_proj0_p110_H1D2B1->state(0); 
   $rho_proj0_p110_H1D2B1->tz(14);
   $rho_proj0_p110_H1D2B1->phaser(1.);
+  $rho_proj0_p110_H1D2B1->spin(1);
 
 
   my $rho_proj0_p110_H1D2B2 = OPparams->new();
@@ -105,6 +110,7 @@ my @all_ops = ();
   $rho_proj0_p110_H1D2B2->state(0); 
   $rho_proj0_p110_H1D2B2->tz(17);
   $rho_proj0_p110_H1D2B2->phaser(1.);
+  $rho_proj0_p110_H1D2B2->spin(1);
 
 
   my $rho_proj0_p111_H0D3A1 = OPparams->new();
@@ -120,6 +126,7 @@ my @all_ops = ();
   $rho_proj0_p111_H0D3A1->state(0); 
   $rho_proj0_p111_H0D3A1->tz(15);
   $rho_proj0_p111_H0D3A1->phaser(1.);
+  $rho_proj0_p111_H0D3A1->spin(1);
 
 
   my $rho_proj0_p111_H1D3E2 = OPparams->new();
@@ -135,6 +142,7 @@ my @all_ops = ();
   $rho_proj0_p111_H1D3E2->state(0); 
   $rho_proj0_p111_H1D3E2->tz(14);
   $rho_proj0_p111_H1D3E2->phaser(1.);
+  $rho_proj0_p111_H1D3E2->spin(1);
 
 
   my $rho_proj0_p200_H0D4A1 = OPparams->new();
@@ -150,6 +158,7 @@ my @all_ops = ();
   $rho_proj0_p200_H0D4A1->state(0); 
   $rho_proj0_p200_H0D4A1->tz(15);
   $rho_proj0_p200_H0D4A1->phaser(1.);
+  $rho_proj0_p200_H0D4A1->spin(1);
 
 
   my $rho_proj0_p200_H1D4E2 = OPparams->new();
@@ -165,6 +174,7 @@ my @all_ops = ();
   $rho_proj0_p200_H1D4E2->state(0); 
   $rho_proj0_p200_H1D4E2->tz(16);
   $rho_proj0_p200_H1D4E2->phaser(1.);
+  $rho_proj0_p200_H1D4E2->spin(1);
 
 
 

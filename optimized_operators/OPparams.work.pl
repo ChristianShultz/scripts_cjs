@@ -163,7 +163,7 @@ EOF
 
 sub print_single_op
 {
-  my ($pid, $rep , $rep_stem , $mom , $twoI_z, $ncfg , $ensemble , $recon_dir ) = @_;  
+  my ($pid, $rep , $rep_stem , $mom , $twoI_z, $ncfg , $ensemble , $recon_dir ,$spin ) = @_;  
   my $p = "\$${pid}_${mom}_${rep_stem}";
 
 
@@ -182,6 +182,7 @@ sub print_single_op
   $p->state(-1); 
   $p->tz(-1);
   $p->phaser(1.);
+  $p->spin($spin);
 EOF
 
   return $p; 
@@ -191,7 +192,7 @@ EOF
 sub print_ops
 {
 
-  my ($pid, $twoI_z, $ncfg , $ensemble , $recon_dir , $hashr ) = @_;  
+  my ($pid, $twoI_z, $ncfg , $ensemble , $recon_dir , $spin, $hashr ) = @_;  
 
 
   my %hash = %{ $hashr };
@@ -215,7 +216,7 @@ sub print_ops
     foreach my $rk (@repkys)
     {
       print "mom = $k rep = $rk \n"; 
-      push @all_ops , &print_single_op($pid , $rk , $rephash{$rk}.$rk , $k, $twoI_z , $ncfg , $ensemble , $recon_dir ); 
+      push @all_ops , &print_single_op($pid , $rk , $rephash{$rk}.$rk , $k, $twoI_z , $ncfg , $ensemble , $recon_dir , $spin); 
     }
   } 
 

@@ -34,7 +34,7 @@ unlink $outfile unless ! -f $outfile;
 open OUT , ">" , $outfile ; 
 
 &print_header_perl();
-&print_ops($pid,$twoI_z,$ncfg,$ensemble,$reconpath,\%momhash);
+&print_ops($pid,$twoI_z,$ncfg,$ensemble,$reconpath,$spin,\%momhash);
 &print_trailer_perl($pid);
 
 close OUT; 

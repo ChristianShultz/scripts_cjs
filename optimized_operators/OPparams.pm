@@ -28,6 +28,7 @@ sub new
     PHASER => undef, 
     HYBRID=> undef, 
     ENERGY=> undef, 
+    SPIN=> undef, 
     @_,
   }; ## self 
 
@@ -116,6 +117,12 @@ sub hybrid {
   my $self = shift; 
   if (@_) {$self->{HYBRID} = shift;}
   return $self->{HYBRID};
+}
+
+sub spin {
+  my $self = shift; 
+  if(@_) {$self->{SPIN} = shift; }
+  return $self->{SPIN};
 }
 
 sub mass {

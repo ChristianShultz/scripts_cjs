@@ -30,6 +30,7 @@ my @all_ops = ();
   $pion_proj0_p000_A1->state(0); 
   $pion_proj0_p000_A1->tz(9);
   $pion_proj0_p000_A1->phaser(1.);
+  $pion_proj0_p000_A1->spin(0);
 
 
   my $pion_proj0_p100_H0D4A2 = OPparams->new();
@@ -45,6 +46,7 @@ my @all_ops = ();
   $pion_proj0_p100_H0D4A2->state(0); 
   $pion_proj0_p100_H0D4A2->tz(13);
   $pion_proj0_p100_H0D4A2->phaser(1.);
+  $pion_proj0_p100_H0D4A2->spin(0);
 
 
   my $pion_proj0_p110_H0D2A2 = OPparams->new();
@@ -60,6 +62,7 @@ my @all_ops = ();
   $pion_proj0_p110_H0D2A2->state(0); 
   $pion_proj0_p110_H0D2A2->tz(12);
   $pion_proj0_p110_H0D2A2->phaser(-1.);
+  $pion_proj0_p110_H0D2A2->spin(0);
 
 
   my $pion_proj0_p111_H0D3A2 = OPparams->new();
@@ -75,6 +78,7 @@ my @all_ops = ();
   $pion_proj0_p111_H0D3A2->state(0); 
   $pion_proj0_p111_H0D3A2->tz(11);
   $pion_proj0_p111_H0D3A2->phaser(1.);
+  $pion_proj0_p111_H0D3A2->spin(0);
 
 
   my $pion_proj0_p200_H0D4A2 = OPparams->new();
@@ -90,6 +94,7 @@ my @all_ops = ();
   $pion_proj0_p200_H0D4A2->state(0); 
   $pion_proj0_p200_H0D4A2->tz(11);
   $pion_proj0_p200_H0D4A2->phaser(1.);
+  $pion_proj0_p200_H0D4A2->spin(0);
 
 
 
