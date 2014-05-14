@@ -12,9 +12,12 @@ sub grab_list
 {
 # list of perl xml 
   my @fs = ( 
+    "a/proj0/a_proj0.perl.xml",
+    "a/proj1/a_proj1.perl.xml",
     "pion/proj0/pion_proj0.perl.xml",
     "pion/proj1/pion_proj1.perl.xml", 
     "pion/proj2/pion_proj2.perl.xml", 
+    "pion/proj4/pion_proj4.perl.xml", 
     "rho/proj0/rho_proj0.perl.xml", 
     "rho/proj1/rho_proj1.perl.xml", 
     "rho/proj2/rho_proj2.perl.xml", 

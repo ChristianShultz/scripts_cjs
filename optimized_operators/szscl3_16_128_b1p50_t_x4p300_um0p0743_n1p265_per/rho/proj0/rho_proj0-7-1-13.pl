@@ -28,7 +28,7 @@ my @all_ops = ();
   $rho_proj0_p000_T1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/T1mP");
   $rho_proj0_p000_T1->t0(7);
   $rho_proj0_p000_T1->state(0); 
-  $rho_proj0_p000_T1->tz(19);
+  $rho_proj0_p000_T1->tz(9);
   $rho_proj0_p000_T1->phaser(-1.);
   $rho_proj0_p000_T1->spin(1);
 

@@ -15,10 +15,10 @@ require "${basedir}/OPparams.work.pl";
 
 
 my $spin = 0;
-my $parity = "m";
+my $parity = "p";
 my $twoI_z = 2; 
 my $reconpath = "/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/";
-my $pid = "pion_proj0";
+my $pid = "a_proj0";
 my $ncfg = 535; 
 my $ensemble = "szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per";
 my $outfile = "run_proj_ops_${pid}_${ensemble}.pl";

@@ -74,6 +74,9 @@ sub write_gnuplot_file
   print GNU "set ylabel \"a_{t} m_{h}\"\n";
   print GNU "set xlabel \"channel\"\n";
   print GNU "plot \"$dat\" u (\$1+\$6):2:4:3:7 w boxxyerrorbars lc variable \n";
+  print GNU "set xr [GPVAL_DATA_X_MIN - 0.1 : GPVAL_DATA_X_MAX + 0.1] \n";
+  print GNU "set yr [0: GPVAL_DATA_Y_MAX + 0.1]\n";
+  print GNU "replot \n";
 
   close GNU ; 
 
@@ -216,11 +219,14 @@ sub sort_operators_JPC
 
   my %hash = ();  
   my $bad_idx = -2; 
-  $hash{"pion"} = "0-+"; 
-  $hash{"rho"} = "1--"; 
+  $hash{"a"} = "++"; 
+  $hash{"b"} = "+-"; 
+  $hash{"pion"} = "-+"; 
+  $hash{"rho"} = "--"; 
 
-  my $ret = "unknown"; 
-  $ret = $hash{$name} if exists $hash{$name};
+  my $ret = $op->spin(); 
+  $ret .= $hash{$name} if exists $hash{$name};
+  $ret .= $name unless exists $hash{$name};
 
   print $pid . " " . $ret . "\n"; 
   return $ret; 
@@ -234,26 +240,26 @@ sub sort_function_particle_JPC
 
   my %hash = ();  
   my $bad_idx = [-2,-2]; 
-#  $hash{"0--"} = [0,1]; 
+  $hash{"0--"} = [0,1]; 
   $hash{"0-+"} = [1,1]; 
-#  $hash{"0+-"} = [2,1]; 
-#  $hash{"0++"} = [3,1]; 
+  $hash{"0+-"} = [2,1]; 
+  $hash{"0++"} = [3,1]; 
   $hash{"1--"} = [4,2]; 
-#  $hash{"1-+"} = [5,2]; 
-#  $hash{"1+-"} = [6,2]; 
-#  $hash{"1++"} = [7,2]; 
-#  $hash{"2--"} = [8,3]; 
-#  $hash{"2-+"} = [9,3]; 
-#  $hash{"2+-"} = [10,3]; 
-#  $hash{"2++"} = [11,3]; 
-#  $hash{"3--"} = [12,4]; 
-#  $hash{"3-+"} = [13,4]; 
-#  $hash{"3+-"} = [14,4]; 
-#  $hash{"3++"} = [15,4]; 
-#  $hash{"4--"} = [16,5]; 
-#  $hash{"4-+"} = [17,5]; 
-#  $hash{"4+-"} = [18,5]; 
-#  $hash{"4++"} = [19,5]; 
+  $hash{"1-+"} = [5,2]; 
+  $hash{"1+-"} = [6,2]; 
+  $hash{"1++"} = [7,2]; 
+  $hash{"2--"} = [8,3]; 
+  $hash{"2-+"} = [9,3]; 
+  $hash{"2+-"} = [10,3]; 
+  $hash{"2++"} = [11,3]; 
+  $hash{"3--"} = [12,4]; 
+  $hash{"3-+"} = [13,4]; 
+  $hash{"3+-"} = [14,4]; 
+  $hash{"3++"} = [15,4]; 
+  $hash{"4--"} = [16,5]; 
+  $hash{"4-+"} = [17,5]; 
+  $hash{"4+-"} = [18,5]; 
+  $hash{"4++"} = [19,5]; 
   $hash{"unknown"} = $bad_idx; 
 
   if ( $mode ) 
@@ -265,7 +271,7 @@ sub sort_function_particle_JPC
   else
   {
     my $s = "set xtics ( "; 
-    foreach my $p ( keys %hash ) 
+    foreach my $p ( sort {$hash{$a}[0] <=> $hash{$b}[0]} keys %hash ) 
     {
       my $val = @{ $hash{$p} }[0];
       $s .= " \"$p\"  $val ,"; 

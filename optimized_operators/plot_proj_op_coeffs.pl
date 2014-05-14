@@ -122,6 +122,14 @@ my $plot = $file . ".gp";
 
 open OUT , ">" , $plot; 
 
+# kill any user defined styles, gnuplot 4.7 was 
+#      having a hard time with this and the 
+#      labels were not matching the boxplot
+print OUT "unset linetype 0 \n";
+print OUT "unset linetype 1 \n";
+print OUT "unset linetype 2 \n";
+print OUT "unset linetype 3 \n";
+print OUT "unset linetype 4 \n";
 print OUT "set xtics nomirror rotate by -45 font \",8\" \n";
 print OUT "set key outside \n"; 
 print OUT "set style data histogram \n";

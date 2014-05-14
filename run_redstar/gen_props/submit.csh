@@ -10,7 +10,6 @@ set y=$argv[2]
 
 foreach x ( `seq 1 1 $y` )
   qsub $f 
-  sleep 1
 end
 
 

@@ -1,7 +1,7 @@
 %!PS-Adobe-2.0 EPSF-2.0
 %%Title: rho_proj0_p200_H1D4E2.eps
-%%Creator: gnuplot 4.4 patchlevel 2
-%%CreationDate: Mon Feb 10 13:55:28 2014
+%%Creator: gnuplot 4.7 patchlevel 0
+%%CreationDate: Mon May 12 09:29:55 2014
 %%DocumentFonts: (atend)
 %%BoundingBox: 50 50 410 302
 %%EndComments
@@ -18,12 +18,15 @@ gnudict begin
 /Dashlength 1 def
 /Landscape false def
 /Level1 false def
+/Level3 false def
 /Rounded false def
 /ClipToBoundingBox false def
+/SuppressPDFMark false def
 /TransparentPatterns false def
 /gnulinewidth 5.000 def
 /userlinewidth gnulinewidth def
 /Gamma 1.0 def
+/BackgroundColor {-1.000 -1.000 -1.000} def
 %
 /vshift -46 def
 /dl1 {
@@ -38,22 +41,6 @@ gnudict begin
 /vpt_ 31.5 def
 /hpt hpt_ def
 /vpt vpt_ def
-Level1 {} {
-/SDict 10 dict def
-systemdict /pdfmark known not {
-  userdict /pdfmark systemdict /cleartomark get put
-} if
-SDict begin [
-  /Title (rho_proj0_p200_H1D4E2.eps)
-  /Subject (gnuplot plot)
-  /Creator (gnuplot 4.4 patchlevel 2)
-  /Author (shultz)
-%  /Producer (gnuplot)
-%  /Keywords ()
-  /CreationDate (Mon Feb 10 13:55:28 2014)
-  /DOCINFO pdfmark
-end
-} ifelse
 /doclip {
   ClipToBoundingBox {
     newpath 50 50 moveto 410 50 lineto 410 302 lineto 50 302 lineto closepath
@@ -61,7 +48,7 @@ end
   } if
 } def
 %
-% Gnuplot Prolog Version 4.4 (August 2010)
+% Gnuplot Prolog Version 4.7 (May 2013)
 %
 %/SuppressPDFMark true def
 %
@@ -78,11 +65,11 @@ end
 /vpt2 vpt 2 mul def
 /hpt2 hpt 2 mul def
 /Lshow {currentpoint stroke M 0 vshift R 
-	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
 /Rshow {currentpoint stroke M dup stringwidth pop neg vshift R
-	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
 /Cshow {currentpoint stroke M dup stringwidth pop -2 div vshift R 
-	Blacktext {gsave 0 setgray show grestore} {show} ifelse} def
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
 /UP {dup vpt_ mul /vpt exch def hpt_ mul /hpt exch def
   /hpt2 hpt 2 mul def /vpt2 vpt 2 mul def} def
 /DL {Color {setrgbcolor Solid {pop []} if 0 setdash}
@@ -328,7 +315,8 @@ end
 /PatternFill {gsave /PFa [ 9 2 roll ] def
   PFa 0 get PFa 2 get 2 div add PFa 1 get PFa 3 get 2 div add translate
   PFa 2 get -2 div PFa 3 get -2 div PFa 2 get PFa 3 get Rec
-  gsave 1 setgray fill grestore clip
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+  clip
   currentlinewidth 0.5 mul setlinewidth
   /PFs PFa 2 get dup mul PFa 3 get dup mul add sqrt def
   0 0 M PFa 5 get rotate PFs -2 div dup translate
@@ -342,9 +330,14 @@ end
 %
 /languagelevel where
  {pop languagelevel} {1} ifelse
- 2 lt
-	{/InterpretLevel1 true def}
-	{/InterpretLevel1 Level1 def}
+dup 2 lt
+	{/InterpretLevel1 true def
+	 /InterpretLevel3 false def}
+	{/InterpretLevel1 Level1 def
+	 2 gt
+	    {/InterpretLevel3 Level3 def}
+	    {/InterpretLevel3 false def}
+	 ifelse }
  ifelse
 %
 % PostScript level 2 pattern fill definitions
@@ -433,8 +426,52 @@ Level1 {Level1PatternFill} {Level2PatternFill} ifelse
 /Symbol-Oblique /Symbol findfont [1 0 .167 1 0 0] makefont
 dup length dict begin {1 index /FID eq {pop pop} {def} ifelse} forall
 currentdict end definefont pop
+%
+Level1 SuppressPDFMark or 
+{} {
+/SDict 10 dict def
+systemdict /pdfmark known not {
+  userdict /pdfmark systemdict /cleartomark get put
+} if
+SDict begin [
+  /Title (rho_proj0_p200_H1D4E2.eps)
+  /Subject (gnuplot plot)
+  /Creator (gnuplot 4.7 patchlevel 0)
+  /Author (shultz)
+%  /Producer (gnuplot)
+%  /Keywords ()
+  /CreationDate (Mon May 12 09:29:55 2014)
+  /DOCINFO pdfmark
 end
+} ifelse
+end
+%
+% Support for boxed text - Ethan A Merritt May 2005
+%
+/InitTextBox { userdict /TBy2 3 -1 roll put userdict /TBx2 3 -1 roll put
+           userdict /TBy1 3 -1 roll put userdict /TBx1 3 -1 roll put
+	   /Boxing true def } def
+/ExtendTextBox { Boxing
+    { gsave dup false charpath pathbbox
+      dup TBy2 gt {userdict /TBy2 3 -1 roll put} {pop} ifelse
+      dup TBx2 gt {userdict /TBx2 3 -1 roll put} {pop} ifelse
+      dup TBy1 lt {userdict /TBy1 3 -1 roll put} {pop} ifelse
+      dup TBx1 lt {userdict /TBx1 3 -1 roll put} {pop} ifelse
+      grestore } if } def
+/PopTextBox { newpath TBx1 TBxmargin sub TBy1 TBymargin sub M
+               TBx1 TBxmargin sub TBy2 TBymargin add L
+	       TBx2 TBxmargin add TBy2 TBymargin add L
+	       TBx2 TBxmargin add TBy1 TBymargin sub L closepath } def
+/DrawTextBox { PopTextBox stroke /Boxing false def} def
+/FillTextBox { gsave PopTextBox 1 1 1 setrgbcolor fill grestore /Boxing false def} def
+0 0 0 0 InitTextBox
+/TBxmargin 20 def
+/TBymargin 20 def
+/Boxing false def
+/textshow { ExtendTextBox Gshow } def
+%
 %%EndProlog
+%%Page: 1 1
 gnudict begin
 gsave
 doclip
@@ -443,6 +480,7 @@ doclip
 0 setgray
 newpath
 (Helvetica) findfont 140 scalefont setfont
+BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {BackgroundColor C 1.000 0 0 7200.00 5040.00 BoxColFill} if
 1.000 UL
 LTb
 546 1743 M
@@ -496,291 +534,349 @@ LTb
 642 1743 M
 0 63 V
 /Helvetica findfont 80 scalefont setfont
+/vshift -26 def
 0 -147 R
 currentpoint gsave translate -45 rotate 0 0 M
 (rho_pionxD2_J1__J1_H1D4E2) Lshow
 grestore
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 1.000 UL
 LTb
 834 1743 M
 0 63 V
 /Helvetica findfont 80 scalefont setfont
+/vshift -26 def
 0 -147 R
 currentpoint gsave translate -45 rotate 0 0 M
 (rho_rho_2xD0_J0__J1_H1D4E2) Lshow
 grestore
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 1.000 UL
 LTb
 1026 1743 M
 0 63 V
 /Helvetica findfont 80 scalefont setfont
+/vshift -26 def
 0 -147 R
 currentpoint gsave translate -45 rotate 0 0 M
 (rho_a1xD1_J1__J1_H1D4E2) Lshow
 grestore
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 1.000 UL
 LTb
 1219 1743 M
 0 63 V
 /Helvetica findfont 80 scalefont setfont
+/vshift -26 def
 0 -147 R
 currentpoint gsave translate -45 rotate 0 0 M
 (b_a0xD2_J1__J1_H1D4E2) Lshow
 grestore
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 1.000 UL
 LTb
 1411 1743 M
 0 63 V
 /Helvetica findfont 80 scalefont setfont
+/vshift -26 def
 0 -147 R
 currentpoint gsave translate -45 rotate 0 0 M
 (b_pionxD1_J1__J1_H1D4E2) Lshow
 grestore
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 1.000 UL
 LTb
 1603 1743 M
 0 63 V
 /Helvetica findfont 80 scalefont setfont
+/vshift -26 def
 0 -147 R
 currentpoint gsave translate -45 rotate 0 0 M
 (rho_pion_2xD2_J1__J1_H1D4E2) Lshow
 grestore
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 1.000 UL
 LTb
 1795 1743 M
 0 63 V
 /Helvetica findfont 80 scalefont setfont
+/vshift -26 def
 0 -147 R
 currentpoint gsave translate -45 rotate 0 0 M
 (b_b1xD2_J0__J1_H1D4E2) Lshow
 grestore
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 1.000 UL
 LTb
 1987 1743 M
 0 63 V
 /Helvetica findfont 80 scalefont setfont
+/vshift -26 def
 0 -147 R
 currentpoint gsave translate -45 rotate 0 0 M
 (b_a1xD2_J1__J1_H1D4E2) Lshow
 grestore
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 1.000 UL
 LTb
 2179 1743 M
 0 63 V
 /Helvetica findfont 80 scalefont setfont
+/vshift -26 def
 0 -147 R
 currentpoint gsave translate -45 rotate 0 0 M
 (b_b1xD2_J2__J1_H1D4E2) Lshow
 grestore
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 1.000 UL
 LTb
 2372 1743 M
 0 63 V
 /Helvetica findfont 80 scalefont setfont
+/vshift -26 def
 0 -147 R
 currentpoint gsave translate -45 rotate 0 0 M
 (rho_rho_2xD2_J2__J1_H1D4E2) Lshow
 grestore
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 1.000 UL
 LTb
 2564 1743 M
 0 63 V
 /Helvetica findfont 80 scalefont setfont
+/vshift -26 def
 0 -147 R
 currentpoint gsave translate -45 rotate 0 0 M
 (rho_rho_2xD2_J0__J1_H1D4E2) Lshow
 grestore
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 1.000 UL
 LTb
 2756 1743 M
 0 63 V
 /Helvetica findfont 80 scalefont setfont
+/vshift -26 def
 0 -147 R
 currentpoint gsave translate -45 rotate 0 0 M
 (rho_a0xD1_J1__J1_H1D4E2) Lshow
 grestore
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 1.000 UL
 LTb
 2948 1743 M
 0 63 V
 /Helvetica findfont 80 scalefont setfont
+/vshift -26 def
 0 -147 R
 currentpoint gsave translate -45 rotate 0 0 M
 (b_b1xD0_J0__J1_H1D4E2) Lshow
 grestore
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 1.000 UL
 LTb
 3140 1743 M
 0 63 V
 /Helvetica findfont 80 scalefont setfont
+/vshift -26 def
 0 -147 R
 currentpoint gsave translate -45 rotate 0 0 M
 (rho_rhoxD0_J0__J1_H1D4E2) Lshow
 grestore
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 1.000 UL
 LTb
 3333 1743 M
 0 63 V
 /Helvetica findfont 80 scalefont setfont
+/vshift -26 def
 0 -147 R
 currentpoint gsave translate -45 rotate 0 0 M
 (rho_rhoxD2_J0__J1_H1D4E2) Lshow
 grestore
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 1.000 UL
 LTb
 3525 1743 M
 0 63 V
 /Helvetica findfont 80 scalefont setfont
+/vshift -26 def
 0 -147 R
 currentpoint gsave translate -45 rotate 0 0 M
 (b_pion_2xD1_J1__J1_H1D4E2) Lshow
 grestore
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 1.000 UL
 LTb
 3717 1743 M
 0 63 V
 /Helvetica findfont 80 scalefont setfont
+/vshift -26 def
 0 -147 R
 currentpoint gsave translate -45 rotate 0 0 M
 (rho_rhoxD2_J2__J1_H1D4E2) Lshow
 grestore
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 1.000 UL
 LTb
 3909 1743 M
 0 63 V
 /Helvetica findfont 80 scalefont setfont
+/vshift -26 def
 0 -147 R
 currentpoint gsave translate -45 rotate 0 0 M
 (b_b0xD2_J2__J2_H1D4E2) Lshow
 grestore
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 1.000 UL
 LTb
 4101 1743 M
 0 63 V
 /Helvetica findfont 80 scalefont setfont
+/vshift -26 def
 0 -147 R
 currentpoint gsave translate -45 rotate 0 0 M
 (rho_rho_2xD2_J2__J2_H1D4E2) Lshow
 grestore
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 1.000 UL
 LTb
 4293 1743 M
 0 63 V
 /Helvetica findfont 80 scalefont setfont
+/vshift -26 def
 0 -147 R
 currentpoint gsave translate -45 rotate 0 0 M
 (b_b1xD2_J2__J2_H1D4E2) Lshow
 grestore
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 1.000 UL
 LTb
 4486 1743 M
 0 63 V
 /Helvetica findfont 80 scalefont setfont
+/vshift -26 def
 0 -147 R
 currentpoint gsave translate -45 rotate 0 0 M
 (b_a1xD2_J1__J2_H1D4E2) Lshow
 grestore
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 1.000 UL
 LTb
 4678 1743 M
 0 63 V
 /Helvetica findfont 80 scalefont setfont
+/vshift -26 def
 0 -147 R
 currentpoint gsave translate -45 rotate 0 0 M
 (rho_a1xD1_J1__J2_H1D4E2) Lshow
 grestore
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 1.000 UL
 LTb
 4870 1743 M
 0 63 V
 /Helvetica findfont 80 scalefont setfont
+/vshift -26 def
 0 -147 R
 currentpoint gsave translate -45 rotate 0 0 M
 (rho_rhoxD2_J2__J2_H1D4E2) Lshow
 grestore
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 1.000 UL
 LTb
 5062 1743 M
 0 63 V
 /Helvetica findfont 80 scalefont setfont
+/vshift -26 def
 0 -147 R
 currentpoint gsave translate -45 rotate 0 0 M
 (rho_rho_2xD2_J2__J3_H3D4E2) Lshow
 grestore
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 1.000 UL
 LTb
 5254 1743 M
 0 63 V
 /Helvetica findfont 80 scalefont setfont
+/vshift -26 def
 0 -147 R
 currentpoint gsave translate -45 rotate 0 0 M
 (rho_rhoxD2_J2__J3_H3D4E2) Lshow
 grestore
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 1.000 UL
 LTb
 5446 1743 M
 0 63 V
 /Helvetica findfont 80 scalefont setfont
+/vshift -26 def
 0 -147 R
 currentpoint gsave translate -45 rotate 0 0 M
 (rho_rho_2xD2_J2__J3_H1D4E2) Lshow
 grestore
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 1.000 UL
 LTb
 5639 1743 M
 0 63 V
 /Helvetica findfont 80 scalefont setfont
+/vshift -26 def
 0 -147 R
 currentpoint gsave translate -45 rotate 0 0 M
 (rho_rhoxD2_J2__J3_H1D4E2) Lshow
 grestore
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 1.000 UL
 LTb
 5831 1743 M
 0 63 V
 /Helvetica findfont 80 scalefont setfont
+/vshift -26 def
 0 -147 R
 currentpoint gsave translate -45 rotate 0 0 M
 (b_b1xD2_J2__J3_H1D4E2) Lshow
 grestore
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 1.000 UL
 LTb
 6023 1743 M
 0 63 V
 /Helvetica findfont 80 scalefont setfont
+/vshift -26 def
 0 -147 R
 currentpoint gsave translate -45 rotate 0 0 M
 (b_b1xD2_J2__J3_H3D4E2) Lshow
 grestore
 /Helvetica findfont 140 scalefont setfont
+/vshift -46 def
 1.000 UL
 LTb
 1.000 UL
@@ -791,74 +887,61 @@ LTb
 0 2876 V
 -5573 0 V
 Z stroke
+1.000 UL
+LTb
+1.000 6479 4283 359 251 BoxColFill
+6479 4283 N
+0 251 V
+359 0 V
+0 -251 V
+-359 0 V
+Z stroke
+1.000 UL
+LTb
+1.000 6479 3779 359 251 BoxColFill
+6479 3779 N
+0 251 V
+359 0 V
+0 -251 V
+-359 0 V
+Z stroke
+1.000 UL
+LTb
+1.000 6479 3275 359 251 BoxColFill
+6479 3275 N
+0 251 V
+359 0 V
+0 -251 V
+-359 0 V
+Z stroke
+1.000 UL
+LTb
+1.000 6479 2771 359 251 BoxColFill
+6479 2771 N
+0 251 V
+359 0 V
+0 -251 V
+-359 0 V
+Z stroke
+1.000 UL
+LTb
+1.000 6479 2268 359 251 BoxColFill
+6479 2268 N
+0 251 V
+359 0 V
+0 -251 V
+-359 0 V
+Z stroke
+1.000 UP
+1.000 UL
+LTb
 3332 4829 M
 (rho_proj0_p200_H1D4E2) Cshow
-0.000 UP
-1.000 UL
-LTb
-LCa setrgbcolor
-1.000 6479 4283 359 251 BoxColFill
-LCb setrgbcolor
-6479 4283 M
-0 251 V
-359 0 V
-0 -251 V
--359 0 V
-0.000 UP
-stroke
-LTb
-LC0 setrgbcolor
-1.000 6479 3779 359 251 BoxColFill
-LCb setrgbcolor
-6479 3779 M
-0 251 V
-359 0 V
-0 -251 V
--359 0 V
-0.000 UP
-stroke
-LTb
-LC1 setrgbcolor
-1.000 6479 3275 359 251 BoxColFill
-LCb setrgbcolor
-6479 3275 M
-0 251 V
-359 0 V
-0 -251 V
--359 0 V
-0.000 UP
-stroke
-LTb
-LC2 setrgbcolor
-1.000 6479 2771 359 251 BoxColFill
-LCb setrgbcolor
-6479 2771 M
-0 251 V
-359 0 V
-0 -251 V
--359 0 V
-0.000 UP
-stroke
-LTb
-LC3 setrgbcolor
-1.000 6479 2268 359 251 BoxColFill
-LCb setrgbcolor
-6479 2268 M
-0 251 V
-359 0 V
-0 -251 V
--359 0 V
-1.000 UP
-stroke
-LTb
 % Begin plot #1
-1.000 UL
+2.000 UL
 LTb
-LCa setrgbcolor
 /Helvetica findfont 140 scalefont setfont
-LC0 setrgbcolor
 1.000 594 1743 97 1613 BoxColFill
-LCb setrgbcolor
 594 1743 N
 0 1612 V
 96 0 V
@@ -866,10 +949,7 @@ LCb setrgbcolor
 -96 0 V
 Z stroke
 LTw
-LCa setrgbcolor
-LC0 setrgbcolor
 1.000 786 1743 97 1497 BoxColFill
-LCb setrgbcolor
 786 1743 N
 0 1496 V
 96 0 V
@@ -877,10 +957,7 @@ LCb setrgbcolor
 -96 0 V
 Z stroke
 LTw
-LCa setrgbcolor
-LC0 setrgbcolor
 1.000 978 1743 97 1223 BoxColFill
-LCb setrgbcolor
 978 1743 N
 0 1222 V
 96 0 V
@@ -888,10 +965,7 @@ LCb setrgbcolor
 -96 0 V
 Z stroke
 LTw
-LCa setrgbcolor
-LC0 setrgbcolor
 1.000 1171 1743 97 319 BoxColFill
-LCb setrgbcolor
 1171 1743 N
 0 318 V
 96 0 V
@@ -899,10 +973,7 @@ LCb setrgbcolor
 -96 0 V
 Z stroke
 LTw
-LCa setrgbcolor
-LC0 setrgbcolor
 1.000 1363 1743 97 2179 BoxColFill
-LCb setrgbcolor
 1363 1743 N
 0 2178 V
 96 0 V
@@ -910,10 +981,7 @@ LCb setrgbcolor
 -96 0 V
 Z stroke
 LTw
-LCa setrgbcolor
-LC0 setrgbcolor
 1.000 1555 1743 97 535 BoxColFill
-LCb setrgbcolor
 1555 1743 N
 0 534 V
 96 0 V
@@ -921,10 +989,7 @@ LCb setrgbcolor
 -96 0 V
 Z stroke
 LTw
-LCa setrgbcolor
-LC0 setrgbcolor
 1.000 1747 1743 97 2740 BoxColFill
-LCb setrgbcolor
 1747 1743 N
 0 2739 V
 96 0 V
@@ -932,10 +997,7 @@ LCb setrgbcolor
 -96 0 V
 Z stroke
 LTw
-LCa setrgbcolor
-LC0 setrgbcolor
 1.000 1939 1743 97 881 BoxColFill
-LCb setrgbcolor
 1939 1743 N
 0 880 V
 96 0 V
@@ -943,10 +1005,7 @@ LCb setrgbcolor
 -96 0 V
 Z stroke
 LTw
-LCa setrgbcolor
-LC0 setrgbcolor
 1.000 2131 1743 98 577 BoxColFill
-LCb setrgbcolor
 2131 1743 N
 0 576 V
 97 0 V
@@ -954,10 +1013,7 @@ LCb setrgbcolor
 -97 0 V
 Z stroke
 LTw
-LCa setrgbcolor
-LC0 setrgbcolor
 1.000 2324 1743 97 1903 BoxColFill
-LCb setrgbcolor
 2324 1743 N
 0 1902 V
 96 0 V
@@ -965,10 +1021,7 @@ LCb setrgbcolor
 -96 0 V
 Z stroke
 LTw
-LCa setrgbcolor
-LC0 setrgbcolor
 1.000 2516 1743 97 2596 BoxColFill
-LCb setrgbcolor
 2516 1743 N
 0 2595 V
 96 0 V
@@ -976,10 +1029,7 @@ LCb setrgbcolor
 -96 0 V
 Z stroke
 LTw
-LCa setrgbcolor
-LC0 setrgbcolor
 1.000 2708 1743 97 1561 BoxColFill
-LCb setrgbcolor
 2708 1743 N
 0 1560 V
 96 0 V
@@ -987,10 +1037,7 @@ LCb setrgbcolor
 -96 0 V
 Z stroke
 LTw
-LCa setrgbcolor
-LC0 setrgbcolor
 1.000 2900 1743 97 818 BoxColFill
-LCb setrgbcolor
 2900 1743 N
 0 817 V
 96 0 V
@@ -998,10 +1045,7 @@ LCb setrgbcolor
 -96 0 V
 Z stroke
 LTw
-LCa setrgbcolor
-LC0 setrgbcolor
 1.000 3092 1743 97 720 BoxColFill
-LCb setrgbcolor
 3092 1743 N
 0 719 V
 96 0 V
@@ -1009,10 +1053,7 @@ LCb setrgbcolor
 -96 0 V
 Z stroke
 LTw
-LCa setrgbcolor
-LC0 setrgbcolor
 1.000 3284 1743 98 1487 BoxColFill
-LCb setrgbcolor
 3284 1743 N
 0 1486 V
 97 0 V
@@ -1020,10 +1061,7 @@ LCb setrgbcolor
 -97 0 V
 Z stroke
 LTw
-LCa setrgbcolor
-LC0 setrgbcolor
 1.000 3477 1743 97 533 BoxColFill
-LCb setrgbcolor
 3477 1743 N
 0 532 V
 96 0 V
@@ -1031,10 +1069,7 @@ LCb setrgbcolor
 -96 0 V
 Z stroke
 LTw
-LCa setrgbcolor
-LC0 setrgbcolor
 1.000 3669 1743 97 249 BoxColFill
-LCb setrgbcolor
 3669 1743 N
 0 248 V
 96 0 V
@@ -1042,10 +1077,7 @@ LCb setrgbcolor
 -96 0 V
 Z stroke
 LTw
-LCa setrgbcolor
-LC1 setrgbcolor
 1.000 3861 1743 97 1441 BoxColFill
-LCb setrgbcolor
 3861 1743 N
 0 1440 V
 96 0 V
@@ -1053,10 +1085,7 @@ LCb setrgbcolor
 -96 0 V
 Z stroke
 LTw
-LCa setrgbcolor
-LC1 setrgbcolor
 1.000 4053 1743 97 1553 BoxColFill
-LCb setrgbcolor
 4053 1743 N
 0 1552 V
 96 0 V
@@ -1064,10 +1093,7 @@ LCb setrgbcolor
 -96 0 V
 Z stroke
 LTw
-LCa setrgbcolor
-LC1 setrgbcolor
 1.000 4245 1743 97 1446 BoxColFill
-LCb setrgbcolor
 4245 1743 N
 0 1445 V
 96 0 V
@@ -1075,10 +1101,7 @@ LCb setrgbcolor
 -96 0 V
 Z stroke
 LTw
-LCa setrgbcolor
-LC1 setrgbcolor
 1.000 4437 1743 98 759 BoxColFill
-LCb setrgbcolor
 4437 1743 N
 0 758 V
 97 0 V
@@ -1086,10 +1109,7 @@ LCb setrgbcolor
 -97 0 V
 Z stroke
 LTw
-LCa setrgbcolor
-LC1 setrgbcolor
 1.000 4630 1743 97 1516 BoxColFill
-LCb setrgbcolor
 4630 1743 N
 0 1515 V
 96 0 V
@@ -1097,10 +1117,7 @@ LCb setrgbcolor
 -96 0 V
 Z stroke
 LTw
-LCa setrgbcolor
-LC1 setrgbcolor
 1.000 4822 1743 97 6 BoxColFill
-LCb setrgbcolor
 4822 1743 N
 0 5 V
 96 0 V
@@ -1108,10 +1125,7 @@ LCb setrgbcolor
 -96 0 V
 Z stroke
 LTw
-LCa setrgbcolor
-LC2 setrgbcolor
 1.000 5014 1743 97 38 BoxColFill
-LCb setrgbcolor
 5014 1743 N
 0 37 V
 96 0 V
@@ -1119,10 +1133,7 @@ LCb setrgbcolor
 -96 0 V
 Z stroke
 LTw
-LCa setrgbcolor
-LC2 setrgbcolor
 1.000 5206 1743 97 64 BoxColFill
-LCb setrgbcolor
 5206 1743 N
 0 63 V
 96 0 V
@@ -1130,10 +1141,7 @@ LCb setrgbcolor
 -96 0 V
 Z stroke
 LTw
-LCa setrgbcolor
-LC2 setrgbcolor
 1.000 5398 1743 97 485 BoxColFill
-LCb setrgbcolor
 5398 1743 N
 0 484 V
 96 0 V
@@ -1141,10 +1149,7 @@ LCb setrgbcolor
 -96 0 V
 Z stroke
 LTw
-LCa setrgbcolor
-LC2 setrgbcolor
 1.000 5591 1743 97 64 BoxColFill
-LCb setrgbcolor
 5591 1743 N
 0 63 V
 96 0 V
@@ -1152,10 +1157,7 @@ LCb setrgbcolor
 -96 0 V
 Z stroke
 LTw
-LCa setrgbcolor
-LC2 setrgbcolor
 1.000 5783 1743 97 212 BoxColFill
-LCb setrgbcolor
 5783 1743 N
 0 211 V
 96 0 V
@@ -1163,10 +1165,7 @@ LCb setrgbcolor
 -96 0 V
 Z stroke
 LTw
-LCa setrgbcolor
-LC2 setrgbcolor
 1.000 5975 1743 97 65 BoxColFill
-LCb setrgbcolor
 5975 1743 N
 0 64 V
 96 0 V
@@ -1174,14 +1173,13 @@ LCb setrgbcolor
 -96 0 V
 Z stroke
 LTw
-LCa setrgbcolor
 % End plot #1
 % Begin plot #2
 1.000 UL
-LT1
+LT2
+LTb
 /Helvetica findfont 140 scalefont setfont
 1.000 UP
-LTb
 642 3410 M
 (-) Cshow
 834 3294 M
@@ -1241,6 +1239,8 @@ LTb
 6023 1862 M
 (+) Cshow
 % End plot #2
+2.000 UL
+LTb
 1.000 UL
 LTb
 546 4619 N
