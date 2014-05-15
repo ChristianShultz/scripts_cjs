@@ -1,0 +1,99 @@
+<perldata>
+ <arrayref memory_address="0x1cc72e8">
+  <item key="0">
+   <hashref blessed_package="OPparams" memory_address="0x1c4a6f8">
+    <item key="ENERGY">0.458181 0.00310027</item>
+    <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
+    <item key="HYBRID" defined="false"></item>
+    <item key="MOM">p000</item>
+    <item key="NCFG">535</item>
+    <item key="PHASER">1</item>
+    <item key="PID">a_proj1</item>
+    <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/A1pM</item>
+    <item key="REP">A1</item>
+    <item key="REPSTEM">A1</item>
+    <item key="SPIN">0</item>
+    <item key="STATE">2</item>
+    <item key="T0">8</item>
+    <item key="TWOIZ">2</item>
+    <item key="TZ">10</item>
+   </hashref>
+  </item>
+  <item key="1">
+   <hashref blessed_package="OPparams" memory_address="0x220dc48">
+    <item key="ENERGY">0.468444 0.00440199</item>
+    <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
+    <item key="HYBRID" defined="false"></item>
+    <item key="MOM">p100</item>
+    <item key="NCFG">535</item>
+    <item key="PHASER">1</item>
+    <item key="PID">a_proj1</item>
+    <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D4A1M_mom1</item>
+    <item key="REP">D4A1</item>
+    <item key="REPSTEM">H0D4A1</item>
+    <item key="SPIN">0</item>
+    <item key="STATE">2</item>
+    <item key="T0">9</item>
+    <item key="TWOIZ">2</item>
+    <item key="TZ">10</item>
+   </hashref>
+  </item>
+  <item key="2">
+   <hashref blessed_package="OPparams" memory_address="0x220ddc8">
+    <item key="ENERGY">0.487179 0.00259645</item>
+    <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
+    <item key="HYBRID" defined="false"></item>
+    <item key="MOM">p110</item>
+    <item key="NCFG">535</item>
+    <item key="PHASER">1</item>
+    <item key="PID">a_proj1</item>
+    <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D2A1M_mom2</item>
+    <item key="REP">D2A1</item>
+    <item key="REPSTEM">H0D2A1</item>
+    <item key="SPIN">0</item>
+    <item key="STATE">5</item>
+    <item key="T0">7</item>
+    <item key="TWOIZ">2</item>
+    <item key="TZ">10</item>
+   </hashref>
+  </item>
+  <item key="3">
+   <hashref blessed_package="OPparams" memory_address="0x220df48">
+    <item key="ENERGY">0.504956 0.00779347</item>
+    <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
+    <item key="HYBRID" defined="false"></item>
+    <item key="MOM">p111</item>
+    <item key="NCFG">535</item>
+    <item key="PHASER">1</item>
+    <item key="PID">a_proj1</item>
+    <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D3A1M_mom3</item>
+    <item key="REP">D3A1</item>
+    <item key="REPSTEM">H0D3A1</item>
+    <item key="SPIN">0</item>
+    <item key="STATE">3</item>
+    <item key="T0">7</item>
+    <item key="TWOIZ">2</item>
+    <item key="TZ">9</item>
+   </hashref>
+  </item>
+  <item key="4">
+   <hashref blessed_package="OPparams" memory_address="0x220e0c8">
+    <item key="ENERGY">0.516549 0.00621059</item>
+    <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
+    <item key="HYBRID" defined="false"></item>
+    <item key="MOM">p200</item>
+    <item key="NCFG">535</item>
+    <item key="PHASER">1</item>
+    <item key="PID">a_proj1</item>
+    <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D4A1M_mom4</item>
+    <item key="REP">D4A1</item>
+    <item key="REPSTEM">H0D4A1</item>
+    <item key="SPIN">0</item>
+    <item key="STATE">3</item>
+    <item key="T0">9</item>
+    <item key="TWOIZ">2</item>
+    <item key="TZ">11</item>
+   </hashref>
+  </item>
+ </arrayref>
+</perldata>

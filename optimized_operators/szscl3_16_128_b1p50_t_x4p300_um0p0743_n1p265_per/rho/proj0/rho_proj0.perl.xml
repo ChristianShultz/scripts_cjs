@@ -1,8 +1,8 @@
 <perldata>
- <arrayref memory_address="0x1036f48">
+ <arrayref memory_address="0x1ffc718">
   <item key="0">
-   <hashref blessed_package="OPparams" memory_address="0xfa53d8">
-    <item key="ENERGY">0.216166 0.000203363</item>
+   <hashref blessed_package="OPparams" memory_address="0x1f6a6f8">
+    <item key="ENERGY">0.216292 0.000254028</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p000</item>
@@ -14,14 +14,14 @@
     <item key="REPSTEM">T1</item>
     <item key="SPIN">1</item>
     <item key="STATE">0</item>
-    <item key="T0">7</item>
+    <item key="T0">9</item>
     <item key="TWOIZ">2</item>
-    <item key="TZ">19</item>
+    <item key="TZ">13</item>
    </hashref>
   </item>
   <item key="1">
-   <hashref blessed_package="OPparams" memory_address="0x1572a08">
-    <item key="ENERGY">0.24299 0.000203548</item>
+   <hashref blessed_package="OPparams" memory_address="0x2537e98">
+    <item key="ENERGY">0.242958 0.000210399</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p100</item>
@@ -33,13 +33,13 @@
     <item key="REPSTEM">H0D4A1</item>
     <item key="SPIN">1</item>
     <item key="STATE">0</item>
-    <item key="T0">8</item>
+    <item key="T0">9</item>
     <item key="TWOIZ">2</item>
-    <item key="TZ">18</item>
+    <item key="TZ">13</item>
    </hashref>
   </item>
   <item key="2">
-   <hashref blessed_package="OPparams" memory_address="0x1572b88">
+   <hashref blessed_package="OPparams" memory_address="0x2538018">
     <item key="ENERGY">0.243636 0.000249301</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
@@ -54,12 +54,12 @@
     <item key="STATE">0</item>
     <item key="T0">8</item>
     <item key="TWOIZ">2</item>
-    <item key="TZ">16</item>
+    <item key="TZ">11</item>
    </hashref>
   </item>
   <item key="3">
-   <hashref blessed_package="OPparams" memory_address="0x1572d08">
-    <item key="ENERGY">0.267249 0.000293419</item>
+   <hashref blessed_package="OPparams" memory_address="0x2538198">
+    <item key="ENERGY">0.267284 0.000342214</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p110</item>
@@ -71,13 +71,13 @@
     <item key="REPSTEM">H0D2A1</item>
     <item key="SPIN">1</item>
     <item key="STATE">0</item>
-    <item key="T0">8</item>
+    <item key="T0">9</item>
     <item key="TWOIZ">2</item>
-    <item key="TZ">16</item>
+    <item key="TZ">12</item>
    </hashref>
   </item>
   <item key="4">
-   <hashref blessed_package="OPparams" memory_address="0x1572e88">
+   <hashref blessed_package="OPparams" memory_address="0x2538318">
     <item key="ENERGY">0.268492 0.000316493</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
@@ -92,12 +92,12 @@
     <item key="STATE">0</item>
     <item key="T0">8</item>
     <item key="TWOIZ">2</item>
-    <item key="TZ">14</item>
+    <item key="TZ">10</item>
    </hashref>
   </item>
   <item key="5">
-   <hashref blessed_package="OPparams" memory_address="0x1046300">
-    <item key="ENERGY">0.268892 0.000327712</item>
+   <hashref blessed_package="OPparams" memory_address="0x200c190">
+    <item key="ENERGY">0.268888 0.000318727</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p110</item>
@@ -109,13 +109,13 @@
     <item key="REPSTEM">H1D2B2</item>
     <item key="SPIN">1</item>
     <item key="STATE">0</item>
-    <item key="T0">9</item>
+    <item key="T0">8</item>
     <item key="TWOIZ">2</item>
-    <item key="TZ">17</item>
+    <item key="TZ">9</item>
    </hashref>
   </item>
   <item key="6">
-   <hashref blessed_package="OPparams" memory_address="0x1046480">
+   <hashref blessed_package="OPparams" memory_address="0x200c310">
     <item key="ENERGY">0.290566 0.000289399</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
@@ -130,11 +130,11 @@
     <item key="STATE">0</item>
     <item key="T0">8</item>
     <item key="TWOIZ">2</item>
-    <item key="TZ">15</item>
+    <item key="TZ">10</item>
    </hashref>
   </item>
   <item key="7">
-   <hashref blessed_package="OPparams" memory_address="0x1046600">
+   <hashref blessed_package="OPparams" memory_address="0x200c490">
     <item key="ENERGY">0.291966 0.000366188</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
@@ -149,11 +149,11 @@
     <item key="STATE">0</item>
     <item key="T0">7</item>
     <item key="TWOIZ">2</item>
-    <item key="TZ">14</item>
+    <item key="TZ">11</item>
    </hashref>
   </item>
   <item key="8">
-   <hashref blessed_package="OPparams" memory_address="0x1046780">
+   <hashref blessed_package="OPparams" memory_address="0x200c610">
     <item key="ENERGY">0.309276 0.000348045</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
@@ -168,11 +168,11 @@
     <item key="STATE">0</item>
     <item key="T0">7</item>
     <item key="TWOIZ">2</item>
-    <item key="TZ">15</item>
+    <item key="TZ">11</item>
    </hashref>
   </item>
   <item key="9">
-   <hashref blessed_package="OPparams" memory_address="0x1046900">
+   <hashref blessed_package="OPparams" memory_address="0x200c790">
     <item key="ENERGY">0.31132 0.000476507</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
@@ -187,7 +187,7 @@
     <item key="STATE">0</item>
     <item key="T0">7</item>
     <item key="TWOIZ">2</item>
-    <item key="TZ">16</item>
+    <item key="TZ">10</item>
    </hashref>
   </item>
  </arrayref>

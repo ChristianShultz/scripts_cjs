@@ -11,7 +11,7 @@ our $hybrid_line_number = init_hybrid_params();
 my @ops = @{ ExtractedStates::grab_all() }; 
 
 # sort the operators by momentum 
-my @moms = ( "p000" ) ; # , "p100" , "p110" , "p111" , "p200" ); 
+my @moms = ( "p000" , "p100" ); # , "p110" , "p111" , "p200" ); 
 my %mom_hash = (); 
 
 foreach my $p ( @moms ) 
@@ -69,6 +69,15 @@ sub write_gnuplot_file
   print GNU "set terminal x11 enhanced \n";
   print GNU xtic_function(); 
   print GNU "unset key \n";
+  print GNU "unset linetype 0 \n";
+  print GNU "unset linetype 1 \n";
+  print GNU "unset linetype 2 \n";
+  print GNU "unset linetype 3 \n";
+  print GNU "unset linetype 4 \n";
+  print GNU "unset linetype 5 \n";
+  print GNU "unset linetype 6 \n";
+  print GNU "unset linetype 7 \n";
+  print GNU "unset linetype 8 \n";
   print GNU "set style fill solid .5 border -1\n";
   print GNU "set title \"Spectrum($f)\" \n";
   print GNU "set ylabel \"a_{t} m_{h}\"\n";
@@ -292,7 +301,7 @@ sub sort_function_particle_JPC
 
 sub init_hybrid_params
 {
-  return 8;
+  return -1;
 }
 
 sub state_color_function

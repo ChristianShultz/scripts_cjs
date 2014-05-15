@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<ProjectedOps>
+  <elem>
+    <Key>
+      <name>b_proj0_p000_A1</name> 
+      <smear/>
+      <mom_type>0 0 0</mom_type>
+    </Key>
+    <Val>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>b_a1xD2_J1__J0_A1</name>
+              <smear/>
+              <mom_type>0 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.19181</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>b_b0xD0_J0__J0_A1</name>
+              <smear/>
+              <mom_type>0 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.683097</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>b_b0xD2_J0__J0_A1</name>
+              <smear/>
+              <mom_type>0 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.255896</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>b_rho_2xD3_J131_J1__J0_A1</name>
+              <smear/>
+              <mom_type>0 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>-0.178657</Val>
+      </elem>
+      <elem>
+        <Key>
+          <Operators>
+            <elem>
+              <name>b_rhoxD3_J131_J1__J0_A1</name>
+              <smear/>
+              <mom_type>0 0 0</mom_type>
+            </elem>
+          </Operators>
+          <CGs/>
+        </Key>
+        <Val>0.65357</Val>
+      </elem>
+    </Val>
+  </elem>
+</ProjectedOps>

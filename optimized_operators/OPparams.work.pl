@@ -19,6 +19,9 @@ sub rep_list
 
   $fcns{0} = \&rep_list_spin_0;
   $fcns{1} = \&rep_list_spin_1;
+  $fcns{2} = \&rep_list_spin_2;
+  $fcns{3} = \&rep_list_spin_3;
+  $fcns{4} = \&rep_list_spin_4;
 
   my $ref = "";
   if ( exists $fcns{$spin} )
@@ -131,6 +134,188 @@ sub rep_list_spin_1
 }
 
 
+sub rep_list_spin_2
+{
+  my $parity = $_[0]; 
+
+  my %ret = (); 
+  my $rep = "";
+
+  # etap = parity
+  if ( $parity eq "p" )
+  {
+    $rep = "A1";
+  }
+  elsif ( $parity eq "m" )
+  {
+    $rep = "A2";
+  }
+  else
+  {
+    die ( " parity must be either p or m , parity : $parity ");
+  }
+
+  my %rest = (); 
+  $rest{ "T2" } = "";
+  $rest{ "E" } = "";
+
+  my %D2 = (); 
+  $D2{ "D2" . $rep } = "H0";
+  $D2{ "D2B1" } = "H1";
+  $D2{ "D2B2" } = "H1";
+  $D2{ "D2A1" } = "H2";
+  $D2{ "D2A2" } = "H2";
+
+  my %D3 = (); 
+  $D3{ "D3" . $rep } = "H0";
+  $D3{ "D3E2" } = "H1";
+  $D3{ "D3E2" } = "H2";
+
+  my %D4 = (); 
+  $D4{ "D4" . $rep } = "H0";
+  $D4{ "D4E2" } = "H1";
+  $D4{ "D4B1" } = "H2";
+  $D4{ "D4B2" } = "H2";
+
+
+  $ret { "p000" } = \%rest; 
+  $ret { "p100" } = \%D4; 
+  $ret { "p110" } = \%D2; 
+  $ret { "p111" } = \%D3; 
+  $ret { "p200" } = \%D4; 
+
+  return \%ret; 
+
+}
+
+
+
+sub rep_list_spin_3
+{
+  my $parity = $_[0]; 
+
+  my %ret = (); 
+  my $rep = "";
+
+  # etap = -parity
+  if ( $parity eq "p" )
+  {
+    $rep = "A2";
+  }
+  elsif ( $parity eq "m" )
+  {
+    $rep = "A1";
+  }
+  else
+  {
+    die ( " parity must be either p or m , parity : $parity ");
+  }
+
+  my %rest = (); 
+  $rest{ "T1" } = "";
+  $rest{ "T2" } = "";
+  $rest{ "A2" } = "";
+
+  my %D2 = (); 
+  $D2{ "D2" . $rep } = "H0";
+  $D2{ "D2B1" } = "H1";
+  $D2{ "D2B2" } = "H1";
+  $D2{ "D2A1" } = "H2";
+  $D2{ "D2A2" } = "H2";
+  $D2{ "D2B1" } = "H3";
+  $D2{ "D2B2" } = "H3";
+
+  my %D3 = (); 
+  $D3{ "D3" . $rep } = "H0";
+  $D3{ "D3E2" } = "H1";
+  $D3{ "D3E2" } = "H2";
+  $D3{ "D3A1" } = "H3";
+  $D3{ "D3A2" } = "H3";
+
+  my %D4 = (); 
+  $D4{ "D4" . $rep } = "H0";
+  $D4{ "D4E2" } = "H1";
+  $D4{ "D4B1" } = "H2";
+  $D4{ "D4B2" } = "H2";
+  $D4{ "D4E2" } = "H3";
+
+
+  $ret { "p000" } = \%rest; 
+  $ret { "p100" } = \%D4; 
+  $ret { "p110" } = \%D2; 
+  $ret { "p111" } = \%D3; 
+  $ret { "p200" } = \%D4; 
+
+  return \%ret; 
+
+}
+
+
+sub rep_list_spin_4
+{
+  my $parity = $_[0]; 
+
+  my %ret = (); 
+  my $rep = "";
+
+  # etap = parity
+  if ( $parity eq "p" )
+  {
+    $rep = "A1";
+  }
+  elsif ( $parity eq "m" )
+  {
+    $rep = "A2";
+  }
+  else
+  {
+    die ( " parity must be either p or m , parity : $parity ");
+  }
+
+  my %rest = (); 
+  $rest{ "T1" } = "";
+  $rest{ "T2" } = "";
+  $rest{ "A1" } = "";
+  $rest{ "E" } = "";
+
+  my %D2 = (); 
+  $D2{ "D2" . $rep } = "H0";
+  $D2{ "D2B1" } = "H1";
+  $D2{ "D2B2" } = "H1";
+  $D2{ "D2A1" } = "H2";
+  $D2{ "D2A2" } = "H2";
+  $D2{ "D2B1" } = "H3";
+  $D2{ "D2B2" } = "H3";
+  $D2{ "D2A1" } = "H4";
+  $D2{ "D2A2" } = "H4";
+
+  my %D3 = (); 
+  $D3{ "D3" . $rep } = "H0";
+  $D3{ "D3E2" } = "H1";
+  $D3{ "D3E2" } = "H2";
+  $D3{ "D3A1" } = "H3";
+  $D3{ "D3A2" } = "H3";
+  $D3{ "D3E2" } = "H4";
+
+  my %D4 = (); 
+  $D4{ "D4" . $rep } = "H0";
+  $D4{ "D4E2" } = "H1";
+  $D4{ "D4B1" } = "H2";
+  $D4{ "D4B2" } = "H2";
+  $D4{ "D4E2" } = "H3";
+  $D4{ "D4A1" } = "H4";
+  $D4{ "D4A2" } = "H4";
+
+
+  $ret { "p000" } = \%rest; 
+  $ret { "p100" } = \%D4; 
+  $ret { "p110" } = \%D2; 
+  $ret { "p111" } = \%D3; 
+  $ret { "p200" } = \%D4; 
+
+  return \%ret; 
+
+}
 
 
 sub print_header_perl

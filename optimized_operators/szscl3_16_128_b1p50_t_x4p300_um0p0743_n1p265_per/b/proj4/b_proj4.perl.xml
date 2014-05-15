@@ -1,0 +1,23 @@
+<perldata>
+ <arrayref memory_address="0x1d769b0">
+  <item key="0">
+   <hashref blessed_package="OPparams" memory_address="0x1ceb8e8">
+    <item key="ENERGY">0.327647 0.000802555</item>
+    <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
+    <item key="HYBRID" defined="false"></item>
+    <item key="MOM">p000</item>
+    <item key="NCFG">535</item>
+    <item key="PHASER">1</item>
+    <item key="PID">b_proj4</item>
+    <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/T1pP</item>
+    <item key="REP">T1</item>
+    <item key="REPSTEM">T1</item>
+    <item key="SPIN">1</item>
+    <item key="STATE">0</item>
+    <item key="T0">8</item>
+    <item key="TWOIZ">2</item>
+    <item key="TZ">11</item>
+   </hashref>
+  </item>
+ </arrayref>
+</perldata>

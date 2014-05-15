@@ -1,0 +1,5 @@
+0 I2,iz2,A1p,r0,p000,a_proj0_p000_A1,p000a_proj0_E
+2 I2,iz2,D2A1,r0,p000,a_proj0_p110_H0D2A1,p110a_proj0_E
+3 I2,iz2,D3A1,r0,p000,a_proj0_p111_H0D3A1,p111a_proj0_E
+1 I2,iz2,D4A1,r0,p000,a_proj0_p100_H0D4A1,p100a_proj0_E
+4 I2,iz2,D4A1,r0,p000,a_proj0_p200_H0D4A1,p200a_proj0_E

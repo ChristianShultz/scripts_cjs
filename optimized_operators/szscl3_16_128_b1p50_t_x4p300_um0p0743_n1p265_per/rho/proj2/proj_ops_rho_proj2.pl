@@ -26,9 +26,9 @@ my @all_ops = ();
   $rho_proj2_p000_T1->ncfg(535);
   $rho_proj2_p000_T1->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
   $rho_proj2_p000_T1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/T1mP");
-  $rho_proj2_p000_T1->t0(7);
+  $rho_proj2_p000_T1->t0(9);
   $rho_proj2_p000_T1->state(2); 
-  $rho_proj2_p000_T1->tz(9);
+  $rho_proj2_p000_T1->tz(13);
   $rho_proj2_p000_T1->phaser(-1.);
   $rho_proj2_p000_T1->spin(1);
 
@@ -42,9 +42,9 @@ my @all_ops = ();
   $rho_proj2_p100_H0D4A1->ncfg(535);
   $rho_proj2_p100_H0D4A1->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
   $rho_proj2_p100_H0D4A1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D4A1P_mom1");
-  $rho_proj2_p100_H0D4A1->t0(8);
+  $rho_proj2_p100_H0D4A1->t0(9);
   $rho_proj2_p100_H0D4A1->state(3); 
-  $rho_proj2_p100_H0D4A1->tz(18);
+  $rho_proj2_p100_H0D4A1->tz(13);
   $rho_proj2_p100_H0D4A1->phaser(1.);
   $rho_proj2_p100_H0D4A1->spin(1);
 
@@ -60,7 +60,7 @@ my @all_ops = ();
   $rho_proj2_p100_H1D4E2->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D4E2P_mom1");
   $rho_proj2_p100_H1D4E2->t0(8);
   $rho_proj2_p100_H1D4E2->state(8); 
-  $rho_proj2_p100_H1D4E2->tz(16);
+  $rho_proj2_p100_H1D4E2->tz(11);
   $rho_proj2_p100_H1D4E2->phaser(1.);
   $rho_proj2_p100_H1D4E2->spin(1);
 
@@ -74,9 +74,9 @@ my @all_ops = ();
   $rho_proj2_p110_H0D2A1->ncfg(535);
   $rho_proj2_p110_H0D2A1->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
   $rho_proj2_p110_H0D2A1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D2A1P_mom2");
-  $rho_proj2_p110_H0D2A1->t0(8);
+  $rho_proj2_p110_H0D2A1->t0(9);
   $rho_proj2_p110_H0D2A1->state(6); 
-  $rho_proj2_p110_H0D2A1->tz(16);
+  $rho_proj2_p110_H0D2A1->tz(12);
   $rho_proj2_p110_H0D2A1->phaser(1.);
   $rho_proj2_p110_H0D2A1->spin(1);
 
@@ -92,7 +92,7 @@ my @all_ops = ();
   $rho_proj2_p110_H1D2B1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D2B1P_mom2");
   $rho_proj2_p110_H1D2B1->t0(8);
   $rho_proj2_p110_H1D2B1->state(3); 
-  $rho_proj2_p110_H1D2B1->tz(14);
+  $rho_proj2_p110_H1D2B1->tz(10);
   $rho_proj2_p110_H1D2B1->phaser(1.);
   $rho_proj2_p110_H1D2B1->spin(1);
 
@@ -106,9 +106,16 @@ my @all_ops = ();
   $rho_proj2_p110_H1D2B2->ncfg(535);
   $rho_proj2_p110_H1D2B2->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
   $rho_proj2_p110_H1D2B2->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D2B2P_mom2");
+
+  #
+  # t08 was crappy here, move t09, cant get them all to line 
+  # up well enough on the same t0, fits are either bad, or 
+  # proj coeffs looks suspicious 
+  #
+
   $rho_proj2_p110_H1D2B2->t0(9);
   $rho_proj2_p110_H1D2B2->state(7); 
-  $rho_proj2_p110_H1D2B2->tz(17);
+  $rho_proj2_p110_H1D2B2->tz(10);
   $rho_proj2_p110_H1D2B2->phaser(1.);
   $rho_proj2_p110_H1D2B2->spin(1);
 
@@ -122,9 +129,14 @@ my @all_ops = ();
   $rho_proj2_p111_H0D3A1->ncfg(535);
   $rho_proj2_p111_H0D3A1->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
   $rho_proj2_p111_H0D3A1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D3A1P_mom3");
-  $rho_proj2_p111_H0D3A1->t0(8);
+
+  #
+  # Again, this op does not like t08 
+  #
+
+  $rho_proj2_p111_H0D3A1->t0(10);
   $rho_proj2_p111_H0D3A1->state(2); 
-  $rho_proj2_p111_H0D3A1->tz(15);
+  $rho_proj2_p111_H0D3A1->tz(12);
   $rho_proj2_p111_H0D3A1->phaser(1.);
   $rho_proj2_p111_H0D3A1->spin(1);
 
@@ -140,7 +152,7 @@ my @all_ops = ();
   $rho_proj2_p111_H1D3E2->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D3E2P_mom3");
   $rho_proj2_p111_H1D3E2->t0(7);
   $rho_proj2_p111_H1D3E2->state(5); 
-  $rho_proj2_p111_H1D3E2->tz(14);
+  $rho_proj2_p111_H1D3E2->tz(11);
   $rho_proj2_p111_H1D3E2->phaser(1.);
   $rho_proj2_p111_H1D3E2->spin(1);
 
@@ -156,7 +168,7 @@ my @all_ops = ();
   $rho_proj2_p200_H0D4A1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D4A1P_mom4");
   $rho_proj2_p200_H0D4A1->t0(7);
   $rho_proj2_p200_H0D4A1->state(3); 
-  $rho_proj2_p200_H0D4A1->tz(15);
+  $rho_proj2_p200_H0D4A1->tz(11);
   $rho_proj2_p200_H0D4A1->phaser(1.);
   $rho_proj2_p200_H0D4A1->spin(1);
 
@@ -170,9 +182,9 @@ my @all_ops = ();
   $rho_proj2_p200_H1D4E2->ncfg(535);
   $rho_proj2_p200_H1D4E2->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
   $rho_proj2_p200_H1D4E2->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D4E2P_mom4");
-  $rho_proj2_p200_H1D4E2->t0(7);
+  $rho_proj2_p200_H1D4E2->t0(8);
   $rho_proj2_p200_H1D4E2->state(3); 
-  $rho_proj2_p200_H1D4E2->tz(16);
+  $rho_proj2_p200_H1D4E2->tz(10);
   $rho_proj2_p200_H1D4E2->phaser(1.);
   $rho_proj2_p200_H1D4E2->spin(1);
 
