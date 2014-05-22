@@ -1,4 +1,4 @@
-#!/bin/tcsh -x
+#!/bin/tcsh 
 
 set stem="szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"
 set file="weights.${stem}.list"
@@ -26,20 +26,19 @@ endif
 
 endif
 
-foreach list (  pion/proj0/weights.pion_proj0.list \
-                pion/proj1/weights.pion_proj1.list \
-                pion/proj2/weights.pion_proj2.list \
-                rho/proj0/weights.rho_proj0.list \
-                rho/proj1/weights.rho_proj1.list \
-                rho/proj2/weights.rho_proj2.list \
-    )
+foreach chan ( pion rho a b )
+  foreach proj ( `seq 0 1 11` )
+    set list = $chan/proj$proj/weights.${chan}_proj$proj.list 
+
 
     if (! -f $list) then 
-    echo "error: $list does not exist"
-    exit 1
-  endif
+      echo " $list does not exist"
+      continue 
+    endif
+
 
   cat $list >> $file
+  end 
 end
 
 set pl=convert_proj_list_to_irrep_op_xml.pl

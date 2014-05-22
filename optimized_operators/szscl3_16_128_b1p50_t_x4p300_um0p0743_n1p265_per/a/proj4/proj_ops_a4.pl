@@ -9,6 +9,7 @@
 use strict; 
 use OPparams; 
 use File::Basename;
+use QuarkModelAssign; 
 
 my $basedir = dirname($0); 
 
@@ -31,37 +32,39 @@ my @all_ops = ();
   $a_proj4_p000_T1->tz(9);
   $a_proj4_p000_T1->phaser(1.);
   $a_proj4_p000_T1->spin(1);
+  $a_proj4_p000_T1->quark_model_assignment(QuarkModelAssign::qm_assign("3P1"));
 
-#  my $a_proj4_p100_H0D4A2 = OPparams->new();
-#  $a_proj4_p100_H0D4A2->pid("a_proj4");
-#  $a_proj4_p100_H0D4A2->irrep("D4A2");
-#  $a_proj4_p100_H0D4A2->irrep_stem("H0D4A2");
-#  $a_proj4_p100_H0D4A2->mom("p100"); 
-#  $a_proj4_p100_H0D4A2->twoI_z(2); 
-#  $a_proj4_p100_H0D4A2->ncfg(535);
-#  $a_proj4_p100_H0D4A2->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
-#  $a_proj4_p100_H0D4A2->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/");
-#  $a_proj4_p100_H0D4A2->t0(-1);
-#  $a_proj4_p100_H0D4A2->state(-1); 
-#  $a_proj4_p100_H0D4A2->tz(-1);
-#  $a_proj4_p100_H0D4A2->phaser(1.);
-#  $a_proj4_p100_H0D4A2->spin(1);
-#
-#  my $a_proj4_p100_H1D4E2 = OPparams->new();
-#  $a_proj4_p100_H1D4E2->pid("a_proj4");
-#  $a_proj4_p100_H1D4E2->irrep("D4E2");
-#  $a_proj4_p100_H1D4E2->irrep_stem("H1D4E2");
-#  $a_proj4_p100_H1D4E2->mom("p100"); 
-#  $a_proj4_p100_H1D4E2->twoI_z(2); 
-#  $a_proj4_p100_H1D4E2->ncfg(535);
-#  $a_proj4_p100_H1D4E2->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
-#  $a_proj4_p100_H1D4E2->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/");
-#  $a_proj4_p100_H1D4E2->t0(-1);
-#  $a_proj4_p100_H1D4E2->state(-1); 
-#  $a_proj4_p100_H1D4E2->tz(-1);
-#  $a_proj4_p100_H1D4E2->phaser(1.);
-#  $a_proj4_p100_H1D4E2->spin(1);
-#
+  my $a_proj4_p100_H0D4A2 = OPparams->new();
+  $a_proj4_p100_H0D4A2->pid("a_proj4");
+  $a_proj4_p100_H0D4A2->irrep("D4A2");
+  $a_proj4_p100_H0D4A2->irrep_stem("H0D4A2");
+  $a_proj4_p100_H0D4A2->mom("p100"); 
+  $a_proj4_p100_H0D4A2->twoI_z(2); 
+  $a_proj4_p100_H0D4A2->ncfg(535);
+  $a_proj4_p100_H0D4A2->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
+  $a_proj4_p100_H0D4A2->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D4A2M_mom1");
+  $a_proj4_p100_H0D4A2->t0(9);
+  $a_proj4_p100_H0D4A2->state(5); 
+  $a_proj4_p100_H0D4A2->tz(13);
+  $a_proj4_p100_H0D4A2->phaser(1.);
+  $a_proj4_p100_H0D4A2->spin(1);
+
+  my $a_proj4_p100_H1D4E2 = OPparams->new();
+  $a_proj4_p100_H1D4E2->pid("a_proj4");
+  $a_proj4_p100_H1D4E2->irrep("D4E2");
+  $a_proj4_p100_H1D4E2->irrep_stem("H1D4E2");
+  $a_proj4_p100_H1D4E2->mom("p100"); 
+  $a_proj4_p100_H1D4E2->twoI_z(2); 
+  $a_proj4_p100_H1D4E2->ncfg(535);
+  $a_proj4_p100_H1D4E2->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
+  $a_proj4_p100_H1D4E2->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D4E2M_mom1");
+  $a_proj4_p100_H1D4E2->t0(7);
+  $a_proj4_p100_H1D4E2->state(4); 
+  $a_proj4_p100_H1D4E2->tz(10);
+  $a_proj4_p100_H1D4E2->phaser(1.);
+  $a_proj4_p100_H1D4E2->spin(1);
+
+  # again this turns junky -- in the D2B2 rep this time 
 #  my $a_proj4_p110_H0D2A2 = OPparams->new();
 #  $a_proj4_p110_H0D2A2->pid("a_proj4");
 #  $a_proj4_p110_H0D2A2->irrep("D2A2");
@@ -70,10 +73,10 @@ my @all_ops = ();
 #  $a_proj4_p110_H0D2A2->twoI_z(2); 
 #  $a_proj4_p110_H0D2A2->ncfg(535);
 #  $a_proj4_p110_H0D2A2->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
-#  $a_proj4_p110_H0D2A2->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/");
-#  $a_proj4_p110_H0D2A2->t0(-1);
-#  $a_proj4_p110_H0D2A2->state(-1); 
-#  $a_proj4_p110_H0D2A2->tz(-1);
+#  $a_proj4_p110_H0D2A2->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D2A2M_mom2");
+#  $a_proj4_p110_H0D2A2->t0(7);
+#  $a_proj4_p110_H0D2A2->state(7); 
+#  $a_proj4_p110_H0D2A2->tz(12);
 #  $a_proj4_p110_H0D2A2->phaser(1.);
 #  $a_proj4_p110_H0D2A2->spin(1);
 #
@@ -85,10 +88,10 @@ my @all_ops = ();
 #  $a_proj4_p110_H1D2B1->twoI_z(2); 
 #  $a_proj4_p110_H1D2B1->ncfg(535);
 #  $a_proj4_p110_H1D2B1->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
-#  $a_proj4_p110_H1D2B1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/");
-#  $a_proj4_p110_H1D2B1->t0(-1);
-#  $a_proj4_p110_H1D2B1->state(-1); 
-#  $a_proj4_p110_H1D2B1->tz(-1);
+#  $a_proj4_p110_H1D2B1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D2B1M_mom2");
+#  $a_proj4_p110_H1D2B1->t0(8);
+#  $a_proj4_p110_H1D2B1->state(3); 
+#  $a_proj4_p110_H1D2B1->tz(10);
 #  $a_proj4_p110_H1D2B1->phaser(1.);
 #  $a_proj4_p110_H1D2B1->spin(1);
 #
@@ -100,10 +103,10 @@ my @all_ops = ();
 #  $a_proj4_p110_H1D2B2->twoI_z(2); 
 #  $a_proj4_p110_H1D2B2->ncfg(535);
 #  $a_proj4_p110_H1D2B2->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
-#  $a_proj4_p110_H1D2B2->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/");
-#  $a_proj4_p110_H1D2B2->t0(-1);
+#  $a_proj4_p110_H1D2B2->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D2B2M_mom2");
+#  $a_proj4_p110_H1D2B2->t0(8);
 #  $a_proj4_p110_H1D2B2->state(-1); 
-#  $a_proj4_p110_H1D2B2->tz(-1);
+#  $a_proj4_p110_H1D2B2->tz(9);
 #  $a_proj4_p110_H1D2B2->phaser(1.);
 #  $a_proj4_p110_H1D2B2->spin(1);
 #
@@ -168,8 +171,10 @@ my @all_ops = ();
 #  $a_proj4_p200_H1D4E2->spin(1);
 
 
-  my @all_operators = (); 
-  push @all_operators , $a_proj4_p000_T1; 
+ my @all_operators = (); 
+ push @all_operators , $a_proj4_p000_T1; 
+
+ # only take this guy at rest, looks very suspect  
 #  push @all_operators , $a_proj4_p100_H0D4A2; 
 #  push @all_operators , $a_proj4_p100_H1D4E2; 
 #  push @all_operators , $a_proj4_p110_H0D2A2; 

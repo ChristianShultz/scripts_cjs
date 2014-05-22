@@ -1,0 +1,400 @@
+particle id - rho_proj0 fn->  I2,iz2,D2A1,r0,p000,rho_proj0_p110_H0D2A1,p110
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj0_p110_H0D2A1 smear=  momtype= 1 1 0 CGs:
+
+
+particle id - rho_proj2 fn->  I2,iz2,D4A1,r0,p000,rho_proj2_p200_H0D4A1,p200
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj2_p200_H0D4A1 smear=  momtype= 2 0 0 CGs:
+
+
+particle id - rho_proj3 fn->  I2,iz2,D4E2,r0,p000,rho_proj3_p200_H1D4E2,p200
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj3_p200_H1D4E2 smear=  momtype= 2 0 0 CGs:
+
+
+particle id - rho_proj3 fn->  I2,iz2,D4A1,r0,p000,rho_proj3_p100_H0D4A1,p100
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj3_p100_H0D4A1 smear=  momtype= 1 0 0 CGs:
+
+
+particle id - a_proj3 fn->  I2,iz2,D2A2,r0,p000,a_proj3_p110_H0D2A2,p110
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= a_proj3_p110_H0D2A2 smear=  momtype= 1 1 0 CGs:
+
+
+particle id - pion_proj0 fn->  I2,iz2,D3A2,r0,p000,pion_proj0_p111_H0D3A2,p111
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= pion_proj0_p111_H0D3A2 smear=  momtype= 1 1 1 CGs:
+
+
+particle id - pion_proj1 fn->  I2,iz2,D3A2,r0,p000,pion_proj1_p111_H0D3A2,p111
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= pion_proj1_p111_H0D3A2 smear=  momtype= 1 1 1 CGs:
+
+
+particle id - rho_proj2 fn->  I2,iz2,D4E2,r0,p000,rho_proj2_p200_H1D4E2,p200
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj2_p200_H1D4E2 smear=  momtype= 2 0 0 CGs:
+
+
+particle id - a_proj0 fn->  I2,iz2,D4A1,r0,p000,a_proj0_p100_H0D4A1,p100
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= a_proj0_p100_H0D4A1 smear=  momtype= 1 0 0 CGs:
+
+
+particle id - rho_proj2 fn->  I2,iz2,D2B2,r0,p000,rho_proj2_p110_H1D2B2,p110
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj2_p110_H1D2B2 smear=  momtype= 1 1 0 CGs:
+
+
+particle id - pion_proj4 fn->  I2,iz2,D4E2,r0,p000,pion_proj4_p200_H1D4E2,p200
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= pion_proj4_p200_H1D4E2 smear=  momtype= 2 0 0 CGs:
+
+
+particle id - rho_proj1 fn->  I2,iz2,D4A1,r0,p000,rho_proj1_p100_H0D4A1,p100
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj1_p100_H0D4A1 smear=  momtype= 1 0 0 CGs:
+
+
+particle id - rho_proj2 fn->  I2,iz2,D4E2,r0,p000,rho_proj2_p100_H1D4E2,p100
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj2_p100_H1D4E2 smear=  momtype= 1 0 0 CGs:
+
+
+particle id - a_proj3 fn->  I2,iz2,D4E2,r0,p000,a_proj3_p200_H1D4E2,p200
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= a_proj3_p200_H1D4E2 smear=  momtype= 2 0 0 CGs:
+
+
+particle id - pion_proj2 fn->  I2,iz2,D4A2,r0,p000,pion_proj2_p200_H0D4A2,p200
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= pion_proj2_p200_H0D4A2 smear=  momtype= 2 0 0 CGs:
+
+
+particle id - rho_proj1 fn->  I2,iz2,D2B2,r0,p000,rho_proj1_p110_H1D2B2,p110
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj1_p110_H1D2B2 smear=  momtype= 1 1 0 CGs:
+
+
+particle id - rho_proj2 fn->  I2,iz2,D3E2,r0,p000,rho_proj2_p111_H1D3E2,p111
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj2_p111_H1D3E2 smear=  momtype= 1 1 1 CGs:
+
+
+particle id - a_proj1 fn->  I2,iz2,D3A1,r0,p000,a_proj1_p111_H0D3A1,p111
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= a_proj1_p111_H0D3A1 smear=  momtype= 1 1 1 CGs:
+
+
+particle id - a_proj3 fn->  I2,iz2,T1p,r0,p000,a_proj3_p000_T1,p000
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= a_proj3_p000_T1 smear=  momtype= 0 0 0 CGs:
+
+
+particle id - b_proj4 fn->  I2,iz2,T1p,r0,p000,b_proj4_p000_T1,p000
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= b_proj4_p000_T1 smear=  momtype= 0 0 0 CGs:
+
+
+particle id - b_proj4 fn->  I2,iz2,D2B2,r0,p000,b_proj4_p110_H1D2B2,p110
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= b_proj4_p110_H1D2B2 smear=  momtype= 1 1 0 CGs:
+
+
+particle id - pion_proj4 fn->  I2,iz2,D2B1,r0,p000,pion_proj4_p110_H1D2B1,p110
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= pion_proj4_p110_H1D2B1 smear=  momtype= 1 1 0 CGs:
+
+
+particle id - rho_proj2 fn->  I2,iz2,D4A1,r0,p000,rho_proj2_p100_H0D4A1,p100
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj2_p100_H0D4A1 smear=  momtype= 1 0 0 CGs:
+
+
+particle id - a_proj1 fn->  I2,iz2,A1p,r0,p000,a_proj1_p000_A1,p000
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= a_proj1_p000_A1 smear=  momtype= 0 0 0 CGs:
+
+
+particle id - a_proj1 fn->  I2,iz2,D2A1,r0,p000,a_proj1_p110_H0D2A1,p110
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= a_proj1_p110_H0D2A1 smear=  momtype= 1 1 0 CGs:
+
+
+particle id - a_proj3 fn->  I2,iz2,D2B1,r0,p000,a_proj3_p110_H1D2B1,p110
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= a_proj3_p110_H1D2B1 smear=  momtype= 1 1 0 CGs:
+
+
+particle id - pion_proj0 fn->  I2,iz2,D4A2,r0,p000,pion_proj0_p100_H0D4A2,p100
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= pion_proj0_p100_H0D4A2 smear=  momtype= 1 0 0 CGs:
+
+
+particle id - pion_proj1 fn->  I2,iz2,D4A2,r0,p000,pion_proj1_p100_H0D4A2,p100
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= pion_proj1_p100_H0D4A2 smear=  momtype= 1 0 0 CGs:
+
+
+particle id - rho_proj2 fn->  I2,iz2,D3A1,r0,p000,rho_proj2_p111_H0D3A1,p111
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj2_p111_H0D3A1 smear=  momtype= 1 1 1 CGs:
+
+
+particle id - rho_proj0 fn->  I2,iz2,D4A1,r0,p000,rho_proj0_p200_H0D4A1,p200
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj0_p200_H0D4A1 smear=  momtype= 2 0 0 CGs:
+
+
+particle id - rho_proj2 fn->  I2,iz2,D2B1,r0,p000,rho_proj2_p110_H1D2B1,p110
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj2_p110_H1D2B1 smear=  momtype= 1 1 0 CGs:
+
+
+particle id - pion_proj4 fn->  I2,iz2,D3A1,r0,p000,pion_proj4_p111_H0D3A1,p111
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= pion_proj4_p111_H0D3A1 smear=  momtype= 1 1 1 CGs:
+
+
+particle id - rho_proj3 fn->  I2,iz2,D2B2,r0,p000,rho_proj3_p110_H1D2B2,p110
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj3_p110_H1D2B2 smear=  momtype= 1 1 0 CGs:
+
+
+particle id - b_proj4 fn->  I2,iz2,D2A2,r0,p000,b_proj4_p110_H0D2A2,p110
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= b_proj4_p110_H0D2A2 smear=  momtype= 1 1 0 CGs:
+
+
+particle id - pion_proj2 fn->  I2,iz2,D3A2,r0,p000,pion_proj2_p111_H0D3A2,p111
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= pion_proj2_p111_H0D3A2 smear=  momtype= 1 1 1 CGs:
+
+
+particle id - pion_proj4 fn->  I2,iz2,D2A1,r0,p000,pion_proj4_p110_H0D2A1,p110
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= pion_proj4_p110_H0D2A1 smear=  momtype= 1 1 0 CGs:
+
+
+particle id - rho_proj0 fn->  I2,iz2,D4E2,r0,p000,rho_proj0_p200_H1D4E2,p200
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj0_p200_H1D4E2 smear=  momtype= 2 0 0 CGs:
+
+
+particle id - rho_proj3 fn->  I2,iz2,D4E2,r0,p000,rho_proj3_p100_H1D4E2,p100
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj3_p100_H1D4E2 smear=  momtype= 1 0 0 CGs:
+
+
+particle id - rho_proj3 fn->  I2,iz2,D4A1,r0,p000,rho_proj3_p200_H0D4A1,p200
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj3_p200_H0D4A1 smear=  momtype= 2 0 0 CGs:
+
+
+particle id - pion_proj4 fn->  I2,iz2,D3E2,r0,p000,pion_proj4_p111_H1D3E2,p111
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= pion_proj4_p111_H1D3E2 smear=  momtype= 1 1 1 CGs:
+
+
+particle id - rho_proj0 fn->  I2,iz2,D2B2,r0,p000,rho_proj0_p110_H1D2B2,p110
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj0_p110_H1D2B2 smear=  momtype= 1 1 0 CGs:
+
+
+particle id - a_proj3 fn->  I2,iz2,D3E2,r0,p000,a_proj3_p111_H1D3E2,p111
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= a_proj3_p111_H1D3E2 smear=  momtype= 1 1 1 CGs:
+
+
+particle id - a_proj4 fn->  I2,iz2,T1p,r0,p000,a_proj4_p000_T1,p000
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= a_proj4_p000_T1 smear=  momtype= 0 0 0 CGs:
+
+
+particle id - rho_proj0 fn->  I2,iz2,D4E2,r0,p000,rho_proj0_p100_H1D4E2,p100
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj0_p100_H1D4E2 smear=  momtype= 1 0 0 CGs:
+
+
+particle id - rho_proj1 fn->  I2,iz2,D4E2,r0,p000,rho_proj1_p200_H1D4E2,p200
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj1_p200_H1D4E2 smear=  momtype= 2 0 0 CGs:
+
+
+particle id - a_proj0 fn->  I2,iz2,D2A1,r0,p000,a_proj0_p110_H0D2A1,p110
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= a_proj0_p110_H0D2A1 smear=  momtype= 1 1 0 CGs:
+
+
+particle id - b_proj4 fn->  I2,iz2,D4E2,r0,p000,b_proj4_p200_H1D4E2,p200
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= b_proj4_p200_H1D4E2 smear=  momtype= 2 0 0 CGs:
+
+
+particle id - pion_proj4 fn->  I2,iz2,T1m,r0,p000,pion_proj4_p000_T1,p000
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= pion_proj4_p000_T1 smear=  momtype= 0 0 0 CGs:
+
+
+particle id - rho_proj0 fn->  I2,iz2,D3E2,r0,p000,rho_proj0_p111_H1D3E2,p111
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj0_p111_H1D3E2 smear=  momtype= 1 1 1 CGs:
+
+
+particle id - rho_proj1 fn->  I2,iz2,T1m,r0,p000,rho_proj1_p000_T1,p000
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj1_p000_T1 smear=  momtype= 0 0 0 CGs:
+
+
+particle id - a_proj3 fn->  I2,iz2,D4A2,r0,p000,a_proj3_p200_H0D4A2,p200
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= a_proj3_p200_H0D4A2 smear=  momtype= 2 0 0 CGs:
+
+
+particle id - pion_proj4 fn->  I2,iz2,D4E2,r0,p000,pion_proj4_p100_H1D4E2,p100
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= pion_proj4_p100_H1D4E2 smear=  momtype= 1 0 0 CGs:
+
+
+particle id - rho_proj0 fn->  I2,iz2,D4A1,r0,p000,rho_proj0_p100_H0D4A1,p100
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj0_p100_H0D4A1 smear=  momtype= 1 0 0 CGs:
+
+
+particle id - rho_proj1 fn->  I2,iz2,D2B1,r0,p000,rho_proj1_p110_H1D2B1,p110
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj1_p110_H1D2B1 smear=  momtype= 1 1 0 CGs:
+
+
+particle id - a_proj3 fn->  I2,iz2,D4E2,r0,p000,a_proj3_p100_H1D4E2,p100
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= a_proj3_p100_H1D4E2 smear=  momtype= 1 0 0 CGs:
+
+
+particle id - b_proj4 fn->  I2,iz2,D2B1,r0,p000,b_proj4_p110_H1D2B1,p110
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= b_proj4_p110_H1D2B1 smear=  momtype= 1 1 0 CGs:
+
+
+particle id - pion_proj2 fn->  I2,iz2,D4A2,r0,p000,pion_proj2_p100_H0D4A2,p100
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= pion_proj2_p100_H0D4A2 smear=  momtype= 1 0 0 CGs:
+
+
+particle id - rho_proj0 fn->  I2,iz2,D3A1,r0,p000,rho_proj0_p111_H0D3A1,p111
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj0_p111_H0D3A1 smear=  momtype= 1 1 1 CGs:
+
+
+particle id - rho_proj0 fn->  I2,iz2,T1m,r0,p000,rho_proj0_p000_T1,p000
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj0_p000_T1 smear=  momtype= 0 0 0 CGs:
+
+
+particle id - rho_proj0 fn->  I2,iz2,D2B1,r0,p000,rho_proj0_p110_H1D2B1,p110
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj0_p110_H1D2B1 smear=  momtype= 1 1 0 CGs:
+
+
+particle id - a_proj1 fn->  I2,iz2,D4A1,r0,p000,a_proj1_p100_H0D4A1,p100
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= a_proj1_p100_H0D4A1 smear=  momtype= 1 0 0 CGs:
+
+
+particle id - pion_proj0 fn->  I2,iz2,D2A2,r0,p000,pion_proj0_p110_H0D2A2,p110
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= pion_proj0_p110_H0D2A2 smear=  momtype= 1 1 0 CGs:
+
+
+particle id - pion_proj1 fn->  I2,iz2,D2A2,r0,p000,pion_proj1_p110_H0D2A2,p110
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= pion_proj1_p110_H0D2A2 smear=  momtype= 1 1 0 CGs:
+
+
+particle id - rho_proj1 fn->  I2,iz2,D3A1,r0,p000,rho_proj1_p111_H0D3A1,p111
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj1_p111_H0D3A1 smear=  momtype= 1 1 1 CGs:
+
+
+particle id - rho_proj3 fn->  I2,iz2,T1m,r0,p000,rho_proj3_p000_T1,p000
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj3_p000_T1 smear=  momtype= 0 0 0 CGs:
+
+
+particle id - pion_proj2 fn->  I2,iz2,A1m,r0,p000,pion_proj2_p000_A1,p000
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= pion_proj2_p000_A1 smear=  momtype= 0 0 0 CGs:
+
+
+particle id - rho_proj1 fn->  I2,iz2,D2A1,r0,p000,rho_proj1_p110_H0D2A1,p110
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj1_p110_H0D2A1 smear=  momtype= 1 1 0 CGs:
+
+
+particle id - rho_proj3 fn->  I2,iz2,D2B1,r0,p000,rho_proj3_p110_H1D2B1,p110
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj3_p110_H1D2B1 smear=  momtype= 1 1 0 CGs:
+
+
+particle id - a_proj3 fn->  I2,iz2,D3A2,r0,p000,a_proj3_p111_H0D3A2,p111
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= a_proj3_p111_H0D3A2 smear=  momtype= 1 1 1 CGs:
+
+
+particle id - rho_proj1 fn->  I2,iz2,D3E2,r0,p000,rho_proj1_p111_H1D3E2,p111
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj1_p111_H1D3E2 smear=  momtype= 1 1 1 CGs:
+
+
+particle id - b_proj4 fn->  I2,iz2,D3E2,r0,p000,b_proj4_p111_H1D3E2,p111
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= b_proj4_p111_H1D3E2 smear=  momtype= 1 1 1 CGs:
+
+
+particle id - b_proj5 fn->  I2,iz2,T1p,r0,p000,b_proj5_p000_T1,p000
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= b_proj5_p000_T1 smear=  momtype= 0 0 0 CGs:
+
+
+particle id - rho_proj3 fn->  I2,iz2,D3A1,r0,p000,rho_proj3_p111_H0D3A1,p111
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj3_p111_H0D3A1 smear=  momtype= 1 1 1 CGs:
+
+
+particle id - b_proj4 fn->  I2,iz2,D4A2,r0,p000,b_proj4_p200_H0D4A2,p200
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= b_proj4_p200_H0D4A2 smear=  momtype= 2 0 0 CGs:
+
+
+particle id - pion_proj4 fn->  I2,iz2,D4A1,r0,p000,pion_proj4_p200_H0D4A1,p200
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= pion_proj4_p200_H0D4A1 smear=  momtype= 2 0 0 CGs:
+
+
+particle id - rho_proj1 fn->  I2,iz2,D4E2,r0,p000,rho_proj1_p100_H1D4E2,p100
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj1_p100_H1D4E2 smear=  momtype= 1 0 0 CGs:
+
+
+particle id - rho_proj3 fn->  I2,iz2,D2A1,r0,p000,rho_proj3_p110_H0D2A1,p110
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj3_p110_H0D2A1 smear=  momtype= 1 1 0 CGs:
+
+
+particle id - b_proj4 fn->  I2,iz2,D4E2,r0,p000,b_proj4_p100_H1D4E2,p100
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= b_proj4_p100_H1D4E2 smear=  momtype= 1 0 0 CGs:
+
+
+particle id - rho_proj2 fn->  I2,iz2,T1m,r0,p000,rho_proj2_p000_T1,p000
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj2_p000_T1 smear=  momtype= 0 0 0 CGs:
+
+
+particle id - a_proj3 fn->  I2,iz2,D4A2,r0,p000,a_proj3_p100_H0D4A2,p100
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= a_proj3_p100_H0D4A2 smear=  momtype= 1 0 0 CGs:
+
+
+particle id - rho_proj2 fn->  I2,iz2,D2A1,r0,p000,rho_proj2_p110_H0D2A1,p110
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj2_p110_H0D2A1 smear=  momtype= 1 1 0 CGs:
+
+
+particle id - a_proj0 fn->  I2,iz2,A1p,r0,p000,a_proj0_p000_A1,p000
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= a_proj0_p000_A1 smear=  momtype= 0 0 0 CGs:
+
+
+particle id - b_proj5 fn->  I2,iz2,D4E2,r0,p000,b_proj5_p100_H1D4E2,p100
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= b_proj5_p100_H1D4E2 smear=  momtype= 1 0 0 CGs:
+
+
+particle id - pion_proj2 fn->  I2,iz2,D2A2,r0,p000,pion_proj2_p110_H0D2A2,p110
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= pion_proj2_p110_H0D2A2 smear=  momtype= 1 1 0 CGs:
+
+
+particle id - b_proj5 fn->  I2,iz2,D4A2,r0,p000,b_proj5_p100_H0D4A2,p100
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= b_proj5_p100_H0D4A2 smear=  momtype= 1 0 0 CGs:
+
+
+particle id - pion_proj0 fn->  I2,iz2,A1m,r0,p000,pion_proj0_p000_A1,p000
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= pion_proj0_p000_A1 smear=  momtype= 0 0 0 CGs:
+
+
+particle id - pion_proj1 fn->  I2,iz2,A1m,r0,p000,pion_proj1_p000_A1,p000
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= pion_proj1_p000_A1 smear=  momtype= 0 0 0 CGs:
+
+
+particle id - a_proj1 fn->  I2,iz2,D4A1,r0,p000,a_proj1_p200_H0D4A1,p200
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= a_proj1_p200_H0D4A1 smear=  momtype= 2 0 0 CGs:
+
+
+particle id - b_proj0 fn->  I2,iz2,A1p,r0,p000,b_proj0_p000_A1,p000
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= b_proj0_p000_A1 smear=  momtype= 0 0 0 CGs:
+
+
+particle id - b_proj4 fn->  I2,iz2,D3A2,r0,p000,b_proj4_p111_H0D3A2,p111
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= b_proj4_p111_H0D3A2 smear=  momtype= 1 1 1 CGs:
+
+
+particle id - a_proj0 fn->  I2,iz2,D3A1,r0,p000,a_proj0_p111_H0D3A1,p111
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= a_proj0_p111_H0D3A1 smear=  momtype= 1 1 1 CGs:
+
+
+particle id - pion_proj4 fn->  I2,iz2,D4A1,r0,p000,pion_proj4_p100_H0D4A1,p100
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= pion_proj4_p100_H0D4A1 smear=  momtype= 1 0 0 CGs:
+
+
+particle id - a_proj0 fn->  I2,iz2,D4A1,r0,p000,a_proj0_p200_H0D4A1,p200
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= a_proj0_p200_H0D4A1 smear=  momtype= 2 0 0 CGs:
+
+
+particle id - pion_proj0 fn->  I2,iz2,D4A2,r0,p000,pion_proj0_p200_H0D4A2,p200
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= pion_proj0_p200_H0D4A2 smear=  momtype= 2 0 0 CGs:
+
+
+particle id - pion_proj1 fn->  I2,iz2,D4A2,r0,p000,pion_proj1_p200_H0D4A2,p200
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= pion_proj1_p200_H0D4A2 smear=  momtype= 2 0 0 CGs:
+
+
+particle id - pion_proj4 fn->  I2,iz2,D2B2,r0,p000,pion_proj4_p110_H1D2B2,p110
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= pion_proj4_p110_H1D2B2 smear=  momtype= 1 1 0 CGs:
+
+
+particle id - a_proj3 fn->  I2,iz2,D2B2,r0,p000,a_proj3_p110_H1D2B2,p110
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= a_proj3_p110_H1D2B2 smear=  momtype= 1 1 0 CGs:
+
+
+particle id - rho_proj1 fn->  I2,iz2,D4A1,r0,p000,rho_proj1_p200_H0D4A1,p200
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj1_p200_H0D4A1 smear=  momtype= 2 0 0 CGs:
+
+
+particle id - rho_proj3 fn->  I2,iz2,D3E2,r0,p000,rho_proj3_p111_H1D3E2,p111
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= rho_proj3_p111_H1D3E2 smear=  momtype= 1 1 1 CGs:
+
+
+particle id - b_proj4 fn->  I2,iz2,D4A2,r0,p000,b_proj4_p100_H0D4A2,p100
+ creat= 0 mom= 0 0 0 row= 0 2I_z= 2 Op: Operators: Op1: name= b_proj4_p100_H0D4A2 smear=  momtype= 1 0 0 CGs:
+
+

@@ -70,11 +70,11 @@ push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.
 push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p110.sdb" . $seqno ; 
 push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p111.sdb" . $seqno ; 
 push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p200.sdb" . $seqno ; 
-push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p000.sdb" . $seqno ; 
-push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p100.sdb" . $seqno ; 
-push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p110.sdb" . $seqno ; 
-push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p111.sdb" . $seqno ; 
-push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p200.sdb" . $seqno ; 
+# push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p000.sdb" . $seqno ; 
+# push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p100.sdb" . $seqno ; 
+# push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p110.sdb" . $seqno ; 
+# push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p111.sdb" . $seqno ; 
+# push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p200.sdb" . $seqno ; 
 
 # this will override the redstar xml printing and try to copy @unsmeared_nodes up to scratch
 $param->unsmeared_node_list(\@unsmeared_nodes); 

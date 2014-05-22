@@ -1,0 +1,10 @@
+2 I2,iz2,D2A2,r0,p000,b_proj4_p110_H0D2A2,p110b_proj4_E
+2 I2,iz2,D2B1,r0,p000,b_proj4_p110_H1D2B1,p110b_proj4_E
+2 I2,iz2,D2B2,r0,p000,b_proj4_p110_H1D2B2,p110b_proj4_E
+3 I2,iz2,D3A2,r0,p000,b_proj4_p111_H0D3A2,p111b_proj4_E
+3 I2,iz2,D3E2,r0,p000,b_proj4_p111_H1D3E2,p111b_proj4_E
+1 I2,iz2,D4A2,r0,p000,b_proj4_p100_H0D4A2,p100b_proj4_E
+4 I2,iz2,D4A2,r0,p000,b_proj4_p200_H0D4A2,p200b_proj4_E
+1 I2,iz2,D4E2,r0,p000,b_proj4_p100_H1D4E2,p100b_proj4_E
+4 I2,iz2,D4E2,r0,p000,b_proj4_p200_H1D4E2,p200b_proj4_E
+0 I2,iz2,T1p,r0,p000,b_proj4_p000_T1,p000b_proj4_E

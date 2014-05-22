@@ -1,0 +1,36 @@
+
+
+*******************************************************************************
+Mon May 19 15:14:33 2014
+
+
+FIT:    data read from 'dispn_gnu.dat' using 1:2
+        format = x:z
+        x range restricted to [-0.100000 : 4.10000]
+        #datapoints = 3
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m             a            
+   0 2.2648582170e+00   0.00e+00  1.43e+00    1.000000e+00   1.000000e+00
+   8 1.4348180000e-06  -8.18e-02  1.43e-08    4.756879e-01   3.186573e+00
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 1.43482e-06
+rel. change during last iteration : -8.18175e-07
+
+degrees of freedom    (FIT_NDF)                        : 1
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00119784
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.43482e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m               = 0.475688         +/- 0.001258     (0.2645%)
+a               = 3.18657          +/- 0.1541       (4.837%)
+
+correlation matrix of the fit parameters:
+                m      a      
+m               1.000 
+a               0.816  1.000 

@@ -1,7 +1,7 @@
 <perldata>
- <arrayref memory_address="0x1787ea8">
+ <arrayref memory_address="0x1f1d0b0">
   <item key="0">
-   <hashref blessed_package="OPparams" memory_address="0x16fc8e8">
+   <hashref blessed_package="OPparams" memory_address="0x1e726f8">
     <item key="ENERGY">0.483673 0.0132492</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
@@ -9,6 +9,11 @@
     <item key="NCFG">535</item>
     <item key="PHASER">1</item>
     <item key="PID">a_proj7</item>
+    <item key="QUARK_MOD">
+     <hashref blessed_package="QuarkModel" memory_address="0x245eb50">
+      <item key="PAR">^{3}P_{2}</item>
+     </hashref>
+    </item>
     <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/EpM</item>
     <item key="REP">E</item>
     <item key="REPSTEM">E</item>
@@ -20,7 +25,7 @@
    </hashref>
   </item>
   <item key="1">
-   <hashref blessed_package="OPparams" memory_address="0x1cd0b78">
+   <hashref blessed_package="OPparams" memory_address="0x245ebb0">
     <item key="ENERGY">0.481801 0.0124608</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
@@ -28,6 +33,7 @@
     <item key="NCFG">535</item>
     <item key="PHASER">1</item>
     <item key="PID">a_proj7</item>
+    <item key="QUARK_MOD" defined="false"></item>
     <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/T2pM</item>
     <item key="REP">T2</item>
     <item key="REPSTEM">T2</item>

@@ -9,6 +9,7 @@
 use strict; 
 use OPparams; 
 use File::Basename;
+use QuarkModelAssign; 
 
 my $basedir = dirname($0); 
 
@@ -32,6 +33,7 @@ my @all_ops = ();
   $pion_proj4_p000_T1->phaser(1.);
   $pion_proj4_p000_T1->hybrid(1);
   $pion_proj4_p000_T1->spin(1);
+  $pion_proj4_p000_T1->quark_model_assignment(QuarkModelAssign::qm_assign("3S1xB->1"));
 
   my $pion_proj4_p100_H0D4A1 = OPparams->new();
   $pion_proj4_p100_H0D4A1->pid("pion_proj4");
@@ -91,7 +93,7 @@ my @all_ops = ();
   $pion_proj4_p110_H1D2B1->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
   $pion_proj4_p110_H1D2B1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D2B1M_mom2");
   $pion_proj4_p110_H1D2B1->t0(8);
-  $pion_proj4_p110_H1D2B1->state(3); 
+  $pion_proj4_p110_H1D2B1->state(4); 
   $pion_proj4_p110_H1D2B1->tz(10);
   $pion_proj4_p110_H1D2B1->phaser(1.);
   $pion_proj4_p110_H1D2B1->hybrid(1);
@@ -108,7 +110,7 @@ my @all_ops = ();
   $pion_proj4_p110_H1D2B2->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D2B2M_mom2");
   $pion_proj4_p110_H1D2B2->t0(8);
   $pion_proj4_p110_H1D2B2->state(3); 
-  $pion_proj4_p110_H1D2B2->tz(8);
+  $pion_proj4_p110_H1D2B2->tz(9);
   $pion_proj4_p110_H1D2B2->phaser(1.);
   $pion_proj4_p110_H1D2B2->hybrid(1);
   $pion_proj4_p110_H1D2B2->spin(1);

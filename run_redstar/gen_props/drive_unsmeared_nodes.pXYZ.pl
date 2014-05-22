@@ -18,7 +18,7 @@ my $seqno = $ARGV[0];
 my $outpath = $ARGV[2];
 my $dt = $ARGV[1];
 my $mom = $ARGV[3];
-our $max_thread = $ARGV[4]; 
+our $max_thread = 8; 
 
 # an instance of the Param "class" to hold lattice specific stuff
 my $param = ParamsDistillation->new(); 

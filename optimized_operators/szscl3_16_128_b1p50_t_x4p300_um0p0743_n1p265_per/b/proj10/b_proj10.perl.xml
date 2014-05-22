@@ -1,7 +1,7 @@
 <perldata>
- <arrayref memory_address="0x1e95e98">
+ <arrayref memory_address="0x18b2320">
   <item key="0">
-   <hashref blessed_package="OPparams" memory_address="0x1e198e8">
+   <hashref blessed_package="OPparams" memory_address="0x180c6f8">
     <item key="ENERGY">0.505553 0.00357155</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
@@ -9,6 +9,11 @@
     <item key="NCFG">535</item>
     <item key="PHASER">1</item>
     <item key="PID">b_proj10</item>
+    <item key="QUARK_MOD">
+     <hashref blessed_package="QuarkModel" memory_address="0x1dfe468">
+      <item key="PAR">^{1}F_{3}</item>
+     </hashref>
+    </item>
     <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/A2pP</item>
     <item key="REP">A2</item>
     <item key="REPSTEM">A2</item>
@@ -20,7 +25,7 @@
    </hashref>
   </item>
   <item key="1">
-   <hashref blessed_package="OPparams" memory_address="0x23eece0">
+   <hashref blessed_package="OPparams" memory_address="0x1dfe4c8">
     <item key="ENERGY">0.491706 0.0105886</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
@@ -28,6 +33,7 @@
     <item key="NCFG">535</item>
     <item key="PHASER">1</item>
     <item key="PID">b_proj10</item>
+    <item key="QUARK_MOD" defined="false"></item>
     <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/T1pP</item>
     <item key="REP">T1</item>
     <item key="REPSTEM">T1</item>
@@ -39,7 +45,7 @@
    </hashref>
   </item>
   <item key="2">
-   <hashref blessed_package="OPparams" memory_address="0x23eee60">
+   <hashref blessed_package="OPparams" memory_address="0x1dfe258">
     <item key="ENERGY">0.492963 0.00556803</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
@@ -47,6 +53,7 @@
     <item key="NCFG">535</item>
     <item key="PHASER">1</item>
     <item key="PID">b_proj10</item>
+    <item key="QUARK_MOD" defined="false"></item>
     <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/T2pP</item>
     <item key="REP">T2</item>
     <item key="REPSTEM">T2</item>

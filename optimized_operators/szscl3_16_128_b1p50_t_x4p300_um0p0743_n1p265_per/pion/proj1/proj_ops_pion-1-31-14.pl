@@ -8,6 +8,7 @@
 
 use strict; 
 use OPparams; 
+use QuarkModelAssign; 
 use File::Basename;
 
 my $basedir = dirname($0); 
@@ -31,6 +32,7 @@ my @all_ops = ();
   $pion_proj1_p000_A1->tz(9);
   $pion_proj1_p000_A1->phaser(1);
   $pion_proj1_p000_A1->spin(0);
+  $pion_proj1_p000_A1->quark_model_assignment(QuarkModelAssign::qm_assign("1S0"));
 
 
   my $pion_proj1_p100_H0D4A2 = OPparams->new();

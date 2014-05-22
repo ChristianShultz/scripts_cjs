@@ -2,6 +2,7 @@
 
 use strict; 
 use OPparams;
+use QuarkModelAssign; 
 use ExtractedStates; 
 use File::Basename;
 use XML::Dumper; 
@@ -11,7 +12,7 @@ our $hybrid_line_number = init_hybrid_params();
 my @ops = @{ ExtractedStates::grab_all() }; 
 
 # sort the operators by momentum 
-my @moms = ( "p000" , "p100" ); # , "p110" , "p111" , "p200" ); 
+my @moms = ( "p000" , "p100"); # , "p110" , "p111" , "p200" ); 
 my %mom_hash = (); 
 
 foreach my $p ( @moms ) 
@@ -82,7 +83,8 @@ sub write_gnuplot_file
   print GNU "set title \"Spectrum($f)\" \n";
   print GNU "set ylabel \"a_{t} m_{h}\"\n";
   print GNU "set xlabel \"channel\"\n";
-  print GNU "plot \"$dat\" u (\$1+\$6):2:4:3:7 w boxxyerrorbars lc variable \n";
+  print GNU "plot \"$dat\" u (\$1+\$6):2:4:3:7 w boxxyerrorbars lc variable, \\\n";
+  print GNU "\"$dat\" u (\$1 + \$6 + 0.4):2:8 with labels font \",8\"\n";
   print GNU "set xr [GPVAL_DATA_X_MIN - 0.1 : GPVAL_DATA_X_MAX + 0.1] \n";
   print GNU "set yr [0: GPVAL_DATA_Y_MAX + 0.1]\n";
   print GNU "replot \n";
@@ -114,7 +116,11 @@ sub write_data_files
       my $ref = sort_function($key); 
       my $string = @{$ref}[0] . " " .  $operator->mass() . " 0.1 " . $key . " " . 0.1*(1 - rand(2)) . " ";
       $string .= state_color_function( $key ,  $operator ) ; 
-      print OUT $string . "\n";
+
+       my $qm_assign = ""; 
+      $qm_assign = $operator->quark_model_assignment()->par() if $operator->quark_model_assignment(); 
+
+      print OUT $string . " $qm_assign \n";
     }
   }
 
@@ -249,26 +255,30 @@ sub sort_function_particle_JPC
 
   my %hash = ();  
   my $bad_idx = [-2,-2]; 
-  $hash{"0--"} = [0,1]; 
+
   $hash{"0-+"} = [1,1]; 
-  $hash{"0+-"} = [2,1]; 
-  $hash{"0++"} = [3,1]; 
-  $hash{"1--"} = [4,2]; 
-  $hash{"1-+"} = [5,2]; 
-  $hash{"1+-"} = [6,2]; 
-  $hash{"1++"} = [7,2]; 
-  $hash{"2--"} = [8,3]; 
-  $hash{"2-+"} = [9,3]; 
-  $hash{"2+-"} = [10,3]; 
+  $hash{"1--"} = [2,2]; 
+  $hash{"2--"} = [3,3]; 
+  $hash{"2-+"} = [4,3]; 
+  $hash{"3--"} = [5,4]; 
+  $hash{"4--"} = [6,5]; 
+  $hash{"4-+"} = [7,5]; 
+
+
+  $hash{"0++"} = [8,1]; 
+  $hash{"1+-"} = [9,2]; 
+  $hash{"1++"} = [10,2]; 
   $hash{"2++"} = [11,3]; 
-  $hash{"3--"} = [12,4]; 
-  $hash{"3-+"} = [13,4]; 
-  $hash{"3+-"} = [14,4]; 
-  $hash{"3++"} = [15,4]; 
-  $hash{"4--"} = [16,5]; 
-  $hash{"4-+"} = [17,5]; 
-  $hash{"4+-"} = [18,5]; 
-  $hash{"4++"} = [19,5]; 
+  $hash{"3++"} = [12,4]; 
+  $hash{"3+-"} = [13,4]; 
+  $hash{"4++"} = [14,5]; 
+
+  $hash{"0--"} = [15,1]; 
+  $hash{"0+-"} = [16,1]; 
+  $hash{"1-+"} = [17,2]; 
+  $hash{"2+-"} = [18,3]; 
+  $hash{"3-+"} = [19,4]; 
+  $hash{"4+-"} = [20,5]; 
   $hash{"unknown"} = $bad_idx; 
 
   if ( $mode ) 

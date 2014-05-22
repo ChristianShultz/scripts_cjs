@@ -29,6 +29,7 @@ sub new
     HYBRID=> undef, 
     ENERGY=> undef, 
     SPIN=> undef, 
+    QUARK_MOD => undef,
     @_,
   }; ## self 
 
@@ -129,6 +130,12 @@ sub mass {
   my $self = shift; 
   if(@_) {$self->{ENERGY} = shift}; 
   return $self->{ENERGY};
+}
+
+sub quark_model_assignment{
+  my $self = shift; 
+  if(@_) {$self->{QUARK_MOD} = shift};
+  return $self->{QUARK_MOD};
 }
 
 #

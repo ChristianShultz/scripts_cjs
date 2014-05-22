@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+
+<Keys>
+  <elem>
+    <particle_id>a_proj4</particle_id>
+    <basic_key>
+      <CGs>
+      </CGs>
+      <Operators>
+        <elem>
+          <name>a_proj4_p000_T1</name>
+          <smear></smear>
+          <mom_type>0 0 0</mom_type>
+        </elem>
+      </Operators>
+      <creation_op>false</creation_op>
+      <smearedP>true</smearedP>
+      <mom>0 0 0</mom>
+      <row>0</row>
+      <twoI_z>2</twoI_z>
+    </basic_key>
+  </elem>
+</Keys>

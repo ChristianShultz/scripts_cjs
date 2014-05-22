@@ -1,4 +1,4 @@
-#!/bin/tcsh -x
+#!/bin/tcsh 
 
 set stem="szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"
 set file="norms.${stem}.list"
@@ -25,21 +25,23 @@ endif
 
 touch $file
 
-foreach db (  pion/proj0/radmat/pion_proj0.sdb \
-              pion/proj1/radmat/pion_proj1.sdb \
-              pion/proj2/radmat/pion_proj2.sdb \
-              rho/proj0/radmat/rho_proj0.sdb \
-              rho/proj1/radmat/rho_proj1.sdb \
-              rho/proj2/radmat/rho_proj2.sdb \
-              rho/proj3/radmat/rho_proj3.sdb \
-    )
+
+foreach chan ( pion rho a b )
+  foreach proj ( `seq 0 1 11` )
+    set db = $chan/proj$proj/radmat/${chan}_proj$proj.sdb 
+
+
+    if(! -d $chan/proj$proj ) then 
+      continue 
+    endif 
 
     if (! -f $db) then 
-    echo "error: $db does not exist"
-    exit 1
-  endif
+      echo " $db does not exist"
+      continue 
+    endif
 
-  echo $db >> $file
+    echo $db >> $file
+  end
 end
 
 

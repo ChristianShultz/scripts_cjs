@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 
 <Params>
-  <mass_file>/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D2B1M_mom2/t08/MassJackFiles/mass_t0_8_reorder_state3.jack</mass_file>
-  <overlap_file>/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D2B1M_mom2/t08/MassJackFiles/mass_t0_8_reorder_state3.jack</overlap_file>
+  <mass_file>/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D2B1M_mom2/t08/MassJackFiles/mass_t0_8_reorder_state4.jack</mass_file>
+  <overlap_file>/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D2B1M_mom2/t08/MassJackFiles/mass_t0_8_reorder_state4.jack</overlap_file>
   <ncfg>535</ncfg>
   <resize>false</resize>
   <isProjected>true</isProjected>
