@@ -7,6 +7,10 @@ use ExtractedStates;
 use File::Basename;
 use XML::Dumper; 
 
+die "usage: $0 <mode 0 qm, 1 pn > " unless $#ARGV == 0 ; 
+
+our $mode = $ARGV[0];
+
 our $hybrid_line_number = init_hybrid_params(); 
 
 my @ops = @{ ExtractedStates::grab_all() }; 
@@ -117,8 +121,15 @@ sub write_data_files
       my $string = @{$ref}[0] . " " .  $operator->mass() . " 0.1 " . $key . " " . 0.1*(1 - rand(2)) . " ";
       $string .= state_color_function( $key ,  $operator ) ; 
 
-       my $qm_assign = ""; 
-      $qm_assign = $operator->quark_model_assignment()->par() if $operator->quark_model_assignment(); 
+      my $qm_assign = ""; 
+      if( $mode == 0 )
+      {
+        $qm_assign = $operator->quark_model_assignment()->par() if $operator->quark_model_assignment(); 
+      }
+      elsif ( $mode == 1) 
+      {
+        $qm_assign = $operator->pid(); 
+      }
 
       print OUT $string . " $qm_assign \n";
     }

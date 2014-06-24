@@ -8,9 +8,9 @@ endif
 
 ../configure \
   --prefix=$HOME/git-builds/reconfit_svd \
-  CFLAGS="-O3 -fargument-noalias-global -finline-limit=50000 -funroll-all-loops -fpeel-loops -march=nocona -fopenmp" \
+  CFLAGS="-O3 -fargument-noalias-global -finline-limit=50000 -funroll-all-loops -fpeel-loops -march=nocona -fopenmp -g" \
   CXX="g++" \
-  CXXFLAGS="-O3 -fargument-noalias-global -finline-limit=50000 -funroll-all-loops -fpeel-loops -march=nocona -fopenmp" \
+  CXXFLAGS="-O3 -fargument-noalias-global -finline-limit=50000 -funroll-all-loops -fpeel-loops -march=nocona -fopenmp -g" \
   LIBS="-lblas -llapack -lgfortran -lpthread" \
   --with-adat=$HOME/git-builds/adat \
     #  --with-adat=$HOME/git-builds/adat-master \

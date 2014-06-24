@@ -66,7 +66,7 @@ my @all_ops = ();
   $pion_proj2_p110_H0D2A2->t0(7); 
   $pion_proj2_p110_H0D2A2->state(6); 
   $pion_proj2_p110_H0D2A2->tz(12);
-  $pion_proj2_p110_H0D2A2->phaser(1);
+  $pion_proj2_p110_H0D2A2->phaser(-1);
   $pion_proj2_p110_H0D2A2->hybrid(1);
   $pion_proj2_p110_H0D2A2->spin(0);
 

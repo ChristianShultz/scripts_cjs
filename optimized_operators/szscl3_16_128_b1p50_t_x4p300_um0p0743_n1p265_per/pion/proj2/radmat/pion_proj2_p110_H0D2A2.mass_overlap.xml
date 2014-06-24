@@ -6,7 +6,7 @@
   <ncfg>535</ncfg>
   <resize>false</resize>
   <isProjected>true</isProjected>
-  <phase_real>1</phase_real>
+  <phase_real>-1</phase_real>
   <phase_imag>0.</phase_imag>
   <Z_type>2E</Z_type>
   <dbname>pion_proj2_p110_H0D2A2.sdb</dbname>

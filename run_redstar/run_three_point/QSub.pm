@@ -201,7 +201,7 @@ sub make_script_mic
 #PBS -N $id
 #PBS -q testmic
 #PBS -A Spectrum
-#PBS -l walltime=8:00:00
+#PBS -l walltime=30:00:00
 #PBS -l nodes=4:mic
 #PBS -j eo
 EOF

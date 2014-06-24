@@ -76,7 +76,7 @@ my @all_ops = ();
   $a_proj3_p110_H0D2A2->t0(7);
   $a_proj3_p110_H0D2A2->state(1); 
   $a_proj3_p110_H0D2A2->tz(12);
-  $a_proj3_p110_H0D2A2->phaser(1.);
+  $a_proj3_p110_H0D2A2->phaser(-1.);
   $a_proj3_p110_H0D2A2->spin(1);
 
   my $a_proj3_p110_H1D2B1 = OPparams->new();

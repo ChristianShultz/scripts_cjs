@@ -10,6 +10,10 @@ use XML::Dumper;
 # the list of everything that is done 
 sub grab_list
 {
+
+#  my @test = ( "pion/proj0/pion_proj0.perl.xml");
+#  return \@test; 
+
 # list of perl xml 
   my @fs = ( 
     "a/proj0/a_proj0.perl.xml",

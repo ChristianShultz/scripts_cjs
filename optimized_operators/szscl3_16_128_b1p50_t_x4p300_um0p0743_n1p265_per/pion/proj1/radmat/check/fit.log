@@ -801,3 +801,61 @@ correlation matrix of the fit parameters:
                 m      a      
 m               1.000 
 a               0.816  1.000 
+
+
+*******************************************************************************
+Wed Jun  4 15:15:21 2014
+
+
+FIT:    data read from 'dispn_gnu.dat' using 1:2
+        format = x:z
+        x range restricted to [-0.100000 : 4.10000]
+BREAK:          No data to fit 
+
+
+
+*******************************************************************************
+Wed Jun  4 15:15:45 2014
+
+
+FIT:    data read from 'dispn_gnu.dat' using 1:2
+        format = x:z
+        x range restricted to [-0.100000 : 4.10000]
+BREAK:          No data to fit 
+
+
+
+*******************************************************************************
+Wed Jun  4 15:15:48 2014
+
+
+FIT:    data read from 'dispn_gnu.dat' using 1:2
+        format = x:z
+        x range restricted to [-0.100000 : 4.10000]
+        #datapoints = 5
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m             a            
+   0 6.7813920799e+00   0.00e+00  1.51e+00    1.000000e+00   1.000000e+00
+   8 2.6713970800e-05  -1.25e-05  1.51e-08    3.640950e-01   3.304546e+00
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 2.6714e-05
+rel. change during last iteration : -1.2499e-10
+
+degrees of freedom    (FIT_NDF)                        : 3
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00298407
+variance of residuals (reduced chisquare) = WSSR/ndf   : 8.90466e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m               = 0.364095         +/- 0.003173     (0.8714%)
+a               = 3.30455          +/- 0.1106       (3.346%)
+
+correlation matrix of the fit parameters:
+                m      a      
+m               1.000 
+a               0.816  1.000 

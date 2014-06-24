@@ -46,7 +46,7 @@ my @all_ops = ();
   $rho_proj9_p000_T1->t0(9);
   $rho_proj9_p000_T1->state(3); 
   $rho_proj9_p000_T1->tz(13);
-  $rho_proj9_p000_T1->phaser(1.);
+  $rho_proj9_p000_T1->phaser(-1.);
   $rho_proj9_p000_T1->spin(3);
 
   my $rho_proj9_p000_T2 = OPparams->new();
