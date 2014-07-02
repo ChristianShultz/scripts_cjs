@@ -9,13 +9,20 @@ if (-f Makefile) then
   make distclean
 endif 
 
+if ( ! -f ../configure ) then 
+  pushd ..
+  ./autogen.sh
+  popd
+endif 
+
 ../configure --prefix=$HOME/git-builds/tensor \
   --with-arpack \
   F77="gfortran" \
   --disable-mps \
   CFLAGS="-I /dist/scidac/atlas/include -DTENSOR_USE_ATLAS" \
   CXXFLAGS="-I /dist/scidac/atlas/include -DTENSOR_USE_ATLAS" \
-  LDFLAGS="-L /usr/lib64/atlas" LIBS="/usr/lib64/atlas/liblapack.so.3 /usr/lib64/atlas/libcblas.so.3 /usr/lib64/atlas/libatlas.so.3"
+  LDFLAGS="-L /dist/scidac/atlas/lib -lptlapack -lptcblas -latlas -lptlapack -lptcblas"
+    #  LDFLAGS="-L /usr/lib64/atlas" LIBS="/usr/lib64/atlas/liblapack.so.3 /usr/lib64/atlas/libcblas.so.3 /usr/lib64/atlas/libatlas.so.3"
 
 ##  LDFLAGS="-shared -L /usr/lib64/atlas" LIBS="-llapack -lcblas -latlas"
 

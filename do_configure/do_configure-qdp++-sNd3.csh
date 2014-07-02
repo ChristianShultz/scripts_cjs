@@ -9,6 +9,10 @@ endif
 
 if (1) then 
   
+
+  source $HOME/scripts_cjs/do_configure/ST_ENV.csh 
+
+
   echo "NOT USING MPI \n" 
 
   ../configure \
@@ -16,11 +20,15 @@ if (1) then
     --with-qmp=$HOME/git-builds/qmp/vanilla \
     --enable-Nd=3 \
     --enable-sse2 \
-    --enable-parallel-arch=parscalar \
+    --enable-parallel-arch=scalar \
     --enable-testcase-runner=trivial \
     --enable-largefile \
     --enable-parallel-io \
-    --enable-dml-output-buffering 
+    --enable-dml-output-buffering \
+    CXXFLAGS="-03 -fopenmp" \
+    CFLAGS="$STCFLAGS" \
+    CXX=$STCXX \
+    CC=$STCC
 
 #  --enable-qmt=/dist/scidac/qmt/master/intel 
 else

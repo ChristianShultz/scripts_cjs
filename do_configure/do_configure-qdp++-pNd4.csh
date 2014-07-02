@@ -32,7 +32,7 @@ if (0) then
 #  --enable-qmt=/dist/scidac/qmt/master/intel 
 else
   
-  source $HOME/.MPI_ENV.csh
+  source $HOME/scripts_cjs/do_configure/MPI_ENV.csh
 
   ../configure \
     --prefix=$HOME/git-builds/qdp++/parscalar-Nd4 \
@@ -45,8 +45,8 @@ else
     --enable-largefile \
     --enable-parallel-io \
     --enable-dml-output-buffering \
-    CXXFLAGS="$MPICXXFLAGS -fopenmp" \
-    CFLAGS="$MPICFLAGS -fopenmp -std=c99" \
+    CXXFLAGS="$MPICXXFLAGS" \
+    CFLAGS="$MPICFLAGS" \
     CXX=$MPICXX \
     CC=$MPICC 
 endif

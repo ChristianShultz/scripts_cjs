@@ -8,15 +8,18 @@ if (-f Makefile) then
 endif
 
 
-source $HOME/.MPI_ENV.csh
+source $HOME/scripts_cjs/do_configure/MPI_ENV.csh
 
 ../configure \
   --prefix=$HOME/git-builds/chroma/parscalar-Nd4 \
-  --with-qdp=$HOME/git-builds/qdp++/parscalar-Nd4 \
+  --with-qdp=$HOME/git-builds/qdpxx/parscalar-Nd4 \
+    #  --enable-sse-wilson-dslash \
+  --enable-sse2 \
+  --enable-testcase-runner=trivial \
   --host=x86_64-linux-gnu \
   --build=none  \
-  CXXFLAGS="$MPICXXFLAGS -fpermissive" \
-  CFLAGS="$MPICFLAGS " \
+  CXXFLAGS="$MPICXXFLAGS -fpermissive -fopenmp" \
+  CFLAGS="$MPICFLAGS -fopenmp" \
   CXX=$MPICXX \
   CC=$MPICC
 

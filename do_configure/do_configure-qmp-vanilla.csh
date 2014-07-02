@@ -6,11 +6,15 @@ if ( -f Makefile ) then
   make distclean
 endif 
 
-
+source $HOME/scripts_cjs/do_configure/ST_ENV.csh 
 
 ../configure \
   --prefix=$HOME/git-builds/qmp/vanilla \
-  --host=x86_64-linux-gnu --build=none
+  --host=x86_64-linux-gnu --build=none \
+  CXXFLAGS="$STCXXFLAGS" \
+  CFLAGS="$STCFLAGS" \
+  CXX=$STCXX \
+  CC=$STCC
 
   #if ( $status != 0 ) then 
   #  echo " configure failed "

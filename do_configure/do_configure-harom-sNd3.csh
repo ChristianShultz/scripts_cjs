@@ -10,13 +10,18 @@ endif
 
 if (1) then 
 
-echo "NOT USING MPI"
+  echo "NOT USING MPI \n" 
+  source $HOME/scripts_cjs/do_configure/ST_ENV.csh 
 
 ../configure \
   --prefix=$HOME/git-builds/harom/scalar-Nd3 \
   --with-qdp=$HOME/git-builds/qdp++/scalar-Nd3 \
   --host=x86_64-linux-gnu \
-  --build=none  
+  --build=none  \
+  CXXFLAGS="" \
+  CFLAGS="$STCFLAGS" \
+  CXX=$STCXX \
+  CC=$STCC
 
 else
 

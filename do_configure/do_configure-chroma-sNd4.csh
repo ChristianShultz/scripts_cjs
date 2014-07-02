@@ -10,19 +10,23 @@ endif
 if (1) then 
   
   echo "NOT USING MPI \n" 
+  source $HOME/scripts_cjs/do_configure/ST_ENV.csh 
 
   ../configure \
     --prefix=$HOME/git-builds/chroma/scalar-Nd4 \
     --with-qdp=$HOME/git-builds/qdp++/scalar-Nd4 \
-    --with-qmp=$HOME/git-builds/qmp/vanilla \
-    --enable-lapack=lapack \
+      #    --with-qmp=$HOME/git-builds/qmp/vanilla \
     --enable-Nd=4 \
     --enable-sse2 \
     --enable-parallel-arch=parscalar \
     --enable-testcase-runner=trivial \
     --enable-largefile \
     --enable-parallel-io \
-    --enable-dml-output-buffering 
+    --enable-dml-output-buffering \
+    CXXFLAGS="$STCXXFLAGS" \
+    CFLAGS="$STCFLAGS" \
+    CXX=$STCXX \
+    CC=$STCC
 
 #  --enable-qmt=/dist/scidac/qmt/master/intel 
 else

@@ -13,7 +13,7 @@ set CXX=g++
   CFLAGS="-O3 -fopenmp -DUSE_OMP"  \
     CXXFLAGS="-O3 -fopenmp -DUSE_OMP" \
       --with-adat=${HOME}/git-builds/adat \
-      --with-itpp=${HOME}/git-builds/itpp \
+        #      --with-itpp=${HOME}/git-builds/itpp \
       --with-hadron=${HOME}/git-builds/hadron
 
 
