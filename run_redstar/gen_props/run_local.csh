@@ -8,7 +8,7 @@ endif
 
 echo "qcd12kmi" > $PBS_NODEFILE
 
-source $HOME/.MPI_ENV.csh
+source $HOME/scripts_cjs/do_configure/MPI_ENV.csh
 
 set seqno=1000 
 set dt=28 

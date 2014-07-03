@@ -7,10 +7,10 @@ if ( -f Makefile ) then
   make distclean
 endif
 
-source $HOME/.JITPTX_ENV.csh
+source $HOME/scripts_cjs/do_configure/JITPTX_ENV.csh
 
 ../configure   \
-  --prefix=$HOME/git-builds/chroma-jitptx/parscalar-Nd4 \
+  --prefix=$HOME/git-builds/chroma-jit/parscalar-Nd4 \
     #  --with-qdp=$HOME/git-builds/qdp-jitptx-6-4-13/gpu-parscalar-Nd4 \
   --with-qdp=$HOME/git-builds/qdp-jit/gpu-parscalar-Nd4 \
   --with-qmp=$HOME/git-builds/qmp/centos62 \
@@ -28,7 +28,7 @@ if ( $status != 0 ) then
   exit 1
 endif
 
-make install -j8
+make install -j10
 
 
 if ( $status != 0 ) then 

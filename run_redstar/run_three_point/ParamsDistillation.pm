@@ -1514,6 +1514,7 @@ sub print_redstar_npoint_list
 sub print_redstar_Param()
 {
   my $self = shift; 
+  my $t_origin = $self->t_origin(); 
   print OUT <<EOF;
   <Param>
     <version>$self->{REDSTARVERSION}</version>
@@ -1521,6 +1522,8 @@ sub print_redstar_Param()
     <Nt_corr>$self->{NTCORR}</Nt_corr>
     <average_1pt_diagrams>true</average_1pt_diagrams>
     <zeroUnsmearedGraphsP>$self->{ZEROUNSMEAREDGRAPHS}</zeroUnsmearedGraphsP>
+    <t_origin>$t_origin</t_origin>
+    <bc_spec>1</bc_spec>
 EOF
   if($self->convertUDtoL())
   {
@@ -1662,7 +1665,7 @@ sub print_colorvec_header
 <?xml version="1.0"?>
 <ColorVecHadron>
   <Param>
-    <version>4</version>
+    <version>5</version>
     <num_vecs>$n</num_vecs>
     <t_origin>$t</t_origin>
     <convertUDtoL>$L</convertUDtoL>

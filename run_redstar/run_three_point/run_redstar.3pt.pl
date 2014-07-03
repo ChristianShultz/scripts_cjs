@@ -20,7 +20,8 @@ my $param = ParamsDistillation->new();
 # REDSTAR AT VERSION 5 -- allow convertUDtoS
 # VERSION 1 does not exist must be [2,5]
 # $param->version(5); 
-$param->redstar_version(6); 
+#$param->redstar_version(6); 
+$param->redstar_version(7); 
 
 
 # Distillation should be at version 1
@@ -65,26 +66,28 @@ $param->diagnostic_level(1);
 # did we already make a bunch of unsmeared nodes? if so where are they 
 my @unsmeared_nodes = ();
 my $lustre_stem = $param->cache_dir() . "/" . $param->stem() ."/gen_props/gen_prop_dbs/dt${dt}/";
-push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p000.sdb" . $seqno ; 
-push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p100.sdb" . $seqno ; 
-push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p110.sdb" . $seqno ; 
-push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p111.sdb" . $seqno ; 
-push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p200.sdb" . $seqno ; 
- push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p000.sdb" . $seqno ; 
- push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p100.sdb" . $seqno ; 
- push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p110.sdb" . $seqno ; 
- push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p111.sdb" . $seqno ; 
- push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p200.sdb" . $seqno ; 
+push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p000.redstar7.sdb" . $seqno ; 
+push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p100.redstar7.sdb" . $seqno ; 
+push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p110.redstar7.sdb" . $seqno ; 
+push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p111.redstar7.sdb" . $seqno ; 
+push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p200.redstar7.sdb" . $seqno ; 
+# push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p000.sdb" . $seqno ; 
+# push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p100.sdb" . $seqno ; 
+# push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p110.sdb" . $seqno ; 
+# push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p111.sdb" . $seqno ; 
+# push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p200.sdb" . $seqno ; 
 
 # this will override the redstar xml printing and try to copy @unsmeared_nodes up to scratch
 $param->unsmeared_node_list(\@unsmeared_nodes); 
 
-# generate the redstar xml then run the graph generator
+# write out xml 
 my $redxml = $param->write_redstar_xml(); 
+my $mesonxml = $param->write_meson_hadron_node_ini_xml();
+
+# run gen graph 
 &run_redstar_gen_graph($redxml,$outpath."/".basename($redxml).".gen.out"," ");
 
 # build any nodes we need
-my $mesonxml = $param->write_meson_hadron_node_ini_xml();
 &run_hadron_node_colorvec($mesonxml,$outpath."/".basename($mesonxml).".hadron_node.out",""); 
 
 # multiply out nodes into correlators
@@ -139,10 +142,13 @@ sub ls_scratch
 # so let the cluster decide how to thread itself
 sub omp_info
 {
+  print "getting omp_info \n";
+
   my $num_thread = `grep '^processor' /proc/cpuinfo | wc -l ` ;
   chomp $num_thread; 
   $num_thread -= 1; 
 
+  print "omp_num_thread = $num_thread\n";
 
   my $nodefile = $ENV{'PBS_NODEFILE'};
 
@@ -168,6 +174,8 @@ sub omp_info
 
   my @r = (); 
   push @r , $run , $num_thread; 
+
+  print "returning omp_info \n";
   return \@r ; 
 }
 
@@ -303,6 +311,8 @@ sub run_harom_cpu
 
 sub run_redstar_npt
 {
+  print "runing redstar_npt \n";
+
   my ($input_file , $output_file) = @_;
   my $exe = "/home/shultz/git-builds/redstar/bin/redstar_npt";
   my ($run,$num_nodes) = @{ &omp_info() }; 
@@ -326,6 +336,7 @@ sub run_redstar_npt
 
 sub run_redstar_gen_graph
 {
+  print "runing redstar_gen_graph \n";
 
   my ($input_file , $output_file, $options) = @_;
   my $exe = "/home/shultz/git-builds/redstar/bin/redstar_gen_graph";
@@ -349,6 +360,7 @@ sub run_redstar_gen_graph
 
 sub run_hadron_node_colorvec
 { 
+
   my ($input,$output,$options) = @_; 
   my $exe = "/home/shultz/git-builds/colorvec/bin/hadron_node";
   my ($run,$num_nodes) = @{ &omp_info() }; 

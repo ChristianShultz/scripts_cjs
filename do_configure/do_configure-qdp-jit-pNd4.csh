@@ -4,8 +4,8 @@ make clean
 make uninstall
 make distclean 
 
-source $HOME/.MPI_ENV.csh
-source $HOME/.CUDA_ENV.csh
+source $HOME/scripts_cjs/do_configure/MPI_ENV.csh
+source $HOME/scripts_cjs/do_configure/CUDA_ENV.csh
 
 
 if ( -f Makefile ) then 
