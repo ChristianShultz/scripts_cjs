@@ -11,13 +11,13 @@ use strict;
 use OPparams;
 use File::Basename;
 my $basedir = dirname($0); 
-require "${basedir}/OPparams.work.pl";
+require "${basedir}/OPparams.work.2particle.pl";
 
 
 my $spin = 1;
 my $parity = "m";
 my $twoI_z = 2; 
-my $reconpath = "/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265/redstar/rho/jjd_analysis";
+my $reconpath = "/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265/redstar/rho/rho_ff";
 my $pid = "rho_proj0";
 my $ncfg = 603; 
 my $ensemble = "szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265";

@@ -30,6 +30,7 @@ sub new
     ENERGY=> undef, 
     SPIN=> undef, 
     QUARK_MOD => undef,
+    NESTED => undef, 
     @_,
   }; ## self 
 
@@ -136,6 +137,12 @@ sub quark_model_assignment{
   my $self = shift; 
   if(@_) {$self->{QUARK_MOD} = shift};
   return $self->{QUARK_MOD};
+}
+
+sub nested{
+  my $self = shift; 
+  if(@_) {$self->{NESTED} = shift};
+  return $self->{NESTED};
 }
 
 #

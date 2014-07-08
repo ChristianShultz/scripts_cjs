@@ -336,7 +336,7 @@ use File::Basename;
 
 my \$basedir = dirname(\$0); 
 
-require "\${basedir}/OPparams.work.pl";
+require "\${basedir}/OPparams.work.2particle.pl";
 
 my \@all_ops = (); 
 
@@ -368,6 +368,7 @@ sub print_single_op
   $p->tz(-1);
   $p->phaser(1.);
   $p->spin($spin);
+  $p->nested(undef); 
 EOF
 
   return $p; 
@@ -433,12 +434,14 @@ sub print_trailer_perl
 
 
   my \@extracts = (); 
+  my \@list_extracts = (); 
   foreach my \$op (\@all_operators)
   {
-    push \@extracts,  &run_extract_all_v_coeffs_svd(\$op); 
+    push \@extracts,  &run_extract_all_v_coeffs_xml(\$op); 
+    push \@list_extracts , &run_extract_all_v_coeffs_svd(\$op); 
   }
 
-  my \$listfile = &convert_proj_to_xml(\\\@extracts,\"$pid\"); 
+  my \$listfile = &finish_proj_xml(\\\@extracts,\\\@list_extracts,\"$pid\"); 
 
   &make_proj_plots(\$listfile);
 
@@ -512,7 +515,64 @@ sub copy_file
 }
 
 
+# run the nested extract 
+sub run_extract_all_v_coeffs_xml
+{
+  my $op = shift;
+  my $base = `pwd`;
+  chomp $base;  
+  my $destdir = $op->recon_dir(); 
 
+  $op->calc_mass(); 
+
+  my $loc = "/u/home/shultz/scripts_cjs/optimized_operators/";
+  my $exe = $loc ."extract_all_v_coeffs_xml.pl";
+  my $t0 = $op->t0(); 
+  my $tz = $op->tz(); 
+  my $state = $op->state(); 
+  my $opslistfile = "ops_phases";
+  my $opname = $op->op_name(); 
+
+  my $outfile = $opname . ".xml"; 
+  my $secondary_xml = "";
+
+  if(  $op->nested()  )
+  {
+    my @nest = @{$op->nested()}; 
+
+    foreach my $nested (@nest)
+    {
+      $secondary_xml .= " $nested"; 
+    }
+  }
+
+  my $run = "${exe} $outfile $t0 $tz $opslistfile $state $opname $secondary_xml > $outfile.log";
+
+  chdir $destdir || die ( $_ ); 
+
+  my $script =  "${opname}.extract_command.csh"; 
+  open OP , ">" , $script; 
+  print OP "#/bin/tcsh \n";
+  print OP $run ." \n"; 
+  close OP;
+
+  # for some reason they go 0644 for me..
+  chmod 0755 , $exe;
+  chmod 0755 , $script; 
+
+  system ( " ./${script} " ) == 0 || die ( "some problem for $run \n in $destdir \n" ) ; 
+
+
+  chdir $base || die ( $_ );
+
+
+  copy_file($destdir."/".$outfile , $outfile);
+
+  return $outfile; 
+}
+
+
+# a single particle extract, must be followed by a convert 
 sub run_extract_all_v_coeffs_svd
 {
   my $op = shift;
@@ -557,12 +617,19 @@ sub run_extract_all_v_coeffs_svd
   return $outfile; 
 }
 
-
-
-sub convert_proj_to_xml
+sub silly_split
 {
-  my ( $ref , $id ) = @_; 
-  my @lists = @{$ref};
+  my ($f,$regrep,$index) = @_; 
+  my @foo = split $f , /$regrep/ ; 
+  return $foo[$index]; 
+}
+
+sub finish_proj_xml
+{
+  my ( $xml_list, $list_list , $id ) = @_; 
+
+  my @lists = @{$list_list};
+  my @xmls = @{$xml_list}; 
 
   my $listf = "weights." . $id . ".list";
   my $xmlf = "weights." . $id . ".xml";
@@ -581,16 +648,23 @@ sub convert_proj_to_xml
 
   close OUT; 
 
-## THIS IS OLD
-#  my $exe = "convert_proj_list_to_xml.pl"; 
-#  die ( "$exe not present" ) unless -f $exe; 
-#  
-#  system (" ./${exe} $listf $xmlf " ) == 0 || die ($_) ;
+  open OUT , ">" , $xmlf; 
+  print OUT <<EOF;
+<?xml version="1.0"?>
+<ProjectedOps>
+EOF
 
-  my $loc = "/u/home/shultz/optimized_operators/";
-  my $exe = $loc . "convert_proj_list_to_irrep_op_xml.pl";
-  die ("$exe not present") unless -f $exe;
-  system (" cat $listf | ${exe} > $xmlf ") == 0 || die($_); 
+  foreach my $xml (@xmls)
+  {
+    print "extracting $xml \n";
+    my $gobs_of_xml = `print_nodeset $xml /ProjectedOps | tail -n +5 | head -n -2`;
+    print OUT $gobs_of_xml; 
+  }
+
+  print OUT <<EOF;
+</ProjectedOps>
+EOF
+
 
   return $listf;  
 }
