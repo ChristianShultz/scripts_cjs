@@ -60,7 +60,7 @@ foreach my $plot (@plots)
   my @a = @{ $plot }; 
   my $p = $a[0]; 
   my $f = $a[1]; 
-  system("gnuplot -persist $p"); 
+  system("/home/shultz/git-builds/gnuplot/bin/gnuplot -persist $p"); 
   unlink $p; 
   unlink $f; 
 }
