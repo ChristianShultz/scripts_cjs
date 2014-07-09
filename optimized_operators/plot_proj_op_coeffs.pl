@@ -7,8 +7,9 @@ use strict;
 # some global switch to turn off/on unit normalization
 # NB: only undef is false since perl is dumb
 # our $donorm = undef;  
-our $donorm = "true";
-our $saveplot = "true";
+our $donorm = undef;
+our $dosign = undef;
+our $saveplot = undef;
 
 # the big list file
 my $file = $ARGV[0];
@@ -60,7 +61,7 @@ foreach my $plot (@plots)
   my @a = @{ $plot }; 
   my $p = $a[0]; 
   my $f = $a[1]; 
-  system("/home/shultz/git-builds/gnuplot/bin/gnuplot -persist $p"); 
+  system("gnuplot -persist $p"); 
 #  unlink $p; 
 #  unlink $f; 
 }
@@ -105,15 +106,22 @@ sub make_gp
 
 # dump the data into a file for gnuplot
   my $fout = $file . "_" . ".dat";
+
+  my $count = 0; 
+  my $op_names; 
+  my $op_vals; 
+  my $line_types; 
+  my $plot_string;  
+  dump_data(\$count,\$op_names,\$op_vals,\$line_types,\$plot_string,\@j0,\%ops,\%sgns);
+  dump_data(\$count,\$op_names,\$op_vals,\$line_types,\$plot_string,\@j1,\%ops,\%sgns); 
+  dump_data(\$count,\$op_names,\$op_vals,\$line_types,\$plot_string,\@j2,\%ops,\%sgns); 
+  dump_data(\$count,\$op_names,\$op_vals,\$line_types,\$plot_string,\@j3,\%ops,\%sgns); 
+  dump_data(\$count,\$op_names,\$op_vals,\$line_types,\$plot_string,\@j4,\%ops,\%sgns); 
+
+
+
   open DATOUT , ">" , $fout;
-
-  my $xp = 0.; 
-  my $j0f = dump_data($file,0,\@j0,\%ops,\%sgns);
-  my $j1f = dump_data($file,1,\@j1,\%ops,\%sgns); 
-  my $j2f = dump_data($file,2,\@j2,\%ops,\%sgns); 
-  my $j3f = dump_data($file,3,\@j3,\%ops,\%sgns); 
-  my $j4f = dump_data($file,4,\@j4,\%ops,\%sgns); 
-
+  print DATOUT $op_names . "\n" . $op_vals; 
   close DATOUT;
 
 
@@ -121,18 +129,20 @@ sub make_gp
   my $plot = $file . ".gp";
 
   open OUT , ">" , $plot; 
-
   print OUT "set key noenhanced\n";
-  print OUT "set bars fullwidth \n";
-  print OUT "set style data histogram \n";
-  print OUT "set style fill solid border -1 \n";
-  print OUT "set style histogram errorbars gap 5 lw 1 \n";
-  print OUT "set xtics nomirror rotate by -45 font \",8\"\n";
-  print OUT "set title \"$tag\" \n";
-  print OUT "set yrange [0:1.05] \n";
-  print OUT "plot \"$fout\" u (column(0)):2:xtic(1), \\\n" ;
-#                                #xval:ydata:boxwidth:color_index:xtic_labels
-  print OUT "\"$fout\" u (column(0)):(\$2 + 0.02):4 with labels";
+  print OUT "set bars fullwidth\n";
+  print OUT "set style data histograms\n";
+
+  print OUT "set style fill solid border -1\n";
+  print OUT "set style histogram errorbars gap 5 lw 1\n";
+
+  print OUT $line_types . "\n";
+  print OUT "set style increment user \n";
+  print OUT "plot \"$fout\" $plot_string\n" ;
+
+  print OUT "set term x11 1 \n";
+  print OUT "set yrange [GPVAL_DATA_Y_MIN - 0.2 : GPVAL_DATA_Y_MAX +0.2] \n";
+  print OUT "replot \n";
 
 
   if($saveplot)
@@ -177,15 +187,15 @@ sub normalize
   {
     my ($op, $val) = split(/ /, $elem); 
 
+    $ops{$op} = $val;
+    $sign{$op} = "+";
     if($val < 0)
     {
-      $ops{$op} = -$val;
+      if( $dosign )
+      {
+       $ops{$op} = -$val;
+      }
       $sign{$op} = "-";
-    }
-    else
-    {
-      $ops{$op} = $val;
-      $sign{$op} = "+";
     }
 
     if ($ops{$op} > $largest)
@@ -215,7 +225,7 @@ sub normalize
 #######################################################
 sub dump_data
 {
-  my ($file,$j,$ky,$opv,$sg) = @_;
+  my ($count,$op_names,$op_vals,$line_types,$plot_string,$ky,$opv,$sg) = @_;
 
   my @keys = @{$ky};
   my %ops = %{$opv};
@@ -223,10 +233,24 @@ sub dump_data
 
   foreach my $key (@keys)
   {
-    print DATOUT $key . " " . $ops{$key} . " " . $j  . " " . $sgn{$key} . "\n"; 
-  }
+    my $style = ident_op($key); 
+    $$op_names .= "$key ";
+    $$op_vals .= $ops{$key} . " "; 
+    my $line = $$count +1; 
+    $$line_types .= "set style line $line lc rgb $style \n"; 
+    my $abc = $$count; 
 
-  return $#keys; 
+    if($$count == 0) 
+    {
+      $$plot_string .= "u $line:0:xtic(1) ti col"; 
+    }
+    else
+    {
+      $$plot_string .= ", \'\' u $line:0 ti col";
+    }
+
+    $$count++; 
+  }
 }
 
 
@@ -405,5 +429,30 @@ sub ident_op {
   return $color;
 }
 
+
+#################################################################################
+# Remove helicity from an irrep name
+sub removeHelicity
+{
+  my $irrep = $_[0];
+  # Remove the helicity label
+  if ( (substr($irrep,0,3) eq "H0D") || (substr($irrep,0,3) eq "H1D") || (substr($irrep,0,3) eq "H2D") || 
+    (substr($irrep,0,3) eq "H3D") || (substr($irrep,0,3) eq "H4D") || (substr($irrep,0,3) eq "H0C") || 
+    (substr($irrep,0,3) eq "H1C") || (substr($irrep,0,3) eq "H2C") || (substr($irrep,0,3) eq "H3C") || 
+    (substr($irrep,0,3) eq "H4C") 
+  )
+  {
+    return substr($irrep,2);
+  }
+
+  if ( (substr($irrep,0,5) eq "H1o2D") || (substr($irrep,0,5) eq "H3o2D") || (substr($irrep,0,5) eq "H5o2D") || (substr($irrep,0,5) eq "H7o2D") || 
+    (substr($irrep,0,5) eq "H1o2C") || (substr($irrep,0,5) eq "H3o2C") || (substr($irrep,0,5) eq "H5o2C") || (substr($irrep,0,5) eq "H7o2C")
+  )
+  {
+    return substr($irrep,4);
+  }
+
+  return $irrep;
+}
 
 
