@@ -12,7 +12,7 @@ use File::Basename;
 
 my $basedir = dirname($0); 
 
-require "${basedir}/OPparams.work.2particle.pl";
+require "${basedir}/OPparams.work.multiparticle.pl";
 
 my @all_ops = (); 
 
@@ -23,15 +23,17 @@ my @all_ops = ();
   $rho_proj0_p000_T1->irrep_stem("T1");
   $rho_proj0_p000_T1->mom("p000"); 
   $rho_proj0_p000_T1->twoI_z(2); 
-  $rho_proj0_p000_T1->ncfg(603);
+  $rho_proj0_p000_T1->ncfg(600);
+  $rho_proj0_p000_T1->spin(1);
   $rho_proj0_p000_T1->ensemble("szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265"); 
-  $rho_proj0_p000_T1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265/redstar/rho/rho_ff");
+  $rho_proj0_p000_T1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per/redstar/rho600/rho_ff");
   $rho_proj0_p000_T1->t0(-1);
   $rho_proj0_p000_T1->state(-1); 
   $rho_proj0_p000_T1->tz(-1);
   $rho_proj0_p000_T1->phaser(1.);
-  $rho_proj0_p000_T1->spin(1);
+  $rho_proj0_p000_T1->recon_version("two_particle"); 
   $rho_proj0_p000_T1->nested(undef); 
+  $rho_proj0_p000_T1->recon_ws(undef); 
 
   my $rho_proj0_p100_H0D4A1 = OPparams->new();
   $rho_proj0_p100_H0D4A1->pid("rho_proj0");
@@ -39,15 +41,17 @@ my @all_ops = ();
   $rho_proj0_p100_H0D4A1->irrep_stem("H0D4A1");
   $rho_proj0_p100_H0D4A1->mom("p100"); 
   $rho_proj0_p100_H0D4A1->twoI_z(2); 
-  $rho_proj0_p100_H0D4A1->ncfg(603);
+  $rho_proj0_p100_H0D4A1->ncfg(600);
+  $rho_proj0_p100_H0D4A1->spin(1);
   $rho_proj0_p100_H0D4A1->ensemble("szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265"); 
-  $rho_proj0_p100_H0D4A1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265/redstar/rho/rho_ff");
+  $rho_proj0_p100_H0D4A1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per/redstar/rho600/rho_ff");
   $rho_proj0_p100_H0D4A1->t0(-1);
   $rho_proj0_p100_H0D4A1->state(-1); 
   $rho_proj0_p100_H0D4A1->tz(-1);
   $rho_proj0_p100_H0D4A1->phaser(1.);
-  $rho_proj0_p100_H0D4A1->spin(1);
+  $rho_proj0_p100_H0D4A1->recon_version("two_particle"); 
   $rho_proj0_p100_H0D4A1->nested(undef); 
+  $rho_proj0_p100_H0D4A1->recon_ws(undef); 
 
   my $rho_proj0_p100_H1D4E2 = OPparams->new();
   $rho_proj0_p100_H1D4E2->pid("rho_proj0");
@@ -55,15 +59,17 @@ my @all_ops = ();
   $rho_proj0_p100_H1D4E2->irrep_stem("H1D4E2");
   $rho_proj0_p100_H1D4E2->mom("p100"); 
   $rho_proj0_p100_H1D4E2->twoI_z(2); 
-  $rho_proj0_p100_H1D4E2->ncfg(603);
+  $rho_proj0_p100_H1D4E2->ncfg(600);
+  $rho_proj0_p100_H1D4E2->spin(1);
   $rho_proj0_p100_H1D4E2->ensemble("szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265"); 
-  $rho_proj0_p100_H1D4E2->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265/redstar/rho/rho_ff");
+  $rho_proj0_p100_H1D4E2->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per/redstar/rho600/rho_ff");
   $rho_proj0_p100_H1D4E2->t0(-1);
   $rho_proj0_p100_H1D4E2->state(-1); 
   $rho_proj0_p100_H1D4E2->tz(-1);
   $rho_proj0_p100_H1D4E2->phaser(1.);
-  $rho_proj0_p100_H1D4E2->spin(1);
+  $rho_proj0_p100_H1D4E2->recon_version("two_particle"); 
   $rho_proj0_p100_H1D4E2->nested(undef); 
+  $rho_proj0_p100_H1D4E2->recon_ws(undef); 
 
   my $rho_proj0_p110_H0D2A1 = OPparams->new();
   $rho_proj0_p110_H0D2A1->pid("rho_proj0");
@@ -71,15 +77,17 @@ my @all_ops = ();
   $rho_proj0_p110_H0D2A1->irrep_stem("H0D2A1");
   $rho_proj0_p110_H0D2A1->mom("p110"); 
   $rho_proj0_p110_H0D2A1->twoI_z(2); 
-  $rho_proj0_p110_H0D2A1->ncfg(603);
+  $rho_proj0_p110_H0D2A1->ncfg(600);
+  $rho_proj0_p110_H0D2A1->spin(1);
   $rho_proj0_p110_H0D2A1->ensemble("szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265"); 
-  $rho_proj0_p110_H0D2A1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265/redstar/rho/rho_ff");
+  $rho_proj0_p110_H0D2A1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per/redstar/rho600/rho_ff");
   $rho_proj0_p110_H0D2A1->t0(-1);
   $rho_proj0_p110_H0D2A1->state(-1); 
   $rho_proj0_p110_H0D2A1->tz(-1);
   $rho_proj0_p110_H0D2A1->phaser(1.);
-  $rho_proj0_p110_H0D2A1->spin(1);
+  $rho_proj0_p110_H0D2A1->recon_version("two_particle"); 
   $rho_proj0_p110_H0D2A1->nested(undef); 
+  $rho_proj0_p110_H0D2A1->recon_ws(undef); 
 
   my $rho_proj0_p110_H1D2B1 = OPparams->new();
   $rho_proj0_p110_H1D2B1->pid("rho_proj0");
@@ -87,15 +95,17 @@ my @all_ops = ();
   $rho_proj0_p110_H1D2B1->irrep_stem("H1D2B1");
   $rho_proj0_p110_H1D2B1->mom("p110"); 
   $rho_proj0_p110_H1D2B1->twoI_z(2); 
-  $rho_proj0_p110_H1D2B1->ncfg(603);
+  $rho_proj0_p110_H1D2B1->ncfg(600);
+  $rho_proj0_p110_H1D2B1->spin(1);
   $rho_proj0_p110_H1D2B1->ensemble("szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265"); 
-  $rho_proj0_p110_H1D2B1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265/redstar/rho/rho_ff");
+  $rho_proj0_p110_H1D2B1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per/redstar/rho600/rho_ff");
   $rho_proj0_p110_H1D2B1->t0(-1);
   $rho_proj0_p110_H1D2B1->state(-1); 
   $rho_proj0_p110_H1D2B1->tz(-1);
   $rho_proj0_p110_H1D2B1->phaser(1.);
-  $rho_proj0_p110_H1D2B1->spin(1);
+  $rho_proj0_p110_H1D2B1->recon_version("two_particle"); 
   $rho_proj0_p110_H1D2B1->nested(undef); 
+  $rho_proj0_p110_H1D2B1->recon_ws(undef); 
 
   my $rho_proj0_p110_H1D2B2 = OPparams->new();
   $rho_proj0_p110_H1D2B2->pid("rho_proj0");
@@ -103,15 +113,17 @@ my @all_ops = ();
   $rho_proj0_p110_H1D2B2->irrep_stem("H1D2B2");
   $rho_proj0_p110_H1D2B2->mom("p110"); 
   $rho_proj0_p110_H1D2B2->twoI_z(2); 
-  $rho_proj0_p110_H1D2B2->ncfg(603);
+  $rho_proj0_p110_H1D2B2->ncfg(600);
+  $rho_proj0_p110_H1D2B2->spin(1);
   $rho_proj0_p110_H1D2B2->ensemble("szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265"); 
-  $rho_proj0_p110_H1D2B2->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265/redstar/rho/rho_ff");
+  $rho_proj0_p110_H1D2B2->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per/redstar/rho600/rho_ff");
   $rho_proj0_p110_H1D2B2->t0(-1);
   $rho_proj0_p110_H1D2B2->state(-1); 
   $rho_proj0_p110_H1D2B2->tz(-1);
   $rho_proj0_p110_H1D2B2->phaser(1.);
-  $rho_proj0_p110_H1D2B2->spin(1);
+  $rho_proj0_p110_H1D2B2->recon_version("two_particle"); 
   $rho_proj0_p110_H1D2B2->nested(undef); 
+  $rho_proj0_p110_H1D2B2->recon_ws(undef); 
 
   my $rho_proj0_p111_H0D3A1 = OPparams->new();
   $rho_proj0_p111_H0D3A1->pid("rho_proj0");
@@ -119,15 +131,17 @@ my @all_ops = ();
   $rho_proj0_p111_H0D3A1->irrep_stem("H0D3A1");
   $rho_proj0_p111_H0D3A1->mom("p111"); 
   $rho_proj0_p111_H0D3A1->twoI_z(2); 
-  $rho_proj0_p111_H0D3A1->ncfg(603);
+  $rho_proj0_p111_H0D3A1->ncfg(600);
+  $rho_proj0_p111_H0D3A1->spin(1);
   $rho_proj0_p111_H0D3A1->ensemble("szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265"); 
-  $rho_proj0_p111_H0D3A1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265/redstar/rho/rho_ff");
+  $rho_proj0_p111_H0D3A1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per/redstar/rho600/rho_ff");
   $rho_proj0_p111_H0D3A1->t0(-1);
   $rho_proj0_p111_H0D3A1->state(-1); 
   $rho_proj0_p111_H0D3A1->tz(-1);
   $rho_proj0_p111_H0D3A1->phaser(1.);
-  $rho_proj0_p111_H0D3A1->spin(1);
+  $rho_proj0_p111_H0D3A1->recon_version("two_particle"); 
   $rho_proj0_p111_H0D3A1->nested(undef); 
+  $rho_proj0_p111_H0D3A1->recon_ws(undef); 
 
   my $rho_proj0_p111_H1D3E2 = OPparams->new();
   $rho_proj0_p111_H1D3E2->pid("rho_proj0");
@@ -135,15 +149,17 @@ my @all_ops = ();
   $rho_proj0_p111_H1D3E2->irrep_stem("H1D3E2");
   $rho_proj0_p111_H1D3E2->mom("p111"); 
   $rho_proj0_p111_H1D3E2->twoI_z(2); 
-  $rho_proj0_p111_H1D3E2->ncfg(603);
+  $rho_proj0_p111_H1D3E2->ncfg(600);
+  $rho_proj0_p111_H1D3E2->spin(1);
   $rho_proj0_p111_H1D3E2->ensemble("szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265"); 
-  $rho_proj0_p111_H1D3E2->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265/redstar/rho/rho_ff");
+  $rho_proj0_p111_H1D3E2->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per/redstar/rho600/rho_ff");
   $rho_proj0_p111_H1D3E2->t0(-1);
   $rho_proj0_p111_H1D3E2->state(-1); 
   $rho_proj0_p111_H1D3E2->tz(-1);
   $rho_proj0_p111_H1D3E2->phaser(1.);
-  $rho_proj0_p111_H1D3E2->spin(1);
+  $rho_proj0_p111_H1D3E2->recon_version("two_particle"); 
   $rho_proj0_p111_H1D3E2->nested(undef); 
+  $rho_proj0_p111_H1D3E2->recon_ws(undef); 
 
   my $rho_proj0_p200_H0D4A1 = OPparams->new();
   $rho_proj0_p200_H0D4A1->pid("rho_proj0");
@@ -151,15 +167,17 @@ my @all_ops = ();
   $rho_proj0_p200_H0D4A1->irrep_stem("H0D4A1");
   $rho_proj0_p200_H0D4A1->mom("p200"); 
   $rho_proj0_p200_H0D4A1->twoI_z(2); 
-  $rho_proj0_p200_H0D4A1->ncfg(603);
+  $rho_proj0_p200_H0D4A1->ncfg(600);
+  $rho_proj0_p200_H0D4A1->spin(1);
   $rho_proj0_p200_H0D4A1->ensemble("szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265"); 
-  $rho_proj0_p200_H0D4A1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265/redstar/rho/rho_ff");
+  $rho_proj0_p200_H0D4A1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per/redstar/rho600/rho_ff");
   $rho_proj0_p200_H0D4A1->t0(-1);
   $rho_proj0_p200_H0D4A1->state(-1); 
   $rho_proj0_p200_H0D4A1->tz(-1);
   $rho_proj0_p200_H0D4A1->phaser(1.);
-  $rho_proj0_p200_H0D4A1->spin(1);
+  $rho_proj0_p200_H0D4A1->recon_version("two_particle"); 
   $rho_proj0_p200_H0D4A1->nested(undef); 
+  $rho_proj0_p200_H0D4A1->recon_ws(undef); 
 
   my $rho_proj0_p200_H1D4E2 = OPparams->new();
   $rho_proj0_p200_H1D4E2->pid("rho_proj0");
@@ -167,15 +185,17 @@ my @all_ops = ();
   $rho_proj0_p200_H1D4E2->irrep_stem("H1D4E2");
   $rho_proj0_p200_H1D4E2->mom("p200"); 
   $rho_proj0_p200_H1D4E2->twoI_z(2); 
-  $rho_proj0_p200_H1D4E2->ncfg(603);
+  $rho_proj0_p200_H1D4E2->ncfg(600);
+  $rho_proj0_p200_H1D4E2->spin(1);
   $rho_proj0_p200_H1D4E2->ensemble("szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265"); 
-  $rho_proj0_p200_H1D4E2->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265/redstar/rho/rho_ff");
+  $rho_proj0_p200_H1D4E2->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per/redstar/rho600/rho_ff");
   $rho_proj0_p200_H1D4E2->t0(-1);
   $rho_proj0_p200_H1D4E2->state(-1); 
   $rho_proj0_p200_H1D4E2->tz(-1);
   $rho_proj0_p200_H1D4E2->phaser(1.);
-  $rho_proj0_p200_H1D4E2->spin(1);
+  $rho_proj0_p200_H1D4E2->recon_version("two_particle"); 
   $rho_proj0_p200_H1D4E2->nested(undef); 
+  $rho_proj0_p200_H1D4E2->recon_ws(undef); 
 
 
   my @all_operators = (); 
@@ -193,16 +213,29 @@ my @all_ops = ();
 
   my @extracts = (); 
   my @list_extracts = (); 
+  my @plot_list = (); 
   foreach my $op (@all_operators)
   {
-    push @extracts,  &run_extract_all_v_coeffs_xml($op); 
-    push @list_extracts , &run_extract_all_v_coeffs_svd($op); 
+    # this one makes a list file for the plots
+    push @plot_list , &run_extract_all_v_coeffs_svd($op); 
+
+    # need to be careful about single vs multiparticle xml extraction
+    # here , also always be wary of weighting shifting 
+    if( ( $op->recon_version() eq "single_meson" )
+      || ($op->recon_version() eq "ancient" ) )
+    {
+      push @list_extracts , &run_extract_all_v_coeffs_svd($op); 
+    }
+    else
+    {
+      push @extracts,  &run_extract_all_v_coeffs_xml($op); 
+    }
   }
+
+  &make_proj_plots(\@plot_list,"rho_proj0");
 
   my $listfile = &finish_proj_xml(\@extracts,\@list_extracts,"rho_proj0"); 
 
-  &make_proj_plots($listfile);
-
   &write_radmat_xml(\@all_operators); 
-  
+
   &serialize_ops_list( "rho_proj0.perl.xml" , \@all_operators ); 

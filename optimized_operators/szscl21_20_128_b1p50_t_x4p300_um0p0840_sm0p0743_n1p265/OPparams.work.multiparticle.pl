@@ -9,6 +9,10 @@ use File::Basename;
 use File::Copy;
 use XML::Dumper;
 
+#
+##
+###
+###########
 sub rep_list
 {
   my ($spin , $parity) = @_; 
@@ -39,6 +43,10 @@ sub rep_list
 
 
 
+#
+##
+###
+###########
 sub rep_list_spin_0
 {
   my $parity = $_[0]; 
@@ -85,6 +93,10 @@ sub rep_list_spin_0
 
 
 
+#
+##
+###
+###########
 sub rep_list_spin_1
 {
   my $parity = $_[0]; 
@@ -134,6 +146,10 @@ sub rep_list_spin_1
 }
 
 
+#
+##
+###
+###########
 sub rep_list_spin_2
 {
   my $parity = $_[0]; 
@@ -190,6 +206,10 @@ sub rep_list_spin_2
 
 
 
+#
+##
+###
+###########
 sub rep_list_spin_3
 {
   my $parity = $_[0]; 
@@ -251,6 +271,10 @@ sub rep_list_spin_3
 }
 
 
+#
+##
+###
+###########
 sub rep_list_spin_4
 {
   my $parity = $_[0]; 
@@ -318,6 +342,10 @@ sub rep_list_spin_4
 }
 
 
+#
+##
+###
+###########
 sub print_header_perl
 {
 
@@ -336,7 +364,7 @@ use File::Basename;
 
 my \$basedir = dirname(\$0); 
 
-require "\${basedir}/OPparams.work.2particle.pl";
+require "\${basedir}/OPparams.work.multiparticle.pl";
 
 my \@all_ops = (); 
 
@@ -346,6 +374,10 @@ EOF
 
 
 
+#
+##
+###
+###########
 sub print_single_op
 {
   my ($pid, $rep , $rep_stem , $mom , $twoI_z, $ncfg , $ensemble , $recon_dir ,$spin ) = @_;  
@@ -361,20 +393,26 @@ sub print_single_op
   $p->mom(\"$mom\"); 
   $p->twoI_z($twoI_z); 
   $p->ncfg($ncfg);
+  $p->spin($spin);
   $p->ensemble(\"$ensemble\"); 
   $p->recon_dir(\"$recon_dir\");
   $p->t0(-1);
   $p->state(-1); 
   $p->tz(-1);
   $p->phaser(1.);
-  $p->spin($spin);
+  $p->recon_version(\"single_meson\"); 
   $p->nested(undef); 
+  $p->recon_ws(undef); 
 EOF
 
   return $p; 
 }
 
 
+#
+##
+###
+###########
 sub print_ops
 {
 
@@ -425,6 +463,10 @@ EOF
 }
 
 
+#
+##
+###
+###########
 sub print_trailer_perl
 {
 
@@ -435,18 +477,31 @@ sub print_trailer_perl
 
   my \@extracts = (); 
   my \@list_extracts = (); 
+  my \@plot_list = (); 
   foreach my \$op (\@all_operators)
   {
-    push \@extracts,  &run_extract_all_v_coeffs_xml(\$op); 
-    push \@list_extracts , &run_extract_all_v_coeffs_svd(\$op); 
+    # this one makes a list file for the plots
+    push \@plot_list , &run_extract_all_v_coeffs_svd(\$op); 
+
+    # need to be careful about single vs multiparticle xml extraction
+    # here , also always be wary of weighting shifting 
+    if( ( \$op->recon_version() eq "single_meson" )
+      || (\$op->recon_version() eq "ancient" ) )
+    {
+      push \@list_extracts , &run_extract_all_v_coeffs_svd(\$op); 
+    }
+    else
+    {
+      push \@extracts,  &run_extract_all_v_coeffs_xml(\$op); 
+    }
   }
+
+  &make_proj_plots(\\\@plot_list,\"$pid\");
 
   my \$listfile = &finish_proj_xml(\\\@extracts,\\\@list_extracts,\"$pid\"); 
 
-  &make_proj_plots(\$listfile);
-
   &write_radmat_xml(\\\@all_operators); 
-  
+
   &serialize_ops_list( \"$pid.perl.xml\" , \\\@all_operators ); 
 EOF
 
@@ -454,6 +509,10 @@ EOF
 }
 
 
+#
+##
+###
+###########
 sub write_radmat_xml
 {
   my $ref = shift; 
@@ -468,6 +527,7 @@ sub write_radmat_xml
   chdir $rdir; 
 
   # a month later I am sorry for writing this..eww
+  # six months later I'm no longer sure how it even works 
   foreach my $op (@all_ops)
   {
     my %h = %{ $op->write_mass_overlap_xml() };
@@ -515,6 +575,10 @@ sub copy_file
 }
 
 
+#
+##
+###
+###########
 # run the nested extract 
 sub run_extract_all_v_coeffs_xml
 {
@@ -572,6 +636,10 @@ sub run_extract_all_v_coeffs_xml
 }
 
 
+#
+##
+###
+###########
 # a single particle extract, must be followed by a convert 
 sub run_extract_all_v_coeffs_svd
 {
@@ -589,15 +657,22 @@ sub run_extract_all_v_coeffs_svd
   my $state = $op->state(); 
   my $opslistfile = "ops_phases";
   my $opname = $op->op_name(); 
-
   my $outfile = $opname . ".list"; 
 
   my $run = "${exe} $t0 $tz $state $opslistfile $opname > $outfile";
 
-  chdir $destdir || die ( $_ ); 
+  if( $op->recon_version() eq "ancient" )
+  {
+    print "WARNING: using an ancient version of correlators\n";
+    $exe = $loc . "extract_all_v_coeffs_ancient.pl";
+    my $converter = $loc . "convert_old_to_new_pion_proj_list.pl";
+    $run = "${exe} $t0 $tz $state $opslistfile $opname | $converter > $outfile";
+  }
+
+  chdir $destdir || die ( "unable to move to $destdir" ); 
 
   my $script =  "${opname}.extract_command.csh"; 
-  open OP , ">" , $script; 
+  open OP , ">" , $script || die("unable to open $script in $destdir"); 
   print OP "#/bin/tcsh \n";
   print OP $run ." \n"; 
   close OP;
@@ -617,12 +692,22 @@ sub run_extract_all_v_coeffs_svd
   return $outfile; 
 }
 
+#
+##
+###
+###########
+
 sub silly_split
 {
   my ($f,$regrep,$index) = @_; 
   my @foo = split $f , /$regrep/ ; 
   return $foo[$index]; 
 }
+
+#
+##
+###
+###########
 
 sub finish_proj_xml
 {
@@ -648,6 +733,20 @@ sub finish_proj_xml
 
   close OUT; 
 
+  # guard completely empty files, the xpath and nodeset codes
+  # complain about </Key> synatax since they(we) are stupid 
+  if( ! -z $listf ) 
+  {
+    my $tmp_xml = $listf . ".xml";
+    my $loc = "/u/home/shultz/optimized_operators/";
+    my $exe = $loc . "convert_proj_list_to_irrep_op_xml.pl";
+    die ("$exe not present") unless -f $exe;
+    system (" cat $listf | ${exe} > $tmp_xml ") == 0 || die($_); 
+
+    push @xmls , $tmp_xml;
+  }
+
+
   open OUT , ">" , $xmlf; 
   print OUT <<EOF;
 <?xml version="1.0"?>
@@ -665,22 +764,45 @@ EOF
 </ProjectedOps>
 EOF
 
-
   return $listf;  
 }
 
+#
+##
+###
+###########
 sub make_proj_plots
 {
-  my $file = shift; 
+  my ($ref,$id) = @_; 
+  my @lists = @{$ref};
+
+  my $listf = "weights." . $id . ".plot.list";
+
+  unlink $listf unless ! -f $listf; 
+
+  open OUT , ">" , $listf; 
+
+  foreach my $l (@lists)
+  {
+    open IN , "<" , $l; 
+    print OUT while <IN>; 
+    close IN; 
+  } 
+
+  close OUT; 
+
   my $loc = "/u/home/shultz/optimized_operators/";
   my $exe = $loc . "plot_proj_op_coeffs.pl"; 
 
   die ( "$exe not present" ) unless -f $exe; 
-  die ( "input not present : $file " ) unless -f $file; 
 
-  system ( " ${exe} $file " ) == 0 || die ($_); 
+  system ( " ${exe} $listf " ) == 0 || die ($_); 
 }
 
+#
+##
+###
+###########
 sub serialize_ops_list
 {
   my ($f , $aref)  = @_; 

@@ -31,6 +31,8 @@ sub new
     SPIN=> undef, 
     QUARK_MOD => undef,
     NESTED => undef, 
+    RECON_VERSION => "single_meson", 
+    RECON_WS => undef, 
     @_,
   }; ## self 
 
@@ -145,6 +147,18 @@ sub nested{
   return $self->{NESTED};
 }
 
+sub recon_version{
+  my $self = shift; 
+  if(@_) {$self->{RECON_VERSION} = shift};
+  return $self->{RECON_VERSION};
+}
+
+sub recon_ws {
+  my $self = shift; 
+  if(@_) {$self->{RECON_WS} = shift;}
+  return $self->{RECON_WS}; 
+}
+
 #
 #
 # parameterless methods
@@ -206,15 +220,38 @@ sub write_mass_overlap_xml
   my $pid = $self->pid();
   my $phaser = $self->phaser(); 
 
-  my $massf = $self->recon_dir() . "/t0" . $t0; 
-  $massf .= "/MassJackFiles/mass_t0_" . $t0 . "_reorder_"; 
-  $massf .= "state" . $self->state() . ".jack"; 
+  
+  my $massdir = $self->recon_dir() . "/t0" . $t0 . "/MassJackFiles";
+  my $massf = "mass_t0_" . $t0 . "_reorder_" . "state" . $self->state() . ".jack"; 
 
-  # this is a stub since I'm being lazy and the 
-  # normalization of a projected operator is fixed
-  # via the extraction coefficients
-  my $zf = $massf;  
+  if( $self->recon_version() eq "ancient" ) 
+  {
+    $massdir = $self->recon_dir(); 
+    $massf = "mass_t0${t0}_state" . $self->state() . "_reordered.jack"; 
+  }
 
+ (  my $zf = $massf  ) =~ s/mass/operator_normalization/;
+
+  # where do we live right now
+  my $local_base_dir = `pwd`; 
+  chomp $local_base_dir;  
+
+  # move to mass dir 
+  chdir $massdir || die ("unable to move $massdir");  
+
+  # peral is not strongly typed, abuse this malfeature by 
+  # changing the ws_factor to an ensemble if we have 
+  # weighting and shifting, otherwise just stick in a 
+  # value of 1. as a placeholder, real languages dont 
+  # let you do things like this..
+  my $ws_factor = 1.; 
+  $ws_factor = $self->calculate_weight_shift($massf) if( $self->recon_ws()) ;
+
+  my $overlap_command = "ensbc '$zf = 2 * $ws_factor * $massf'";
+  system($overlap_command) == 0 || die("cant do $overlap_command"); 
+
+  # move back out 
+  chdir $local_base_dir || die ("unable to move $local_base_dir"); 
 
   open OUT , ">" , $f; 
 
@@ -222,14 +259,13 @@ sub write_mass_overlap_xml
 <?xml version="1.0"?>
 
 <Params>
-  <mass_file>$massf</mass_file>
-  <overlap_file>$zf</overlap_file>
+  <mass_file>$massdir/$massf</mass_file>
+  <overlap_file>$massdir/$zf</overlap_file>
   <ncfg>$ncfg</ncfg>
   <resize>false</resize>
   <isProjected>true</isProjected>
   <phase_real>$phaser</phase_real>
   <phase_imag>0.</phase_imag>
-  <Z_type>2E</Z_type>
   <dbname>$db</dbname>
   <pid>$pid</pid>
   <LG>true</LG>
@@ -254,10 +290,44 @@ sub write_mass_overlap_xml
 
 EOF
 
+  close OUT; 
+
   my %hash = (); 
   $hash{$f} = $db;
 
   return \%hash ; 
+}
+
+# perl is not strongly typed, abuse this malfeature by returning 
+# a filename to a local ensemble when we calculate the weight
+sub calculate_weight_shift
+{
+  my ($self,$massf) = @_;  
+  my $recon_dir = $self->recon_dir(); 
+
+  # make a tmp jack file with the factor, set it equal to an ensemble 
+  # of one first 
+  my $factor = "tmp.jack";
+  my $make_factor_1_cmd = "ensbc '$factor = $massf / $massf'";
+  system($make_factor_1_cmd) == 0 || die("could not exe $make_factor_1_cmd"); 
+
+  # determine the number of weight shifts that were done 
+  my $num_nodes = `print_nodeset $recon_dir/sfit.ini.xml "/FitIniParams/weightShiftCorrectProps/E_dt" | grep elem | wc -l` / 2; 
+
+  print "there were $num_nodes elems in the ini file \n";
+
+  # loop and be fancy 
+  for my $i (1..$num_nodes)
+  {
+    my $energy =  `print_xpath $recon_dir/sfit.ini.xml "/FitIniParams/weightShiftCorrectProps/E_dt/elem[${i}]/weight_energy"` ; 
+    my $shift =  `print_xpath $recon_dir/sfit.ini.xml "/FitIniParams/weightShiftCorrectProps/E_dt/elem[${i}]/shift_tslices"` ; 
+
+    # this is the extra normalization that comes from weighting shifting 
+    my $local_command = "ensbc '$factor = sqrt( 1 - exp( - ($massf - $energy) * $shift) )'"; 
+    system($local_command) == 0 || die("could not exe $local_command"); 
+  }
+
+  return $factor; 
 }
 
 
