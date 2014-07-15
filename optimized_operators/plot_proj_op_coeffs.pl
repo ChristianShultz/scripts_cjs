@@ -140,7 +140,6 @@ sub make_gp
   print OUT "set style increment user \n";
   print OUT "plot \"$fout\" $plot_string\n" ;
 
-  print OUT "set term x11 1 \n";
   print OUT "set yrange [GPVAL_DATA_Y_MIN - 0.2 : GPVAL_DATA_Y_MAX +0.2] \n";
   print OUT "replot \n";
 

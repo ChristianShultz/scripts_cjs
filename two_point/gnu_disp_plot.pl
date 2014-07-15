@@ -116,7 +116,7 @@ print PLOT "fit g(x) \'$dat\' using 1:2 via m,a \n" unless $mass;
 print PLOT "fit g(x) \'$dat\' using 1:2 via a \n" unless ! $mass;
 
 
-print PLOT "plot \'$dat\' using 1:2:3 w yerr ti 'E^2(p^2)' lt 5, \\\n";
+print PLOT "plot \'$dat\' using 1:2:3 w yerr ti 'E^2(p^2)' lt 1, \\\n";
 print PLOT "g(x) ti sprintf(\"g=m^2 + x*(2pi/Ls/xi)^2, m=%.4f, xi=%.4f\", m, a)  \n";
 
 print PLOT "set xr [GPVAL_DATA_X_MIN-0.1:GPVAL_DATA_X_MAX+0.1]\n";
@@ -137,4 +137,4 @@ print PLOT "replot \n";
 print PLOT "set term pop \n";
 close PLOT;
 
-system("gnuplot -p $plot");
+system("gnuplot -persist $plot");

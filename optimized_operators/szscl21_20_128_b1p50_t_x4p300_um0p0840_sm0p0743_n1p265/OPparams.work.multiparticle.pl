@@ -648,8 +648,6 @@ sub run_extract_all_v_coeffs_svd
   chomp $base;  
   my $destdir = $op->recon_dir(); 
 
-  $op->calc_mass(); 
-
   my $loc = "/u/home/shultz/optimized_operators/";
   my $exe = $loc ."extract_all_v_coeffs_svd.pl";
   my $t0 = $op->t0(); 
