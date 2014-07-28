@@ -199,14 +199,26 @@ sub write_mass_overlap_xml
   my $pid = $self->pid();
   my $phaser = $self->phaser(); 
 
-  my $massf = $self->recon_dir() . "/t0" . $t0; 
-  $massf .= "/MassJackFiles/mass_t0_" . $t0 . "_reorder_"; 
-  $massf .= "state" . $self->state() . ".jack"; 
 
-  # this is a stub since I'm being lazy and the 
-  # normalization of a projected operator is fixed
-  # via the extraction coefficients
-  my $zf = $massf;  
+
+  
+  my $massdir = $self->recon_dir() . "/t0" . $t0 . "/MassJackFiles";
+  my $massf = "mass_t0_" . $t0 . "_reorder_" . "state" . $self->state() . ".jack"; 
+
+ (  my $zf = $massf  ) =~ s/mass/operator_normalization/;
+
+  # where do we live right now
+  my $local_base_dir = `pwd`; 
+  chomp $local_base_dir;  
+
+  # move to mass dir 
+  chdir $massdir || die ("unable to move $massdir");  
+
+  my $overlap_command = "ensbc '$zf = 2 *  $massf'";
+  system($overlap_command) == 0 || die("cant do $overlap_command"); 
+  
+  # move back out 
+  chdir $local_base_dir || die ("unable to move $local_base_dir"); 
 
 
   open OUT , ">" , $f; 
@@ -215,14 +227,13 @@ sub write_mass_overlap_xml
 <?xml version="1.0"?>
 
 <Params>
-  <mass_file>$massf</mass_file>
-  <overlap_file>$zf</overlap_file>
+  <mass_file>$massdir/$massf</mass_file>
+  <overlap_file>$massdir/$zf</overlap_file>
   <ncfg>$ncfg</ncfg>
   <resize>false</resize>
   <isProjected>true</isProjected>
   <phase_real>$phaser</phase_real>
   <phase_imag>0.</phase_imag>
-  <Z_type>2E</Z_type>
   <dbname>$db</dbname>
   <pid>$pid</pid>
   <LG>true</LG>

@@ -58,7 +58,8 @@ sub make_gnu_spectrum_plots
   my $gp = &write_gnuplot_file( $f , $dat , "foo" ) ; 
 
 
-  system ( "gnuplot -persist $gp" ); 
+  # 4.7
+  system ( "/u/home/shultz/git-builds/gnuplot/bin/gnuplot -persist $gp" ); 
 
 }
 

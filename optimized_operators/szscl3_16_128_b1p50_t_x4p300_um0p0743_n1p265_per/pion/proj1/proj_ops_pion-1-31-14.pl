@@ -64,7 +64,7 @@ my @all_ops = ();
   $pion_proj1_p110_H0D2A2->t0(7);  
   $pion_proj1_p110_H0D2A2->state(3); 
   $pion_proj1_p110_H0D2A2->tz(12);
-  $pion_proj1_p110_H0D2A2->phaser(-1);
+  $pion_proj1_p110_H0D2A2->phaser(1);
   $pion_proj1_p110_H0D2A2->spin(0);
 
 
@@ -80,7 +80,7 @@ my @all_ops = ();
   $pion_proj1_p111_H0D3A2->t0(8);
   $pion_proj1_p111_H0D3A2->state(2); 
   $pion_proj1_p111_H0D3A2->tz(11);
-  $pion_proj1_p111_H0D3A2->phaser(1);
+  $pion_proj1_p111_H0D3A2->phaser(-1);
   $pion_proj1_p111_H0D3A2->spin(0);
 
 
