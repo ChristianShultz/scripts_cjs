@@ -15,7 +15,7 @@ source $HOME/.MPI_ENV.csh
   --with-qdp=$HOME/git-builds/qdp++/parscalar-Nd3 \
   --host=x86_64-linux-gnu \
   --build=none  \
-  CXXFLAGS="$MPICXXFLAGS -fpermissive" \
+  CXXFLAGS="$MPICXXFLAGS -fpermissive -fopenmp" \
   CFLAGS="$MPICFLAGS " \
   CXX=$MPICXX \
   CC=$MPICC

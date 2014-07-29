@@ -2,13 +2,12 @@
 
 <Params>
   <mass_file>/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D4E2P_mom1/t08/MassJackFiles/mass_t0_8_reorder_state8.jack</mass_file>
-  <overlap_file>/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D4E2P_mom1/t08/MassJackFiles/mass_t0_8_reorder_state8.jack</overlap_file>
+  <overlap_file>/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D4E2P_mom1/t08/MassJackFiles/operator_normalization_t0_8_reorder_state8.jack</overlap_file>
   <ncfg>535</ncfg>
   <resize>false</resize>
   <isProjected>true</isProjected>
   <phase_real>1</phase_real>
   <phase_imag>0.</phase_imag>
-  <Z_type>2E</Z_type>
   <dbname>rho_proj2_p100_H1D4E2.sdb</dbname>
   <pid>rho_proj2</pid>
   <LG>true</LG>
