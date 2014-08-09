@@ -12,11 +12,11 @@ source $HOME/.MPI_ENV.csh
 
 ../configure \
   --prefix=$HOME/git-builds/harom/parscalar-Nd3 \
-  --with-qdp=$HOME/git-builds/qdp++/parscalar-Nd3 \
+  --with-qdp=$HOME/git-builds/qdpxx/parscalar-Nd3 \
   --host=x86_64-linux-gnu \
   --build=none  \
-  CXXFLAGS="$MPICXXFLAGS -fpermissive -fopenmp" \
-  CFLAGS="$MPICFLAGS " \
+  CXXFLAGS="$MPICXXFLAGS -fpermissive -fopenmp -std=c++0x" \
+  CFLAGS="$MPICFLAGS -std=c99" \
   CXX=$MPICXX \
   CC=$MPICC
 
