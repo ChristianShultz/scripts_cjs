@@ -17,7 +17,8 @@ my $script_gen = QSub->new();
 my $param = ParamsDistillation->new(); 
 
 # configuration stuff
-my $lattice = "szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per";
+
+my $lattice = "szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per";
 $param->stem($lattice);
 
 # figure out what the matrix elem data is based on the directory structure

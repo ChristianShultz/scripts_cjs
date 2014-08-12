@@ -45,14 +45,15 @@ $param->npt_list_xml("npt.list.xml");
 
 # configuration stuff
 $param->config_type("SZINQIO");
-my $lattice = "szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per";
+
+my $lattice = "szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per";
 $param->stem($lattice);
 my @proj_op = ("/u/home/shultz/optimized_operators/${lattice}/weights.${lattice}.xml");
 $param->proj_op_xml(\@proj_op);
 $param->convertUDtoL("true");   # this should be false if UD->S is true
 $param->convertUDtoS("false");    # requires redstar version 5 or better 
-$param->u_mass(-0.0743); 
-$param->d_mass(-0.0743); 
+$param->u_mass(-0.0804); 
+$param->d_mass(-0.0840); 
 $param->s_mass(-0.0743); 
 
 # run everything from scratch -- avoid any copying to  
@@ -66,16 +67,7 @@ $param->diagnostic_level(1);
 # did we already make a bunch of unsmeared nodes? if so where are they 
 my @unsmeared_nodes = ();
 my $lustre_stem = $param->cache_dir() . "/" . $param->stem() ."/gen_props/gen_prop_dbs/dt${dt}/";
-push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p000.redstar7.sdb" . $seqno ; 
-push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p100.redstar7.sdb" . $seqno ; 
-push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p110.redstar7.sdb" . $seqno ; 
-push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p111.redstar7.sdb" . $seqno ; 
-push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p200.redstar7.sdb" . $seqno ; 
-# push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p000.sdb" . $seqno ; 
-# push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p100.sdb" . $seqno ; 
-# push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p110.sdb" . $seqno ; 
-# push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p111.sdb" . $seqno ; 
-# push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p200.sdb" . $seqno ; 
+push @unsmeared_nodes , $lustre_stem . $param->stem() . ".CONN.isospin1.unsmeared_hadron_node.p000..sdb" . $seqno ; 
 
 # this will override the redstar xml printing and try to copy @unsmeared_nodes up to scratch
 $param->unsmeared_node_list(\@unsmeared_nodes); 
