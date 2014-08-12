@@ -11,10 +11,17 @@ use XML::Dumper;
 my $basedir = dirname($0); 
 require "${basedir}/OPparams.work.pl"; 
 
-die( "usaged: $0 <channel> <rep> <pmom>" ) unless $#ARGV == 2; 
+die( "usaged: $0 <channel> <rep> <pmom>" ) unless $#ARGV >= 2; 
 my $channel = $ARGV[0]; 
 my $rep = $ARGV[1]; 
 my $mom = $ARGV[2]; 
+
+my $output = undef; 
+if( $#ARGV == 3 ) 
+{
+  $output = $ARGV[3]; 
+}
+
 
 print "read $channel $rep $mom \n";
 
@@ -217,10 +224,17 @@ sub do_gnuplot
   print GNU "set yr [GPVAL_DATA_Y_MIN - 0.02: GPVAL_DATA_Y_MAX + 0.02]\n";
   print GNU "replot \n";
 
+  if( $output ) 
+  {
+    print GNU "set term postscript eps enhanced \n"; 
+    print GNU "set out \"$output\" \n";
+    print GNU "replot \n";
+  }
+
 
   close GNU; 
 
-  system ( "gnuplot -persist $gp" ); 
+  system ( "/home/shultz/git-builds/gnuplot/bin/gnuplot -persist $gp" ); 
 }
 
 

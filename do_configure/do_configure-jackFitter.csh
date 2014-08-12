@@ -9,7 +9,7 @@ endif
 
 ../configure \
   --prefix=$HOME/git-builds/jackFitter \
-  --bindir=$HOME/bin \
+    # --bindir=$HOME/bin \
   CFLAGS="-O3 -fargument-noalias-global -finline-limit=50000 -funroll-all-loops -fpeel-loops -march=nocona -fopenmp -DUSE_OMP" \
   CXX="g++" \
   CXXFLAGS="-O3 -g -fargument-noalias-global -finline-limit=50000 -funroll-all-loops -fpeel-loops -march=nocona -fopenmp -DUSE_OMP"  \
