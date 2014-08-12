@@ -226,7 +226,7 @@ sub do_gnuplot
 
   if( $output ) 
   {
-    print GNU "set term postscript eps enhanced \n"; 
+    print GNU "set term postscript eps enhanced color font 'Helvetica,10' \n"; 
     print GNU "set out \"$output\" \n";
     print GNU "replot \n";
   }

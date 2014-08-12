@@ -24,13 +24,13 @@ set label 4 at screen 0.915,0.57 "J3" front
 set label 5 at screen 0.915,0.47 "J4" front 
 set label 6 at screen 0.915,0.37 "Hyb" front 
 set style fill solid .5 border -1
-set title "boosted rest -> D3A2M" 
+set title "boosted rest -> D4A2M" 
 set ylabel "a_{t} m_{h}"
 plot "tmp/boosted_spectrum_gnu.dat" u 1:2:(0.3):(0.005):4 w boxxyerrorbars lc variable, \
 "tmp/boosted_spectrum_gnu.dat" u ($1+1):2:3 with labels
 set xr [GPVAL_DATA_X_MIN - 0.2 : GPVAL_DATA_X_MAX + 0.2] 
 set yr [GPVAL_DATA_Y_MIN - 0.02: GPVAL_DATA_Y_MAX + 0.02]
 replot 
-set term postscript eps enhanced 
-set out "D3A2M.eps" 
+set term postscript eps enhanced color font 'Helvetica,10' 
+set out "D4A2M.eps" 
 replot 
