@@ -98,7 +98,7 @@ if (\$?PBS_O_HOST != 0) then
   cat \$PBS_NODEFILE | uniq
 endif
 
-set file_prefix="szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"
+set file_prefix="szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per"
 set list="sdb.list"
 set run_script="\${PBS_O_WORKDIR}/$run_script"
 set dt=$dt

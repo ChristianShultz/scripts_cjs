@@ -1,7 +1,7 @@
 <perldata>
- <arrayref memory_address="0x1bb8b10">
+ <arrayref memory_address="0x1aeb720">
   <item key="0">
-   <hashref blessed_package="OPparams" memory_address="0x1b17908">
+   <hashref blessed_package="OPparams" memory_address="0x1a4a718">
     <item key="ENERGY" defined="false"></item>
     <item key="ENSEMBLE">szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265</item>
     <item key="HYBRID" defined="false"></item>
@@ -12,7 +12,7 @@
     <item key="PID">pion_proj0</item>
     <item key="QUARK_MOD" defined="false"></item>
     <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per/meson_2pt/n128_subduced_new/analysis/shultz/A1mp</item>
-    <item key="RECON_VERSION">ancient</item>
+    <item key="RECON_VERSION">single_meson.convert</item>
     <item key="RECON_WS" defined="false"></item>
     <item key="REP">A1</item>
     <item key="REPSTEM">A1</item>
@@ -24,7 +24,7 @@
    </hashref>
   </item>
   <item key="1">
-   <hashref blessed_package="OPparams" memory_address="0x210f210">
+   <hashref blessed_package="OPparams" memory_address="0x2041e30">
     <item key="ENERGY" defined="false"></item>
     <item key="ENSEMBLE">szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265</item>
     <item key="HYBRID" defined="false"></item>
@@ -47,7 +47,7 @@
    </hashref>
   </item>
   <item key="2">
-   <hashref blessed_package="OPparams" memory_address="0x210f3f0">
+   <hashref blessed_package="OPparams" memory_address="0x2042010">
     <item key="ENERGY" defined="false"></item>
     <item key="ENSEMBLE">szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265</item>
     <item key="HYBRID" defined="false"></item>
@@ -70,7 +70,7 @@
    </hashref>
   </item>
   <item key="3">
-   <hashref blessed_package="OPparams" memory_address="0x210f5d0">
+   <hashref blessed_package="OPparams" memory_address="0x20421f0">
     <item key="ENERGY" defined="false"></item>
     <item key="ENSEMBLE">szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265</item>
     <item key="HYBRID" defined="false"></item>
@@ -93,7 +93,7 @@
    </hashref>
   </item>
   <item key="4">
-   <hashref blessed_package="OPparams" memory_address="0x1b1f618">
+   <hashref blessed_package="OPparams" memory_address="0x1a52228">
     <item key="ENERGY" defined="false"></item>
     <item key="ENSEMBLE">szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265</item>
     <item key="HYBRID" defined="false"></item>

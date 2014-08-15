@@ -29,10 +29,10 @@ $param->harom_version(1);
 
 # specify things that I want 
 $param->seqno($seqno);
-$param->num_vecs(64);       # max 
+$param->num_vecs(128);       # max 
 $param->nt_corr($dt + 1);  # this should avoid yet another way of mucking it up   
 $param->L_t(128);         
-$param->L_s(16);
+$param->L_s(20);
 
 # t_sources specifies sources
 # delta_t specifies sinks 
@@ -52,9 +52,9 @@ my @proj_op = ("/u/home/shultz/optimized_operators/${lattice}/weights.${lattice}
 $param->proj_op_xml(\@proj_op);
 $param->convertUDtoL("true");   # this should be false if UD->S is true
 $param->convertUDtoS("false");    # requires redstar version 5 or better 
-$param->u_mass(-0.0804); 
-$param->d_mass(-0.0840); 
-$param->s_mass(-0.0743); 
+$param->u_mass("-0.0840"); 
+$param->d_mass("-0.0840"); 
+$param->s_mass("-0.0743"); 
 
 # run everything from scratch -- avoid any copying to  
 #     lustre until we have a gen prop / perambulators
@@ -67,7 +67,7 @@ $param->diagnostic_level(1);
 # did we already make a bunch of unsmeared nodes? if so where are they 
 my @unsmeared_nodes = ();
 my $lustre_stem = $param->cache_dir() . "/" . $param->stem() ."/gen_props/gen_prop_dbs/dt${dt}/";
-push @unsmeared_nodes , $lustre_stem . $param->stem() . ".CONN.isospin1.unsmeared_hadron_node.p000..sdb" . $seqno ; 
+push @unsmeared_nodes , $lustre_stem . $param->stem() . ".CONN.isospin1.unsmeared_hadron_node.p000.sdb" . $seqno ; 
 
 # this will override the redstar xml printing and try to copy @unsmeared_nodes up to scratch
 $param->unsmeared_node_list(\@unsmeared_nodes); 
@@ -108,7 +108,7 @@ $dest_corr .= $mat;
 #  die ( "UNHOLY DEATH!" ) ; 
 #}
 
-$dest_corr .= "/" . $param->stem() . ".qq_0-4.corr2.sdb" . $param->seqno(); 
+$dest_corr .= "/" . $param->stem() . ".qq_0.corr0.sdb" . $param->seqno(); 
 $param->copy_back_rename_rcp($scratch_corr,$dest_corr);
 
 exit ( 0 ) ; 
@@ -138,17 +138,11 @@ sub omp_info
 
   my $num_thread = `grep '^processor' /proc/cpuinfo | wc -l ` ;
   chomp $num_thread; 
-  $num_thread -= 1; 
+  # $num_thread -= 1; 
+  $num_thread /= 2; 
 
   print "omp_num_thread = $num_thread\n";
 
-  my $nodefile = $ENV{'PBS_NODEFILE'};
-
-
-  # $num_thread = 6;
-
-  my $num_nodes = `cat $nodefile | wc -l` ;
-  chomp $num_nodes; 
 
   my $run = "env";
   $run .= " OMP_NUM_THREADS=$num_thread";
@@ -172,6 +166,32 @@ sub omp_info
 }
 
 
+# so let the cluster decide how to thread itself
+sub minimal_omp_info
+{
+  print "getting omp_info \n";
+
+  my $num_thread = `grep '^processor' /proc/cpuinfo | wc -l ` ;
+  chomp $num_thread; 
+  # $num_thread -= 1; 
+  $num_thread /= 2; 
+
+  print "omp_num_thread = $num_thread\n";
+
+  my $run = "env";
+  $run .= " OMP_NUM_THREADS=$num_thread";
+
+  print " OMP RUN INFO \n";
+  print " num thread = $num_thread \n ";
+  print " run = $run \n"; 
+
+  my @r = (); 
+  push @r , $run , $num_thread; 
+
+  print "returning omp_info \n";
+  return \@r ; 
+}
+
 sub mpi_info
 {
   my $num_thread = `grep '^processor' /proc/cpuinfo | wc -l ` ;
@@ -183,8 +203,6 @@ sub mpi_info
   my $num_nodes = `cat $nodefile | wc -l` ;
   chomp $num_nodes; 
 
-#  my $base = dirname($0);
-#  my $numa = "${base}/numa_script.sh";
   my $numa = $ENV{'HOME'};
   chomp $numa; 
   $numa .= "/scripts/numa_script_c8.sh"; 
@@ -197,8 +215,6 @@ sub mpi_info
     print " num_nodes isnt the expected 8, $num_nodes \n";
     $num_nodes = 8;
   } 
-
-#  $num_nodes = 4; 
 
   my $run = "${mpi}/bin/mpirun_rsh -rsh -np $num_nodes -hostfile $nodefile MV2_ENABLE_AFFINITY=0 OMP_NUM_THREADS=2 $numa";
 
@@ -220,94 +236,14 @@ sub mpi_info
 }
 
 
-sub run_chroma_ptx
-{
-  my ($input_file , $output_file, $chroma_opts) = @_;
-
-  my ($run,$num_nodes) = @{ &mpi_info() }; 
-
-  $chroma_opts .= " -iogeom 1 1 1 $num_nodes  -geom 1 1 1 $num_nodes"; 
-
-  my $chroma_exe = "/home/shultz/git-builds/chroma-jitptx/parscalar-Nd4/bin/chroma";
-  my $chroma_command = "$run $chroma_exe $chroma_opts -i $input_file -o $output_file";
-
-  if ( -f $output_file ) 
-  {
-    unlink $output_file; 
-  }
-
-  &check_exe($chroma_exe,"run_chroma_ptx");
-
-
-  print " \n\n RUNNING CHROMA WITH \n\n $chroma_command \n\n";
-
-  system ( " $chroma_command " ) == 0 || die (" some error for chroma, output : $output_file ");
-
-
-
-  print " \n\n FINISHED CHROMA WITH \n\n $chroma_command \n\n";
-  &ls_scratch(); 
-}
-
-
-sub run_harom_ptx
-{
-  my ($input_file , $output_file, $chroma_opts) = @_; 
-  my $chroma_exe = "/home/shultz/git-builds/harom-jitptx/gpu-parscalar-Nd3/bin/harom";
-
-  my ($run,$num_nodes) = @{ &mpi_info() }; 
-
-  $chroma_opts .= " -iogeom 1 1 $num_nodes -geom 1 1 $num_nodes "; 
-
-  my $chroma_command = "$run $chroma_exe $chroma_opts -i $input_file -o $output_file ";
-
-  if ( -f $output_file ) 
-  {
-    unlink $output_file; 
-  }
-
-  &check_exe($chroma_exe,"run_harom_ptx");
-
-  print " \n\n RUNNING HAROM WITH \n\n $chroma_command \n\n";
-
-  system ( " $chroma_command " ) == 0 || die (" some error for harom, output : $output_file \n $_ ");
-  print " \n\n FINISHED HAROM WITH \n\n $chroma_command \n\n";
-  &ls_scratch(); 
-}
-
-sub run_harom_cpu
-{
-  my ($input_file , $output_file, $chroma_opts) = @_; 
-  my $chroma_exe = "/home/shultz/git-builds/harom/parscalar-Nd3/bin/harom";
-
-  my ($run,$num_nodes) = @{ &mpi_info() }; 
-
-  $chroma_opts .= " -iogeom 1 1 $num_nodes -geom 1 1 $num_nodes "; 
-
-  my $chroma_command = "$run $chroma_exe $chroma_opts -i $input_file -o $output_file ";
-
-  if ( -f $output_file ) 
-  {
-    unlink $output_file; 
-  }
-
-  &check_exe($chroma_exe,"run_harom_ptx");
-
-  print " \n\n RUNNING HAROM WITH \n\n $chroma_command \n\n";
-
-  system ( " $chroma_command " ) == 0 || die (" some error for harom, output : $output_file \n $_ ");
-  print " \n\n FINISHED HAROM WITH \n\n $chroma_command \n\n";
-  &ls_scratch(); 
-}
-
 
 sub run_redstar_npt
 {
   print "runing redstar_npt \n";
 
   my ($input_file , $output_file) = @_;
-  my $exe = "/home/shultz/git-builds/redstar/bin/redstar_npt";
-  my ($run,$num_nodes) = @{ &omp_info() }; 
+  my $exe = "/home/shultz/git-builds/redstar-9q/bin/redstar_npt";
+  my ($run,$num_nodes) = @{ &minimal_omp_info() }; 
   my $cmd = "$run $exe $input_file $output_file";
 
   if ( -f $output_file ) 
@@ -331,8 +267,8 @@ sub run_redstar_gen_graph
   print "runing redstar_gen_graph \n";
 
   my ($input_file , $output_file, $options) = @_;
-  my $exe = "/home/shultz/git-builds/redstar/bin/redstar_gen_graph";
-  my ($run,$num_nodes) = @{ &omp_info() }; 
+  my $exe = "/home/shultz/git-builds/redstar-9q/bin/redstar_gen_graph";
+  my ($run,$num_nodes) = @{ &minimal_omp_info() }; 
   my $cmd = "$run $exe $input_file $output_file ";
 
   if ( -f $output_file ) 
@@ -354,8 +290,8 @@ sub run_hadron_node_colorvec
 { 
 
   my ($input,$output,$options) = @_; 
-  my $exe = "/home/shultz/git-builds/colorvec/bin/hadron_node";
-  my ($run,$num_nodes) = @{ &omp_info() }; 
+  my $exe = "/home/shultz/git-builds/colorvec-9q/bin/hadron_node";
+  my ($run,$num_nodes) = @{ &minimal_omp_info() }; 
   my $cmd = "$run $exe $input $output";
   if( -f $output)
   {

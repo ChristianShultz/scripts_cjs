@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 
 <Params>
-  <mass_file>/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per/meson_2pt/n128_subduced_new/analysis/shultz/A1mp/mass_t09_state0_reordered.jack</mass_file>
-  <overlap_file>/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per/meson_2pt/n128_subduced_new/analysis/shultz/A1mp/operator_normalization_t09_state0_reordered.jack</overlap_file>
+  <mass_file>/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per/meson_2pt/n128_subduced_new/analysis/shultz/A1mp/t09/MassJackFiles/mass_t0_9_reorder_state0.jack</mass_file>
+  <overlap_file>/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per/meson_2pt/n128_subduced_new/analysis/shultz/A1mp/t09/MassJackFiles/operator_normalization_t0_9_reorder_state0.jack</overlap_file>
   <ncfg>600</ncfg>
   <resize>false</resize>
   <isProjected>true</isProjected>

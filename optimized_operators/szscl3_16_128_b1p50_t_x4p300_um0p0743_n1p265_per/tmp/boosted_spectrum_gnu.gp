@@ -31,6 +31,3 @@ plot "tmp/boosted_spectrum_gnu.dat" u 1:2:(0.3):(0.005):4 w boxxyerrorbars lc va
 set xr [GPVAL_DATA_X_MIN - 0.2 : GPVAL_DATA_X_MAX + 0.2] 
 set yr [GPVAL_DATA_Y_MIN - 0.02: GPVAL_DATA_Y_MAX + 0.02]
 replot 
-set term postscript eps enhanced color font 'Helvetica,10' 
-set out "D4A2M.eps" 
-replot 

@@ -462,11 +462,13 @@ sub mass_string {
   my $self = shift; 
   my $mass = shift; 
 
-  if ($mass == $self->u_mass())
+  # on the 840 need to move from numbers 
+  # to strings since the 0 gets chopped
+  if ($mass eq $self->u_mass())
   {
     $mass = "U" . $mass;
   }
-  elsif($mass == $self->s_mass())
+  elsif($mass eq $self->s_mass())
   {
     $mass = "S" . $mass; 
   }
@@ -605,35 +607,9 @@ sub improvement_gen_prop_db
 sub prop_dbs{
   my $self = shift; 
 
-#    if ( $self->scratchy() )
-#    {
-#  
-#      if ( $self->verbose() ) 
-#      {
-#        my @t = @{$self->scratchy_props()};
-#        print "prop_dbs props @t \n";
-#      }
-#  
-#      return $self->scratchy_props(); 
-#    } 
-
-
   my @prop_dbs; 
-#    my $seqno = $self->seqno();
-#    my $t_ref = $self->t_sources(); 
-#    my @flav = ("light");
-#    foreach my $tt (@$t_ref)
-#    {
-#      foreach my $flavor (@flav)
-#      {
-#        push @prop_dbs , "$cache_dir/${stem}/prop_db/${stem}.prop.n128.${flavor}.t0_${tt}.sdb${seqno}";
-#      }
-#    }
-#  
-# don't need diag guys since no bubbles
 
-
-  my $loc = $self->cache_dir() . "/" . $self->stem() . "/prop_mod/";
+  my $loc = $self->cache_dir() . "/" . $self->stem() . "/cjs_unstable/prop_mod/";
   my $f = $loc . $self->stem() . ".prop.n" . $self->num_vecs(); 
   $f .= ".t0_";
   my $tail = ".mod" . $self->seqno(); 
@@ -653,11 +629,6 @@ sub prop_dbs{
     push @scratch_dbs , $self->copy_file_to_scratch($db);
   }
 
-# push(@prop_dbs, "$cache_dir/${stem}/prop_db/${stem}.prop.t0_0-124_inc4.sdb${seqno}");
-# push(@prop_dbs, "$cache_dir/${stem}/prop_db/${stem}.prop.t0_1-125_inc4.sdb${seqno}");
-# push(@prop_dbs, "$cache_dir/${stem}/prop_db/${stem}.prop.t0_2-126_inc4.sdb${seqno}");
-# push(@prop_dbs, "$cache_dir/${stem}/prop_db/${stem}.prop.t0_3-127_inc4.sdb${seqno}");
-
   return \@scratch_dbs; 
 }
 
@@ -665,7 +636,7 @@ sub peram_dbs
 {
   my $self = shift; 
 
-  my $loc = $self->cache_dir() . "/" . $self->stem() . "/prop_db/";
+  my $loc = $self->cache_dir() . "/" . $self->stem() . "/cjs_unstable/prop_db/";
   my $f = $loc . $self->stem() . ".prop.n" . $self->num_vecs(); 
   $f .= ".t0_";
   my $tail = ".sdb" . $self->seqno(); 
@@ -697,15 +668,12 @@ sub meson_dbs
   my $cache_stem = "$cache_dir/${stem}/meson_db_dispmom/${stem}.meson.colorvec.";
   push @mdbs , $cache_stem . "1disp.sdb" . $self->seqno();
   push @mdbs , $cache_stem . "2disp.sdb" . $self->seqno();
+
+  my $lhpc_dir = $self->lhpc_dir(); 
+  my $lhpc_stem = "$lhpc_dir/${stem}/meson_db_128/${stem}.meson.colorvec.sdb"; 
+  
+  push @mdbs , $lhpc_stem . $self->seqno(); 
  
-  # there seem to be multiple copies of this guy?? -- use only the cache guys
-  # my $lhpc_dir = $self->lhpc_dir(); 
-  # my $lhpc_stem = "$lhpc_dir/${stem}/meson_db_combined/${stem}.meson.colorvec.sdb";
-  # push @mdbs , $lhpc_stem . $self->seqno(); 
-
-  my $cache_stem2 = "$cache_dir/${stem}/meson_db_combined/${stem}.meson.colorvec.sdb";
-  push @mdbs , $cache_stem2 . $self->seqno(); 
-
   my @scratch_dbs = ();
 
   foreach my $db (@mdbs)

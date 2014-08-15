@@ -47,7 +47,7 @@ my @all_ops = ();
   $pion_proj0_p000_A1->state(0); 
   $pion_proj0_p000_A1->tz(15);
   $pion_proj0_p000_A1->phaser(1.);
-  $pion_proj0_p000_A1->recon_version("ancient"); 
+  $pion_proj0_p000_A1->recon_version("single_meson.convert"); 
   $pion_proj0_p000_A1->nested(undef); 
   $pion_proj0_p000_A1->recon_ws(undef); 
 

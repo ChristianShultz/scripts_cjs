@@ -90,3 +90,95 @@ correlation matrix of the fit parameters:
                m      a      
 m               1.000 
 a               0.816  1.000 
+
+
+*******************************************************************************
+Tue Aug 12 12:59:43 2014
+
+
+FIT:    data read from 'dispn_gnu.dat' using 1:2
+	x range restricted to [-0.100000 : 4.10000]
+        #datapoints = 5
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 6.97822           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.45552
+
+initial set of free parameter values
+
+m               = 1
+a               = 1
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 3.48311e-05
+rel. change during last iteration : -4.51425e-07
+
+degrees of freedom    (FIT_NDF)                        : 3
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0034074
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.16104e-05
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+m               = 0.102183         +/- 0.01291      (12.63%)
+a               = 3.92523          +/- 0.3306       (8.423%)
+
+
+correlation matrix of the fit parameters:
+
+               m      a      
+m               1.000 
+a               0.816  1.000 
+
+
+*******************************************************************************
+Tue Aug 12 13:45:05 2014
+
+
+FIT:    data read from 'dispn_gnu.dat' using 1:2
+	x range restricted to [-0.100000 : 4.10000]
+        #datapoints = 5
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 6.99667           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.45552
+
+initial set of free parameter values
+
+m               = 1
+a               = 1
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 5.18846e-08
+rel. change during last iteration : -1.49422e-06
+
+degrees of freedom    (FIT_NDF)                        : 3
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00013151
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.72949e-08
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+m               = 0.0696637        +/- 0.0007308    (1.049%)
+a               = 3.4549           +/- 0.008701     (0.2519%)
+
+
+correlation matrix of the fit parameters:
+
+               m      a      
+m               1.000 
+a               0.816  1.000 
