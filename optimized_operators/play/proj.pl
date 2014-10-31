@@ -194,14 +194,16 @@ my @all_ops = ();
 
 
   my @extracts = (); 
+  my @list_extracts = (); 
+  my @plot_list = (); 
   foreach my $op (@all_operators)
   {
-    push @extracts,  &run_extract_all_v_coeffs_svd($op); 
+    push @plot_list , &run_extract_all_v_coeffs_svd($op); 
+    push @list_extracts,  &run_extract_all_v_coeffs_svd($op); 
   }
 
-  my $listfile = &convert_proj_to_xml(\@extracts,"rho_proj0"); 
-
-  &make_proj_plots($listfile);
+  &make_proj_plots(\@plot_list,"rho_proj0");
+  my $listfile = &finish_proj_xml(\@extracts,\@list_extracts,"rho_proj0"); 
 
   &write_radmat_xml(\@all_operators); 
 

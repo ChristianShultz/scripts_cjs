@@ -1,1 +1,0 @@
-../../QuarkModelAssign.pm

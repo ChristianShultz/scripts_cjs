@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<Params>
+  <mass_file>/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/T1mP/t05/MassJackFiles/mass_t0_5_reorder_state0.jack</mass_file>
+  <overlap_file>/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/T1mP/t05/MassJackFiles/operator_normalization_t0_5_reorder_state0.jack</overlap_file>
+  <ncfg>535</ncfg>
+  <resize>false</resize>
+  <isProjected>true</isProjected>
+  <phase_real>-1</phase_real>
+  <phase_imag>0.</phase_imag>
+  <dbname>rho_proj0_p000_T1.sdb</dbname>
+  <pid>rho_proj0</pid>
+  <LG>true</LG>
+  <t0_extract>5</t0_extract>
+  <redstar>
+    <CGs>
+    </CGs>
+    <Operators>
+      <elem>
+        <name>rho_proj0_p000_T1</name>
+        <smear></smear>
+        <mom_type>0 0 0</mom_type>
+      </elem>
+    </Operators>
+    <creation_op>false</creation_op>
+    <smearedP>true</smearedP>
+    <mom>0 0 0</mom>
+    <row>1</row>
+    <twoI_z>2</twoI_z>
+  </redstar>
+</Params>
+
