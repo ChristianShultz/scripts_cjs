@@ -30,7 +30,7 @@ my @all_ops = ();
   $rho_proj1_p000_T1->t0(9);
   $rho_proj1_p000_T1->state(1); 
   $rho_proj1_p000_T1->tz(13);
-  $rho_proj1_p000_T1->phaser(-1.);
+  $rho_proj1_p000_T1->phaser(1.);
   $rho_proj1_p000_T1->spin(1);
   $rho_proj1_p000_T1->spin(1);
   $rho_proj1_p000_T1->quark_model_assignment(QuarkModelAssign::qm_assign("3S1"));
@@ -45,7 +45,8 @@ my @all_ops = ();
   $rho_proj1_p100_H0D4A1->ncfg(535);
   $rho_proj1_p100_H0D4A1->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
   $rho_proj1_p100_H0D4A1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D4A1P_mom1");
-  $rho_proj1_p100_H0D4A1->t0(9);
+  # $rho_proj1_p100_H0D4A1->t0(9);
+  $rho_proj1_p100_H0D4A1->t0(8);  ## <-- corr2 has t09
   $rho_proj1_p100_H0D4A1->state(2); 
   $rho_proj1_p100_H0D4A1->tz(13);
   $rho_proj1_p100_H0D4A1->phaser(1.);

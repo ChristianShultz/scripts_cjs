@@ -11,9 +11,9 @@ if ( 1 ) then
 
 ../configure \
   --prefix=$HOME/git-builds/formfactor \
-  CFLAGS="-O3 -fargument-noalias-global -finline-limit=50000 -funroll-all-loops -fpeel-loops -march=nocona -fopenmp" \
+  CFLAGS="-O3 -fargument-noalias-global -finline-limit=50000 -funroll-all-loops -fpeel-loops -march=native -fopenmp" \
   CXX="g++" \
-  CXXFLAGS="-O3 -g -fargument-noalias-global -finline-limit=50000 -funroll-all-loops -fpeel-loops -march=nocona -fopenmp" \
+  CXXFLAGS="-O3 -g -fargument-noalias-global -finline-limit=50000 -funroll-all-loops -fpeel-loops -march=native -fopenmp" \
   LIBS="-lblas -llapack -lgfortran -lpthread" \
   --with-adat=$HOME/git-builds/adat \
   --with-itpp=$HOME/git-builds/itpp \
@@ -40,7 +40,7 @@ if ( $status != 0 ) then
   exit 1
 endif
 
-make install -j15
+make install -j9
 
 if ( $status != 0 ) then 
   echo "build failed"

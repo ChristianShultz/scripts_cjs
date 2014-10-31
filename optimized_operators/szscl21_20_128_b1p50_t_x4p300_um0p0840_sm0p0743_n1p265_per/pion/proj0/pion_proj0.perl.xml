@@ -1,12 +1,12 @@
 <perldata>
- <arrayref memory_address="0x1aeb720">
+ <arrayref memory_address="0x22bcb10">
   <item key="0">
-   <hashref blessed_package="OPparams" memory_address="0x1a4a718">
+   <hashref blessed_package="OPparams" memory_address="0x221b908">
     <item key="ENERGY" defined="false"></item>
     <item key="ENSEMBLE">szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p000</item>
-    <item key="NCFG">600</item>
+    <item key="NCFG">603</item>
     <item key="NESTED" defined="false"></item>
     <item key="PHASER">1</item>
     <item key="PID">pion_proj0</item>
@@ -24,12 +24,12 @@
    </hashref>
   </item>
   <item key="1">
-   <hashref blessed_package="OPparams" memory_address="0x2041e30">
+   <hashref blessed_package="OPparams" memory_address="0x2813210">
     <item key="ENERGY" defined="false"></item>
     <item key="ENSEMBLE">szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p100</item>
-    <item key="NCFG">600</item>
+    <item key="NCFG">603</item>
     <item key="NESTED" defined="false"></item>
     <item key="PHASER">1</item>
     <item key="PID">pion_proj0</item>
@@ -47,12 +47,12 @@
    </hashref>
   </item>
   <item key="2">
-   <hashref blessed_package="OPparams" memory_address="0x2042010">
+   <hashref blessed_package="OPparams" memory_address="0x28133f0">
     <item key="ENERGY" defined="false"></item>
     <item key="ENSEMBLE">szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p110</item>
-    <item key="NCFG">600</item>
+    <item key="NCFG">603</item>
     <item key="NESTED" defined="false"></item>
     <item key="PHASER">1</item>
     <item key="PID">pion_proj0</item>
@@ -70,12 +70,12 @@
    </hashref>
   </item>
   <item key="3">
-   <hashref blessed_package="OPparams" memory_address="0x20421f0">
+   <hashref blessed_package="OPparams" memory_address="0x28135d0">
     <item key="ENERGY" defined="false"></item>
     <item key="ENSEMBLE">szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p111</item>
-    <item key="NCFG">600</item>
+    <item key="NCFG">603</item>
     <item key="NESTED" defined="false"></item>
     <item key="PHASER">1</item>
     <item key="PID">pion_proj0</item>
@@ -93,12 +93,12 @@
    </hashref>
   </item>
   <item key="4">
-   <hashref blessed_package="OPparams" memory_address="0x1a52228">
+   <hashref blessed_package="OPparams" memory_address="0x2223618">
     <item key="ENERGY" defined="false"></item>
     <item key="ENSEMBLE">szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p200</item>
-    <item key="NCFG">600</item>
+    <item key="NCFG">603</item>
     <item key="NESTED" defined="false"></item>
     <item key="PHASER">1</item>
     <item key="PID">pion_proj0</item>

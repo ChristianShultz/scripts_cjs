@@ -30,7 +30,7 @@ my @all_ops = ();
   $rho_proj2_p000_T1->t0(9);
   $rho_proj2_p000_T1->state(2); 
   $rho_proj2_p000_T1->tz(13);
-  $rho_proj2_p000_T1->phaser(-1.);
+  $rho_proj2_p000_T1->phaser(1.);
   $rho_proj2_p000_T1->spin(1);
   $rho_proj2_p000_T1->quark_model_assignment(QuarkModelAssign::qm_assign("3D1"));
 

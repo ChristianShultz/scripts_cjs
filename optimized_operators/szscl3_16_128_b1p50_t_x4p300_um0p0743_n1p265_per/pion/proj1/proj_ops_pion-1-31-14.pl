@@ -27,9 +27,9 @@ my @all_ops = ();
   $pion_proj1_p000_A1->ncfg(535);
   $pion_proj1_p000_A1->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
   $pion_proj1_p000_A1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/A1mM");
-  $pion_proj1_p000_A1->t0(7);
+  $pion_proj1_p000_A1->t0(5);
   $pion_proj1_p000_A1->state(1); 
-  $pion_proj1_p000_A1->tz(9);
+  $pion_proj1_p000_A1->tz(10);
   $pion_proj1_p000_A1->phaser(1);
   $pion_proj1_p000_A1->spin(0);
   $pion_proj1_p000_A1->quark_model_assignment(QuarkModelAssign::qm_assign("1S0"));
@@ -44,9 +44,9 @@ my @all_ops = ();
   $pion_proj1_p100_H0D4A2->ncfg(535);
   $pion_proj1_p100_H0D4A2->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
   $pion_proj1_p100_H0D4A2->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D4A2M_mom1");
-  $pion_proj1_p100_H0D4A2->t0(9);
+  $pion_proj1_p100_H0D4A2->t0(7);
   $pion_proj1_p100_H0D4A2->state(2); 
-  $pion_proj1_p100_H0D4A2->tz(13);
+  $pion_proj1_p100_H0D4A2->tz(9);
   $pion_proj1_p100_H0D4A2->phaser(1);
   $pion_proj1_p100_H0D4A2->spin(0);
 
@@ -63,7 +63,7 @@ my @all_ops = ();
   $pion_proj1_p110_H0D2A2->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D2A2M_mom2");
   $pion_proj1_p110_H0D2A2->t0(7);  
   $pion_proj1_p110_H0D2A2->state(3); 
-  $pion_proj1_p110_H0D2A2->tz(12);
+  $pion_proj1_p110_H0D2A2->tz(9);
   $pion_proj1_p110_H0D2A2->phaser(1);
   $pion_proj1_p110_H0D2A2->spin(0);
 
@@ -77,10 +77,10 @@ my @all_ops = ();
   $pion_proj1_p111_H0D3A2->ncfg(535);
   $pion_proj1_p111_H0D3A2->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
   $pion_proj1_p111_H0D3A2->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D3A2M_mom3");
-  $pion_proj1_p111_H0D3A2->t0(8);
+  $pion_proj1_p111_H0D3A2->t0(6);
   $pion_proj1_p111_H0D3A2->state(2); 
-  $pion_proj1_p111_H0D3A2->tz(11);
-  $pion_proj1_p111_H0D3A2->phaser(-1);
+  $pion_proj1_p111_H0D3A2->tz(8);
+  $pion_proj1_p111_H0D3A2->phaser(-1.); ## <---- phase 
   $pion_proj1_p111_H0D3A2->spin(0);
 
 
@@ -93,9 +93,9 @@ my @all_ops = ();
   $pion_proj1_p200_H0D4A2->ncfg(535);
   $pion_proj1_p200_H0D4A2->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
   $pion_proj1_p200_H0D4A2->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D4A2M_mom4");
-  $pion_proj1_p200_H0D4A2->t0(7);
+  $pion_proj1_p200_H0D4A2->t0(5);
   $pion_proj1_p200_H0D4A2->state(2); 
-  $pion_proj1_p200_H0D4A2->tz(11);
+  $pion_proj1_p200_H0D4A2->tz(13);
   $pion_proj1_p200_H0D4A2->phaser(1);
   $pion_proj1_p200_H0D4A2->spin(0);
 

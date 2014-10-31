@@ -7,24 +7,17 @@ use strict;
 use ParamsDistillation; 
 use File::Basename;
 
-die "usage: $0 <seqno> <delta_t> <output_path> " unless $#ARGV == 2; 
+die "usage: $0 <seqno> <delta_t> <output_path> <JLAB_ARCH>" unless $#ARGV == 3; 
 
 my $seqno = $ARGV[0];
-my $outpath = $ARGV[2];
 my $dt = $ARGV[1];
+my $outpath = $ARGV[2];
+my $jlab_arch = $ARGV[3]; 
 
 # an instance of the Param "class" to hold lattice specific stuff
 my $param = ParamsDistillation->new(); 
 
-
-# REDSTAR AT VERSION 5 -- allow convertUDtoS
-# VERSION 1 does not exist must be [2,5]
-# $param->version(5); 
-#$param->redstar_version(6); 
 $param->redstar_version(7); 
-
-
-# Distillation should be at version 1
 $param->harom_version(1); 
 
 # specify things that I want 
@@ -97,17 +90,6 @@ my $scratch_corr = $param->scratch_seq_callback("output_sdb");
 my $dest_corr = $param->work_dir() . "/" . $param->stem(); 
 $dest_corr .= "/meson_3pt_redstar/unsmeared_insertion/";
 $dest_corr .= $mat;
-
-# cant see the work disk from the nodes?
-#
-## check that it exists
-#if ( ! -d $dest_corr ) 
-#{
-#  print "ERROR: The work dest, $dest_corr, does not exist and we cannot make it from a remote node";
-#  print "\n because christian never bothered to figure out how\n";
-#  die ( "UNHOLY DEATH!" ) ; 
-#}
-
 $dest_corr .= "/" . $param->stem() . ".qq_0.corr0.sdb" . $param->seqno(); 
 $param->copy_back_rename_rcp($scratch_corr,$dest_corr);
 
@@ -138,7 +120,6 @@ sub omp_info
 
   my $num_thread = `grep '^processor' /proc/cpuinfo | wc -l ` ;
   chomp $num_thread; 
-  # $num_thread -= 1; 
   $num_thread /= 2; 
 
   print "omp_num_thread = $num_thread\n";
@@ -242,7 +223,21 @@ sub run_redstar_npt
   print "runing redstar_npt \n";
 
   my ($input_file , $output_file) = @_;
-  my $exe = "/home/shultz/git-builds/redstar-9q/bin/redstar_npt";
+
+  my $exe = ""; 
+  if( $jlab_arch eq "12k" ) 
+  {
+    $exe = "/home/shultz/git-builds/redstar-12k/bin/redstar_npt";
+  }
+  elsif( $jlab_arch eq "9q" )
+  {
+    $exe = "/home/shultz/git-builds/redstar-9q/bin/redstar_npt";
+  }
+  else
+  {
+    die("jlab_arch = $jlab_arch is unknown"); 
+  }
+
   my ($run,$num_nodes) = @{ &minimal_omp_info() }; 
   my $cmd = "$run $exe $input_file $output_file";
 
@@ -267,7 +262,21 @@ sub run_redstar_gen_graph
   print "runing redstar_gen_graph \n";
 
   my ($input_file , $output_file, $options) = @_;
-  my $exe = "/home/shultz/git-builds/redstar-9q/bin/redstar_gen_graph";
+
+  my $exe = ""; 
+  if( $jlab_arch eq "12k" ) 
+  {
+    $exe = "/home/shultz/git-builds/redstar-12k/bin/redstar_gen_graph";
+  }
+  elsif( $jlab_arch eq "9q" )
+  {
+    $exe = "/home/shultz/git-builds/redstar-9q/bin/redstar_gen_graph";
+  }
+  else
+  {
+    die("jlab_arch = $jlab_arch is unknown"); 
+  }
+
   my ($run,$num_nodes) = @{ &minimal_omp_info() }; 
   my $cmd = "$run $exe $input_file $output_file ";
 
@@ -290,7 +299,21 @@ sub run_hadron_node_colorvec
 { 
 
   my ($input,$output,$options) = @_; 
-  my $exe = "/home/shultz/git-builds/colorvec-9q/bin/hadron_node";
+
+  my $exe = ""; 
+  if( $jlab_arch eq "12k" ) 
+  {
+    $exe = "/home/shultz/git-builds/colorvec-12k/bin/hadron_node";
+  }
+  elsif( $jlab_arch eq "9q" )
+  {
+    $exe = "/home/shultz/git-builds/colorvec-9q/bin/hadron_node";
+  }
+  else
+  {
+    die("jlab_arch = $jlab_arch is unknown"); 
+  }
+
   my ($run,$num_nodes) = @{ &minimal_omp_info() }; 
   my $cmd = "$run $exe $input $output";
   if( -f $output)

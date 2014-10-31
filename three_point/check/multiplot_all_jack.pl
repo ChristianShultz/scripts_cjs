@@ -75,11 +75,10 @@ if($mode != 0)
       my $cmdr = "calcbc \' real ( ${stem} ) \' > tmp/${stem}.dat.real";
       my $cmdi = "calcbc \' imag ( ${stem} ) \' > tmp/${stem}.dat.imag";
 
-      system ( $cmdr ) == 0 || die($_);
-      system ( $cmdi ) == 0 || die($_); 
+      system ( $cmdr ) == 0 || die($_ . " : cmd -> $cmdr");
+      system ( $cmdi ) == 0 || die($_ . " : cmd -> $cmdi"); 
 
       my $ti = $stem; 
-      ++ $map_count;
       print MAP $map_count . "->" . $ti . "\n"; 
 
       print GNU "set label 1\"";
@@ -89,6 +88,8 @@ if($mode != 0)
 
       print GNU "plot \'tmp/${stem}.dat.real\' using 1:2:3 w yerr title \'real\' lt 2, \\\n";
       print GNU " \'tmp/${stem}.dat.imag\' using 1:2:3 w yerr title \'imag\' lt 4 \n";
+
+      ++ $map_count;
     }
 
 

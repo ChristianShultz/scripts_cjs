@@ -161,7 +161,7 @@ ls -al /scratch >> \$out
 set ds = `date`
 echo "Starting chroma script at time=  \$ds"  >> \$out
 
-time \$run_script \$newseqno \$dt \$output_path  \$JLAB_ARCH >> \$out
+time \$run_script \$newseqno \$dt \$output_path >> \$out
 
 if ( \$status != 0) then
   echo "Some error in run for \$out at seqno=\$newseqno"
@@ -204,9 +204,6 @@ sub make_script_mic
 #PBS -l walltime=30:00:00
 #PBS -l nodes=4:mic
 #PBS -j eo
-
-  set JLAB_ARCH="12k"
-
 EOF
 
   $self->print_body($dt,$outpath); 
@@ -248,9 +245,6 @@ sub make_script_8c8
 #PBS -l walltime=48:00:00
 #PBS -l nodes=8:cores8
 #PBS -j eo
-
-  set JLAB_ARCH="9q"
-
 EOF
 
   $self->print_body($dt,$outpath); 
@@ -292,9 +286,47 @@ sub make_script_16c16
 #PBS -l walltime=48:00:00
 #PBS -l nodes=16:cores16
 #PBS -j eo
+EOF
 
-  set JLAB_ARCH="12k"
+  $self->print_body($dt,$outpath); 
 
+  print OUT<<EOF;
+if (\$?PBS_O_WORKDIR != 0) then
+  /usr/local/bin/qsub $fhandle
+endif
+
+exit 0
+EOF
+
+  close OUT; 
+
+  return $fhandle; 
+}
+
+
+# generate an gpu script to run on the front end only!!
+sub make_script_ib_FM
+{
+  &err_func(__func__,__LINE__,"expected 1 arg") unless $#_ == 1; 
+  my ( $self, $outpath ) = @_; 
+
+  my $fhandle = "ib.gpu_front_end.fermi.csh";
+  my $id = $self->generate_job_name($outpath) . "_4Fm";
+  my $dt = $self->generate_dt($outpath); 
+
+  unlink $fhandle unless ! -f $fhandle;
+
+
+  open OUT , ">" , $fhandle; 
+
+  print OUT<<EOF;
+#!/bin/tcsh -x
+#PBS -N $id
+#PBS -q gpu
+#PBS -A Spectrum
+#PBS -l walltime=10:00:00
+#PBS -l nodes=4:Fermi
+#PBS -j eo
 EOF
 
   $self->print_body($dt,$outpath); 
@@ -314,6 +346,7 @@ EOF
 
 
 
+
 sub make_script
 {
   &err_func(__func__,__LINE__,"expected 2 args") unless $#_ == 2; 
@@ -325,6 +358,7 @@ sub make_script
   $hash{"mic"} = \&QSub::make_script_mic;
   $hash{"ib8"} = \&QSub::make_script_8c8;
   $hash{"ib16"} = \&QSub::make_script_16c16;
+  $hash{"ib_FM"} = \&QSub::make_script_ib_FM;
 
   # black magic!
   if ( exists $hash{$string} ) 

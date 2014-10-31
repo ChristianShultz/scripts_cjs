@@ -1,31 +1,59 @@
 <perldata>
- <arrayref memory_address="0x14ce578">
+ <arrayref memory_address="0x1184a80">
   <item key="0">
-   <hashref blessed_package="OPparams" memory_address="0x14383e8">
-    <item key="ENERGY">0.338429 0.0042619</item>
+   <hashref blessed_package="OPparams" memory_address="0x10fd3e8">
+    <item key="ENERGY">0.190759 0.00108131</item>
     <item key="ENSEMBLE">szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265</item>
     <item key="HYBRID" defined="false"></item>
-    <item key="MOM">p000</item>
+    <item key="MOM">p100</item>
     <item key="NCFG">600</item>
     <item key="NESTED">
-     <arrayref memory_address="0x1a22350">
-      <item key="0">rho.rest.xml</item>
-      <item key="1">pipi_I1.rest.xml</item>
+     <arrayref memory_address="0x16eb238">
+      <item key="0">pipi_I1.D4.p001.xml</item>
+      <item key="1">single.I1.D4.p001.xml</item>
      </arrayref>
     </item>
     <item key="PHASER">1</item>
     <item key="PID">rho_proj1</item>
     <item key="QUARK_MOD" defined="false"></item>
-    <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per/redstar/rho600/rho_ff/T1mm</item>
+    <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per/redstar/rho/rho_ff/ws_larger/D4A1m_p001_wr</item>
     <item key="RECON_VERSION">two_particle</item>
     <item key="RECON_WS">true</item>
-    <item key="REP">T1</item>
-    <item key="REPSTEM">T1</item>
+    <item key="REP">D4A1</item>
+    <item key="REPSTEM">H0D4A1</item>
     <item key="SPIN">1</item>
     <item key="STATE">1</item>
-    <item key="T0">10</item>
+    <item key="T0">8</item>
     <item key="TWOIZ">2</item>
-    <item key="TZ">12</item>
+    <item key="TZ">18</item>
+   </hashref>
+  </item>
+  <item key="1">
+   <hashref blessed_package="OPparams" memory_address="0x16eb280">
+    <item key="ENERGY">0.221673 0.00171399</item>
+    <item key="ENSEMBLE">szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265</item>
+    <item key="HYBRID" defined="false"></item>
+    <item key="MOM">p110</item>
+    <item key="NCFG">600</item>
+    <item key="NESTED">
+     <arrayref memory_address="0x16eb460">
+      <item key="0">pipi_I1.D2.p011.xml</item>
+      <item key="1">single.I1.D2.p011.xml</item>
+     </arrayref>
+    </item>
+    <item key="PHASER">1</item>
+    <item key="PID">rho_proj1</item>
+    <item key="QUARK_MOD" defined="false"></item>
+    <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per/redstar/rho/rho_ff/ws_larger/D2A1m_p011_wr</item>
+    <item key="RECON_VERSION">two_particle</item>
+    <item key="RECON_WS">true</item>
+    <item key="REP">D2A1</item>
+    <item key="REPSTEM">H0D2A1</item>
+    <item key="SPIN">1</item>
+    <item key="STATE">5</item>
+    <item key="T0">8</item>
+    <item key="TWOIZ">2</item>
+    <item key="TZ">17</item>
    </hashref>
   </item>
  </arrayref>

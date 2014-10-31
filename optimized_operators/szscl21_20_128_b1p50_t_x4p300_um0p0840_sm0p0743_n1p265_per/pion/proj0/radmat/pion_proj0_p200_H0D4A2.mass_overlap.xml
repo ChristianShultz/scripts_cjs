@@ -3,7 +3,7 @@
 <Params>
   <mass_file>/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per/meson_2pt/n128_hel_2deriv/shultz/fits/pion/D4A2p.p002/t09/MassJackFiles/mass_t0_9_reorder_state0.jack</mass_file>
   <overlap_file>/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per/meson_2pt/n128_hel_2deriv/shultz/fits/pion/D4A2p.p002/t09/MassJackFiles/operator_normalization_t0_9_reorder_state0.jack</overlap_file>
-  <ncfg>600</ncfg>
+  <ncfg>603</ncfg>
   <resize>false</resize>
   <isProjected>true</isProjected>
   <phase_real>1</phase_real>

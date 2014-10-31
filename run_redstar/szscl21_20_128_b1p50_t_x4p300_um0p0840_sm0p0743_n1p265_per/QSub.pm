@@ -98,7 +98,7 @@ if (\$?PBS_O_HOST != 0) then
   cat \$PBS_NODEFILE | uniq
 endif
 
-set file_prefix="szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per"
+set file_prefix="szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"
 set list="sdb.list"
 set run_script="\${PBS_O_WORKDIR}/$run_script"
 set dt=$dt
@@ -161,7 +161,7 @@ ls -al /scratch >> \$out
 set ds = `date`
 echo "Starting chroma script at time=  \$ds"  >> \$out
 
-time \$run_script \$newseqno \$dt \$output_path >> \$out
+time \$run_script \$newseqno \$dt \$output_path  \$JLAB_ARCH >> \$out
 
 if ( \$status != 0) then
   echo "Some error in run for \$out at seqno=\$newseqno"
@@ -204,6 +204,9 @@ sub make_script_mic
 #PBS -l walltime=30:00:00
 #PBS -l nodes=4:mic
 #PBS -j eo
+
+  set JLAB_ARCH="12k"
+
 EOF
 
   $self->print_body($dt,$outpath); 
@@ -245,6 +248,9 @@ sub make_script_8c8
 #PBS -l walltime=48:00:00
 #PBS -l nodes=8:cores8
 #PBS -j eo
+
+  set JLAB_ARCH="9q"
+
 EOF
 
   $self->print_body($dt,$outpath); 
@@ -286,6 +292,9 @@ sub make_script_16c16
 #PBS -l walltime=48:00:00
 #PBS -l nodes=16:cores16
 #PBS -j eo
+
+  set JLAB_ARCH="12k"
+
 EOF
 
   $self->print_body($dt,$outpath); 

@@ -7,12 +7,11 @@ use strict;
 use ParamsDistillation; 
 use File::Basename;
 
-die "usage: $0 <seqno> <delta_t> <output_path> <JLAB_ARCH> " unless $#ARGV == 3; 
+die "usage: $0 <seqno> <delta_t> <output_path> " unless $#ARGV == 2; 
 
 my $seqno = $ARGV[0];
 my $outpath = $ARGV[2];
 my $dt = $ARGV[1];
-my $jlab_arch = $ARGV[3];
 
 # an instance of the Param "class" to hold lattice specific stuff
 my $param = ParamsDistillation->new(); 
@@ -67,15 +66,11 @@ $param->diagnostic_level(1);
 # did we already make a bunch of unsmeared nodes? if so where are they 
 my @unsmeared_nodes = ();
 my $lustre_stem = $param->cache_dir() . "/" . $param->stem() ."/gen_props/gen_prop_dbs/dt${dt}/";
-
 push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p000.redstar7.sdb" . $seqno ; 
-
-# push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p100.redstar7.sdb" . $seqno ; 
-# push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p110.redstar7.sdb" . $seqno ; 
-# push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p111.redstar7.sdb" . $seqno ; 
-# push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p200.redstar7.sdb" . $seqno ; 
-
-# old t_origin format nodes
+push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p100.redstar7.sdb" . $seqno ; 
+push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p110.redstar7.sdb" . $seqno ; 
+push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p111.redstar7.sdb" . $seqno ; 
+push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p200.redstar7.sdb" . $seqno ; 
 # push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p000.sdb" . $seqno ; 
 # push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p100.sdb" . $seqno ; 
 # push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p110.sdb" . $seqno ; 
@@ -90,13 +85,13 @@ my $redxml = $param->write_redstar_xml();
 my $mesonxml = $param->write_meson_hadron_node_ini_xml();
 
 # run gen graph 
-&run_redstar_gen_graph($redxml,$outpath."/".basename($redxml).".gen.out",$jlab_arch);
+&run_redstar_gen_graph($redxml,$outpath."/".basename($redxml).".gen.out"," ");
 
 # build any nodes we need
-&run_hadron_node_colorvec($mesonxml,$outpath."/".basename($mesonxml).".hadron_node.out",$jlab_arch); 
+&run_hadron_node_colorvec($mesonxml,$outpath."/".basename($mesonxml).".hadron_node.out",""); 
 
 # multiply out nodes into correlators
-&run_redstar_npt($redxml,$outpath."/".basename($redxml).".npt.out",$jlab_arch);
+&run_redstar_npt($redxml,$outpath."/".basename($redxml).".npt.out"," ");
 
 # figure out what the matrix elem data is based on the directory structure
 my $whereami = `pwd`; 
@@ -111,8 +106,18 @@ my $dest_corr = $param->work_dir() . "/" . $param->stem();
 $dest_corr .= "/meson_3pt_redstar/unsmeared_insertion/";
 $dest_corr .= $mat;
 
+# cant see the work disk from the nodes?
+#
+## check that it exists
+#if ( ! -d $dest_corr ) 
+#{
+#  print "ERROR: The work dest, $dest_corr, does not exist and we cannot make it from a remote node";
+#  print "\n because christian never bothered to figure out how\n";
+#  die ( "UNHOLY DEATH!" ) ; 
+#}
 
-$dest_corr .= "/" . $param->stem() . ".qq_0.corr2.sdb" . $param->seqno(); 
+#$dest_corr .= "/" . $param->stem() . ".test.sdb" . $param->seqno(); 
+$dest_corr .= "/" . $param->stem() . ".qq_0-4.corr3.sdb" . $param->seqno(); 
 $param->copy_back_rename_rcp($scratch_corr,$dest_corr);
 
 exit ( 0 ) ; 
@@ -142,13 +147,20 @@ sub omp_info
 
   my $num_thread = `grep '^processor' /proc/cpuinfo | wc -l ` ;
   chomp $num_thread; 
-  $num_thread /= 2; 
+  $num_thread -= 1; 
 
   print "omp_num_thread = $num_thread\n";
 
 
   my $run = "env";
   $run .= " OMP_NUM_THREADS=$num_thread";
+  $run .= " OMP_PROC_BIND=true"; 
+  my $gomp = "0";
+  for my $c (1 .. ${num_thread} -1)
+  {
+    $gomp .= " $c"; 
+  }
+  $run .= " GOMP_CPU_AFFINITY=\'${gomp}\'";
 
   print " OMP RUN INFO \n";
   print " num thread = $num_thread \n ";
@@ -215,23 +227,8 @@ sub run_redstar_npt
 {
   print "runing redstar_npt \n";
 
-  my ($input_file , $output_file, $jlab_arch) = @_;
-
-  my $exe = "";
-  
-  if( $jlab_arch eq "12k" )
-  {
-    $exe =  "/home/shultz/git-builds/redstar-12k/bin/redstar_npt";
-  }
-  elsif ($jlab_arch eq "9q")
-  {
-    $exe =  "/home/shultz/git-builds/redstar-9q/bin/redstar_npt";
-  }
-  else
-  {
-    die( "jlab_arch = $jlab_arch is unknown \n");
-  }
-
+  my ($input_file , $output_file) = @_;
+  my $exe = "/home/shultz/git-builds/ARCHIVE/redstar_npt4-1";
   my ($run,$num_nodes) = @{ &omp_info() }; 
   my $cmd = "$run $exe $input_file $output_file";
 
@@ -255,23 +252,8 @@ sub run_redstar_gen_graph
 {
   print "runing redstar_gen_graph \n";
 
-  my ($input_file , $output_file, $jlab_arch) = @_;
-
-  my $exe = "";
-  
-  if( $jlab_arch eq "12k" )
-  {
-    $exe =  "/home/shultz/git-builds/redstar-12k/bin/redstar_gen_graph";
-  }
-  elsif ($jlab_arch eq "9q")
-  {
-    $exe =  "/home/shultz/git-builds/redstar-9q/bin/redstar_gen_graph";
-  }
-  else
-  {
-    die( "jlab_arch = $jlab_arch is unknown \n");
-  }
-
+  my ($input_file , $output_file, $options) = @_;
+  my $exe = "/home/shultz/git-builds/ARCHIVE/redstar_gen_graph4-1";
   my ($run,$num_nodes) = @{ &omp_info() }; 
   my $cmd = "$run $exe $input_file $output_file ";
 
@@ -293,23 +275,8 @@ sub run_redstar_gen_graph
 sub run_hadron_node_colorvec
 { 
 
-  my ($input,$output,$jlab_arch) = @_; 
-
-  my $exe = "";
-  
-  if( $jlab_arch eq "12k" )
-  {
-    $exe =  "/home/shultz/git-builds/colorvec-12k/bin/hadron_node";
-  }
-  elsif ($jlab_arch eq "9q")
-  {
-    $exe =  "/home/shultz/git-builds/colorvec-9q/bin/hadron_node";
-  }
-  else
-  {
-    die( "jlab_arch = $jlab_arch is unknown \n");
-  }
-
+  my ($input,$output,$options) = @_; 
+  my $exe = "/home/shultz/git-builds/colorvec-singleThread/bin/hadron_node";
   my ($run,$num_nodes) = @{ &omp_info() }; 
   my $cmd = "$run $exe $input $output";
   if( -f $output)

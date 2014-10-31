@@ -263,6 +263,47 @@ EOF
 }
 
 
+
+# generate an ib 8c8 script
+sub make_script_8c8_w10
+{
+  &err_func(__func__,__LINE__,"expected 1 arg") unless $#_ == 1; 
+  my ( $self, $outpath ) = @_; 
+
+  my $fhandle = "ib.8c8.w10.csh";
+  my $id = $self->generate_job_name($outpath) . "_8c8";
+  my $dt = $self->generate_dt($outpath); 
+
+  unlink $fhandle unless ! -f $fhandle;
+
+
+  open OUT , ">" , $fhandle; 
+
+  print OUT<<EOF;
+#!/bin/tcsh -x
+#PBS -N $id
+#PBS -q ib
+#PBS -A Spectrum
+#PBS -l walltime=10:00:00
+#PBS -l nodes=8:cores8
+#PBS -j eo
+EOF
+
+  $self->print_body($dt,$outpath); 
+
+  print OUT<<EOF;
+if (\$?PBS_O_WORKDIR != 0) then
+  /usr/local/bin/qsub $fhandle
+endif
+
+exit 0
+EOF
+
+  close OUT; 
+
+  return $fhandle; 
+}
+
 # generate an ib 16c16 script
 sub make_script_16c16
 {
@@ -315,6 +356,7 @@ sub make_script
   # SDB NAMES
   $hash{"mic"} = \&QSub::make_script_mic;
   $hash{"ib8"} = \&QSub::make_script_8c8;
+  $hash{"ib8_w10"} = \&QSub::make_script_8c8_w10;
   $hash{"ib16"} = \&QSub::make_script_16c16;
 
   # black magic!
