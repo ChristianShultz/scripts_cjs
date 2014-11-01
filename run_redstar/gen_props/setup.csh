@@ -42,7 +42,7 @@ foreach x ( p000 \
   ln -s ../submit.csh
   ln -s ../$run
 
-  ./submit.csh $run 60 & 
+  ./submit.csh $run 1 & 
 
   popd
 

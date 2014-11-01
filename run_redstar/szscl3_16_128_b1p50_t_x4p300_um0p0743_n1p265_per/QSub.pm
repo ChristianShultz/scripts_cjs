@@ -323,7 +323,7 @@ sub make_script_ib_FM
 #!/bin/tcsh -x
 #PBS -N $id
 #PBS -q gpu
-#PBS -A Spectrum
+#PBS -A Spectrumg
 #PBS -l walltime=10:00:00
 #PBS -l nodes=4:Fermi
 #PBS -j eo

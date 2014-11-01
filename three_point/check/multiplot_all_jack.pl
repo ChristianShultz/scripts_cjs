@@ -41,7 +41,7 @@ foreach (@dat)
 my %Q2 = ();
 
 my $num = ceil(sqrt($#dat + 1)); 
-my $maxnum = 4;
+my $maxnum = 3;
 
 $num = $maxnum unless ($num < $maxnum);
 

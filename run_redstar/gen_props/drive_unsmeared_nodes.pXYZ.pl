@@ -113,53 +113,6 @@ if ( $hack )
 $param->verbose("true");
 $param->diagnostic_level(1); 
 
-#    
-#   THIS IS THE OLD GEN PROP JUNK THAT WORKS WITH DISTILLATION
-#
-#   #    :M,N s/^/#  /  -- or switch to uncomment 
-#   # gen a bunch of xml and get some file names
-#   my $srcref =  $param->write_harom_distillation_source_ini_xml();
-#   my $propref = $param->write_chroma_distillation_prop_ini_xml(); 
-#   
-#   
-#   # deref some return values  , first value is the file name of the ini.xml , second is 
-#   # a ref to an array of all the .mod files that we made assuming successfull completion 
-#   # of the run code
-#   
-#   my ($src,$srcs) = @{$srcref};
-#   my ($prop,$props) = @{$propref};
-#   
-#   # get some solution vectors up in /scratch
-#   &run_harom_ptx($src, $outpath."/".basename($src).".out" , " "); 
-#   &run_chroma_ptx($prop, $outpath."/".basename($prop).".out" , " "); 
-#   
-#   # need to do some redstar_gen_graph here to get the unsmeared list
-#   my $redxml = $param->write_redstar_xml(); 
-#   &run_redstar_gen_graph($redxml,$outpath."/".basename($redxml).".gen.out"," ");
-#   
-#   # make dem gen props
-#   my $gen_prop = $param->write_harom_hadron_node_ini_xml($props);
-#   &run_harom_ptx($gen_prop, $outpath."/".basename($gen_prop).".out"," ");  
-#   
-#   
-#   
-#   # copy back 
-#   my $file = $param->generalized_perambulator_file(); 
-#   my $location = $param->cache_dir() . "/" . $param->stem() . "/gen_props/gen_prop_dbs/dt${dt}/";
-#   my $filename = $location . $file;
-#   my $scratch_file = $param->scratch_seq_callback("unsmeared_hadron_node_sdb"); 
-#   my $cmd = "rcp $scratch_file $filename"; 
-#   print "Attempting to execute command: $cmd \n"; 
-#   system ( " $cmd " ) == 0 || die ( "failure to rcp : $filename " ) ; 
-#   
-#   # I hope to someday see this..
-#   print "YOU WIN!\n";
-
-
-# 
-# Hopefully this is the new hottness
-#
-
 
 #   # need to do some redstar_gen_graph here to get the smeared/unsmeared list
 my $redxml = $param->write_redstar_xml(); 
@@ -168,26 +121,11 @@ my $haromxml = $param->write_harom_hadron_node_ini_xml($param->prop_dbs());
 &run_redstar_gen_graph($redxml,$outpath."/".basename($redxml).".gen.out"," ");
 &run_harom_cpu($haromxml,$outpath."/".basename($haromxml).".gen_prop.harom.out"," "); 
 
-#  SKIP THIS PART
-#
-# my $mesonxml = $param->write_meson_hadron_node_ini_xml();
-# &run_hadron_node_colorvec($mesonxml,$outpath."/".basename($mesonxml).".hadron_node.out",""); 
-#
 
 my $scratch_node = $param->scratch_seq_callback("unsmeared_hadron_node_sdb"); 
 my $dest_node = $param->gen_prop_db(); 
 $param->copy_back_rename_rcp($scratch_node,$dest_node);
 
-# SKIP THIS PART
-#
-# &run_redstar_npt($redxml,$outpath."/".basename($redxml).".npt.out"," ");
-# my $scratch_corr = $param->scratch_seq_callback("output_sdb"); 
-# my $dest_corr = $param->work_dir() . "/" . $param->stem(); 
-# $dest_corr .= "/meson_3pt_redstar/unsmeared_insertion/";
-# $dest_corr .= "pion_proj0__pion_proj0/";
-# $dest_corr .= $param->stem() . ".sdb" . $param->seqno(); 
-# $param->copy_back_rename_rcp($scratch_corr,$dest_corr);
-# 
 exit ( 0 ) ; 
 
 

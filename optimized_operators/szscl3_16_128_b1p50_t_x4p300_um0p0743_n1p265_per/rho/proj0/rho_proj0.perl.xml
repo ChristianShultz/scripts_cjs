@@ -1,8 +1,8 @@
 <perldata>
- <arrayref memory_address="0x245d190">
+ <arrayref memory_address="0x26da490">
   <item key="0">
-   <hashref blessed_package="OPparams" memory_address="0x23a23d8">
-    <item key="ENERGY" defined="false"></item>
+   <hashref blessed_package="OPparams" memory_address="0x20c56f8">
+    <item key="ENERGY">0.216091 0.000200153</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p000</item>
@@ -11,7 +11,7 @@
     <item key="PHASER">-1</item>
     <item key="PID">rho_proj0</item>
     <item key="QUARK_MOD">
-     <hashref blessed_package="QuarkModel" memory_address="0x29bd680">
+     <hashref blessed_package="QuarkModel" memory_address="0x26b8258">
       <item key="PAR">^{3}S_{1}</item>
      </hashref>
     </item>
@@ -28,8 +28,8 @@
    </hashref>
   </item>
   <item key="1">
-   <hashref blessed_package="OPparams" memory_address="0x2993708">
-    <item key="ENERGY" defined="false"></item>
+   <hashref blessed_package="OPparams" memory_address="0x26b82b8">
+    <item key="ENERGY">0.243065 0.000200939</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p100</item>
@@ -51,8 +51,8 @@
    </hashref>
   </item>
   <item key="2">
-   <hashref blessed_package="OPparams" memory_address="0x29bd488">
-    <item key="ENERGY" defined="false"></item>
+   <hashref blessed_package="OPparams" memory_address="0x26da7a8">
+    <item key="ENERGY">0.243727 0.00023986</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p100</item>
@@ -74,8 +74,8 @@
    </hashref>
   </item>
   <item key="3">
-   <hashref blessed_package="OPparams" memory_address="0x29938a0">
-    <item key="ENERGY" defined="false"></item>
+   <hashref blessed_package="OPparams" memory_address="0x26b8450">
+    <item key="ENERGY">0.26736 0.000261817</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p110</item>
@@ -97,8 +97,8 @@
    </hashref>
   </item>
   <item key="4">
-   <hashref blessed_package="OPparams" memory_address="0x2993a80">
-    <item key="ENERGY" defined="false"></item>
+   <hashref blessed_package="OPparams" memory_address="0x26b8630">
+    <item key="ENERGY">0.268607 0.000285609</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p110</item>
@@ -120,8 +120,8 @@
    </hashref>
   </item>
   <item key="5">
-   <hashref blessed_package="OPparams" memory_address="0x2993c60">
-    <item key="ENERGY" defined="false"></item>
+   <hashref blessed_package="OPparams" memory_address="0x26b8810">
+    <item key="ENERGY">0.26893 0.000305017</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p110</item>
@@ -143,8 +143,8 @@
    </hashref>
   </item>
   <item key="6">
-   <hashref blessed_package="OPparams" memory_address="0x2993e40">
-    <item key="ENERGY" defined="false"></item>
+   <hashref blessed_package="OPparams" memory_address="0x26b89f0">
+    <item key="ENERGY">0.290493 0.000256404</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p111</item>
@@ -166,8 +166,8 @@
    </hashref>
   </item>
   <item key="7">
-   <hashref blessed_package="OPparams" memory_address="0x2994020">
-    <item key="ENERGY" defined="false"></item>
+   <hashref blessed_package="OPparams" memory_address="0x26b8bd0">
+    <item key="ENERGY">0.291966 0.000366188</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p111</item>
@@ -189,8 +189,8 @@
    </hashref>
   </item>
   <item key="8">
-   <hashref blessed_package="OPparams" memory_address="0x2994200">
-    <item key="ENERGY" defined="false"></item>
+   <hashref blessed_package="OPparams" memory_address="0x26b8db0">
+    <item key="ENERGY">0.309276 0.000348045</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p200</item>
@@ -212,8 +212,8 @@
    </hashref>
   </item>
   <item key="9">
-   <hashref blessed_package="OPparams" memory_address="0x29943e0">
-    <item key="ENERGY" defined="false"></item>
+   <hashref blessed_package="OPparams" memory_address="0x26b8f90">
+    <item key="ENERGY">0.309407 0.00135456</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p200</item>

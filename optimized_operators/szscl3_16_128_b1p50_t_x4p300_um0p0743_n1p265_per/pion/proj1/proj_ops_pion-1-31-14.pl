@@ -13,7 +13,7 @@ use File::Basename;
 
 my $basedir = dirname($0); 
 
-require "${basedir}/OPparams.work.pl";
+require "${basedir}/OPparams.work.multiparticle.pl";
 
 my @all_ops = (); 
 
@@ -110,15 +110,13 @@ my @all_ops = ();
 
 
   my @extracts = (); 
+  my @list_extracts = (); 
   foreach my $op (@all_operators)
   {
-    push @extracts,  &run_extract_all_v_coeffs_svd($op); 
+    push @list_extracts,  &run_extract_all_v_coeffs_svd($op); 
   }
 
-  my $listfile = &convert_proj_to_xml(\@extracts,"pion_proj1"); 
-
-  &make_proj_plots($listfile);
-
+  &make_proj_plots(\@list_extracts,"pion_proj1");
+  my $listfile = &finish_proj_xml(\@extracts,\@list_extracts,"pion_proj1"); 
   &write_radmat_xml(\@all_operators); 
-
   &serialize_ops_list( "pion_proj1.perl.xml" , \@all_operators );

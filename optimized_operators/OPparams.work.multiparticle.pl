@@ -589,8 +589,6 @@ sub run_extract_all_v_coeffs_xml
   chomp $base;  
   my $destdir = $op->recon_dir(); 
 
-  $op->calc_mass(); 
-
   my $loc = "/u/home/shultz/scripts_cjs/optimized_operators/";
   my $exe = $loc ."extract_all_v_coeffs_xml.pl";
   my $t0 = $op->t0(); 
@@ -816,8 +814,15 @@ sub serialize_ops_list
 {
   my ($f , $aref)  = @_; 
 
+  my @mass_calc = (); 
+  foreach my $op (@{$aref})
+  {
+    $op->calc_mass(); 
+    push @mass_calc , $op;
+  }
+
   my $dump = XML::Dumper->new(); 
-  $dump->pl2xml( $aref , $f ); 
+  $dump->pl2xml( \@mass_calc , $f ); 
 }
 
 1;  # for require 
