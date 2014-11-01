@@ -345,6 +345,85 @@ EOF
 }
 
 
+# generate an gpu script to run on the front end only!!
+sub make_script_ib_c9g
+{
+  &err_func(__func__,__LINE__,"expected 1 arg") unless $#_ == 1; 
+  my ( $self, $outpath ) = @_; 
+
+  my $fhandle = "ib.gpu_front_end.c9g.csh";
+  my $id = $self->generate_job_name($outpath) . "_4Fm";
+  my $dt = $self->generate_dt($outpath); 
+
+  unlink $fhandle unless ! -f $fhandle;
+
+
+  open OUT , ">" , $fhandle; 
+
+  print OUT<<EOF;
+#!/bin/tcsh -x
+#PBS -N $id
+#PBS -q gpu
+#PBS -A Spectrumg
+#PBS -l walltime=10:00:00
+#PBS -l nodes=c9g
+#PBS -j eo
+EOF
+
+  $self->print_body($dt,$outpath); 
+
+  print OUT<<EOF;
+if (\$?PBS_O_WORKDIR != 0) then
+  /usr/local/bin/qsub $fhandle
+endif
+
+exit 0
+EOF
+
+  close OUT; 
+
+  return $fhandle; 
+}
+
+# generate an gpu script to run on the front end only!!
+sub make_script_ib_c10g
+{
+  &err_func(__func__,__LINE__,"expected 1 arg") unless $#_ == 1; 
+  my ( $self, $outpath ) = @_; 
+
+  my $fhandle = "ib.gpu_front_end.c10g.csh";
+  my $id = $self->generate_job_name($outpath) . "_4Fm";
+  my $dt = $self->generate_dt($outpath); 
+
+  unlink $fhandle unless ! -f $fhandle;
+
+
+  open OUT , ">" , $fhandle; 
+
+  print OUT<<EOF;
+#!/bin/tcsh -x
+#PBS -N $id
+#PBS -q gpu
+#PBS -A Spectrumg
+#PBS -l walltime=10:00:00
+#PBS -l nodes=c10g
+#PBS -j eo
+EOF
+
+  $self->print_body($dt,$outpath); 
+
+  print OUT<<EOF;
+if (\$?PBS_O_WORKDIR != 0) then
+  /usr/local/bin/qsub $fhandle
+endif
+
+exit 0
+EOF
+
+  close OUT; 
+
+  return $fhandle; 
+}
 
 
 sub make_script
@@ -359,6 +438,8 @@ sub make_script
   $hash{"ib8"} = \&QSub::make_script_8c8;
   $hash{"ib16"} = \&QSub::make_script_16c16;
   $hash{"ib_FM"} = \&QSub::make_script_ib_FM;
+  $hash{"ib_c9g"} = \&QSub::make_script_ib_c9g;
+  $hash{"ib_c10g"} = \&QSub::make_script_ib_c10g;
 
   # black magic!
   if ( exists $hash{$string} ) 
