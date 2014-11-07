@@ -366,7 +366,7 @@ sub make_script_ib_c9g
 #PBS -q gpu
 #PBS -A Spectrumg
 #PBS -l walltime=10:00:00
-#PBS -l nodes=c9g
+#PBS -l nodes=1:c9g
 #PBS -j eo
 EOF
 
@@ -406,7 +406,7 @@ sub make_script_ib_c10g
 #PBS -q gpu
 #PBS -A Spectrumg
 #PBS -l walltime=10:00:00
-#PBS -l nodes=c10g
+#PBS -l nodes=1:c10g
 #PBS -j eo
 EOF
 

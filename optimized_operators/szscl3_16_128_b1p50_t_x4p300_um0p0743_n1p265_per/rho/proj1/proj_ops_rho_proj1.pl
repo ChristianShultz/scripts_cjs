@@ -13,7 +13,7 @@ use File::Basename;
 
 my $basedir = dirname($0); 
 
-require "${basedir}/OPparams.work.pl";
+require "${basedir}/OPparams.work.multiparticle.pl";
 
 my @all_ops = (); 
 
@@ -27,9 +27,9 @@ my @all_ops = ();
   $rho_proj1_p000_T1->ncfg(535);
   $rho_proj1_p000_T1->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
   $rho_proj1_p000_T1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/T1mP");
-  $rho_proj1_p000_T1->t0(9);
+  $rho_proj1_p000_T1->t0(5);
   $rho_proj1_p000_T1->state(1); 
-  $rho_proj1_p000_T1->tz(13);
+  $rho_proj1_p000_T1->tz(10);
   $rho_proj1_p000_T1->phaser(1.);
   $rho_proj1_p000_T1->spin(1);
   $rho_proj1_p000_T1->spin(1);
@@ -45,10 +45,9 @@ my @all_ops = ();
   $rho_proj1_p100_H0D4A1->ncfg(535);
   $rho_proj1_p100_H0D4A1->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
   $rho_proj1_p100_H0D4A1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D4A1P_mom1");
-  # $rho_proj1_p100_H0D4A1->t0(9);
-  $rho_proj1_p100_H0D4A1->t0(8);  ## <-- corr2 has t09
+  $rho_proj1_p100_H0D4A1->t0(6);
   $rho_proj1_p100_H0D4A1->state(2); 
-  $rho_proj1_p100_H0D4A1->tz(13);
+  $rho_proj1_p100_H0D4A1->tz(9);
   $rho_proj1_p100_H0D4A1->phaser(1.);
   $rho_proj1_p100_H0D4A1->spin(1);
 
@@ -62,9 +61,9 @@ my @all_ops = ();
   $rho_proj1_p100_H1D4E2->ncfg(535);
   $rho_proj1_p100_H1D4E2->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
   $rho_proj1_p100_H1D4E2->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D4E2P_mom1");
-  $rho_proj1_p100_H1D4E2->t0(8);
+  $rho_proj1_p100_H1D4E2->t0(6);
   $rho_proj1_p100_H1D4E2->state(4); 
-  $rho_proj1_p100_H1D4E2->tz(11);
+  $rho_proj1_p100_H1D4E2->tz(9);
   $rho_proj1_p100_H1D4E2->phaser(1.);
   $rho_proj1_p100_H1D4E2->spin(1);
 
@@ -78,9 +77,9 @@ my @all_ops = ();
   $rho_proj1_p110_H0D2A1->ncfg(535);
   $rho_proj1_p110_H0D2A1->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
   $rho_proj1_p110_H0D2A1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D2A1P_mom2");
-  $rho_proj1_p110_H0D2A1->t0(9);
+  $rho_proj1_p110_H0D2A1->t0(8);
   $rho_proj1_p110_H0D2A1->state(3); 
-  $rho_proj1_p110_H0D2A1->tz(12);
+  $rho_proj1_p110_H0D2A1->tz(10);
   $rho_proj1_p110_H0D2A1->phaser(1.);
   $rho_proj1_p110_H0D2A1->spin(1);
 
@@ -94,7 +93,7 @@ my @all_ops = ();
   $rho_proj1_p110_H1D2B1->ncfg(535);
   $rho_proj1_p110_H1D2B1->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
   $rho_proj1_p110_H1D2B1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D2B1P_mom2");
-  $rho_proj1_p110_H1D2B1->t0(8);
+  $rho_proj1_p110_H1D2B1->t0(7);
   $rho_proj1_p110_H1D2B1->state(2); 
   $rho_proj1_p110_H1D2B1->tz(10);
   $rho_proj1_p110_H1D2B1->phaser(1.);
@@ -110,9 +109,9 @@ my @all_ops = ();
   $rho_proj1_p110_H1D2B2->ncfg(535);
   $rho_proj1_p110_H1D2B2->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
   $rho_proj1_p110_H1D2B2->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D2B2P_mom2");
-  $rho_proj1_p110_H1D2B2->t0(8);
+  $rho_proj1_p110_H1D2B2->t0(7);
   $rho_proj1_p110_H1D2B2->state(5); 
-  $rho_proj1_p110_H1D2B2->tz(9);
+  $rho_proj1_p110_H1D2B2->tz(10);
   $rho_proj1_p110_H1D2B2->phaser(1.);
   $rho_proj1_p110_H1D2B2->spin(1);
 
@@ -126,9 +125,9 @@ my @all_ops = ();
   $rho_proj1_p111_H0D3A1->ncfg(535);
   $rho_proj1_p111_H0D3A1->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
   $rho_proj1_p111_H0D3A1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D3A1P_mom3");
-  $rho_proj1_p111_H0D3A1->t0(8);
+  $rho_proj1_p111_H0D3A1->t0(6);
   $rho_proj1_p111_H0D3A1->state(1); 
-  $rho_proj1_p111_H0D3A1->tz(10);
+  $rho_proj1_p111_H0D3A1->tz(9);
   $rho_proj1_p111_H0D3A1->phaser(1.);
   $rho_proj1_p111_H0D3A1->spin(1);
 
@@ -142,9 +141,9 @@ my @all_ops = ();
   $rho_proj1_p111_H1D3E2->ncfg(535);
   $rho_proj1_p111_H1D3E2->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
   $rho_proj1_p111_H1D3E2->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D3E2P_mom3");
-  $rho_proj1_p111_H1D3E2->t0(7);
+  $rho_proj1_p111_H1D3E2->t0(6);
   $rho_proj1_p111_H1D3E2->state(4); 
-  $rho_proj1_p111_H1D3E2->tz(11);
+  $rho_proj1_p111_H1D3E2->tz(9);
   $rho_proj1_p111_H1D3E2->phaser(1.);
   $rho_proj1_p111_H1D3E2->spin(1);
 
@@ -158,9 +157,9 @@ my @all_ops = ();
   $rho_proj1_p200_H0D4A1->ncfg(535);
   $rho_proj1_p200_H0D4A1->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
   $rho_proj1_p200_H0D4A1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D4A1P_mom4");
-  $rho_proj1_p200_H0D4A1->t0(7);
+  $rho_proj1_p200_H0D4A1->t0(6);
   $rho_proj1_p200_H0D4A1->state(2); 
-  $rho_proj1_p200_H0D4A1->tz(11);
+  $rho_proj1_p200_H0D4A1->tz(9);
   $rho_proj1_p200_H0D4A1->phaser(1.);
   $rho_proj1_p200_H0D4A1->spin(1);
 
@@ -174,9 +173,9 @@ my @all_ops = ();
   $rho_proj1_p200_H1D4E2->ncfg(535);
   $rho_proj1_p200_H1D4E2->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
   $rho_proj1_p200_H1D4E2->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D4E2P_mom4");
-  $rho_proj1_p200_H1D4E2->t0(7);
+  $rho_proj1_p200_H1D4E2->t0(6);
   $rho_proj1_p200_H1D4E2->state(2); 
-  $rho_proj1_p200_H1D4E2->tz(10);
+  $rho_proj1_p200_H1D4E2->tz(9);
   $rho_proj1_p200_H1D4E2->phaser(1.);
   $rho_proj1_p200_H1D4E2->spin(1);
 
@@ -196,14 +195,17 @@ my @all_ops = ();
 
 
   my @extracts = (); 
+  my @list_extracts = (); 
+  my @plot_list = (); 
   foreach my $op (@all_operators)
   {
-    push @extracts,  &run_extract_all_v_coeffs_svd($op); 
+    push @plot_list,  &run_extract_all_v_coeffs_svd($op); 
+    push @list_extracts,  &run_extract_all_v_coeffs_svd($op); 
   }
 
-  my $listfile = &convert_proj_to_xml(\@extracts,"rho_proj1"); 
+  &make_proj_plots(\@plot_list,"rho_proj1"); 
+  my $listfile = &finish_proj_xml(\@extracts,\@list_extracts,"rho_proj1"); 
 
-  &make_proj_plots($listfile);
 
   &write_radmat_xml(\@all_operators); 
 

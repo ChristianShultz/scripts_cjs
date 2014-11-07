@@ -9,7 +9,7 @@ endif
 
 set CC=gcc
 set CXX=g++
-../configure --prefix=${HOME}/git-builds/redstar-singleThread \
+../configure --prefix=${HOME}/git-builds/redstar- \
   CFLAGS="-O3 -fopenmp -DUSE_OMP"  \
     CXXFLAGS="-O3 -fopenmp -DUSE_OMP" \
       --with-adat=${HOME}/git-builds/adat \

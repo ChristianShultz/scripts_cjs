@@ -7,12 +7,11 @@ use strict;
 use ParamsDistillation; 
 use File::Basename;
 
-die "usage: $0 <seqno> <delta_t> <output_path> <JLAB_ARCH>" unless $#ARGV == 3; 
+die "usage: $0 <seqno> <delta_t> <output_path> " unless $#ARGV == 2; 
 
 my $seqno = $ARGV[0];
 my $dt = $ARGV[1];
 my $outpath = $ARGV[2];
-my $jlab_arch = $ARGV[3]; 
 
 # an instance of the Param "class" to hold lattice specific stuff
 my $param = ParamsDistillation->new(); 
@@ -90,7 +89,7 @@ my $scratch_corr = $param->scratch_seq_callback("output_sdb");
 my $dest_corr = $param->work_dir() . "/" . $param->stem(); 
 $dest_corr .= "/meson_3pt_redstar/unsmeared_insertion/";
 $dest_corr .= $mat;
-$dest_corr .= "/" . $param->stem() . ".qq_0.corr0.sdb" . $param->seqno(); 
+$dest_corr .= "/" . $param->stem() . ".qq_0_1.corr0.sdb" . $param->seqno(); 
 $param->copy_back_rename_rcp($scratch_corr,$dest_corr);
 
 exit ( 0 ) ; 
@@ -112,39 +111,6 @@ sub ls_scratch
   print " THIS IS SCRATCH \n $foo \n"; 
 }
 
-
-# so let the cluster decide how to thread itself
-sub omp_info
-{
-  print "getting omp_info \n";
-
-  my $num_thread = `grep '^processor' /proc/cpuinfo | wc -l ` ;
-  chomp $num_thread; 
-  $num_thread /= 2; 
-
-  print "omp_num_thread = $num_thread\n";
-
-
-  my $run = "env";
-  $run .= " OMP_NUM_THREADS=$num_thread";
-  $run .= " OMP_PROC_BIND=true"; 
-  my $gomp = "0";
-  for my $c (1 .. ${num_thread} -1)
-  {
-    $gomp .= " $c"; 
-  }
-  $run .= " GOMP_CPU_AFFINITY=\'${gomp}\'";
-
-  print " OMP RUN INFO \n";
-  print " num thread = $num_thread \n ";
-  print " run = $run \n"; 
-
-  my @r = (); 
-  push @r , $run , $num_thread; 
-
-  print "returning omp_info \n";
-  return \@r ; 
-}
 
 
 # so let the cluster decide how to thread itself
@@ -173,48 +139,6 @@ sub minimal_omp_info
   return \@r ; 
 }
 
-sub mpi_info
-{
-  my $num_thread = `grep '^processor' /proc/cpuinfo | wc -l ` ;
-  chomp $num_thread; 
-  $num_thread /= 2; 
-
-  my $nodefile = $ENV{'PBS_NODEFILE'};
-
-  my $num_nodes = `cat $nodefile | wc -l` ;
-  chomp $num_nodes; 
-
-  my $numa = $ENV{'HOME'};
-  chomp $numa; 
-  $numa .= "/scripts/numa_script_c8.sh"; 
-
-
-  my $mpi = $ENV{'MPIHOME'};
-
-  if ( $num_nodes != 8 ) 
-  {
-    print " num_nodes isnt the expected 8, $num_nodes \n";
-    $num_nodes = 8;
-  } 
-
-  my $run = "${mpi}/bin/mpirun_rsh -rsh -np $num_nodes -hostfile $nodefile MV2_ENABLE_AFFINITY=0 OMP_NUM_THREADS=2 $numa";
-
-
-  print " MPI RUN INFO \n";
-  print " num thread = $num_thread \n ";
-  print " nodefile = $nodefile  \n" ;
-  print " num_nodes = $num_nodes  \n" ;
-  print " numa = $numa  \n" ;
-  print " mpihome = $mpi \n";
-  print " run = $run \n"; 
-
-
-  die ( " cant find numa script : $numa " ) unless -e $numa;
-
-  my @r = (); 
-  push @r , $run , $num_nodes; 
-  return \@r ; 
-}
 
 
 
@@ -224,19 +148,7 @@ sub run_redstar_npt
 
   my ($input_file , $output_file) = @_;
 
-  my $exe = ""; 
-  if( $jlab_arch eq "12k" ) 
-  {
-    $exe = "/home/shultz/git-builds/redstar-12k/bin/redstar_npt";
-  }
-  elsif( $jlab_arch eq "9q" )
-  {
-    $exe = "/home/shultz/git-builds/redstar-9q/bin/redstar_npt";
-  }
-  else
-  {
-    die("jlab_arch = $jlab_arch is unknown"); 
-  }
+  my $exe = "/u/home/shultz/git-builds/ARCHIVE/redstar_npt-840_production.2014.11.2"; 
 
   my ($run,$num_nodes) = @{ &minimal_omp_info() }; 
   my $cmd = "$run $exe $input_file $output_file";
@@ -263,19 +175,7 @@ sub run_redstar_gen_graph
 
   my ($input_file , $output_file, $options) = @_;
 
-  my $exe = ""; 
-  if( $jlab_arch eq "12k" ) 
-  {
-    $exe = "/home/shultz/git-builds/redstar-12k/bin/redstar_gen_graph";
-  }
-  elsif( $jlab_arch eq "9q" )
-  {
-    $exe = "/home/shultz/git-builds/redstar-9q/bin/redstar_gen_graph";
-  }
-  else
-  {
-    die("jlab_arch = $jlab_arch is unknown"); 
-  }
+  my $exe = "/u/home/shultz/git-builds/ARCHIVE/redstar_gen_graph-840_production.2014.11.2"; 
 
   my ($run,$num_nodes) = @{ &minimal_omp_info() }; 
   my $cmd = "$run $exe $input_file $output_file ";
@@ -300,19 +200,7 @@ sub run_hadron_node_colorvec
 
   my ($input,$output,$options) = @_; 
 
-  my $exe = ""; 
-  if( $jlab_arch eq "12k" ) 
-  {
-    $exe = "/home/shultz/git-builds/colorvec-12k/bin/hadron_node";
-  }
-  elsif( $jlab_arch eq "9q" )
-  {
-    $exe = "/home/shultz/git-builds/colorvec-9q/bin/hadron_node";
-  }
-  else
-  {
-    die("jlab_arch = $jlab_arch is unknown"); 
-  }
+  my $exe = "/u/home/shultz/git-builds/ARCHIVE/hadron_node-840_production.2014.11.2"; 
 
   my ($run,$num_nodes) = @{ &minimal_omp_info() }; 
   my $cmd = "$run $exe $input $output";

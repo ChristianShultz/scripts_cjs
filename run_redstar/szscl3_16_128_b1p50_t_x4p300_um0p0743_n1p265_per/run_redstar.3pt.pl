@@ -117,7 +117,7 @@ $dest_corr .= $mat;
 #}
 
 #$dest_corr .= "/" . $param->stem() . ".test.sdb" . $param->seqno(); 
-$dest_corr .= "/" . $param->stem() . ".qq_0-4.corr4.sdb" . $param->seqno(); 
+$dest_corr .= "/" . $param->stem() . ".qq_0-4.corr5.sdb" . $param->seqno(); 
 $param->copy_back_rename_rcp($scratch_corr,$dest_corr);
 
 exit ( 0 ) ; 
