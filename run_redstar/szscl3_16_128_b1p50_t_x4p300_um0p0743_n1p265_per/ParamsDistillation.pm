@@ -583,11 +583,12 @@ sub copy_back_scratch_rcp_arr
 sub gen_prop_db
 { 
   my $self = shift; 
+  my $estem = shift; 
   my $f = $self->cache_dir() . "/" . $self->stem();
   $f .= "/gen_props/gen_prop_dbs/dt"; 
   my @dts = @{$self->delta_t()}; 
   die ("confused") unless $#dts == 0; 
-  $f .= $dts[0] . "/" . $self->stem() . "." . $self->sequenceify( $self->unsmeared_hadron_node_sdb() );
+  $f .= $dts[0] . "/" . $self->stem() . ".$estem." . $self->sequenceify( $self->unsmeared_hadron_node_sdb() );
   return $f;
 }
 

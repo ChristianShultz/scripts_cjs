@@ -37,13 +37,7 @@ $param->meson_hadron_node("meson_hadron_node.ini.${mom}.xml");
 $param->harom_hadron_node("harom_hadron_node.ini.${mom}.xml"); 
 
 
-# other versions don't look to be 
-# supported anymore
-$param->redstar_version(7); 
-
-
-# Distillation should be at version 2, this matches
-# the removal of t_origin in redstar version 7 
+$param->redstar_version(8); 
 $param->harom_version(2); 
 
 # specify things that I want 
@@ -107,7 +101,7 @@ my $haromxml = $param->write_harom_hadron_node_ini_xml($param->prop_dbs());
 
 
 my $scratch_node = $param->scratch_seq_callback("unsmeared_hadron_node_sdb"); 
-my $dest_node = $param->gen_prop_db("CONN.isospin1"); 
+my $dest_node = $param->gen_prop_db("canon.isospin0"); 
 $param->copy_back_rename_rcp($scratch_node,$dest_node);
 
 exit ( 0 ) ; 
@@ -155,8 +149,6 @@ sub mpi_info
   my $num_nodes = `cat $nodefile | wc -l` ;
   chomp $num_nodes; 
 
-#  my $base = dirname($0);
-#  my $numa = "${base}/numa_script.sh";
   my $numa = $ENV{'HOME'};
   chomp $numa; 
   $numa .= "/scripts_cjs/run_redstar/gen_props/numa_script_c8.sh"; 
@@ -170,9 +162,8 @@ sub mpi_info
     $num_nodes = 8;
   } 
 
-#  $num_nodes = 4; 
 
-  my $run = "${mpi}/bin/mpirun_rsh -rsh -np $num_nodes -hostfile $nodefile MV2_ENABLE_AFFINITY=0 OMP_NUM_THREADS=2 $numa";
+  my $run = "${mpi}/bin/mpirun_rsh -rsh -np $num_nodes -hostfile $nodefile MV2_ENABLE_AFFINITY=0 OMP_NUM_THREADS=1 $numa";
 
 
   print " MPI RUN INFO \n";
@@ -192,65 +183,11 @@ sub mpi_info
 }
 
 
-sub run_chroma_ptx
-{
-  my ($input_file , $output_file, $chroma_opts) = @_;
-
-  my ($run,$num_nodes) = @{ &mpi_info() }; 
-
-  $chroma_opts .= " -iogeom 1 1 1 $num_nodes  -geom 1 1 1 $num_nodes"; 
-
-  my $chroma_exe = "/home/shultz/git-builds/chroma-jitptx/parscalar-Nd4/bin/chroma";
-  my $chroma_command = "$run $chroma_exe $chroma_opts -i $input_file -o $output_file";
- 
-  if ( -f $output_file ) 
-  {
-    unlink $output_file; 
-  }
-
-  &check_exe($chroma_exe,"run_chroma_ptx");
-
-
-  print " \n\n RUNNING CHROMA WITH \n\n $chroma_command \n\n";
-
-  system ( " $chroma_command " ) == 0 || die (" some error for chroma, output : $output_file ");
-
-
-
-  print " \n\n FINISHED CHROMA WITH \n\n $chroma_command \n\n";
-  &ls_scratch(); 
-}
-
-
-sub run_harom_ptx
-{
-  my ($input_file , $output_file, $chroma_opts) = @_; 
-  my $chroma_exe = "/home/shultz/git-builds/harom-jitptx/gpu-parscalar-Nd3/bin/harom";
-
-  my ($run,$num_nodes) = @{ &mpi_info() }; 
-
-  $chroma_opts .= " -iogeom 1 1 $num_nodes -geom 1 1 $num_nodes "; 
-
-  my $chroma_command = "$run $chroma_exe $chroma_opts -i $input_file -o $output_file ";
- 
-  if ( -f $output_file ) 
-  {
-    unlink $output_file; 
-  }
-
-  &check_exe($chroma_exe,"run_harom_ptx");
-
-  print " \n\n RUNNING HAROM WITH \n\n $chroma_command \n\n";
-
-  system ( " $chroma_command " ) == 0 || die (" some error for harom, output : $output_file \n $_ ");
-  print " \n\n FINISHED HAROM WITH \n\n $chroma_command \n\n";
-  &ls_scratch(); 
-}
 
 sub run_harom_cpu
 {
   my ($input_file , $output_file, $chroma_opts) = @_; 
-  my $chroma_exe = "/home/shultz/git-builds/harom/parscalar-Nd3/bin/harom";
+  my $chroma_exe = "/home/shultz/git-builds/ARCHIVE/harom_pND3-840_production.2014.11.12";
 
   my ($run,$num_nodes) = @{ &mpi_info() }; 
 
@@ -274,10 +211,10 @@ sub run_harom_cpu
 }
 
 
-sub run_redstar_npt
+sub run_redstar_gen_graph
 {
   my ($input_file , $output_file) = @_;
-  my $exe = "/home/shultz/git-builds/redstar/bin/redstar_npt";
+  my $exe = "/home/shultz/git-builds/ARCHIVE/redstar_gen_graph-840_production.2014.11.12";
   my ($run,$num_nodes) = @{ &omp_info() }; 
   my $cmd = "$run $exe $input_file $output_file";
   
@@ -286,53 +223,15 @@ sub run_redstar_npt
     unlink $output_file; 
   }
 
-  &check_exe($exe,"run_redstar_npt");
+  &check_exe($exe,"run_redstar_gen_graph");
 
-  system ( " $cmd " ) == 0 || die (" some error for redstar_npt, output : $output_file " ); 
+  system ( " $cmd " ) == 0 || die (" some error for redstar_gen_graph, output : $output_file " ); 
 
   print "FINISHED REDSTAR_NPT \n\n "; 
   &ls_scratch(); 
 
 }
 
-sub run_redstar_gen_graph
-{
-
-  my ($input_file , $output_file, $options) = @_;
-  my $exe = "/home/shultz/git-builds/redstar/bin/redstar_gen_graph";
-  my ($run,$num_nodes) = @{ &omp_info() }; 
-  my $cmd = "$run $exe $input_file $output_file ";
-  
-  if ( -f $output_file ) 
-  {
-    unlink $output_file; 
-  }
-
-  &check_exe($exe,"run_redstar_gen_graph");
-
-  system ( " $cmd " ) == 0 || die (" some error for redstar_npt, output : $output_file " ); 
-
-  print "FINISHED REDSTAR GEN GRAPH \n\n";
-  &ls_scratch();
-}
-
-sub run_hadron_node_colorvec
-{ 
-  my ($input,$output,$options) = @_; 
-  my $exe = "/home/shultz/git-builds/colorvec/bin/hadron_node";
-  my $cmd = "$exe $input $output";
-  if( -f $output)
-  {
-    unlink $output; 
-  }
-
-  &check_exe($exe,"hadron_node"); 
-  
-  system(" $cmd " )  == 0 || die("some error for hadron_node, output: $output "); 
-  print "FINISHED COLORVEC \n\n";
-  &ls_scratch(); 
-
-}
 
 sub check_exe
 {

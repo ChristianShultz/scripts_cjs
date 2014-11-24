@@ -19,7 +19,7 @@ if (! $?MY_COMPILE_ENV_SET) then
   # setenv MPICFLAGS "-O3 -march=core2 -fargument-noalias-global -std=c99"
 
   # setenv STCXXFLAGS "-std=c++0x -O3 -finline-limit=50000 -march=core2  -fargument-noalias-global -fopenmp"
-  setenv STCXXFLAGS "-O3 -finline-limit=50000 -march=core2  -fargument-noalias-global -fopenmp"
+  setenv STCXXFLAGS "-O3 -finline-limit=50000 -march=core2  -fargument-noalias-global -fopenmp -std=c++0x"
   setenv STCFLAGS "-std=c99 -O3 -march=core2 -fargument-noalias-global"
 
 

@@ -37,7 +37,7 @@ if (! $?MY_MPI_ENV_SET) then
   setenv MPICFLAGS "-O3 -march=core2 -fargument-noalias-global -std=c99" 
 
   # this needs to match the MPI numa junk 
-   setenv OMP_NUM_THREADS 8 
+   setenv OMP_NUM_THREADS 16
 
    setenv MAKE "make -j 10"
 

@@ -18,9 +18,12 @@ endif
 touch $out
 
 set header='<?xml version="1.0"?>\
-<ProjectedOps>'
+<ProjectedOpWeights>\
+  <version>2</version>\
+  <ProjectedOps>'
 
-set footer='</ProjectedOps>'
+set footer='  </ProjectedOps>\
+</ProjectedOpWeights>'
 
 echo $header:q >> $out  
 

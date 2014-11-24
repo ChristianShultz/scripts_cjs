@@ -16,8 +16,7 @@ my $outpath = $ARGV[2];
 # an instance of the Param "class" to hold lattice specific stuff
 my $param = ParamsDistillation->new(); 
 
-$param->redstar_version(7); 
-$param->harom_version(1); 
+$param->redstar_version(8); 
 
 # specify things that I want 
 $param->seqno($seqno);
@@ -54,12 +53,12 @@ $param->scratchy(undef);
 
 # be really noisy 
 $param->verbose("true");
-$param->diagnostic_level(1); 
+$param->diagnostic_level(0); 
 
 # did we already make a bunch of unsmeared nodes? if so where are they 
 my @unsmeared_nodes = ();
 my $lustre_stem = $param->cache_dir() . "/" . $param->stem() ."/gen_props/gen_prop_dbs/dt${dt}/";
-push @unsmeared_nodes , $lustre_stem . $param->stem() . ".CONN.isospin1.unsmeared_hadron_node.p000.sdb" . $seqno ; 
+push @unsmeared_nodes , $lustre_stem . $param->stem() . ".canon.isospin0.unsmeared_hadron_node.canon.sdb" . $seqno ; 
 
 # this will override the redstar xml printing and try to copy @unsmeared_nodes up to scratch
 $param->unsmeared_node_list(\@unsmeared_nodes); 
@@ -89,7 +88,7 @@ my $scratch_corr = $param->scratch_seq_callback("output_sdb");
 my $dest_corr = $param->work_dir() . "/" . $param->stem(); 
 $dest_corr .= "/meson_3pt_redstar/unsmeared_insertion/";
 $dest_corr .= $mat;
-$dest_corr .= "/" . $param->stem() . ".qq_0_1.corr0.sdb" . $param->seqno(); 
+$dest_corr .= "/" . $param->stem() . ".rtopo_test2.sdb" . $param->seqno(); 
 $param->copy_back_rename_rcp($scratch_corr,$dest_corr);
 
 exit ( 0 ) ; 
@@ -148,7 +147,7 @@ sub run_redstar_npt
 
   my ($input_file , $output_file) = @_;
 
-  my $exe = "/u/home/shultz/git-builds/ARCHIVE/redstar_npt-840_production.2014.11.2"; 
+  my $exe = "/u/home/shultz/git-builds/ARCHIVE/redstar_npt-840_production.2014.11.24"; 
 
   my ($run,$num_nodes) = @{ &minimal_omp_info() }; 
   my $cmd = "$run $exe $input_file $output_file";
@@ -175,7 +174,7 @@ sub run_redstar_gen_graph
 
   my ($input_file , $output_file, $options) = @_;
 
-  my $exe = "/u/home/shultz/git-builds/ARCHIVE/redstar_gen_graph-840_production.2014.11.2"; 
+   my $exe = "/u/home/shultz/git-builds/ARCHIVE/redstar_gen_graph-840_production.2014.11.24"; 
 
   my ($run,$num_nodes) = @{ &minimal_omp_info() }; 
   my $cmd = "$run $exe $input_file $output_file ";
@@ -200,7 +199,7 @@ sub run_hadron_node_colorvec
 
   my ($input,$output,$options) = @_; 
 
-  my $exe = "/u/home/shultz/git-builds/ARCHIVE/hadron_node-840_production.2014.11.2"; 
+  my $exe = "/u/home/shultz/git-builds/ARCHIVE/hadron_node-840_production.2014.11.24"; 
 
   my ($run,$num_nodes) = @{ &minimal_omp_info() }; 
   my $cmd = "$run $exe $input $output";

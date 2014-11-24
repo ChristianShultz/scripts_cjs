@@ -15,10 +15,10 @@ if (1) then
 
 ../configure \
   --prefix=$HOME/git-builds/harom/scalar-Nd3 \
-  --with-qdp=$HOME/git-builds/qdp++/scalar-Nd3 \
+  --with-qdp=$HOME/git-builds/qdpxx/scalar-Nd3 \
   --host=x86_64-linux-gnu \
   --build=none  \
-  CXXFLAGS="" \
+  CXXFLAGS="$STCXXFLAGS" \
   CFLAGS="$STCFLAGS" \
   CXX=$STCXX \
   CC=$STCC
@@ -30,7 +30,7 @@ source $HOME/.MPI_ENV.csh
 
 ../configure \
   --prefix=$HOME/git-builds/harom/scalar-Nd3 \
-  --with-qdp=$HOME/git-builds/qdp++/scalar-Nd3 \
+  --with-qdp=$HOME/git-builds/qdpxx/scalar-Nd3 \
   --host=x86_64-linux-gnu \
   --build=none  \
   CXXFLAGS="$MPICXXFLAGS -fpermissive" \

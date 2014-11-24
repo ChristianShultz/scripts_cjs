@@ -30,7 +30,7 @@ my @all_ops = ();
   $rho_proj1_p000_T1->t0(5);
   $rho_proj1_p000_T1->state(1); 
   $rho_proj1_p000_T1->tz(10);
-  $rho_proj1_p000_T1->phaser(1.);
+  $rho_proj1_p000_T1->phaser(-1.);  #<---- phase 
   $rho_proj1_p000_T1->spin(1);
   $rho_proj1_p000_T1->spin(1);
   $rho_proj1_p000_T1->quark_model_assignment(QuarkModelAssign::qm_assign("3S1"));
@@ -64,7 +64,7 @@ my @all_ops = ();
   $rho_proj1_p100_H1D4E2->t0(6);
   $rho_proj1_p100_H1D4E2->state(4); 
   $rho_proj1_p100_H1D4E2->tz(9);
-  $rho_proj1_p100_H1D4E2->phaser(1.);
+  $rho_proj1_p100_H1D4E2->phaser(-1.); #<--- phase 
   $rho_proj1_p100_H1D4E2->spin(1);
 
 
@@ -144,7 +144,7 @@ my @all_ops = ();
   $rho_proj1_p111_H1D3E2->t0(6);
   $rho_proj1_p111_H1D3E2->state(4); 
   $rho_proj1_p111_H1D3E2->tz(9);
-  $rho_proj1_p111_H1D3E2->phaser(1.);
+  $rho_proj1_p111_H1D3E2->phaser(-1.); #<---- phase 
   $rho_proj1_p111_H1D3E2->spin(1);
 
 
@@ -176,7 +176,7 @@ my @all_ops = ();
   $rho_proj1_p200_H1D4E2->t0(6);
   $rho_proj1_p200_H1D4E2->state(2); 
   $rho_proj1_p200_H1D4E2->tz(9);
-  $rho_proj1_p200_H1D4E2->phaser(1.);
+  $rho_proj1_p200_H1D4E2->phaser(-1.); #<---- phase 
   $rho_proj1_p200_H1D4E2->spin(1);
 
 

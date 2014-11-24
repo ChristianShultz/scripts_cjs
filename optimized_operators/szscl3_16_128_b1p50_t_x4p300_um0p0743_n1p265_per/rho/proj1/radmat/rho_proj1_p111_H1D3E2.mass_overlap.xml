@@ -6,7 +6,7 @@
   <ncfg>535</ncfg>
   <resize>false</resize>
   <isProjected>true</isProjected>
-  <phase_real>1</phase_real>
+  <phase_real>-1</phase_real>
   <phase_imag>0.</phase_imag>
   <dbname>rho_proj1_p111_H1D3E2.sdb</dbname>
   <pid>rho_proj1</pid>

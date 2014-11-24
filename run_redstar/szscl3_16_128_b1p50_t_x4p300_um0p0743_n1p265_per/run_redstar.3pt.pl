@@ -17,15 +17,8 @@ my $dt = $ARGV[1];
 my $param = ParamsDistillation->new(); 
 
 
-# REDSTAR AT VERSION 5 -- allow convertUDtoS
-# VERSION 1 does not exist must be [2,5]
-# $param->version(5); 
-#$param->redstar_version(6); 
 $param->redstar_version(7); 
 
-
-# Distillation should be at version 1
-$param->harom_version(1); 
 
 # specify things that I want 
 $param->seqno($seqno);
@@ -61,21 +54,12 @@ $param->scratchy(undef);
 
 # be really noisy 
 $param->verbose("true");
-$param->diagnostic_level(1); 
+$param->diagnostic_level(0); 
 
 # did we already make a bunch of unsmeared nodes? if so where are they 
 my @unsmeared_nodes = ();
 my $lustre_stem = $param->cache_dir() . "/" . $param->stem() ."/gen_props/gen_prop_dbs/dt${dt}/";
-push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p000.redstar7.sdb" . $seqno ; 
-push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p100.redstar7.sdb" . $seqno ; 
-push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p110.redstar7.sdb" . $seqno ; 
-push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p111.redstar7.sdb" . $seqno ; 
-push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p200.redstar7.sdb" . $seqno ; 
-# push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p000.sdb" . $seqno ; 
-# push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p100.sdb" . $seqno ; 
-# push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p110.sdb" . $seqno ; 
-# push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p111.sdb" . $seqno ; 
-# push @unsmeared_nodes , $lustre_stem . $param->stem() . ".improvement.unsmeared_hadron_node.p200.sdb" . $seqno ; 
+push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.canon.sdb" . $seqno ; 
 
 # this will override the redstar xml printing and try to copy @unsmeared_nodes up to scratch
 $param->unsmeared_node_list(\@unsmeared_nodes); 
@@ -276,7 +260,7 @@ sub run_hadron_node_colorvec
 { 
 
   my ($input,$output,$options) = @_; 
-  my $exe = "/home/shultz/git-builds/colorvec-singleThread/bin/hadron_node";
+  my $exe = "/home/shultz/git-builds/ARCHIVE/hadron_node-743_production.2014.11.19";
   my ($run,$num_nodes) = @{ &omp_info() }; 
   my $cmd = "$run $exe $input $output";
   if( -f $output)

@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
-<ProjectedOps>
+<ProjectedOpWeights>
+  <version>2</version>
+  <ProjectedOps>
   <elem>
     <Key>
       <name>pion_proj0_p000_A1</name> 
@@ -5983,4 +5985,5 @@
       </elem>
     </Val>
   </elem>
-</ProjectedOps>
+  </ProjectedOps>
+</ProjectedOpWeights>

@@ -1549,6 +1549,7 @@ EOF
   print OUT <<EOF; 
     </proj_op_xmls>
     <noneval_graph_xml>$nuke_list</noneval_graph_xml>
+    <eval_graph_xml>/scratch/eval_graph_xml.xml</eval_graph_xml>
     <smeared_hadron_node_xml>$shad_node_xml</smeared_hadron_node_xml>
     <unsmeared_hadron_node_xml>$uhad_node_xml</unsmeared_hadron_node_xml>
     <hadron_npt_graph_db>$had_graph</hadron_npt_graph_db>

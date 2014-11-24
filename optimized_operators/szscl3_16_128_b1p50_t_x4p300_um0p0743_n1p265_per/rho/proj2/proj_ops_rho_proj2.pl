@@ -47,7 +47,7 @@ my @all_ops = ();
   $rho_proj2_p100_H0D4A1->t0(6);
   $rho_proj2_p100_H0D4A1->state(3); 
   $rho_proj2_p100_H0D4A1->tz(9);
-  $rho_proj2_p100_H0D4A1->phaser(1.);
+  $rho_proj2_p100_H0D4A1->phaser(-1.); #<--- phase 
   $rho_proj2_p100_H0D4A1->spin(1);
 
 

@@ -4,7 +4,7 @@ l = 16
 f = (t/l)*(t/l) 
 g(x) = m*m + (f/(a*a))*x
 fit g(x) 'dispn_gnu.dat' using 1:2 via m,a 
-plot 'dispn_gnu.dat' using 1:2:3 w yerr ti 'E^2(p^2)' lt 5, \
+plot 'dispn_gnu.dat' using 1:2:3 w yerr ti 'E^2(p^2)' lt 1, \
 g(x) ti sprintf("g=m^2 + x*(2pi/Ls/xi)^2, m=%.4f, xi=%.4f", m, a)  
 set xr [GPVAL_DATA_X_MIN-0.1:GPVAL_DATA_X_MAX+0.1]
 set yr [GPVAL_DATA_Y_MIN-0.01:GPVAL_DATA_Y_MAX+0.01]

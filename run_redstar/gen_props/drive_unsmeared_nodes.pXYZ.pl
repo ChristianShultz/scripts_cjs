@@ -41,11 +41,13 @@ $param->harom_hadron_node("harom_hadron_node.ini.${mom}.xml");
 # REDSTAR AT VERSION 5 -- allow convertUDtoS
 # VERSION 1 does not exist must be [2,5]
 # $param->version(5); 
-$param->redstar_version(6); 
+#$param->redstar_version(6); 
+$param->redstar_version(7); 
 
 
 # Distillation should be at version 1
-$param->harom_version(1); 
+#$param->harom_version(1); 
+$param->harom_version(2); # moves to absolute coordinates I think  
 
 # specify things that I want 
 $param->seqno($seqno);
@@ -149,30 +151,23 @@ sub ls_scratch
 # so let the cluster decide how to thread itself
 sub omp_info
 {
-#  my $num_thread = `grep '^processor' /proc/cpuinfo | wc -l ` ;
-#  chomp $num_thread; 
-#  $num_thread -= 2; 
-
-  my  $num_thread = $max_thread; # 16 threads in a core8, 5 sets of mom, three threads per momentum
-
-#  my $nodefile = $ENV{'PBS_NODEFILE'};
-  #
-#  my $num_nodes = `cat $nodefile | wc -l` ;
-#  chomp $num_nodes; 
+  my $num_thread = `grep '^processor' /proc/cpuinfo | wc -l ` ;
+  chomp $num_thread; 
+  $num_thread -= 2; 
 
   my $run = "env";
   $run .= " OMP_NUM_THREADS=$num_thread";
-#  $run .= " OMP_PROC_BIND=true"; 
-#  my $gomp = "0";
-#  for my $c (1 .. ${num_thread} -1)
-#  {
-#    $gomp .= " $c"; 
-#  }
-#  $run .= " GOMP_CPU_AFFINITY=\'${gomp}\'";
-  #
-#  print " MPI RUN INFO \n";
-#  print " num thread = $num_thread \n ";
-#  print " run = $run \n"; 
+  $run .= " OMP_PROC_BIND=true"; 
+  my $gomp = "0";
+  for my $c (1 .. ${num_thread} -1)
+  {
+    $gomp .= " $c"; 
+  }
+  $run .= " GOMP_CPU_AFFINITY=\'${gomp}\'";
+
+  print " OMP RUN INFO \n";
+  print " num thread = $num_thread \n ";
+  print " run = $run \n"; 
 
   my @r = (); 
   push @r , $run , $num_thread; 
@@ -191,8 +186,6 @@ sub mpi_info
   my $num_nodes = `cat $nodefile | wc -l` ;
   chomp $num_nodes; 
 
-#  my $base = dirname($0);
-#  my $numa = "${base}/numa_script.sh";
   my $numa = $ENV{'HOME'};
   chomp $numa; 
   $numa .= "/scripts_cjs/run_redstar/gen_props/numa_script_c8.sh"; 
@@ -206,9 +199,9 @@ sub mpi_info
     $num_nodes = 8;
   } 
 
-#  $num_nodes = 4; 
 
-  my $run = "${mpi}/bin/mpirun_rsh -rsh -np $num_nodes -hostfile $nodefile MV2_ENABLE_AFFINITY=0 OMP_NUM_THREADS=2 $numa";
+  # my $run = "${mpi}/bin/mpirun_rsh -rsh -np $num_nodes -hostfile $nodefile MV2_ENABLE_AFFINITY=0 OMP_NUM_THREADS=2 $numa";
+    my $run = "${mpi}/bin/mpirun_rsh -rsh -np $num_nodes -hostfile $nodefile MV2_ENABLE_AFFINITY=0 OMP_NUM_THREADS=1 $numa";
 
 
   print " MPI RUN INFO \n";
@@ -228,78 +221,24 @@ sub mpi_info
 }
 
 
-sub run_chroma_ptx
-{
-  my ($input_file , $output_file, $chroma_opts) = @_;
-
-  my ($run,$num_nodes) = @{ &mpi_info() }; 
-
-  $chroma_opts .= " -iogeom 1 1 1 $num_nodes  -geom 1 1 1 $num_nodes"; 
-
-  my $chroma_exe = "/home/shultz/git-builds/chroma-jitptx/parscalar-Nd4/bin/chroma";
-  my $chroma_command = "$run $chroma_exe $chroma_opts -i $input_file -o $output_file";
- 
-  if ( -f $output_file ) 
-  {
-    unlink $output_file; 
-  }
-
-  &check_exe($chroma_exe,"run_chroma_ptx");
-
-
-  print " \n\n RUNNING CHROMA WITH \n\n $chroma_command \n\n";
-
-  system ( " $chroma_command " ) == 0 || die (" some error for chroma, output : $output_file ");
-
-
-
-  print " \n\n FINISHED CHROMA WITH \n\n $chroma_command \n\n";
-  &ls_scratch(); 
-}
-
-
-sub run_harom_ptx
-{
-  my ($input_file , $output_file, $chroma_opts) = @_; 
-  my $chroma_exe = "/home/shultz/git-builds/harom-jitptx/gpu-parscalar-Nd3/bin/harom";
-
-  my ($run,$num_nodes) = @{ &mpi_info() }; 
-
-  $chroma_opts .= " -iogeom 1 1 $num_nodes -geom 1 1 $num_nodes "; 
-
-  my $chroma_command = "$run $chroma_exe $chroma_opts -i $input_file -o $output_file ";
- 
-  if ( -f $output_file ) 
-  {
-    unlink $output_file; 
-  }
-
-  &check_exe($chroma_exe,"run_harom_ptx");
-
-  print " \n\n RUNNING HAROM WITH \n\n $chroma_command \n\n";
-
-  system ( " $chroma_command " ) == 0 || die (" some error for harom, output : $output_file \n $_ ");
-  print " \n\n FINISHED HAROM WITH \n\n $chroma_command \n\n";
-  &ls_scratch(); 
-}
 
 sub run_harom_cpu
 {
   my ($input_file , $output_file, $chroma_opts) = @_; 
-  my $chroma_exe = "/home/shultz/git-builds/harom/parscalar-Nd3/bin/harom";
+  my $chroma_exe = "/home/shultz/git-builds/ARCHIVE/harom_pND3-743_production.2014.11.10";
 
   my ($run,$num_nodes) = @{ &mpi_info() }; 
 
   $chroma_opts .= " -iogeom 1 1 $num_nodes -geom 1 1 $num_nodes "; 
 
   my $chroma_command = "$run $chroma_exe $chroma_opts -i $input_file -o $output_file ";
- 
+
   if ( -f $output_file ) 
   {
     unlink $output_file; 
   }
 
-  &check_exe($chroma_exe,"run_harom_ptx");
+  &check_exe($chroma_exe,"run_harom_cpu");
 
   print " \n\n RUNNING HAROM WITH \n\n $chroma_command \n\n";
 
@@ -309,35 +248,14 @@ sub run_harom_cpu
 }
 
 
-sub run_redstar_npt
-{
-  my ($input_file , $output_file) = @_;
-  my $exe = "/home/shultz/git-builds/redstar/bin/redstar_npt";
-  my ($run,$num_nodes) = @{ &omp_info() }; 
-  my $cmd = "$run $exe $input_file $output_file";
-  
-  if ( -f $output_file ) 
-  {
-    unlink $output_file; 
-  }
-
-  &check_exe($exe,"run_redstar_npt");
-
-  system ( " $cmd " ) == 0 || die (" some error for redstar_npt, output : $output_file " ); 
-
-  print "FINISHED REDSTAR_NPT \n\n "; 
-  &ls_scratch(); 
-
-}
 
 sub run_redstar_gen_graph
 {
-
   my ($input_file , $output_file, $options) = @_;
-  my $exe = "/home/shultz/git-builds/redstar/bin/redstar_gen_graph";
+  my $exe = "/home/shultz/git-builds/ARCHIVE/redstar_gen_graph4-1";
   my ($run,$num_nodes) = @{ &omp_info() }; 
   my $cmd = "$run $exe $input_file $output_file ";
-  
+
   if ( -f $output_file ) 
   {
     unlink $output_file; 
@@ -345,29 +263,12 @@ sub run_redstar_gen_graph
 
   &check_exe($exe,"run_redstar_gen_graph");
 
-  system ( " $cmd " ) == 0 || die (" some error for redstar_npt, output : $output_file " ); 
+  system ( " $cmd " ) == 0 || die (" some error for redstar_gen_graph, output : $output_file " ); 
 
   print "FINISHED REDSTAR GEN GRAPH \n\n";
   &ls_scratch();
 }
 
-sub run_hadron_node_colorvec
-{ 
-  my ($input,$output,$options) = @_; 
-  my $exe = "/home/shultz/git-builds/colorvec/bin/hadron_node";
-  my $cmd = "$exe $input $output";
-  if( -f $output)
-  {
-    unlink $output; 
-  }
-
-  &check_exe($exe,"hadron_node"); 
-  
-  system(" $cmd " )  == 0 || die("some error for hadron_node, output: $output "); 
-  print "FINISHED COLORVEC \n\n";
-  &ls_scratch(); 
-
-}
 
 sub check_exe
 {
