@@ -128,6 +128,7 @@ my @all_ops = ();
   $rho_proj2_p111_H0D3A1->state(2); 
   $rho_proj2_p111_H0D3A1->tz(9);
   $rho_proj2_p111_H0D3A1->phaser(1.);
+#  $rho_proj2_p111_H0D3A1->phaser(-1.);  # <--- preference for a phase 
   $rho_proj2_p111_H0D3A1->spin(1);
 
 

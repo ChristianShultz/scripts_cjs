@@ -147,7 +147,7 @@ sub run_redstar_npt
 
   my ($input_file , $output_file) = @_;
 
-  my $exe = "/u/home/shultz/git-builds/ARCHIVE/redstar_npt-840_production.2014.11.24"; 
+  my $exe = "/u/home/shultz/git-builds/ARCHIVE/redstar_npt-840_production.2014.12.01"; 
 
   my ($run,$num_nodes) = @{ &minimal_omp_info() }; 
   my $cmd = "$run $exe $input_file $output_file";
@@ -174,7 +174,7 @@ sub run_redstar_gen_graph
 
   my ($input_file , $output_file, $options) = @_;
 
-   my $exe = "/u/home/shultz/git-builds/ARCHIVE/redstar_gen_graph-840_production.2014.11.24"; 
+   my $exe = "/u/home/shultz/git-builds/ARCHIVE/redstar_gen_graph-840_production.2014.12.01"; 
 
   my ($run,$num_nodes) = @{ &minimal_omp_info() }; 
   my $cmd = "$run $exe $input_file $output_file ";
