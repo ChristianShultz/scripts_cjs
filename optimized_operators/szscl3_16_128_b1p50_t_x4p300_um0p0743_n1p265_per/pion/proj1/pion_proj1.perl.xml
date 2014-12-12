@@ -1,7 +1,7 @@
 <perldata>
- <arrayref memory_address="0x2b897c0">
+ <arrayref memory_address="0x282a7c0">
   <item key="0">
-   <hashref blessed_package="OPparams" memory_address="0x257f738">
+   <hashref blessed_package="OPparams" memory_address="0x2220738">
     <item key="ENERGY">0.367593 0.00114839</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
@@ -11,7 +11,7 @@
     <item key="PHASER">1</item>
     <item key="PID">pion_proj1</item>
     <item key="QUARK_MOD">
-     <hashref blessed_package="QuarkModel" memory_address="0x2b67588">
+     <hashref blessed_package="QuarkModel" memory_address="0x2808588">
       <item key="PAR">^{1}S_{0}</item>
      </hashref>
     </item>
@@ -28,7 +28,7 @@
    </hashref>
   </item>
   <item key="1">
-   <hashref blessed_package="OPparams" memory_address="0x2b675e8">
+   <hashref blessed_package="OPparams" memory_address="0x28085e8">
     <item key="ENERGY">0.384817 0.00159177</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
@@ -51,7 +51,7 @@
    </hashref>
   </item>
   <item key="2">
-   <hashref blessed_package="OPparams" memory_address="0x2b89ad8">
+   <hashref blessed_package="OPparams" memory_address="0x282aad8">
     <item key="ENERGY">0.397496 0.00254953</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
@@ -74,7 +74,7 @@
    </hashref>
   </item>
   <item key="3">
-   <hashref blessed_package="OPparams" memory_address="0x2b67780">
+   <hashref blessed_package="OPparams" memory_address="0x2808780">
     <item key="ENERGY">0.412499 0.0033833</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
@@ -97,7 +97,7 @@
    </hashref>
   </item>
   <item key="4">
-   <hashref blessed_package="OPparams" memory_address="0x2b67960">
+   <hashref blessed_package="OPparams" memory_address="0x2808960">
     <item key="ENERGY">0.431405 0.00399166</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>

@@ -1,20 +1,23 @@
 <perldata>
- <arrayref memory_address="0x11ceed0">
+ <arrayref memory_address="0xf3a680">
   <item key="0">
-   <hashref blessed_package="OPparams" memory_address="0x111a708">
+   <hashref blessed_package="OPparams" memory_address="0x91d8f8">
     <item key="ENERGY">0.482094 0.0049341</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID">1</item>
     <item key="MOM">p000</item>
     <item key="NCFG">535</item>
+    <item key="NESTED" defined="false"></item>
     <item key="PHASER">-1</item>
     <item key="PID">rho_proj3</item>
     <item key="QUARK_MOD">
-     <hashref blessed_package="QuarkModel" memory_address="0x171c2c8">
+     <hashref blessed_package="QuarkModel" memory_address="0xf10bd8">
       <item key="PAR">^{1}S_{0}xB_{1}</item>
      </hashref>
     </item>
     <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/T1mP</item>
+    <item key="RECON_VERSION">single_meson</item>
+    <item key="RECON_WS" defined="false"></item>
     <item key="REP">T1</item>
     <item key="REPSTEM">T1</item>
     <item key="SPIN">1</item>
@@ -25,16 +28,19 @@
    </hashref>
   </item>
   <item key="1">
-   <hashref blessed_package="OPparams" memory_address="0x171c328">
+   <hashref blessed_package="OPparams" memory_address="0xf10c38">
     <item key="ENERGY">0.500257 0.00442594</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID">1</item>
     <item key="MOM">p100</item>
     <item key="NCFG">535</item>
+    <item key="NESTED" defined="false"></item>
     <item key="PHASER">1</item>
     <item key="PID">rho_proj3</item>
     <item key="QUARK_MOD" defined="false"></item>
     <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D4A1P_mom1</item>
+    <item key="RECON_VERSION">single_meson</item>
+    <item key="RECON_WS" defined="false"></item>
     <item key="REP">D4A1</item>
     <item key="REPSTEM">H0D4A1</item>
     <item key="SPIN">1</item>
@@ -45,16 +51,19 @@
    </hashref>
   </item>
   <item key="2">
-   <hashref blessed_package="OPparams" memory_address="0x171c100">
+   <hashref blessed_package="OPparams" memory_address="0xf3a998">
     <item key="ENERGY">0.502171 0.00437208</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID">1</item>
     <item key="MOM">p100</item>
     <item key="NCFG">535</item>
+    <item key="NESTED" defined="false"></item>
     <item key="PHASER">1</item>
     <item key="PID">rho_proj3</item>
     <item key="QUARK_MOD" defined="false"></item>
     <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D4E2P_mom1</item>
+    <item key="RECON_VERSION">single_meson</item>
+    <item key="RECON_WS" defined="false"></item>
     <item key="REP">D4E2</item>
     <item key="REPSTEM">H1D4E2</item>
     <item key="SPIN">1</item>
@@ -65,16 +74,19 @@
    </hashref>
   </item>
   <item key="3">
-   <hashref blessed_package="OPparams" memory_address="0x171c448">
+   <hashref blessed_package="OPparams" memory_address="0xf10dd0">
     <item key="ENERGY">0.518968 0.00338522</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID">1</item>
     <item key="MOM">p110</item>
     <item key="NCFG">535</item>
+    <item key="NESTED" defined="false"></item>
     <item key="PHASER">1</item>
     <item key="PID">rho_proj3</item>
     <item key="QUARK_MOD" defined="false"></item>
     <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D2A1P_mom2</item>
+    <item key="RECON_VERSION">single_meson</item>
+    <item key="RECON_WS" defined="false"></item>
     <item key="REP">D2A1</item>
     <item key="REPSTEM">H0D2A1</item>
     <item key="SPIN">1</item>
@@ -85,16 +97,19 @@
    </hashref>
   </item>
   <item key="4">
-   <hashref blessed_package="OPparams" memory_address="0x171c5e0">
+   <hashref blessed_package="OPparams" memory_address="0xf10fb0">
     <item key="ENERGY">0.514094 0.00466124</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID">1</item>
     <item key="MOM">p110</item>
     <item key="NCFG">535</item>
+    <item key="NESTED" defined="false"></item>
     <item key="PHASER">1</item>
     <item key="PID">rho_proj3</item>
     <item key="QUARK_MOD" defined="false"></item>
     <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D2B1P_mom2</item>
+    <item key="RECON_VERSION">single_meson</item>
+    <item key="RECON_WS" defined="false"></item>
     <item key="REP">D2B1</item>
     <item key="REPSTEM">H1D2B1</item>
     <item key="SPIN">1</item>
@@ -105,16 +120,19 @@
    </hashref>
   </item>
   <item key="5">
-   <hashref blessed_package="OPparams" memory_address="0x171c778">
+   <hashref blessed_package="OPparams" memory_address="0xf11190">
     <item key="ENERGY">0.517408 0.00461268</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID">1</item>
     <item key="MOM">p110</item>
     <item key="NCFG">535</item>
+    <item key="NESTED" defined="false"></item>
     <item key="PHASER">1</item>
     <item key="PID">rho_proj3</item>
     <item key="QUARK_MOD" defined="false"></item>
     <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D2B2P_mom2</item>
+    <item key="RECON_VERSION">single_meson</item>
+    <item key="RECON_WS" defined="false"></item>
     <item key="REP">D2B2</item>
     <item key="REPSTEM">H1D2B2</item>
     <item key="SPIN">1</item>
@@ -125,16 +143,19 @@
    </hashref>
   </item>
   <item key="6">
-   <hashref blessed_package="OPparams" memory_address="0x171f318">
+   <hashref blessed_package="OPparams" memory_address="0xf11370">
     <item key="ENERGY">0.53821 0.00433672</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID">1</item>
     <item key="MOM">p111</item>
     <item key="NCFG">535</item>
+    <item key="NESTED" defined="false"></item>
     <item key="PHASER">1</item>
     <item key="PID">rho_proj3</item>
     <item key="QUARK_MOD" defined="false"></item>
     <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D3A1P_mom3</item>
+    <item key="RECON_VERSION">single_meson</item>
+    <item key="RECON_WS" defined="false"></item>
     <item key="REP">D3A1</item>
     <item key="REPSTEM">H0D3A1</item>
     <item key="SPIN">1</item>
@@ -145,16 +166,19 @@
    </hashref>
   </item>
   <item key="7">
-   <hashref blessed_package="OPparams" memory_address="0x171f4b0">
+   <hashref blessed_package="OPparams" memory_address="0xf11550">
     <item key="ENERGY">0.530825 0.00599674</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID">1</item>
     <item key="MOM">p111</item>
     <item key="NCFG">535</item>
+    <item key="NESTED" defined="false"></item>
     <item key="PHASER">1</item>
     <item key="PID">rho_proj3</item>
     <item key="QUARK_MOD" defined="false"></item>
     <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D3E2P_mom3</item>
+    <item key="RECON_VERSION">single_meson</item>
+    <item key="RECON_WS" defined="false"></item>
     <item key="REP">D3E2</item>
     <item key="REPSTEM">H1D3E2</item>
     <item key="SPIN">1</item>
@@ -165,16 +189,19 @@
    </hashref>
   </item>
   <item key="8">
-   <hashref blessed_package="OPparams" memory_address="0x171f648">
+   <hashref blessed_package="OPparams" memory_address="0xf11730">
     <item key="ENERGY">0.546594 0.00474067</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID">1</item>
     <item key="MOM">p200</item>
     <item key="NCFG">535</item>
+    <item key="NESTED" defined="false"></item>
     <item key="PHASER">1</item>
     <item key="PID">rho_proj3</item>
     <item key="QUARK_MOD" defined="false"></item>
     <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D4A1P_mom4</item>
+    <item key="RECON_VERSION">single_meson</item>
+    <item key="RECON_WS" defined="false"></item>
     <item key="REP">D4A1</item>
     <item key="REPSTEM">H0D4A1</item>
     <item key="SPIN">1</item>
@@ -185,16 +212,19 @@
    </hashref>
   </item>
   <item key="9">
-   <hashref blessed_package="OPparams" memory_address="0x171f7e0">
+   <hashref blessed_package="OPparams" memory_address="0xf11910">
     <item key="ENERGY">0.546894 0.00583221</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID">1</item>
     <item key="MOM">p200</item>
     <item key="NCFG">535</item>
+    <item key="NESTED" defined="false"></item>
     <item key="PHASER">1</item>
     <item key="PID">rho_proj3</item>
     <item key="QUARK_MOD" defined="false"></item>
     <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D4E2P_mom4</item>
+    <item key="RECON_VERSION">single_meson</item>
+    <item key="RECON_WS" defined="false"></item>
     <item key="REP">D4E2</item>
     <item key="REPSTEM">H1D4E2</item>
     <item key="SPIN">1</item>

@@ -6,9 +6,6 @@
 #
 
 
-####### NB: this state (the hybrid) was a bit difficult to extract
-#           and was not always pulled from the same t0 as the 
-#           other vector states 
 
 use strict; 
 use OPparams; 
@@ -17,7 +14,7 @@ use QuarkModelAssign;
 
 my $basedir = dirname($0); 
 
-require "${basedir}/OPparams.work.pl";
+require "${basedir}/OPparams.work.multiparticle.pl";
 
 my @all_ops = (); 
 
@@ -211,15 +208,13 @@ my @all_ops = ();
 
 
   my @extracts = (); 
+  my @list_extracts = (); 
   foreach my $op (@all_operators)
   {
-    push @extracts,  &run_extract_all_v_coeffs_svd($op); 
+    push @list_extracts,  &run_extract_all_v_coeffs_svd($op); 
   }
 
-  my $listfile = &convert_proj_to_xml(\@extracts,"rho_proj3"); 
-
-  &make_proj_plots($listfile);
-
+  my $listfile = &finish_proj_xml(\@extracts,\@list_extracts,"rho_proj3"); 
+  &make_proj_plots(\@list_extracts,"rho_proj3"); 
   &write_radmat_xml(\@all_operators); 
-
   &serialize_ops_list( "rho_proj3.perl.xml" , \@all_operators ); 

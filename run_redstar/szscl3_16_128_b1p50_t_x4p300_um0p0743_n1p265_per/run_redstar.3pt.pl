@@ -59,7 +59,29 @@ $param->diagnostic_level(0);
 # did we already make a bunch of unsmeared nodes? if so where are they 
 my @unsmeared_nodes = ();
 my $lustre_stem = $param->cache_dir() . "/" . $param->stem() ."/gen_props/gen_prop_dbs/dt${dt}/";
-push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.canon.sdb" . $seqno ; 
+
+# dt=20 
+if( $dt == 20 )
+{
+  push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.canon.sdb" . $seqno ; 
+}
+elsif ( $dt == 24 ) 
+{
+  die("dt =24 not implemented"); 
+}
+elsif ( ($dt == 12) || ($dt == 16) || ($dt ==28) || ($dt == 32) || ($dt == 36) ) 
+{
+# dt=12,16,28
+  push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p000.redstar7.sdb" . $seqno ; 
+  push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p100.redstar7.sdb" . $seqno ; 
+  push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p110.redstar7.sdb" . $seqno ; 
+  push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p111.redstar7.sdb" . $seqno ; 
+  push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p200.redstar7.sdb" . $seqno ; 
+}
+else
+{
+  die("I dont know what to do with dt=$dt"); 
+}
 
 # this will override the redstar xml printing and try to copy @unsmeared_nodes up to scratch
 $param->unsmeared_node_list(\@unsmeared_nodes); 
@@ -67,6 +89,7 @@ $param->unsmeared_node_list(\@unsmeared_nodes);
 # write out xml 
 my $redxml = $param->write_redstar_xml(); 
 my $mesonxml = $param->write_meson_hadron_node_ini_xml();
+
 
 # run gen graph 
 &run_redstar_gen_graph($redxml,$outpath."/".basename($redxml).".gen.out"," ");
@@ -101,7 +124,7 @@ $dest_corr .= $mat;
 #}
 
 #$dest_corr .= "/" . $param->stem() . ".test.sdb" . $param->seqno(); 
-$dest_corr .= "/" . $param->stem() . ".qq_0-4.corr5.sdb" . $param->seqno(); 
+$dest_corr .= "/" . $param->stem() . ".qq_0-4.corr6.sdb" . $param->seqno(); 
 $param->copy_back_rename_rcp($scratch_corr,$dest_corr);
 
 exit ( 0 ) ; 

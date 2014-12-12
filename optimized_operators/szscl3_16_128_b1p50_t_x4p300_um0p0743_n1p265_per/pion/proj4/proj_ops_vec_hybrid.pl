@@ -13,7 +13,7 @@ use QuarkModelAssign;
 
 my $basedir = dirname($0); 
 
-require "${basedir}/OPparams.work.pl";
+require "${basedir}/OPparams.work.multiparticle.pl";
 
 my @all_ops = (); 
 
@@ -27,9 +27,9 @@ my @all_ops = ();
   $pion_proj4_p000_T1->ncfg(535);
   $pion_proj4_p000_T1->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
   $pion_proj4_p000_T1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/T1mM");
-  $pion_proj4_p000_T1->t0(8);
+  $pion_proj4_p000_T1->t0(4);
   $pion_proj4_p000_T1->state(0); 
-  $pion_proj4_p000_T1->tz(9);
+  $pion_proj4_p000_T1->tz(10);
   $pion_proj4_p000_T1->phaser(1.);
   $pion_proj4_p000_T1->hybrid(1);
   $pion_proj4_p000_T1->spin(1);
@@ -44,7 +44,7 @@ my @all_ops = ();
   $pion_proj4_p100_H0D4A1->ncfg(535);
   $pion_proj4_p100_H0D4A1->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
   $pion_proj4_p100_H0D4A1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D4A1M_mom1");
-  $pion_proj4_p100_H0D4A1->t0(9);
+  $pion_proj4_p100_H0D4A1->t0(5);
   $pion_proj4_p100_H0D4A1->state(3); 
   $pion_proj4_p100_H0D4A1->tz(10);
   $pion_proj4_p100_H0D4A1->phaser(1.);
@@ -194,15 +194,13 @@ my @all_ops = ();
 
 
   my @extracts = (); 
+  my @list_extracts = ();
   foreach my $op (@all_operators)
   {
-    push @extracts,  &run_extract_all_v_coeffs_svd($op); 
+    push @list_extracts,  &run_extract_all_v_coeffs_svd($op); 
   }
 
-  my $listfile = &convert_proj_to_xml(\@extracts,"pion_proj4"); 
-
-  &make_proj_plots($listfile);
-
+  &make_proj_plots(\@list_extracts,"pion_proj4"); 
+  my $listfile = &finish_proj_xml(\@extracts,\@list_extracts,"pion_proj4"); 
   &write_radmat_xml(\@all_operators); 
-  
   &serialize_ops_list( "pion_proj4.perl.xml" , \@all_operators ); 

@@ -250,7 +250,7 @@ sub write_mass_overlap_xml
   $ws_factor = $self->calculate_weight_shift($massf) if( $self->recon_ws()) ;
   my $post_proj = $self->calculate_post_proj_weight($massf);
 
-  my $overlap_command = "ensbc '$zf = 2 * $ws_factor * $massf / $post_proj'";
+  my $overlap_command = "ensbc '$zf = 2 * $ws_factor * $massf * $post_proj'";
   system($overlap_command) == 0 || die("cant do $overlap_command"); 
   
   # move back out 

@@ -1,7 +1,7 @@
 <perldata>
- <arrayref memory_address="0x26da490">
+ <arrayref memory_address="0x1395e00">
   <item key="0">
-   <hashref blessed_package="OPparams" memory_address="0x20c56f8">
+   <hashref blessed_package="OPparams" memory_address="0xd808e8">
     <item key="ENERGY">0.216091 0.000200153</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
@@ -11,7 +11,7 @@
     <item key="PHASER">-1</item>
     <item key="PID">rho_proj0</item>
     <item key="QUARK_MOD">
-     <hashref blessed_package="QuarkModel" memory_address="0x26b8258">
+     <hashref blessed_package="QuarkModel" memory_address="0x1373bf8">
       <item key="PAR">^{3}S_{1}</item>
      </hashref>
     </item>
@@ -28,7 +28,7 @@
    </hashref>
   </item>
   <item key="1">
-   <hashref blessed_package="OPparams" memory_address="0x26b82b8">
+   <hashref blessed_package="OPparams" memory_address="0x1373c58">
     <item key="ENERGY">0.243065 0.000200939</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
@@ -51,8 +51,8 @@
    </hashref>
   </item>
   <item key="2">
-   <hashref blessed_package="OPparams" memory_address="0x26da7a8">
-    <item key="ENERGY">0.243727 0.00023986</item>
+   <hashref blessed_package="OPparams" memory_address="0x1396118">
+    <item key="ENERGY">0.243782 0.000230619</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p100</item>
@@ -68,13 +68,13 @@
     <item key="REPSTEM">H1D4E2</item>
     <item key="SPIN">1</item>
     <item key="STATE">0</item>
-    <item key="T0">7</item>
+    <item key="T0">6</item>
     <item key="TWOIZ">2</item>
-    <item key="TZ">10</item>
+    <item key="TZ">9</item>
    </hashref>
   </item>
   <item key="3">
-   <hashref blessed_package="OPparams" memory_address="0x26b8450">
+   <hashref blessed_package="OPparams" memory_address="0x1373df0">
     <item key="ENERGY">0.26736 0.000261817</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
@@ -93,12 +93,12 @@
     <item key="STATE">0</item>
     <item key="T0">7</item>
     <item key="TWOIZ">2</item>
-    <item key="TZ">12</item>
+    <item key="TZ">9</item>
    </hashref>
   </item>
   <item key="4">
-   <hashref blessed_package="OPparams" memory_address="0x26b8630">
-    <item key="ENERGY">0.268607 0.000285609</item>
+   <hashref blessed_package="OPparams" memory_address="0x1373fd0">
+    <item key="ENERGY">0.268607 0.00029159</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p110</item>
@@ -114,13 +114,13 @@
     <item key="REPSTEM">H1D2B1</item>
     <item key="SPIN">1</item>
     <item key="STATE">0</item>
-    <item key="T0">6</item>
+    <item key="T0">7</item>
     <item key="TWOIZ">2</item>
-    <item key="TZ">8</item>
+    <item key="TZ">10</item>
    </hashref>
   </item>
   <item key="5">
-   <hashref blessed_package="OPparams" memory_address="0x26b8810">
+   <hashref blessed_package="OPparams" memory_address="0x13741b0">
     <item key="ENERGY">0.26893 0.000305017</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
@@ -143,7 +143,7 @@
    </hashref>
   </item>
   <item key="6">
-   <hashref blessed_package="OPparams" memory_address="0x26b89f0">
+   <hashref blessed_package="OPparams" memory_address="0x1374390">
     <item key="ENERGY">0.290493 0.000256404</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
@@ -162,12 +162,12 @@
     <item key="STATE">0</item>
     <item key="T0">6</item>
     <item key="TWOIZ">2</item>
-    <item key="TZ">12</item>
+    <item key="TZ">9</item>
    </hashref>
   </item>
   <item key="7">
-   <hashref blessed_package="OPparams" memory_address="0x26b8bd0">
-    <item key="ENERGY">0.291966 0.000366188</item>
+   <hashref blessed_package="OPparams" memory_address="0x1374570">
+    <item key="ENERGY">0.291831 0.000341955</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p111</item>
@@ -183,14 +183,14 @@
     <item key="REPSTEM">H1D3E2</item>
     <item key="SPIN">1</item>
     <item key="STATE">0</item>
-    <item key="T0">7</item>
+    <item key="T0">6</item>
     <item key="TWOIZ">2</item>
-    <item key="TZ">11</item>
+    <item key="TZ">9</item>
    </hashref>
   </item>
   <item key="8">
-   <hashref blessed_package="OPparams" memory_address="0x26b8db0">
-    <item key="ENERGY">0.309276 0.000348045</item>
+   <hashref blessed_package="OPparams" memory_address="0x1374750">
+    <item key="ENERGY">0.309387 0.000338735</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p200</item>
@@ -206,14 +206,14 @@
     <item key="REPSTEM">H0D4A1</item>
     <item key="SPIN">1</item>
     <item key="STATE">0</item>
-    <item key="T0">7</item>
+    <item key="T0">6</item>
     <item key="TWOIZ">2</item>
-    <item key="TZ">11</item>
+    <item key="TZ">9</item>
    </hashref>
   </item>
   <item key="9">
-   <hashref blessed_package="OPparams" memory_address="0x26b8f90">
-    <item key="ENERGY">0.309407 0.00135456</item>
+   <hashref blessed_package="OPparams" memory_address="0x1374930">
+    <item key="ENERGY">0.31139 0.000466525</item>
     <item key="ENSEMBLE">szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p200</item>
@@ -229,9 +229,9 @@
     <item key="REPSTEM">H1D4E2</item>
     <item key="SPIN">1</item>
     <item key="STATE">0</item>
-    <item key="T0">5</item>
+    <item key="T0">6</item>
     <item key="TWOIZ">2</item>
-    <item key="TZ">13</item>
+    <item key="TZ">9</item>
    </hashref>
   </item>
  </arrayref>
