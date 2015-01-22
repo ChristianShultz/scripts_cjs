@@ -1,14 +1,14 @@
 <perldata>
- <arrayref memory_address="0x1184a80">
+ <arrayref memory_address="0x12da448">
   <item key="0">
-   <hashref blessed_package="OPparams" memory_address="0x10fd3e8">
+   <hashref blessed_package="OPparams" memory_address="0xcef3e8">
     <item key="ENERGY">0.190759 0.00108131</item>
     <item key="ENSEMBLE">szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p100</item>
     <item key="NCFG">600</item>
     <item key="NESTED">
-     <arrayref memory_address="0x16eb238">
+     <arrayref memory_address="0x12da718">
       <item key="0">pipi_I1.D4.p001.xml</item>
       <item key="1">single.I1.D4.p001.xml</item>
      </arrayref>
@@ -29,14 +29,14 @@
    </hashref>
   </item>
   <item key="1">
-   <hashref blessed_package="OPparams" memory_address="0x16eb280">
+   <hashref blessed_package="OPparams" memory_address="0x12b6bc8">
     <item key="ENERGY">0.221673 0.00171399</item>
     <item key="ENSEMBLE">szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p110</item>
     <item key="NCFG">600</item>
     <item key="NESTED">
-     <arrayref memory_address="0x16eb460">
+     <arrayref memory_address="0x12b6da8">
       <item key="0">pipi_I1.D2.p011.xml</item>
       <item key="1">single.I1.D2.p011.xml</item>
      </arrayref>
@@ -53,7 +53,7 @@
     <item key="STATE">5</item>
     <item key="T0">8</item>
     <item key="TWOIZ">2</item>
-    <item key="TZ">17</item>
+    <item key="TZ">11</item>
    </hashref>
   </item>
  </arrayref>

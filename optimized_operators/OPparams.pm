@@ -252,6 +252,8 @@ sub write_mass_overlap_xml
 
   my $overlap_command = "ensbc '$zf = 2 * $ws_factor * $massf * $post_proj'";
   system($overlap_command) == 0 || die("cant do $overlap_command"); 
+
+  chmod 0660 , $zf; 
   
   # move back out 
   chdir $local_base_dir || die ("unable to move $local_base_dir"); 
@@ -329,6 +331,8 @@ sub calculate_weight_shift
   # close the last multiply with identity 
   $ensbc_command .= " 1.'";
   system($ensbc_command) == 0 || die ("could not exe $ensbc_command"); 
+
+  chmod 0660 , $factor; 
 
   return $factor; 
 }
