@@ -1,1 +1,2 @@
-rho_proj2_p000_T1 has unexpected phase , got 0.965271 +/- 0.371161, phaser -1
+pion_proj0_p100_H0D4A2 has unexpected phase , got -0.494387 +/- 0.000997606, phaser 1
+pion_proj0_p200_H0D4A2 has unexpected phase , got -0.388141 +/- 0.0249745, phaser 1

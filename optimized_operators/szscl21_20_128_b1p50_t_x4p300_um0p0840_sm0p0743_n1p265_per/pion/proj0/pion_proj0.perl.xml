@@ -1,8 +1,8 @@
 <perldata>
- <arrayref memory_address="0x22bcb10">
+ <arrayref memory_address="0x20b8498">
   <item key="0">
-   <hashref blessed_package="OPparams" memory_address="0x221b908">
-    <item key="ENERGY" defined="false"></item>
+   <hashref blessed_package="OPparams" memory_address="0x1abc408">
+    <item key="ENERGY">0.069694 0.000188962</item>
     <item key="ENSEMBLE">szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p000</item>
@@ -24,8 +24,8 @@
    </hashref>
   </item>
   <item key="1">
-   <hashref blessed_package="OPparams" memory_address="0x2813210">
-    <item key="ENERGY" defined="false"></item>
+   <hashref blessed_package="OPparams" memory_address="0x20b8768">
+    <item key="ENERGY">0.114284 0.000171928</item>
     <item key="ENSEMBLE">szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p100</item>
@@ -47,8 +47,8 @@
    </hashref>
   </item>
   <item key="2">
-   <hashref blessed_package="OPparams" memory_address="0x28133f0">
-    <item key="ENERGY" defined="false"></item>
+   <hashref blessed_package="OPparams" memory_address="0x20b8948">
+    <item key="ENERGY">0.146222 0.000249208</item>
     <item key="ENSEMBLE">szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p110</item>
@@ -70,8 +70,8 @@
    </hashref>
   </item>
   <item key="3">
-   <hashref blessed_package="OPparams" memory_address="0x28135d0">
-    <item key="ENERGY" defined="false"></item>
+   <hashref blessed_package="OPparams" memory_address="0x20b8b28">
+    <item key="ENERGY">0.172752 0.000331019</item>
     <item key="ENSEMBLE">szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p111</item>
@@ -93,8 +93,8 @@
    </hashref>
   </item>
   <item key="4">
-   <hashref blessed_package="OPparams" memory_address="0x2223618">
-    <item key="ENERGY" defined="false"></item>
+   <hashref blessed_package="OPparams" memory_address="0x20b8d08">
+    <item key="ENERGY">0.194445 0.000401393</item>
     <item key="ENSEMBLE">szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265</item>
     <item key="HYBRID" defined="false"></item>
     <item key="MOM">p200</item>
