@@ -624,8 +624,9 @@ sub run_extract_all_v_coeffs_xml
   close OP;
 
   # for some reason they go 0644 for me..
-  chmod 0755 , $exe;
-  chmod 0755 , $script; 
+  chmod 0770 , $exe;
+  chmod 0770 , $script; 
+  chmod 0660 , "$outfile.log";
 
   system ( " ./${script} " ) == 0 || die ( "some problem for $run \n in $destdir \n" ) ; 
 
@@ -686,8 +687,9 @@ sub run_extract_all_v_coeffs_svd
   close OP;
 
   # for some reason they go 0644 for me..
-  chmod 0755 , $exe;
-  chmod 0755 , $script; 
+  chmod 0770 , $exe;
+  chmod 0770 , $script; 
+  chmod 0660 , $outfile; 
 
   system ( " ./${script} " ) == 0 || die ( "some problem for $run \n in $destdir \n" ) ; 
 
