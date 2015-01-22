@@ -310,6 +310,9 @@ sub calculate_weight_shift
   my ($self,$massf) = @_;  
   my $recon_dir = $self->recon_dir(); 
 
+  #debug 
+  print "calculating weight-shift-correct for:\n$recon_dir\n";
+
   my $factor = "ws_factor.jack";
 
   # determine the number of weight shifts that were done 
@@ -324,14 +327,21 @@ sub calculate_weight_shift
     my $energy =  `print_xpath $recon_dir/sfit.ini.xml "/FitIniParams/weightShiftCorrectProps/E_dt/elem[${i}]/weight_energy"` ; 
     my $shift =  `print_xpath $recon_dir/sfit.ini.xml "/FitIniParams/weightShiftCorrectProps/E_dt/elem[${i}]/shift_tslices"` ; 
 
+    #strip newline 
+    chomp $energy; 
+    chomp $shift; 
+
     # this is the extra normalization that comes from weighting shifting 
     $ensbc_command .= " sqrt( 1 - exp( - ($massf - $energy) * $shift) ) *"; 
   }
 
-  # close the last multiply with identity 
-  $ensbc_command .= " 1.'";
-  system($ensbc_command) == 0 || die ("could not exe $ensbc_command"); 
+  # remove the last mult *
+  chop $ensbc_command;
+  # close the single quote
+  $ensbc_command .= "'"; 
 
+  system($ensbc_command) == 0 || die ("could not exe $ensbc_command"); 
+  
   chmod 0660 , $factor; 
 
   return $factor; 
