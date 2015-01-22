@@ -170,7 +170,7 @@ my @all_ops = ();
 #  $rho_proj0_p200_H0D4A1->ncfg(603);
 #  $rho_proj0_p200_H0D4A1->spin(1);
 #  $rho_proj0_p200_H0D4A1->ensemble("szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265"); 
-#  $rho_proj0_p200_H0D4A1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per/redstar/rho/rho_ff/ws_larger/");
+#  $rho_proj0_p200_H0D4A1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per/redstar/rho/rho_ff/ws_larger/D4A1m_p002_wr");
 #  $rho_proj0_p200_H0D4A1->t0(6);
 #  $rho_proj0_p200_H0D4A1->state(0); 
 #  $rho_proj0_p200_H0D4A1->tz(7);
@@ -178,7 +178,7 @@ my @all_ops = ();
 #  $rho_proj0_p200_H0D4A1->recon_version("two_particle"); 
 #  $rho_proj0_p200_H0D4A1->nested(undef); 
 #  $rho_proj0_p200_H0D4A1->recon_ws("true"); 
-#
+
 #  my $rho_proj0_p200_H1D4E2 = OPparams->new();
 #  $rho_proj0_p200_H1D4E2->pid("rho_proj0");
 #  $rho_proj0_p200_H1D4E2->irrep("D4E2");
@@ -207,7 +207,7 @@ my @all_ops = ();
   push @all_operators , $rho_proj0_p110_H1D2B2; 
   push @all_operators , $rho_proj0_p111_H0D3A1; 
   push @all_operators , $rho_proj0_p111_H1D3E2; 
-#  push @all_operators , $rho_proj0_p200_H0D4A1; 
+# push @all_operators , $rho_proj0_p200_H0D4A1; 
 #  push @all_operators , $rho_proj0_p200_H1D4E2; 
 
 

@@ -1,0 +1,119 @@
+<perldata>
+ <arrayref memory_address="0x1f24858">
+  <item key="0">
+   <hashref blessed_package="OPparams" memory_address="0x19306b8">
+    <item key="ENERGY">0.0694385 0.000157544</item>
+    <item key="ENSEMBLE">szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265</item>
+    <item key="HYBRID" defined="false"></item>
+    <item key="MOM">p000</item>
+    <item key="NCFG">603</item>
+    <item key="NESTED" defined="false"></item>
+    <item key="PHASER">1</item>
+    <item key="PID">pion_proj10</item>
+    <item key="QUARK_MOD" defined="false"></item>
+    <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per/redstar/rho/rho_ff/ws_larger/pion_rest</item>
+    <item key="RECON_VERSION">single_meson</item>
+    <item key="RECON_WS" defined="false"></item>
+    <item key="REP">A1</item>
+    <item key="REPSTEM">A1</item>
+    <item key="SPIN">0</item>
+    <item key="STATE">0</item>
+    <item key="T0">9</item>
+    <item key="TWOIZ">2</item>
+    <item key="TZ">15</item>
+   </hashref>
+  </item>
+  <item key="1">
+   <hashref blessed_package="OPparams" memory_address="0x1f24b28">
+    <item key="ENERGY">0.114251 0.000167111</item>
+    <item key="ENSEMBLE">szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265</item>
+    <item key="HYBRID" defined="false"></item>
+    <item key="MOM">p100</item>
+    <item key="NCFG">603</item>
+    <item key="NESTED" defined="false"></item>
+    <item key="PHASER">1</item>
+    <item key="PID">pion_proj10</item>
+    <item key="QUARK_MOD" defined="false"></item>
+    <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per/redstar/rho/rho_ff/ws_larger/pion_boosted/D4A2p.p001</item>
+    <item key="RECON_VERSION">single_meson</item>
+    <item key="RECON_WS" defined="false"></item>
+    <item key="REP">D4A2</item>
+    <item key="REPSTEM">H0D4A2</item>
+    <item key="SPIN">0</item>
+    <item key="STATE">0</item>
+    <item key="T0">8</item>
+    <item key="TWOIZ">2</item>
+    <item key="TZ">15</item>
+   </hashref>
+  </item>
+  <item key="2">
+   <hashref blessed_package="OPparams" memory_address="0x1937ec0">
+    <item key="ENERGY">0.146124 0.000242258</item>
+    <item key="ENSEMBLE">szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265</item>
+    <item key="HYBRID" defined="false"></item>
+    <item key="MOM">p110</item>
+    <item key="NCFG">603</item>
+    <item key="NESTED" defined="false"></item>
+    <item key="PHASER">1</item>
+    <item key="PID">pion_proj10</item>
+    <item key="QUARK_MOD" defined="false"></item>
+    <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per/redstar/rho/rho_ff/ws_larger/pion_boosted/D2A2p.p011</item>
+    <item key="RECON_VERSION">single_meson</item>
+    <item key="RECON_WS" defined="false"></item>
+    <item key="REP">D2A2</item>
+    <item key="REPSTEM">H0D2A2</item>
+    <item key="SPIN">0</item>
+    <item key="STATE">0</item>
+    <item key="T0">8</item>
+    <item key="TWOIZ">2</item>
+    <item key="TZ">12</item>
+   </hashref>
+  </item>
+  <item key="3">
+   <hashref blessed_package="OPparams" memory_address="0x19380a0">
+    <item key="ENERGY">0.172226 0.00034318</item>
+    <item key="ENSEMBLE">szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265</item>
+    <item key="HYBRID" defined="false"></item>
+    <item key="MOM">p111</item>
+    <item key="NCFG">603</item>
+    <item key="NESTED" defined="false"></item>
+    <item key="PHASER">1</item>
+    <item key="PID">pion_proj10</item>
+    <item key="QUARK_MOD" defined="false"></item>
+    <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per/redstar/rho/rho_ff/ws_larger/pion_boosted/D3A2p.p111</item>
+    <item key="RECON_VERSION">single_meson</item>
+    <item key="RECON_WS" defined="false"></item>
+    <item key="REP">D3A2</item>
+    <item key="REPSTEM">H0D3A2</item>
+    <item key="SPIN">0</item>
+    <item key="STATE">0</item>
+    <item key="T0">7</item>
+    <item key="TWOIZ">2</item>
+    <item key="TZ">13</item>
+   </hashref>
+  </item>
+  <item key="4">
+   <hashref blessed_package="OPparams" memory_address="0x1938280">
+    <item key="ENERGY">0.194568 0.000352207</item>
+    <item key="ENSEMBLE">szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265</item>
+    <item key="HYBRID" defined="false"></item>
+    <item key="MOM">p200</item>
+    <item key="NCFG">603</item>
+    <item key="NESTED" defined="false"></item>
+    <item key="PHASER">1</item>
+    <item key="PID">pion_proj10</item>
+    <item key="QUARK_MOD" defined="false"></item>
+    <item key="RECONDIR">/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per/redstar/rho/rho_ff/ws_larger/pion_boosted/D4A2p.p002</item>
+    <item key="RECON_VERSION">single_meson</item>
+    <item key="RECON_WS" defined="false"></item>
+    <item key="REP">D4A2</item>
+    <item key="REPSTEM">H0D4A2</item>
+    <item key="SPIN">0</item>
+    <item key="STATE">0</item>
+    <item key="T0">7</item>
+    <item key="TWOIZ">2</item>
+    <item key="TZ">13</item>
+   </hashref>
+  </item>
+ </arrayref>
+</perldata>
