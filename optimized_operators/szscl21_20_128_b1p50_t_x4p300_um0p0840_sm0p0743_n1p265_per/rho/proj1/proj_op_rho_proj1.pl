@@ -84,7 +84,7 @@ my @all_ops = ();
    $rho_proj1_p110_H0D2A1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per/redstar/rho/rho_ff/ws_larger/D2A1m_p011_wr");
    $rho_proj1_p110_H0D2A1->t0(8);
    $rho_proj1_p110_H0D2A1->state(5); 
-   $rho_proj1_p110_H0D2A1->tz(17);
+   $rho_proj1_p110_H0D2A1->tz(11);
    $rho_proj1_p110_H0D2A1->phaser(1.);
    $rho_proj1_p110_H0D2A1->recon_version("two_particle"); 
    $rho_proj1_p110_H0D2A1->nested(["pipi_I1.D2.p011.xml","single.I1.D2.p011.xml"]); 

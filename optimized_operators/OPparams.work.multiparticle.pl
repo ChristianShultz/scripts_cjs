@@ -580,6 +580,8 @@ sub copy_file
 #
 ##
 ###
+#
+
 ###########
 # run the nested extract 
 sub run_extract_all_v_coeffs_xml
@@ -589,7 +591,8 @@ sub run_extract_all_v_coeffs_xml
   chomp $base;  
   my $destdir = $op->recon_dir(); 
 
-  my $loc = "/u/home/shultz/scripts_cjs/optimized_operators/";
+#  my $loc = "/u/home/rbriceno/git/scripts_cjs/optimized_operators/";
+  my $loc = "$ENV{'HOME'}/git/scripts_cjs/optimized_operators/";
   my $exe = $loc ."extract_all_v_coeffs_xml.pl";
   my $t0 = $op->t0(); 
   my $tz = $op->tz(); 
@@ -648,7 +651,7 @@ sub run_extract_all_v_coeffs_svd
   chomp $base;  
   my $destdir = $op->recon_dir(); 
 
-  my $loc = "/u/home/shultz/optimized_operators/";
+  my $loc = "$ENV{'HOME'}/git/scripts_cjs/optimized_operators/";
   my $exe = $loc ."extract_all_v_coeffs_svd.pl";
   my $t0 = $op->t0(); 
   my $tz = $op->tz(); 
@@ -745,7 +748,7 @@ sub finish_proj_xml
   if( ! -z $listf ) 
   {
     my $tmp_xml = $listf . ".xml";
-    my $loc = "/u/home/shultz/optimized_operators/";
+    my $loc = "$ENV{'HOME'}/git/scripts_cjs/optimized_operators/";
     my $exe = $loc . "convert_proj_list_to_irrep_op_xml.pl";
     die ("$exe not present") unless -f $exe;
     system (" cat $listf | ${exe} > $tmp_xml ") == 0 || die($_); 
@@ -798,7 +801,7 @@ sub make_proj_plots
 
   close OUT; 
 
-  my $loc = "/u/home/shultz/optimized_operators/";
+  my $loc = "$ENV{'HOME'}/git/scripts_cjs/optimized_operators/";
   my $exe = $loc . "plot_proj_op_coeffs.pl"; 
 
   die ( "$exe not present" ) unless -f $exe; 
