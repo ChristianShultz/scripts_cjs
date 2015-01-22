@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 
 <Params>
-  <mass_file>/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D2B1M_mom2/t08/MassJackFiles/mass_t0_8_reorder_state4.jack</mass_file>
-  <overlap_file>/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D2B1M_mom2/t08/MassJackFiles/operator_normalization_t0_8_reorder_state4.jack</overlap_file>
+  <mass_file>/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D2B1M_mom2/t05/MassJackFiles/mass_t0_5_reorder_state4.jack</mass_file>
+  <overlap_file>/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D2B1M_mom2/t05/MassJackFiles/operator_normalization_t0_5_reorder_state4.jack</overlap_file>
   <ncfg>535</ncfg>
   <resize>false</resize>
   <isProjected>true</isProjected>
@@ -11,7 +11,7 @@
   <dbname>pion_proj4_p110_H1D2B1.sdb</dbname>
   <pid>pion_proj4</pid>
   <LG>true</LG>
-  <t0_extract>8</t0_extract>
+  <t0_extract>5</t0_extract>
   <redstar>
     <CGs>
     </CGs>
