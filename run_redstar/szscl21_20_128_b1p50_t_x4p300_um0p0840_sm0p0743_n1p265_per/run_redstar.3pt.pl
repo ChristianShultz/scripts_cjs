@@ -88,7 +88,7 @@ my $scratch_corr = $param->scratch_seq_callback("output_sdb");
 my $dest_corr = $param->work_dir() . "/" . $param->stem(); 
 $dest_corr .= "/meson_3pt_redstar/unsmeared_insertion/";
 $dest_corr .= $mat;
-$dest_corr .= "/" . $param->stem() . ".rtopo_test2.sdb" . $param->seqno(); 
+$dest_corr .= "/" . $param->stem() . ".corr0.sdb" . $param->seqno(); 
 $param->copy_back_rename_rcp($scratch_corr,$dest_corr);
 
 exit ( 0 ) ; 

@@ -63,15 +63,23 @@ my $lustre_stem = $param->cache_dir() . "/" . $param->stem() ."/gen_props/gen_pr
 # dt=20 
 if( $dt == 20 )
 {
-  push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.canon.sdb" . $seqno ; 
+  # single tsrc, canonical 
+  #  push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.canon.sdb" . $seqno ; 
+
+  # set of unsmeared nodes, 4 tsources, canonical 
+  push @unsmeared_nodes, $lustre_stem . $param->stem() . ".canon.n64.t0_0_64.unsmeared_hadron_node.sdb" . $seqno; 
+  push @unsmeared_nodes, $lustre_stem . $param->stem() . ".canon.n64.t0_32_96.unsmeared_hadron_node.sdb" . $seqno; 
 }
 elsif ( $dt == 24 ) 
 {
-  die("dt =24 not implemented"); 
+  # dt = 24 -- 4 tsource canonical 
+  push @unsmeared_nodes, $lustre_stem . $param->stem() . ".canon.n64.t0_0_64.unsmeared_hadron_node.sdb" . $seqno; 
+  push @unsmeared_nodes, $lustre_stem . $param->stem() . ".canon.n64.t0_32_96.unsmeared_hadron_node.sdb" . $seqno; 
+
 }
 elsif ( ($dt == 12) || ($dt == 16) || ($dt ==28) || ($dt == 32) || ($dt == 36) ) 
 {
-# dt=12,16,28
+  # dt=12,16,28 -- single tsource, all momenta up to q.q < 5  
   push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p000.redstar7.sdb" . $seqno ; 
   push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p100.redstar7.sdb" . $seqno ; 
   push @unsmeared_nodes , $lustre_stem . $param->stem() . ".unsmeared_hadron_node.p110.redstar7.sdb" . $seqno ; 

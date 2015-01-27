@@ -634,18 +634,26 @@ sub prop_dbs{
 # don't need diag guys since no bubbles
 
 
-  my $loc = $self->cache_dir() . "/" . $self->stem() . "/prop_mod/";
-  my $f = $loc . $self->stem() . ".prop.n" . $self->num_vecs(); 
-  $f .= ".t0_";
-  my $tail = ".mod" . $self->seqno(); 
+#  my $loc = $self->cache_dir() . "/" . $self->stem() . "/prop_mod/";
+#  my $f = $loc . $self->stem() . ".prop.n" . $self->num_vecs(); 
+#  $f .= ".t0_";
+#  my $tail = ".mod" . $self->seqno(); 
+  #
+#  push @prop_dbs , $f . "0" . $tail ;
+#  
+#  foreach my $t (@{$self->delta_t()})
+#  {
+#    push @prop_dbs , $f . $t . $tail ; 
+#  }
+  #
+  #
 
-  push @prop_dbs , $f . "0" . $tail ;
-  
-  foreach my $t (@{$self->delta_t()})
-  {
-    push @prop_dbs , $f . $t . $tail ; 
-  }
 
+
+# push(@prop_dbs, "$cache_dir/${stem}/prop_db/${stem}.prop.t0_1-125_inc4.sdb${seqno}");
+# push(@prop_dbs, "$cache_dir/${stem}/prop_db/${stem}.prop.t0_0-124_inc4.sdb${seqno}");
+# push(@prop_dbs, "$cache_dir/${stem}/prop_db/${stem}.prop.t0_2-126_inc4.sdb${seqno}");
+# push(@prop_dbs, "$cache_dir/${stem}/prop_db/${stem}.prop.t0_3-127_inc4.sdb${seqno}");
 
   my @scratch_dbs = ();
 
@@ -654,29 +662,29 @@ sub prop_dbs{
     push @scratch_dbs , $self->copy_file_to_scratch($db);
   }
 
-# push(@prop_dbs, "$cache_dir/${stem}/prop_db/${stem}.prop.t0_0-124_inc4.sdb${seqno}");
-# push(@prop_dbs, "$cache_dir/${stem}/prop_db/${stem}.prop.t0_1-125_inc4.sdb${seqno}");
-# push(@prop_dbs, "$cache_dir/${stem}/prop_db/${stem}.prop.t0_2-126_inc4.sdb${seqno}");
-# push(@prop_dbs, "$cache_dir/${stem}/prop_db/${stem}.prop.t0_3-127_inc4.sdb${seqno}");
-
   return \@scratch_dbs; 
 }
 
 sub peram_dbs
 {
   my $self = shift; 
-
-  my $loc = $self->cache_dir() . "/" . $self->stem() . "/prop_db/";
-  my $f = $loc . $self->stem() . ".prop.n" . $self->num_vecs(); 
-  $f .= ".t0_";
-  my $tail = ".sdb" . $self->seqno(); 
   my @prop_dbs = (); 
-  push @prop_dbs , $f . "0" . $tail ;
-  
-  foreach my $t (@{$self->delta_t()})
-  {
-    push @prop_dbs , $f . $t . $tail ; 
-  }
+
+#  my $loc = $self->cache_dir() . "/" . $self->stem() . "/prop_db/";
+#  my $f = $loc . $self->stem() . ".prop.n" . $self->num_vecs(); 
+#  $f .= ".t0_";
+#  my $tail = ".sdb" . $self->seqno(); 
+#  push @prop_dbs , $f . "0" . $tail ;
+#  
+#  foreach my $t (@{$self->delta_t()})
+#  {
+#    push @prop_dbs , $f . $t . $tail ; 
+#  }
+
+  my $loc = $self->cache_dir() . "/" . $self->stem() . "/prop_db/" . $self->stem();
+  my $tail = "sdb" . $self->seqno(); 
+  push(@prop_dbs, "$loc.prop.t0_0-124_inc4.$tail");
+
 
   my @scratch_dbs = ();
   foreach my $db (@prop_dbs)
@@ -698,7 +706,7 @@ sub meson_dbs
   my $cache_stem = "$cache_dir/${stem}/meson_db_dispmom/${stem}.meson.colorvec.";
   push @mdbs , $cache_stem . "1disp.sdb" . $self->seqno();
   push @mdbs , $cache_stem . "2disp.sdb" . $self->seqno();
- 
+
   # there seem to be multiple copies of this guy?? -- use only the cache guys
   # my $lhpc_dir = $self->lhpc_dir(); 
   # my $lhpc_stem = "$lhpc_dir/${stem}/meson_db_combined/${stem}.meson.colorvec.sdb";
