@@ -93,7 +93,7 @@ my @all_ops = ();
   $pion_proj4_p110_H1D2B1->ensemble("szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per"); 
   $pion_proj4_p110_H1D2B1->recon_dir("/work/JLabLQCD/LHPC/Spectrum/Clover/NF2+1/szscl3_16_128_b1p50_t_x4p300_um0p0743_n1p265_per/redstar/isovector/analysis/shultz/D2B1M_mom2");
   $pion_proj4_p110_H1D2B1->t0(5);
-  $pion_proj4_p110_H1D2B1->state(4); 
+  $pion_proj4_p110_H1D2B1->state(3); 
   $pion_proj4_p110_H1D2B1->tz(7);
   $pion_proj4_p110_H1D2B1->phaser(1.);
   $pion_proj4_p110_H1D2B1->hybrid(1);
