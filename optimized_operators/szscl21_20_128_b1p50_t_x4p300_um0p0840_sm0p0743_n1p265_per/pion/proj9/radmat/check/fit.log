@@ -44,3 +44,49 @@ correlation matrix of the fit parameters:
                m      a      
 m               1.000 
 a               0.816  1.000 
+
+
+*******************************************************************************
+Wed Jan 28 09:28:33 2015
+
+
+FIT:    data read from 'dispn_gnu.dat' using 1:2
+	x range restricted to [-0.100000 : 4.10000]
+        #datapoints = 5
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 6.99716           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.45552
+
+initial set of free parameter values
+
+m               = 1
+a               = 1
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 3.66476e-09
+rel. change during last iteration : -4.66146e-11
+
+degrees of freedom    (FIT_NDF)                        : 3
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 3.49512e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.22159e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+m               = 0.0693785        +/- 0.000195     (0.2811%)
+a               = 3.45503          +/- 0.002313     (0.06694%)
+
+
+correlation matrix of the fit parameters:
+
+               m      a      
+m               1.000 
+a               0.816  1.000 

@@ -5,7 +5,7 @@ set create_db = mass_overlap_db_create
 set merge_list = mass_overlap_sdbs.list
 set merge = mass_overlap_db_combine 
 
-set particle_db = pion_proj10.sdb 
+set particle_db = pion_proj9.sdb 
 
 # make the little guys 
 cat $xml | xargs -I qq $create_db qq

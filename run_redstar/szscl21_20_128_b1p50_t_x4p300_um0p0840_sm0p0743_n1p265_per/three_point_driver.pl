@@ -51,7 +51,9 @@ else
 
 #
 # output path 
-my $output_dir = "/u/home/shultz/shultz_volatile/$lattice/$mat"; 
+#RB
+#my $output_dir = "/u/home/shultz/shultz_volatile/$lattice/$mat"; 
+my $output_dir = "/u/home/rbriceno/rbriceno_volatile/$lattice/$mat"; 
 
 # check that it exists
 if ( ! -d $output_dir ) 

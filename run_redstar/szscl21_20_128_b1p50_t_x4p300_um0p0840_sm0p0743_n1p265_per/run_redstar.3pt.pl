@@ -39,7 +39,10 @@ $param->config_type("SZINQIO");
 
 my $lattice = "szscl21_20_128_b1p50_t_x4p300_um0p0840_sm0p0743_n1p265_per";
 $param->stem($lattice);
-my @proj_op = ("/u/home/shultz/optimized_operators/${lattice}/weights.${lattice}.xml");
+
+#RB
+#my @proj_op = ("/u/home/shultz/optimized_operators/${lattice}/weights.${lattice}.xml");
+my @proj_op = ("/u/home/rbriceno/git/scripts_cjs/optimized_operators/${lattice}/weights.${lattice}.xml");
 $param->proj_op_xml(\@proj_op);
 $param->convertUDtoL("true");   # this should be false if UD->S is true
 $param->convertUDtoS("false");    # requires redstar version 5 or better 

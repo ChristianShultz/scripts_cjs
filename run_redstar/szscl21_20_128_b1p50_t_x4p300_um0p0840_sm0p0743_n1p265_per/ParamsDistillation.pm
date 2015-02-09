@@ -665,15 +665,23 @@ sub meson_dbs
 
   my $stem = $self->stem(); 
   my $cache_dir = $self->cache_dir(); 
-  my $cache_stem = "$cache_dir/${stem}/meson_db_dispmom/${stem}.meson.colorvec.";
-  push @mdbs , $cache_stem . "1disp.sdb" . $self->seqno();
-  push @mdbs , $cache_stem . "2disp.sdb" . $self->seqno();
 
-  my $lhpc_dir = $self->lhpc_dir(); 
-  my $lhpc_stem = "$lhpc_dir/${stem}/meson_db_128/${stem}.meson.colorvec.sdb"; 
-  
-  push @mdbs , $lhpc_stem . $self->seqno(); 
- 
+  # disp
+#  my $cache_stem = "$cache_dir/${stem}/meson_db_dispmom/${stem}.meson.colorvec.";
+#  push @mdbs , $cache_stem . "1disp.sdb" . $self->seqno();
+#  push @mdbs , $cache_stem . "2disp.sdb" . $self->seqno();
+#
+#  my $lhpc_dir = $self->lhpc_dir(); 
+#  my $lhpc_stem = "$lhpc_dir/${stem}/meson_db_128/${stem}.meson.colorvec.sdb"; 
+#  
+#  push @mdbs , $lhpc_stem . $self->seqno(); 
+
+  # deriv
+  my $nv = $self->num_vecs();
+  my $cache_stem = "$cache_dir/${stem}/meson_db_deriv/${stem}.meson.deriv.n${nv}";
+  push @mdbs , $cache_stem . ".sdb" . $self->seqno();
+  push @mdbs , $cache_stem . ".mom.sdb" . $self->seqno();
+
   my @scratch_dbs = ();
 
   foreach my $db (@mdbs)
@@ -1719,8 +1727,9 @@ sub write_meson_hadron_node_ini_xml
   my $glue = $self->glue_dbs(); 
   my $tet = $self->tetraquark_dbs(); 
   open OUT , ">" , $file; 
-
-  $self->print_colorvec_header("false"); 
+  #RB
+  #$self->print_colorvec_header("false"); 
+  $self->print_colorvec_header("true"); 
   $self->print_colorvec_db_files(\@had_node_xmls,$peram,$bar,$mes,$glue,$tet,$shadop); 
   $self->print_colorvec_trailer();
 

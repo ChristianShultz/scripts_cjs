@@ -11,7 +11,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>pionxD0_J0__J0_A1</name>
+              <name>pion_pionxD0_J0__J0_A1</name>
               <smear/>
               <mom_type>0 0 0</mom_type>
             </elem>
@@ -24,7 +24,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>pion_2xD0_J0__J0_A1</name>
+              <name>pion_pion_2xD0_J0__J0_A1</name>
               <smear/>
               <mom_type>0 0 0</mom_type>
             </elem>
@@ -37,7 +37,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>b1xD1_J1__J0_A1</name>
+              <name>pion_b1xD1_J1__J0_A1</name>
               <smear/>
               <mom_type>0 0 0</mom_type>
             </elem>
@@ -50,7 +50,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>pionxD2_J0__J0_A1</name>
+              <name>pion_pionxD2_J0__J0_A1</name>
               <smear/>
               <mom_type>0 0 0</mom_type>
             </elem>
@@ -63,7 +63,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>pion_2xD2_J0__J0_A1</name>
+              <name>pion_pion_2xD2_J0__J0_A1</name>
               <smear/>
               <mom_type>0 0 0</mom_type>
             </elem>
@@ -76,7 +76,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>rhoxD2_J1__J0_A1</name>
+              <name>pion_rhoxD2_J1__J0_A1</name>
               <smear/>
               <mom_type>0 0 0</mom_type>
             </elem>
@@ -89,7 +89,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>rho_2xD2_J1__J0_A1</name>
+              <name>pion_rho_2xD2_J1__J0_A1</name>
               <smear/>
               <mom_type>0 0 0</mom_type>
             </elem>
@@ -102,7 +102,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>a0xD3_J131_J0__J0_A1</name>
+              <name>pion_a0xD3_J131_J0__J0_A1</name>
               <smear/>
               <mom_type>0 0 0</mom_type>
             </elem>
@@ -115,7 +115,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>a1xD3_J131_J1__J0_A1</name>
+              <name>pion_a1xD3_J131_J1__J0_A1</name>
               <smear/>
               <mom_type>0 0 0</mom_type>
             </elem>
@@ -128,7 +128,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>b1xD3_J130_J1__J0_A1</name>
+              <name>pion_b1xD3_J130_J1__J0_A1</name>
               <smear/>
               <mom_type>0 0 0</mom_type>
             </elem>
@@ -141,7 +141,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>b1xD3_J132_J1__J0_A1</name>
+              <name>pion_b1xD3_J132_J1__J0_A1</name>
               <smear/>
               <mom_type>0 0 0</mom_type>
             </elem>
@@ -154,7 +154,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>b1xD3_J132_J3__J4_A1</name>
+              <name>pion_b1xD3_J132_J3__J4_A1</name>
               <smear/>
               <mom_type>0 0 0</mom_type>
             </elem>
@@ -176,7 +176,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>pionxD0_J0__J0_H0D4A2</name>
+              <name>pion_pionxD0_J0__J0_H0D4A2</name>
               <smear/>
               <mom_type>1 0 0</mom_type>
             </elem>
@@ -189,7 +189,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>pion_2xD0_J0__J0_H0D4A2</name>
+              <name>pion_pion_2xD0_J0__J0_H0D4A2</name>
               <smear/>
               <mom_type>1 0 0</mom_type>
             </elem>
@@ -202,7 +202,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>a1xD0_J0__J1_H0D4A2</name>
+              <name>a_a1xD0_J0__J1_H0D4A2</name>
               <smear/>
               <mom_type>1 0 0</mom_type>
             </elem>
@@ -215,7 +215,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>rhoxD1_J1__J1_H0D4A2</name>
+              <name>a_rhoxD1_J1__J1_H0D4A2</name>
               <smear/>
               <mom_type>1 0 0</mom_type>
             </elem>
@@ -228,7 +228,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>rho_2xD1_J1__J1_H0D4A2</name>
+              <name>a_rho_2xD1_J1__J1_H0D4A2</name>
               <smear/>
               <mom_type>1 0 0</mom_type>
             </elem>
@@ -241,7 +241,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>b1xD1_J1__J0_H0D4A2</name>
+              <name>pion_b1xD1_J1__J0_H0D4A2</name>
               <smear/>
               <mom_type>1 0 0</mom_type>
             </elem>
@@ -254,7 +254,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>b1xD1_J1__J2_H0D4A2</name>
+              <name>pion_b1xD1_J1__J2_H0D4A2</name>
               <smear/>
               <mom_type>1 0 0</mom_type>
             </elem>
@@ -267,7 +267,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>pionxD2_J0__J0_H0D4A2</name>
+              <name>pion_pionxD2_J0__J0_H0D4A2</name>
               <smear/>
               <mom_type>1 0 0</mom_type>
             </elem>
@@ -280,7 +280,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>pion_2xD2_J0__J0_H0D4A2</name>
+              <name>pion_pion_2xD2_J0__J0_H0D4A2</name>
               <smear/>
               <mom_type>1 0 0</mom_type>
             </elem>
@@ -293,7 +293,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>a1xD2_J0__J1_H0D4A2</name>
+              <name>a_a1xD2_J0__J1_H0D4A2</name>
               <smear/>
               <mom_type>1 0 0</mom_type>
             </elem>
@@ -306,7 +306,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>b0xD2_J1__J1_H0D4A2</name>
+              <name>a_b0xD2_J1__J1_H0D4A2</name>
               <smear/>
               <mom_type>1 0 0</mom_type>
             </elem>
@@ -319,7 +319,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>rhoxD2_J1__J0_H0D4A2</name>
+              <name>pion_rhoxD2_J1__J0_H0D4A2</name>
               <smear/>
               <mom_type>1 0 0</mom_type>
             </elem>
@@ -332,7 +332,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>rhoxD2_J1__J2_H0D4A2</name>
+              <name>pion_rhoxD2_J1__J2_H0D4A2</name>
               <smear/>
               <mom_type>1 0 0</mom_type>
             </elem>
@@ -345,7 +345,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>rho_2xD2_J1__J0_H0D4A2</name>
+              <name>pion_rho_2xD2_J1__J0_H0D4A2</name>
               <smear/>
               <mom_type>1 0 0</mom_type>
             </elem>
@@ -358,7 +358,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>rho_2xD2_J1__J2_H0D4A2</name>
+              <name>pion_rho_2xD2_J1__J2_H0D4A2</name>
               <smear/>
               <mom_type>1 0 0</mom_type>
             </elem>
@@ -371,7 +371,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>b1xD2_J1__J1_H0D4A2</name>
+              <name>a_b1xD2_J1__J1_H0D4A2</name>
               <smear/>
               <mom_type>1 0 0</mom_type>
             </elem>
@@ -384,7 +384,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>pionxD2_J2__J2_H0D4A2</name>
+              <name>pion_pionxD2_J2__J2_H0D4A2</name>
               <smear/>
               <mom_type>1 0 0</mom_type>
             </elem>
@@ -397,7 +397,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>pion_2xD2_J2__J2_H0D4A2</name>
+              <name>pion_pion_2xD2_J2__J2_H0D4A2</name>
               <smear/>
               <mom_type>1 0 0</mom_type>
             </elem>
@@ -410,7 +410,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>a1xD2_J2__J1_H0D4A2</name>
+              <name>a_a1xD2_J2__J1_H0D4A2</name>
               <smear/>
               <mom_type>1 0 0</mom_type>
             </elem>
@@ -423,7 +423,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>a1xD2_J2__J3_H0D4A2</name>
+              <name>a_a1xD2_J2__J3_H0D4A2</name>
               <smear/>
               <mom_type>1 0 0</mom_type>
             </elem>
@@ -445,7 +445,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>pionxD0_J0__J0_H0D2A2</name>
+              <name>pion_pionxD0_J0__J0_H0D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -458,7 +458,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>pion_2xD0_J0__J0_H0D2A2</name>
+              <name>pion_pion_2xD0_J0__J0_H0D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -471,7 +471,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>a1xD0_J0__J1_H0D2A2</name>
+              <name>a_a1xD0_J0__J1_H0D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -484,7 +484,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>rhoxD1_J1__J1_H0D2A2</name>
+              <name>a_rhoxD1_J1__J1_H0D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -497,7 +497,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>rhoxD1_J1__J2_H2D2A2</name>
+              <name>a_rhoxD1_J1__J2_H2D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -510,7 +510,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>rho_2xD1_J1__J1_H0D2A2</name>
+              <name>a_rho_2xD1_J1__J1_H0D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -523,7 +523,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>rho_2xD1_J1__J2_H2D2A2</name>
+              <name>a_rho_2xD1_J1__J2_H2D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -536,7 +536,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>b1xD1_J1__J0_H0D2A2</name>
+              <name>pion_b1xD1_J1__J0_H0D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -549,7 +549,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>b1xD1_J1__J2_H0D2A2</name>
+              <name>pion_b1xD1_J1__J2_H0D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -562,7 +562,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>b1xD1_J1__J2_H2D2A2</name>
+              <name>pion_b1xD1_J1__J2_H2D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -575,7 +575,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>pionxD2_J0__J0_H0D2A2</name>
+              <name>pion_pionxD2_J0__J0_H0D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -588,7 +588,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>pion_2xD2_J0__J0_H0D2A2</name>
+              <name>pion_pion_2xD2_J0__J0_H0D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -601,7 +601,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>a1xD2_J0__J1_H0D2A2</name>
+              <name>a_a1xD2_J0__J1_H0D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -614,7 +614,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>b0xD2_J1__J1_H0D2A2</name>
+              <name>a_b0xD2_J1__J1_H0D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -627,7 +627,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>rhoxD2_J1__J0_H0D2A2</name>
+              <name>pion_rhoxD2_J1__J0_H0D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -640,7 +640,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>rhoxD2_J1__J2_H0D2A2</name>
+              <name>pion_rhoxD2_J1__J2_H0D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -653,7 +653,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>rhoxD2_J1__J2_H2D2A2</name>
+              <name>pion_rhoxD2_J1__J2_H2D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -666,7 +666,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>rho_2xD2_J1__J0_H0D2A2</name>
+              <name>pion_rho_2xD2_J1__J0_H0D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -679,7 +679,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>rho_2xD2_J1__J2_H0D2A2</name>
+              <name>pion_rho_2xD2_J1__J2_H0D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -692,7 +692,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>rho_2xD2_J1__J2_H2D2A2</name>
+              <name>pion_rho_2xD2_J1__J2_H2D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -705,7 +705,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>b1xD2_J1__J1_H0D2A2</name>
+              <name>a_b1xD2_J1__J1_H0D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -718,7 +718,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>b1xD2_J1__J2_H2D2A2</name>
+              <name>a_b1xD2_J1__J2_H2D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -731,7 +731,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>pionxD2_J2__J2_H0D2A2</name>
+              <name>pion_pionxD2_J2__J2_H0D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -744,7 +744,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>pionxD2_J2__J2_H2D2A2</name>
+              <name>pion_pionxD2_J2__J2_H2D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -757,7 +757,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>pion_2xD2_J2__J2_H0D2A2</name>
+              <name>pion_pion_2xD2_J2__J2_H0D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -770,7 +770,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>pion_2xD2_J2__J2_H2D2A2</name>
+              <name>pion_pion_2xD2_J2__J2_H2D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -783,7 +783,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>a0xD2_J2__J2_H2D2A2</name>
+              <name>a_a0xD2_J2__J2_H2D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -796,7 +796,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>a1xD2_J2__J1_H0D2A2</name>
+              <name>a_a1xD2_J2__J1_H0D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -809,7 +809,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>a1xD2_J2__J2_H2D2A2</name>
+              <name>a_a1xD2_J2__J2_H2D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -822,7 +822,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>a1xD2_J2__J3_H0D2A2</name>
+              <name>a_a1xD2_J2__J3_H0D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -835,7 +835,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>a1xD2_J2__J3_H2D2A2</name>
+              <name>a_a1xD2_J2__J3_H2D2A2</name>
               <smear/>
               <mom_type>1 1 0</mom_type>
             </elem>
@@ -857,7 +857,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>pionxD0_J0__J0_H0D3A2</name>
+              <name>pion_pionxD0_J0__J0_H0D3A2</name>
               <smear/>
               <mom_type>1 1 1</mom_type>
             </elem>
@@ -870,7 +870,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>pion_2xD0_J0__J0_H0D3A2</name>
+              <name>pion_pion_2xD0_J0__J0_H0D3A2</name>
               <smear/>
               <mom_type>1 1 1</mom_type>
             </elem>
@@ -883,7 +883,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>a1xD0_J0__J1_H0D3A2</name>
+              <name>a_a1xD0_J0__J1_H0D3A2</name>
               <smear/>
               <mom_type>1 1 1</mom_type>
             </elem>
@@ -896,7 +896,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>rhoxD1_J1__J1_H0D3A2</name>
+              <name>a_rhoxD1_J1__J1_H0D3A2</name>
               <smear/>
               <mom_type>1 1 1</mom_type>
             </elem>
@@ -909,7 +909,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>rho_2xD1_J1__J1_H0D3A2</name>
+              <name>a_rho_2xD1_J1__J1_H0D3A2</name>
               <smear/>
               <mom_type>1 1 1</mom_type>
             </elem>
@@ -922,7 +922,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>b1xD1_J1__J0_H0D3A2</name>
+              <name>pion_b1xD1_J1__J0_H0D3A2</name>
               <smear/>
               <mom_type>1 1 1</mom_type>
             </elem>
@@ -935,7 +935,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>b1xD1_J1__J2_H0D3A2</name>
+              <name>pion_b1xD1_J1__J2_H0D3A2</name>
               <smear/>
               <mom_type>1 1 1</mom_type>
             </elem>
@@ -948,7 +948,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>pionxD2_J0__J0_H0D3A2</name>
+              <name>pion_pionxD2_J0__J0_H0D3A2</name>
               <smear/>
               <mom_type>1 1 1</mom_type>
             </elem>
@@ -961,7 +961,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>pion_2xD2_J0__J0_H0D3A2</name>
+              <name>pion_pion_2xD2_J0__J0_H0D3A2</name>
               <smear/>
               <mom_type>1 1 1</mom_type>
             </elem>
@@ -974,7 +974,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>a1xD2_J0__J1_H0D3A2</name>
+              <name>a_a1xD2_J0__J1_H0D3A2</name>
               <smear/>
               <mom_type>1 1 1</mom_type>
             </elem>
@@ -987,7 +987,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>b0xD2_J1__J1_H0D3A2</name>
+              <name>a_b0xD2_J1__J1_H0D3A2</name>
               <smear/>
               <mom_type>1 1 1</mom_type>
             </elem>
@@ -1000,7 +1000,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>rhoxD2_J1__J0_H0D3A2</name>
+              <name>pion_rhoxD2_J1__J0_H0D3A2</name>
               <smear/>
               <mom_type>1 1 1</mom_type>
             </elem>
@@ -1013,7 +1013,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>rhoxD2_J1__J2_H0D3A2</name>
+              <name>pion_rhoxD2_J1__J2_H0D3A2</name>
               <smear/>
               <mom_type>1 1 1</mom_type>
             </elem>
@@ -1026,7 +1026,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>rho_2xD2_J1__J0_H0D3A2</name>
+              <name>pion_rho_2xD2_J1__J0_H0D3A2</name>
               <smear/>
               <mom_type>1 1 1</mom_type>
             </elem>
@@ -1039,7 +1039,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>rho_2xD2_J1__J2_H0D3A2</name>
+              <name>pion_rho_2xD2_J1__J2_H0D3A2</name>
               <smear/>
               <mom_type>1 1 1</mom_type>
             </elem>
@@ -1052,7 +1052,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>b1xD2_J1__J1_H0D3A2</name>
+              <name>a_b1xD2_J1__J1_H0D3A2</name>
               <smear/>
               <mom_type>1 1 1</mom_type>
             </elem>
@@ -1065,7 +1065,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>pionxD2_J2__J2_H0D3A2</name>
+              <name>pion_pionxD2_J2__J2_H0D3A2</name>
               <smear/>
               <mom_type>1 1 1</mom_type>
             </elem>
@@ -1078,7 +1078,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>pion_2xD2_J2__J2_H0D3A2</name>
+              <name>pion_pion_2xD2_J2__J2_H0D3A2</name>
               <smear/>
               <mom_type>1 1 1</mom_type>
             </elem>
@@ -1091,7 +1091,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>a1xD2_J2__J1_H0D3A2</name>
+              <name>a_a1xD2_J2__J1_H0D3A2</name>
               <smear/>
               <mom_type>1 1 1</mom_type>
             </elem>
@@ -1104,7 +1104,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>a1xD2_J2__J3_H0D3A2</name>
+              <name>a_a1xD2_J2__J3_H0D3A2</name>
               <smear/>
               <mom_type>1 1 1</mom_type>
             </elem>
@@ -1117,7 +1117,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>a1xD2_J2__J3_H3D3A2</name>
+              <name>a_a1xD2_J2__J3_H3D3A2</name>
               <smear/>
               <mom_type>1 1 1</mom_type>
             </elem>
@@ -1139,7 +1139,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>pionxD0_J0__J0_H0D4A2</name>
+              <name>pion_pionxD0_J0__J0_H0D4A2</name>
               <smear/>
               <mom_type>2 0 0</mom_type>
             </elem>
@@ -1152,7 +1152,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>pion_2xD0_J0__J0_H0D4A2</name>
+              <name>pion_pion_2xD0_J0__J0_H0D4A2</name>
               <smear/>
               <mom_type>2 0 0</mom_type>
             </elem>
@@ -1165,7 +1165,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>a1xD0_J0__J1_H0D4A2</name>
+              <name>a_a1xD0_J0__J1_H0D4A2</name>
               <smear/>
               <mom_type>2 0 0</mom_type>
             </elem>
@@ -1178,7 +1178,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>rhoxD1_J1__J1_H0D4A2</name>
+              <name>a_rhoxD1_J1__J1_H0D4A2</name>
               <smear/>
               <mom_type>2 0 0</mom_type>
             </elem>
@@ -1191,7 +1191,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>rho_2xD1_J1__J1_H0D4A2</name>
+              <name>a_rho_2xD1_J1__J1_H0D4A2</name>
               <smear/>
               <mom_type>2 0 0</mom_type>
             </elem>
@@ -1204,7 +1204,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>b1xD1_J1__J0_H0D4A2</name>
+              <name>pion_b1xD1_J1__J0_H0D4A2</name>
               <smear/>
               <mom_type>2 0 0</mom_type>
             </elem>
@@ -1217,7 +1217,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>b1xD1_J1__J2_H0D4A2</name>
+              <name>pion_b1xD1_J1__J2_H0D4A2</name>
               <smear/>
               <mom_type>2 0 0</mom_type>
             </elem>
@@ -1230,7 +1230,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>pionxD2_J0__J0_H0D4A2</name>
+              <name>pion_pionxD2_J0__J0_H0D4A2</name>
               <smear/>
               <mom_type>2 0 0</mom_type>
             </elem>
@@ -1243,7 +1243,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>pion_2xD2_J0__J0_H0D4A2</name>
+              <name>pion_pion_2xD2_J0__J0_H0D4A2</name>
               <smear/>
               <mom_type>2 0 0</mom_type>
             </elem>
@@ -1256,7 +1256,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>a1xD2_J0__J1_H0D4A2</name>
+              <name>a_a1xD2_J0__J1_H0D4A2</name>
               <smear/>
               <mom_type>2 0 0</mom_type>
             </elem>
@@ -1269,7 +1269,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>b0xD2_J1__J1_H0D4A2</name>
+              <name>a_b0xD2_J1__J1_H0D4A2</name>
               <smear/>
               <mom_type>2 0 0</mom_type>
             </elem>
@@ -1282,7 +1282,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>rhoxD2_J1__J0_H0D4A2</name>
+              <name>pion_rhoxD2_J1__J0_H0D4A2</name>
               <smear/>
               <mom_type>2 0 0</mom_type>
             </elem>
@@ -1295,7 +1295,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>rhoxD2_J1__J2_H0D4A2</name>
+              <name>pion_rhoxD2_J1__J2_H0D4A2</name>
               <smear/>
               <mom_type>2 0 0</mom_type>
             </elem>
@@ -1308,7 +1308,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>rho_2xD2_J1__J0_H0D4A2</name>
+              <name>pion_rho_2xD2_J1__J0_H0D4A2</name>
               <smear/>
               <mom_type>2 0 0</mom_type>
             </elem>
@@ -1321,7 +1321,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>rho_2xD2_J1__J2_H0D4A2</name>
+              <name>pion_rho_2xD2_J1__J2_H0D4A2</name>
               <smear/>
               <mom_type>2 0 0</mom_type>
             </elem>
@@ -1334,7 +1334,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>b1xD2_J1__J1_H0D4A2</name>
+              <name>a_b1xD2_J1__J1_H0D4A2</name>
               <smear/>
               <mom_type>2 0 0</mom_type>
             </elem>
@@ -1347,7 +1347,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>pionxD2_J2__J2_H0D4A2</name>
+              <name>pion_pionxD2_J2__J2_H0D4A2</name>
               <smear/>
               <mom_type>2 0 0</mom_type>
             </elem>
@@ -1360,7 +1360,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>pion_2xD2_J2__J2_H0D4A2</name>
+              <name>pion_pion_2xD2_J2__J2_H0D4A2</name>
               <smear/>
               <mom_type>2 0 0</mom_type>
             </elem>
@@ -1373,7 +1373,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>a1xD2_J2__J1_H0D4A2</name>
+              <name>a_a1xD2_J2__J1_H0D4A2</name>
               <smear/>
               <mom_type>2 0 0</mom_type>
             </elem>
@@ -1386,7 +1386,7 @@
         <Key>
           <Operators>
             <elem>
-              <name>a1xD2_J2__J3_H0D4A2</name>
+              <name>a_a1xD2_J2__J3_H0D4A2</name>
               <smear/>
               <mom_type>2 0 0</mom_type>
             </elem>

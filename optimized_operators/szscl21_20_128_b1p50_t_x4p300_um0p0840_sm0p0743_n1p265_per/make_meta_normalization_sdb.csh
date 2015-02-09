@@ -45,7 +45,9 @@ foreach chan ( pion rho a b )
 end
 
 
-set exe = $HOME/git-builds/formfactor/bin/mass_overlap_db_combine
+#RB 
+#set exe = $HOME/git-builds/formfactor/bin/mass_overlap_db_combine
+set exe = $HOME/arch/formfactor/bin/mass_overlap_db_combine
 
 if ( ! -e $exe ) then 
   echo "executable $exe does not exist"

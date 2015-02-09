@@ -31,7 +31,7 @@ my @all_ops = ();
   $pion_proj9_p000_A1->state(0); 
   $pion_proj9_p000_A1->tz(15);
   $pion_proj9_p000_A1->phaser(1.);
-  $pion_proj9_p000_A1->recon_version("single_meson"); 
+  $pion_proj9_p000_A1->recon_version("single_meson.convert"); 
   $pion_proj9_p000_A1->nested(undef); 
   $pion_proj9_p000_A1->recon_ws(undef); 
 
@@ -49,7 +49,7 @@ my @all_ops = ();
   $pion_proj9_p100_H0D4A2->state(0); 
   $pion_proj9_p100_H0D4A2->tz(15);
   $pion_proj9_p100_H0D4A2->phaser(1.);
-  $pion_proj9_p100_H0D4A2->recon_version("single_meson"); 
+  $pion_proj9_p100_H0D4A2->recon_version("single_meson.convert"); 
   $pion_proj9_p100_H0D4A2->nested(undef); 
   $pion_proj9_p100_H0D4A2->recon_ws(undef); 
 
@@ -67,7 +67,7 @@ my @all_ops = ();
   $pion_proj9_p110_H0D2A2->state(0); 
   $pion_proj9_p110_H0D2A2->tz(12);
   $pion_proj9_p110_H0D2A2->phaser(1.);
-  $pion_proj9_p110_H0D2A2->recon_version("single_meson"); 
+  $pion_proj9_p110_H0D2A2->recon_version("single_meson.convert"); 
   $pion_proj9_p110_H0D2A2->nested(undef); 
   $pion_proj9_p110_H0D2A2->recon_ws(undef); 
 
@@ -85,7 +85,7 @@ my @all_ops = ();
   $pion_proj9_p111_H0D3A2->state(0); 
   $pion_proj9_p111_H0D3A2->tz(13);
   $pion_proj9_p111_H0D3A2->phaser(1.);
-  $pion_proj9_p111_H0D3A2->recon_version("single_meson"); 
+  $pion_proj9_p111_H0D3A2->recon_version("single_meson.convert"); 
   $pion_proj9_p111_H0D3A2->nested(undef); 
   $pion_proj9_p111_H0D3A2->recon_ws(undef); 
 
@@ -103,7 +103,7 @@ my @all_ops = ();
   $pion_proj9_p200_H0D4A2->state(0); 
   $pion_proj9_p200_H0D4A2->tz(13);
   $pion_proj9_p200_H0D4A2->phaser(1.);
-  $pion_proj9_p200_H0D4A2->recon_version("single_meson"); 
+  $pion_proj9_p200_H0D4A2->recon_version("single_meson.convert"); 
   $pion_proj9_p200_H0D4A2->nested(undef); 
   $pion_proj9_p200_H0D4A2->recon_ws(undef); 
 
