@@ -62,6 +62,7 @@ sub new
     UNSMEAREDHADRONNODESDB => "unsmeared_hadron_node.sdb",
     SMEAREDHADRONNODEXML => "smeared_hadron_node.xml",
     UNSMEAREDHADRONNODEXML => "unsmeared_hadron_node.xml",
+    UNSMEAREDNODELIST => undef,
     NUKELIST => "graph.nuke_list.xml",
     REDSTARXML=> "redstar.ini.xml",
     MESONHADRONNODE => "meson_hadron_node.ini.xml",
@@ -291,6 +292,14 @@ sub unsmeared_hadron_node_xml
   my $self = shift;
   if(@_) {$self->{UNSMEAREDHADRONNODEXML} = shift}
   return $self->{UNSMEAREDHADRONNODEXML};
+}
+
+# use to override normal behavior
+sub unsmeared_node_list
+{
+  my $self = shift; 
+  if (@_) {$self->{UNSMEAREDNODELIST} = shift}
+  return $self->{UNSMEAREDNODELIST};
 }
 
 sub graph_nuke_list_xml
@@ -574,24 +583,58 @@ sub copy_back_scratch_rcp_arr
 sub gen_prop_db
 { 
   my $self = shift; 
-  my $extra_stem = shift; 
+  my $estem = shift; 
   my $f = $self->cache_dir() . "/" . $self->stem();
   $f .= "/gen_props/gen_prop_dbs/dt"; 
   my @dts = @{$self->delta_t()}; 
   die ("confused") unless $#dts == 0; 
-  $f .= $dts[0] . "/" . $self->stem() . "." . $extra_stem . "." . $self->sequenceify( $self->unsmeared_hadron_node_sdb() );
+  $f .= $dts[0] . "/" . $self->stem() . ".$estem." . $self->sequenceify( $self->unsmeared_hadron_node_sdb() );
   return $f;
 }
 
+sub improvement_gen_prop_db
+{ 
+  my $self = shift; 
+  my $f = $self->cache_dir() . "/" . $self->stem();
+  $f .= "/gen_props/gen_prop_dbs/dt"; 
+  my @dts = @{$self->delta_t()}; 
+  die ("confused") unless $#dts == 0; 
+  $f .= $dts[0] . "/" . $self->stem() . ".improvement." . $self->sequenceify( $self->unsmeared_hadron_node_sdb() );
+  return $f;
+}
 
 sub prop_dbs{
   my $self = shift; 
+
+#    if ( $self->scratchy() )
+#    {
+#  
+#      if ( $self->verbose() ) 
+#      {
+#        my @t = @{$self->scratchy_props()};
+#        print "prop_dbs props @t \n";
+#      }
+#  
+#      return $self->scratchy_props(); 
+#    } 
+
+
   my @prop_dbs; 
+#    my $seqno = $self->seqno();
+#    my $t_ref = $self->t_sources(); 
+#    my @flav = ("light");
+#    foreach my $tt (@$t_ref)
+#    {
+#      foreach my $flavor (@flav)
+#      {
+#        push @prop_dbs , "$cache_dir/${stem}/prop_db/${stem}.prop.n128.${flavor}.t0_${tt}.sdb${seqno}";
+#      }
+#    }
+#  
+# don't need diag guys since no bubbles
 
-#  my $loc = $self->cache_dir() . "/" . $self->stem() . "/prop_mod/";
 
-  my $loc = $self->cache_dir() . "/" . $self->stem() . "/cjs_unstable/prop_mod/";
-
+  my $loc = $self->cache_dir() . "/" . $self->stem() . "/prop_mod/";
   my $f = $loc . $self->stem() . ".prop.n" . $self->num_vecs(); 
   $f .= ".t0_";
   my $tail = ".mod" . $self->seqno(); 
@@ -962,7 +1005,7 @@ EOF
 sub print_harom_trailer
 {
   my $self = shift; 
-#  my $gauge_file = $self->gauge_file_lime(); 
+  my $gauge_file = $self->gauge_file_lime(); 
 
   print OUT <<EOF;
   </InlineMeasurements>
@@ -978,15 +1021,13 @@ sub print_harom_trailer
   </Seed>
 </RNG>
 
+<Cfg>
+  <cfg_type>$self->{CFGTYPE}</cfg_type>
+  <cfg_file>$gauge_file</cfg_file>
+</Cfg>
 
 </harom>
 EOF
-
-
-## <Cfg>
-##   <cfg_type>$self->{CFGTYPE}</cfg_type>
-##   <cfg_file>$gauge_file</cfg_file>
-## </Cfg>
 
 }
 
@@ -1474,8 +1515,7 @@ sub print_redstar_npoint_list
 sub print_redstar_Param()
 {
   my $self = shift; 
-  my $t = $self->t_origin(); 
-
+  my $t_origin = $self->t_origin(); 
   print OUT <<EOF;
   <Param>
     <version>$self->{REDSTARVERSION}</version>
@@ -1483,7 +1523,7 @@ sub print_redstar_Param()
     <Nt_corr>$self->{NTCORR}</Nt_corr>
     <average_1pt_diagrams>true</average_1pt_diagrams>
     <zeroUnsmearedGraphsP>$self->{ZEROUNSMEAREDGRAPHS}</zeroUnsmearedGraphsP>
-    <t_origin>$t</t_origin>
+    <t_origin>$t_origin</t_origin>
     <bc_spec>1</bc_spec>
 EOF
   if($self->convertUDtoL())
@@ -1525,6 +1565,7 @@ sub print_redstar_DBFiles
   my $uhad_node_out_db = $self->scratch_seq_callback("unsmeared_hadron_node_sdb");
   my $out_db = $self->scratch_seq_callback("output_sdb"); 
   my $nuke_list = $self->scratch_seq_callback("nuke_list");
+  my $unsmeared_node_list = $self->unsmeared_node_list(); 
 
   print OUT <<EOF;
   <DBFiles>
@@ -1540,14 +1581,32 @@ EOF
 
   print OUT <<EOF; 
     </proj_op_xmls>
-    <eval_graph_xml>/scratch/eval_graph.xml</eval_graph_xml>
     <noneval_graph_xml>$nuke_list</noneval_graph_xml>
+    <eval_graph_xml>/scratch/eval_graph_xml.xml</eval_graph_xml>
     <smeared_hadron_node_xml>$shad_node_xml</smeared_hadron_node_xml>
     <unsmeared_hadron_node_xml>$uhad_node_xml</unsmeared_hadron_node_xml>
     <hadron_npt_graph_db>$had_graph</hadron_npt_graph_db>
     <hadron_node_dbs>
       <elem>$shad_node_out_db</elem>
+EOF
+  if ( ! $unsmeared_node_list ) # did we do everything in one shot (prob not)
+  {
+    print OUT <<EOF; 
       <elem>$uhad_node_out_db</elem>
+EOF
+  }
+  else # allow for unsmeared nodes to be computed separately -- push this in the drive file
+  {
+    my @tmp = @{$unsmeared_node_list};
+    my @dbs = (); 
+    foreach (@tmp)
+    {
+      push @dbs , $self->copy_file_to_scratch($_); 
+    }  
+    $self->print_elem_arr(\@dbs);
+  }
+
+  print OUT <<EOF; 
     </hadron_node_dbs>
     <output_db>$out_db</output_db>
   </DBFiles>
@@ -1608,7 +1667,7 @@ sub print_colorvec_header
 <?xml version="1.0"?>
 <ColorVecHadron>
   <Param>
-    <version>4</version>
+    <version>5</version>
     <num_vecs>$n</num_vecs>
     <t_origin>$t</t_origin>
     <convertUDtoL>$L</convertUDtoL>
